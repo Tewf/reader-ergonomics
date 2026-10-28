@@ -64,7 +64,7 @@ Surveys first, then the seminal work, then forward citations.
 
 ## 6. The human constants
 
-- Miller 1981, Kiger 1984, Larson 1998: depth versus breadth on menus of 64 items. Very flat and very deep both lose; two to three levels of 8 to 16 items win.
+- Miller 1981, Kiger 1984: depth versus breadth on menus of 64 items; two levels of eight beat deeper and flatter menus. Larson 1998, with 512 web targets: two levels of 16 by 32 were fastest and three levels of 8 slowest (see [against](against.md)).
 - Pirolli 1999: **information foraging theory**.
 - Lawrance 2013: programmers navigate code by scent, and a scent model predicts their paths better than a hypothesis model.
 - Lawrie 2006, 2007: full words beat abbreviations and single letters for comprehension.
