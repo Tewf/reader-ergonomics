@@ -59,7 +59,7 @@ Order inside each strand: definitions, seminal work, forward citations.
 - **Argument overlap**: two propositions share an argument; **reinstatement search**: retrieval from memory when nothing in the buffer overlaps.
 - Kintsch & Keenan 1973: reading time followed the number of propositions more than the number of words (secondary).
 - Kintsch & van Dijk 1978: cycles through a limited buffer, coherence by argument overlap, macro-operators that reduce to gist.
-- Miller & Kintsch 1980: the model applied to readability of short passages (results not read here).
+- Miller & Kintsch 1980: the model applied to readability of short passages. Abstract only: 20 texts and 600 undergraduates, with readability as reading time per proposition recalled. Predictions of readability, reading time and recall reached r = .8 to .9.
 - Kintsch 1988; Kintsch 1998: construction-integration: bottom-up activation, then integration by spreading activation.
 - Haviland & Clark 1974: the **given-new contract**: a sentence is read faster when its given part has a direct antecedent (secondary).
 - Britton & Gülgöz 1991: the model located inference calls in a 1000-word text; each was repaired into a principled revision.
@@ -84,7 +84,9 @@ Order inside each strand: definitions, seminal work, forward citations.
 - **Reverse cohesion effect**: high-knowledge readers learn more from a low-cohesion text (McNamara et al. 1996b).
 - McNamara & Kintsch 1996a: high coherence helped recall; high-knowledge readers did better on open questions after low coherence.
 - O'Reilly & McNamara 2007: with 143 students, the low-cohesion benefit held only for less skilled high-knowledge readers.
-- **Expertise reversal effect**: support that helps novices can hurt experts (Kalyuga et al. 2003).
+- **Expertise reversal effect**: support that helps novices can hurt more experienced learners (Kalyuga et al. 2003).
+- A 1998 study reviewed in Kalyuga 2003: explanatory notes in a text helped readers with low language competence and slowed more knowledgeable readers.
+- Davison & Kantor 1982: splitting sentences removes connectives, which shifts the inference load to the reader; some of the best adaptations made sentences longer.
 
 ## 7. Ordering and measurement
 
@@ -103,7 +105,8 @@ Kinds: G government guide, L law, T tool, P paper. Practice is **convention, unt
 - Vale 2026 (T): averages the listed metrics (Gunning Fog, Coleman-Liau, Flesch-Kincaid, SMOG, ARI); a `grade` parameter sets the highest acceptable level; owner documentation.
 - Hemingway 2026 (T): grade score; the Editor Plus default target is grade 9; the page names no formula; owner documentation.
 - textstat 2026 (T): MIT-licensed readability library, 1.4k GitHub stars on 2026-10-28; its README calls SMOG on texts under 30 sentences statistically invalid.
-- Redish 2000 (P, commentary, secondary): formulas were built for children's school books and ignore reader differences, layout and retrieval aids.
+- Redish 2000 (P, commentary, read in full): formulas were built for children's school books and ignore reader differences, layout and retrieval aids.
+- Redish 2000 reports that about half of 36 studies improved comprehension by improving scores. Revised jury instructions were understood better yet scored worse. A very poor score remains a red flag.
 - Schriver 2017 (P, secondary): a review of 1940 to 2015 finds formulas often unreliable and invalid; usability testing is the best benchmark; read on an advocacy page.
 - ISO 2023 (standard, preview read): plain language focuses on how well readers can use a document, not on mechanical measures such as readability formulas (p. v).
 - Martinez et al. 2022 (P): in about 10 million words, contracts carry more rare words, center-embedding (0.729 vs 0.272 per sentence, OR = 2.56), passives (0.758 vs 0.160, OR = 4.35) and non-standard capitalisation than nine other genres.

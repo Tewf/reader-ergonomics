@@ -31,8 +31,10 @@ skilled ones (O'Reilly & McNamara 2007).
 
 A term the reader already knows needs no definition. Across 60 studies, assistance helped novices and hurt advanced
 learners (Tetzlaff 2025, a meta-analysis, measured; Kalyuga 2003 first reviewed the effect). The studies are mostly in
-science and mathematics, the evidence is weakest for humanities and language, and the authors advise giving
-assistance when in doubt. That it holds for definitions is an inference, so with an unknown reader, define.
+science and mathematics, the evidence is weakest for humanities and language, and the authors advise giving assistance when in doubt.
+
+Closer to definitions, explanatory notes built into a text helped readers with low language competence and slowed
+more knowledgeable ones (one study, reviewed in Kalyuga 2003). So with an unknown reader, define.
 
 Practice agrees: Google's style guide exempts well-known terms such as API (Google 2026b, convention).
 Which terms are known depends on the reader, so the reader style decides.

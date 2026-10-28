@@ -36,7 +36,7 @@ Terms are defined in `review.md`; works are listed in the [bibliography](../bibl
 - The reverse cohesion effect depends on skill: skilled high-knowledge readers gained from high cohesion (O'Reilly & McNamara 2007).
 - It depends on the measure: situation-model tasks, not recall (McNamara et al. 1996b).
 - One of its results did not replicate in a second experiment (McNamara & Kintsch 1996a).
-- Expertise reversal: a rule tuned for novices is not neutral for experts (Kalyuga et al. 2003).
+- Expertise reversal: a rule tuned for novices is not neutral for more experienced learners (Kalyuga et al. 2003).
 - Consequence: no density rule is reader-free; each needs a stated reader.
 
 ## 5. From the lab to notes that are reread and searched
@@ -51,7 +51,7 @@ Terms are defined in `review.md`; works are listed in the [bibliography](../bibl
 ## 6. Readability formulas
 
 - Formulas count sentence length and word familiarity; they do not define what makes a text hard (Davison & Kantor 1982).
-- Adaptations written to a formula can become harder to understand (Davison & Kantor 1982).
+- A linguistic analysis of four adapted texts argues that rewriting to a formula can make text harder (Davison & Kantor 1982; no reader testing).
 - For adults, NLP-feature models predict comprehension better than classic formulas (Crossley et al. 2017).
 - Coh-Metrix indices are correlates of difficulty; a rule that moves an index is not shown to move comprehension.
 
@@ -65,7 +65,7 @@ Terms are defined in `review.md`; works are listed in the [bibliography](../bibl
 
 - Practice: rewrite until a grade tool passes (Vale 2026; Hemingway 2026; textstat 2026).
 - Principle: Even information density is not supported as a way to read faster.
-- Evidence: adaptations written to a formula can read worse (Davison & Kantor 1982); formulas ignore readers (Redish 2000; Schriver 2017).
+- Evidence: an analysis, not a measurement, argues that adaptations written to a formula can read worse (Davison & Kantor 1982); formulas ignore readers (Redish 2000; Schriver 2017).
 - Practice: a Flesch floor fixed by statute (NAIC 2025), against the weak adult baseline in section 6.
 - Practice: splitting to a word cap; the EC warns to keep link words so coherence survives (EC 2011).
 - Tool caveat: textstat's own README limits SMOG to texts of at least 30 sentences.

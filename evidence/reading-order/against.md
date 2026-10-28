@@ -6,7 +6,7 @@ This file lists null results, controversies, costs of the proposal, and practice
 
 | Claim at risk | Evidence against | Source |
 |---|---|---|
-| Overview first helps | organizer effect small on immediate tests (d = 0.21, Luiten), 0.66 on delayed tests (Stone), both secondary; the unfamiliar-material condition is Mayer's theory (Mayer 1979), not a tested moderator | Luiten 1980; Stone 1983; Mayer 1979 |
+| Overview first helps | organizer effect small on immediate tests (d = 0.21, Luiten; delayed 0.19 to 0.38), median 0.48 (mean 0.66) on tests a week or more later (Stone); the unfamiliar-material condition rests on Mayer's vote count (Mayer 1979) and is not confirmed by Stone's effect sizes (very small k) | Luiten 1980; Stone 1983; Mayer 1979 |
 | Any overview helps | a network map did worse than a hierarchical one, most for novices | DeStefano and LeFevre 2007; Amadieu 2009 |
 | Zoom-lens and spiral sequencing | the few tests are null; spiral evidence is single-site and quasi-experimental | Van Patten 1986; Harden and Stamper 1999 |
 | Skim first | skimming gives only moderate comprehension | Rayner 2016 |

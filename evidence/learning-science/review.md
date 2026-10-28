@@ -77,7 +77,8 @@ Grouped by strand. Surveys first, then the seminal work, then later syntheses.
 
 ## 7. Comparison and transfer
 
-- Alfieri 2013 (MA, 57 experiments, 336 tests): case comparison d = 0.50 on 336 tests (95% CI 0.44 to 0.56); d = 0.60 on the 57 experiments, heterogeneous (I2 = 59). The d = 0.37 against sequential study is not verified. Domain moderates inconsistently, so the maths figure of 0.23 is not a stable effect and is not given.
+- Alfieri 2013 (MA, 57 experiments, 336 tests): case comparison d = 0.50 on 336 tests (95% CI 0.44 to 0.56); d = 0.60 on the 57 experiments, heterogeneous (I2 = 59). The comparison against sequential study of the same cases gives d = 0.37 (CI 0.31 to 0.44); the effect is larger against control (0.69) and nonanalogous cases (0.82). Domain moderates inconsistently, so the maths figure of 0.23 is not a stable effect and is not given.
+- Alfieri 2013, moderators: asking for similarities only beat similarities and differences; perceptual content beat procedural; immediate tests beat next-day tests; learner experience and age were not moderators.
 - Gick 1983 (RCT): one case plus a principle did not transfer; two cases did.
 - Gentner 2003 (RCT): two cases compared beat the same two studied apart.
 - Catrambone 1989 (RCT): comparison must be prompted.

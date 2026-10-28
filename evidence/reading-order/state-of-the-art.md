@@ -20,7 +20,7 @@ Upper bounds: what has been achieved. Lower bounds: what is shown not to work or
 
 | Limit | Source | Measured how |
 |---|---|---|
-| Organizer effect small on immediate tests (d = 0.21, Luiten), 0.66 on delayed tests (Stone) (secondary); unfamiliar-material condition from Mayer's theory | Luiten 1980; Stone 1983; Mayer 1979 | meta-analyses; theory with experiments |
+| Organizer effect small on immediate tests (d = 0.21, Luiten; delayed 0.19 to 0.38), mean 0.66 (median 0.48) on delayed tests (Stone, read); unfamiliar-material condition supported by Mayer's vote count, not by Stone's effect sizes (tiny k) | Luiten 1980; Stone 1983; Mayer 1979 | meta-analyses; theory with experiments |
 | Skimming gives only moderate comprehension | Rayner 2016 | review |
 | Goal-bounded depth lowers learning of the non-goal part | Klauer 1984; McCrudden 2005 | meta-analysis; experiment |
 | Withholding assistance beat giving it for advanced learners (d = -0.43, CI -0.65 to -0.21, high heterogeneity); the gain for novices is larger (+0.51) | Tetzlaff 2025 | meta-analysis |

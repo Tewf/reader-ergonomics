@@ -10,9 +10,11 @@ Surveys to read first: Ponce 2025 (organizers), McCrudden 2007 (relevance), Ritt
 
 | Source | Finding | Level |
 |---|---|---|
-| Luiten 1980; Stone 1983 | advance organizer: learning d = 0.21, retention 0.26 over 135 studies (Luiten); 0.66 on tests a week or more later (Stone) (all secondary, read in Kenny 1993); the unfamiliar-material condition is Mayer's model, not a reported moderator | MA |
+| Luiten 1980; Stone 1983 | advance organizer: learning d = 0.21 over 135 studies, retention 0.19 to 0.38 by interval, rising with delay (Luiten, read in full); median 0.48, mean 0.66 over 112 effect sizes from 29 studies, on tests a week or more later (Stone, read in full); Mayer's vote count found stronger effects for learners lacking prerequisite knowledge, and Stone found no advantage for low-knowledge learners (k of 4 to 6) | MA |
+| Luiten 1980 (moderators) | written organizers 0.17 (k = 89), aural 0.37 (k = 21); high ability 0.23, middle 0.08, low 0.13; no study measured retention beyond 15 weeks (read in full) | MA |
+| Alfieri 2013 (principle first) | giving the principle before the cases did no better than giving none (read in full) | MA |
 | Ponce 2025 | instructor-provided graphic organizer: memory g = 0.70, comprehension 0.53, no moderator found | MA |
-| Ponce 2023 | outline given with the text: memory g+ 0.61; comprehension g+ 0.34, not significant. Learner-generated outlining: memory 0.59, comprehension 0.59, writing 0.52 (abstract) | MA |
+| Ponce 2023 | outline given with the text: memory g+ 0.61 (k = 18, CI 0.33 to 0.88); comprehension g+ 0.34 (k = 10, CI -0.14 to 0.81, I2 72%), not significant. Learner-generated outlining: memory 0.59 (k = 9, prediction interval -0.62 to 1.80), comprehension 0.59 (k = 10, prediction interval 0.02 to 1.16), writing 0.52 (k = 11). Provided outlines: 20 of 22 effect sizes are college (read in full) | MA |
 | Mayer 1979 | review of organizer studies; predicts organizers help most on unfamiliar material | R |
 | Bransford and Johnson 1972 | topic given before a passage raises comprehension and recall; given after, no gain | RCT |
 | DeStefano and LeFevre 2007; Amadieu 2009 | a map matching the domain hierarchy helps low prior knowledge; a network map did worse than a hierarchical one | R; S |
@@ -37,7 +39,7 @@ Surveys to read first: Ponce 2025 (organizers), McCrudden 2007 (relevance), Ritt
 | Pyc and Rawson 2009; Rawson and Dunlosky 2011 | correct recalls required before moving on: diminishing returns past a few; word pairs | RCT |
 | Dunlosky and Rawson 2012 | overconfident learners stop early and score lower; checking against the key's idea units corrected it (secondary) | RCT |
 | Rozenblit and Keil 2002 | felt understanding of a mechanism exceeds the explanation; asking for it exposes the gap (12 studies) | RCT |
-| Kalyuga and Sweller 2004 | writing the first step of a problem is a fast check of expertise (secondary) | RCT |
+| Kalyuga and Sweller 2004 | a rapid first-step test correlates up to r = .92 with full knowledge tests and is 2.5 to 4.9 times faster (abstract only; the first-step method stays secondary) | validation studies (Experiments 1 and 2); RCT (Experiments 3 and 4) |
 | Tetzlaff 2025 | expertise reversal: assistance helps novices (+0.51), hurts the advanced (-0.43); the reversal is asymmetric, with a larger gain for novices | MA |
 | Kester 2001, 2004 | just-in-time model: theory before practice, how-to during it; the experiment (n = 72) found the reverse most efficient | T; S |
 | Doignon and Falmagne 1985 | study what all prerequisites are mastered for (outer fringe) | T |

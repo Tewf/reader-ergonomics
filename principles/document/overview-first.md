@@ -21,8 +21,13 @@ Telling readers what is relevant raises learning of that part at no extra readin
 
 ## Limits
 
-The classic advance organizer has a small effect on immediate tests, d = 0.21 (Luiten 1980, secondary), and 0.66 on delayed tests (Stone 1983, secondary).
-Mayer 1979 predicts it helps most on unfamiliar material. A network map did worse than a hierarchical one, most for readers with little prior knowledge, so a map should follow the domain's own hierarchy (Amadieu 2009). Stating
+The classic advance organizer has a small effect: d = 0.21 on tests within a day, and 0.19 to 0.38 on later tests,
+rising with delay (Luiten 1980, 135 studies). On tests a week or more later, the median of 112 effects is 0.48 (Stone
+1983). Written organizers did worse than spoken ones, 0.17 against 0.37 (Luiten 1980), so a written overview is the
+weaker case. Whether it helps most on unfamiliar material is contested: Mayer's count of 44 studies said so, and
+Stone's effect sizes did not confirm it, from very few studies (Stone 1983).
+
+A network map did worse than a hierarchical one, most for readers with little prior knowledge, so a map should follow the domain's own hierarchy (Amadieu 2009). Stating
 what matters lowers learning of what was not named (Klauer 1984).
 
 Overview first is not importance first: the evidence above is for organizers, which announce the parts. Putting the most important fact first, as news does, is a different order, and its two direct tests, both theses,
