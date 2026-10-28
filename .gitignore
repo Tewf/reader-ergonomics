@@ -11,5 +11,3 @@ checks/out/
 
 /.quarto/
 **/*.quarto_ipynb
-# Kept on the maintainer's machine, not published for now
-CITATION.cff

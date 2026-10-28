@@ -57,4 +57,4 @@ Le contenu est en anglais ; seules les deux pages d'accueil sont bilingues.
 ## Licence
 
 Code sous [licence Apache 2.0](LICENSE) ; textes sous [CC BY 4.0](LICENSES/CC-BY-4.0.txt). Réutilisez-les librement,
-en mentionnant ce dépôt.
+en mentionnant ce dépôt ; [CITATION.cff](CITATION.cff) donne une citation si besoin.

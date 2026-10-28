@@ -57,4 +57,4 @@ written to `checks/out/needs-judgment.md`. See [checks/](checks/).
 ## Licence
 
 Code under the [Apache License 2.0](LICENSE); prose under [CC BY 4.0](LICENSES/CC-BY-4.0.txt). Reuse it as you wish, with
-credit to this repository.
+credit to this repository; [CITATION.cff](CITATION.cff) gives a citation if you need one.

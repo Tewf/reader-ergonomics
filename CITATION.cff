@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: >-
+  If this repository helps you, you may cite it as below. It is an informal,
+  work-in-progress synthesis of published research, written with Claude, an AI
+  assistant by Anthropic. It is not an official standard, not peer-reviewed,
+  and not a new result.
+title: "reader-ergonomics (work in progress)"
+abstract: >-
+  A synthesis of what cognitive science, psycholinguistics and software
+  engineering report about writing notes, documents and files that are cheap
+  to read, for people and for language models. Each principle carries its
+  grade of evidence, many are untested conventions, and every topic lists the
+  evidence against. The literature reviews were drafted with AI agents; every
+  reference was resolved by script and claims were spot-checked, and a number
+  read only in a summary is marked as secondary. Use it as a reading list and
+  a starting point, not as an authority.
+type: software
+authors:
+  - name: "Tewf"
+repository-code: "https://github.com/Tewf/reader-ergonomics"
+url: "https://tewf.github.io/reader-ergonomics/"
+license:
+  - Apache-2.0
+  - CC-BY-4.0
+keywords:
+  - technical writing
+  - documentation
+  - cognitive load
+  - information design
+  - literature review
