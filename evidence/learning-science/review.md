@@ -49,17 +49,17 @@ Grouped by strand. Surveys first, then the seminal work, then later syntheses.
 - Robinson 1995 (RCT): graphic organisers beat outlines for relations among concepts, not always.
 - Kiewra 1985 (RCT): a skeleton halves what students write and raises recall; best with the skeleton before the lecture and full notes after.
 - Ponce 2022 (MA): own highlighting g = 0.36 memory, 0.20 comprehension (n.s.); instructor-provided highlighting 0.44 on both.
-- Kobayashi 2005 (MA): notes without review, about d = 0.22 vs listening (secondary).
+- Kobayashi 2005 (MA): notes without review, weighted d = 0.22 (unweighted 0.29; 131 samples from 57 studies) against no note-taking, whether listening or reading. Recognition tests gave only 0.18.
 - Mueller 2014 reported a laptop deficit; Urry 2021 and Morehead 2019 did not replicate it; Flanigan 2024 (MA) finds handwriting g = 0.25 on achievement.
 
 ## 5. Multimedia principles (Mayer)
 
 - Mayer 2020 summarises the principles: multimedia, coherence, signalling, contiguity, segmenting, pre-training, modality.
 - Mayer 2001 (RCT): sixteen learner-paced segments beat one continuous lesson on transfer, not recall.
-- Ginns 2006 (MA): spatial contiguity, larger for complex material; d between 0.72 and 0.85 in secondary summaries.
-- Schneider 2018 (MA, 103 studies): signalling retention g = 0.53, transfer 0.33 (secondary).
+- Ginns 2006 (MA): spatial contiguity, d = 0.72 (37 effects); 0.85 pooled with temporal (50 effects). Larger for high element interactivity (d = 0.78, 43 effects) than low (d = 0.28, 7 effects, CI -0.03 to 0.58). All learners were novices.
+- Schneider 2018 (MA, 103 studies): signalling retention g = 0.53 (CI 0.42 to 0.64), transfer 0.33 (CI 0.22 to 0.43), N = 12,201. The cues are organizational signals, colour and labels, not only headings. The paper found no important prior-knowledge moderator, with a descriptively larger effect for high prior knowledge, which contrasts with Richter 2016.
 - Richter 2016 (MA): signalling r = 0.17, strongest for low prior knowledge.
-- Sundararajan 2020 (MA, 58 studies, 68 effects): seductive details hurt learning, g = -0.33 (secondary).
+- Sundararajan 2020 (MA, 58 papers, 68 effects, 7,521 participants): seductive details hurt learning, g = -0.33 (CI -0.48 to -0.18), strongly heterogeneous (I2 = 89%).
 - Höffler 2007 (MA): animation over static pictures d = 0.37; larger for realistic (0.76) and procedural-motor (1.06) content, 0.40 for representational graphics.
 - Berney 2016 (MA): g = 0.23, high heterogeneity.
 - Ploetzner 2020 (R): animation helps when the change shown is what must be learned.
@@ -68,7 +68,7 @@ Grouped by strand. Surveys first, then the seminal work, then later syntheses.
 
 ## 6. Hypertext and navigation load
 
-- DeStefano 2007 (R, 38 studies, secondary): each link is a decision that loads working memory.
+- DeStefano and LeFevre 2007 (R, 38 studies): each link is a decision that loads working memory.
 - Novices are helped only by a hierarchy matching the domain; restricting links helps.
 - Amadieu 2009 (S, n = 24): a network concept map did worse than a hierarchical one, most for low-prior-knowledge learners.
 - Doignon 1985 (theory): prerequisites as a quasi-order; the outer fringe is what a learner is ready for.
@@ -77,7 +77,7 @@ Grouped by strand. Surveys first, then the seminal work, then later syntheses.
 
 ## 7. Comparison and transfer
 
-- Alfieri 2013 (MA, 57 experiments, 336 tests): case comparison d = 0.50; against studying the same cases one after the other d = 0.37 and in maths 0.23 (not checked against the paper).
+- Alfieri 2013 (MA, 57 experiments, 336 tests): case comparison d = 0.50 on 336 tests (95% CI 0.44 to 0.56); d = 0.60 on the 57 experiments, heterogeneous (I2 = 59). The d = 0.37 against sequential study is not verified. Domain moderates inconsistently, so the maths figure of 0.23 is not a stable effect and is not given.
 - Gick 1983 (RCT): one case plus a principle did not transfer; two cases did.
 - Gentner 2003 (RCT): two cases compared beat the same two studied apart.
 - Catrambone 1989 (RCT): comparison must be prompted.

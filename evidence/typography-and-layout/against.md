@@ -15,7 +15,7 @@
 
 ## Polarity
 
-- Piepenbrock 2013 favours dark-on-light; Dobres 2017 finds no daytime difference and a night benefit for light text.
+- Piepenbrock 2013 favours dark-on-light; Dobres 2017 finds no daytime difference. At night white on black was clearly less legible (negative polarity disadvantage), so the night benefit belongs to dark text on light.
 
 ## Layout and design
 

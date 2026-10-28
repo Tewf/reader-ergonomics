@@ -83,7 +83,7 @@ Every work cited anywhere in this repository, once. The text cites `Author Year`
 | Díaz 2002 | Díaz, Petit, Serna (2002). A survey of graph layout problems. ACM Computing Surveys, 34(3), 313-356. | https://doi.org/10.1145/568522.568523 |
 | Dickson 2005 | Dickson, Miller (2005). Effectiveness of crib sheets (index cards). Teaching of Psychology | https://doi.org/10.1207/s15328023top3204_4 |
 | Django 2026 | Django Software Foundation (accessed 2026). Writing documentation; What to read next. Django documentation | https://docs.djangoproject.com/en/stable/internals/contributing/writing-documentation/ |
-| Dobres 2017 | Dobres, Chahine, Reimer (2017). Effects of ambient illumination, contrast polarity, and letter size on text legibility under glance-like reading. Applied Ergonomics; read as summarised in Nielsen Norman 2020 | https://doi.org/10.1016/j.apergo.2016.11.001 |
+| Dobres 2017 | Dobres, Chahine, Reimer (2017). Effects of ambient illumination, contrast polarity, and letter size on text legibility under glance-like reading. Applied Ergonomics | https://doi.org/10.1016/j.apergo.2016.11.001 |
 | Dodds 2020 | Dodds (2020). AHA programming. Blog post, 2020-06-22 | https://kentcdodds.com/blog/aha-programming |
 | Doignon 1985 | Doignon, Falmagne (1985). Spaces for the assessment of knowledge. International Journal of Man-Machine Studies | https://doi.org/10.1016/S0020-7373%2885%2980031-6 |
 | Donoghue 2021 | Donoghue, Hattie (2021). A meta-analysis of ten learning techniques. Frontiers in Education | https://doi.org/10.3389/feduc.2021.581216 |

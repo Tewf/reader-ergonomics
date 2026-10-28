@@ -44,7 +44,7 @@ Cited in review.md without a bibliography key, so not scored: Bringhurst, Krug, 
 | Beelders 2015 | experiment | review.md |
 | Cleveland 1984 | experiment | review.md |
 | Conklin 1987 | survey | review.md |
-| Dobres 2017 | experiment (read as summarised in Nielsen Norman 2020) | against.md, review.md, state-of-the-art.md |
+| Dobres 2017 | experiment (full text read: 34 adults, single words at a glance, no long-form reading) | against.md, review.md, state-of-the-art.md |
 | Dyson 2004 | review | against.md, baseline.md, position.md, review.md, state-of-the-art.md |
 | Ginns 2006 | meta-analysis | review.md, state-of-the-art.md |
 | Hannebauer 2018 | experiment (RCT) | against.md, review.md, state-of-the-art.md |

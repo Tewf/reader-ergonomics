@@ -12,10 +12,10 @@ Upper and lower bounds are kept apart, as in every topic ([method](../README.md)
 | Do examples help novices? | Barbieri 2023 | meta-analysis, maths | g = 0.48 |
 | When does assistance stop helping? (indirect evidence for examples) | Tetzlaff 2025 | meta-analysis, 60 studies on instructional assistance in general | +0.51 novices, -0.43 advanced |
 | Draw or study a concept map? | Schroeder 2018 | meta-analysis, 142 effects | 0.72 vs 0.43 |
-| Words with their picture? | Ginns 2006 | meta-analysis | d about 0.72 to 0.85 (secondary) |
-| Visual cues? | Schneider 2018 | meta-analysis, 103 studies | g = 0.53 retention |
+| Words with their picture? | Ginns 2006 | meta-analysis | d = 0.72 (spatial, 37 effects); 0.85 pooled with temporal (50 effects, 2,375 novices) |
+| Visual cues? | Schneider 2018 | meta-analysis, 103 studies | g = 0.53 retention (N = 12,201) |
 | Which multimedia rules matter most? | Noetel 2022 | meta-meta-analysis, 1,189 studies | captioning second-language video, contiguity, signalling |
-| Comparing cases? | Alfieri 2013 | meta-analysis, 57 experiments (336 tests) | d = 0.50 |
+| Comparing cases? | Alfieri 2013 | meta-analysis, 57 experiments (336 tests) | d = 0.50 per test |
 | Prequestions? | St. Hilaire 2023 | meta-analysis | g = 0.54 targeted, 0.04 other |
 | Skeletal notes? | Kiewra 1985 | randomised experiments | less writing, more recall |
 
@@ -24,7 +24,7 @@ Upper and lower bounds are kept apart, as in every topic ([method](../README.md)
 - Expanding gaps do not beat uniform gaps (g = 0.03).
 - Testing gains shrink as element interactivity grows (van Gog 2015).
 - Surface outcomes gain more than deep ones across techniques (0.60 vs 0.26).
-- Seductive details cost a little (Sundararajan 2020).
+- Seductive details cost a small to medium amount, g = -0.33, and the effect varies widely by moderator (Sundararajan 2020).
 - No pooled effect exists for subgoal labels, atomic notes or maps of content.
 
 ## Most adopted, kept apart from best evidence

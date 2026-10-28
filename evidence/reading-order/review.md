@@ -12,7 +12,7 @@ Surveys to read first: Ponce 2025 (organizers), McCrudden 2007 (relevance), Ritt
 |---|---|---|
 | Luiten 1980; Stone 1983 | advance organizer: learning d = 0.21, retention 0.26 over 135 studies (Luiten); 0.66 on tests a week or more later (Stone) (all secondary, read in Kenny 1993); the unfamiliar-material condition is Mayer's model, not a reported moderator | MA |
 | Ponce 2025 | instructor-provided graphic organizer: memory g = 0.70, comprehension 0.53, no moderator found | MA |
-| Ponce 2023 | outline inside the text: memory 0.61, comprehension 0.34 (secondary) | MA |
+| Ponce 2023 | outline given with the text: memory g+ 0.61; comprehension g+ 0.34, not significant. Learner-generated outlining: memory 0.59, comprehension 0.59, writing 0.52 (abstract) | MA |
 | Mayer 1979 | review of organizer studies; predicts organizers help most on unfamiliar material | R |
 | Bransford and Johnson 1972 | topic given before a passage raises comprehension and recall; given after, no gain | RCT |
 | DeStefano and LeFevre 2007; Amadieu 2009 | a map matching the domain hierarchy helps low prior knowledge; a network map did worse than a hierarchical one | R; S |

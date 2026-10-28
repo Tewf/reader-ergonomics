@@ -20,7 +20,8 @@ shrank (Piepenbrock 2014).
 
 ## Limits
 
-By day the polarities do not differ measurably for some tasks, and light-on-dark may win at night (Dobres 2017). The
+By day the polarities did not differ for single words read at a glance, and at night white text on black was
+clearly less legible (Dobres 2017, measured, 34 adults). The
 claim that dark mode improves reading is **not supported**.
 
 The 4.5:1 floor is a convention under revision. APCA makes the threshold depend on the size of the text, and on

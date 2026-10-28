@@ -32,7 +32,7 @@ Grouped by strand. Surveys first, then primary studies and standards.
 - WCAG 2.2 sets the numeric floors (see baseline.md).
 - Piepenbrock 2013 (RCT, fixed 10 pt type): light-on-dark text lost on acuity and proofreading at every age.
 - Piepenbrock 2014 (RCT): the loss grows as characters shrink.
-- Dobres 2017 (S): no daytime difference between polarities; light wins at night.
+- Dobres 2017 (S): no daytime difference between polarities. At night white on black was clearly less legible, a "negative polarity disadvantage". 34 adults read single words at a glance, so long-form reading is untested.
 - Nielsen Norman Group (P): default to light, offer a switch.
 
 ## 5. Scanning and chunking
@@ -46,10 +46,10 @@ Grouped by strand. Surveys first, then primary studies and standards.
 ## 6. Layout, signalling and figures
 
 - Gestalt (R): proximity is a strong grouping cue, and common region (a box) groups harder than whitespace.
-- Ginns 2006 (MA): placing words in the picture or code they explain, d about 0.72 to 0.85 (secondary). Ayres 2014 (R) gives the split-attention account.
+- Ginns 2006 (MA): placing words in the diagram or formulae they explain, d = 0.72 (spatial); 0.85 pooled with temporal. Materials were diagrams, formulae and worked examples; no code study, so code is an extension. Ayres 2014 (R) gives the split-attention account.
 - Richter 2016 (MA): signalling r = 0.17, strongest for low prior knowledge.
 - Schneider 2018 (MA, 103 studies): signalling helps retention.
-- Sundararajan 2020 (MA, 58 studies, 68 effects): seductive details hurt learning, g = -0.33 (secondary).
+- Sundararajan 2020 (MA, 58 papers, 68 effects): seductive details hurt learning, g = -0.33, strongly heterogeneous (I2 = 89%). Image type is one moderator, so decorative pictures are one subtype.
 - Bateman 2010 (S): embellished charts were no worse for accuracy and better for recall.
 - Cleveland 1984 (S): position and length are judged more accurately than angle, area or colour.
 - Vessey 1991 (R): tables fit symbolic look-up; graphs fit spatial tasks.

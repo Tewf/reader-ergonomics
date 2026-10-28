@@ -39,7 +39,7 @@ Rule of method: the field's name for a thing is the search term; the author's ow
 | BLUF, bottom line up front | military and business writing | **relevance instruction**, advance organizer (McCrudden and Schraw 2007) |
 | Pyramid Principle, governing thought | consulting | advance organizer plus hierarchical outline |
 | Inverted pyramid | journalism | importance order, a different construct from an organizer |
-| Executive summary, structured abstract | industry, journals | outline inside the text (Ponce 2023) |
+| Executive summary, structured abstract | industry, journals | outline given with a text (Ponce 2023); it tests outlines, not summaries or structured abstracts |
 | Direct or indirect order | business communication research | conclusion first or explanation first |
 | Scannable text, front-loading | web usability | **satisficing**, **patch leaving** (Pirolli 1999) |
 | Relevant, findable, understandable, usable | plain language | reader analysis (interviews, surveys); evaluation with readers (ISO 2023) |

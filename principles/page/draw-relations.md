@@ -12,7 +12,8 @@
 - A relation between things is a graph; a set or a partition is regions; a quantity is length or position; a process is frames the reader steps through.
 - A table when the reader looks up symbols; a graph when the reader compares shapes or trends (Vessey 1991).
 - Position and length before angle, area or colour, which are judged less accurately (Cleveland 1984).
-- No decorative pictures: seductive details have a small negative effect (Sundararajan 2020).
+- No decorative pictures: interesting but irrelevant material lowers learning, g = -0.33, with strongly varying
+  results (Sundararajan 2020, a meta-analysis); decorative pictures are one kind of it.
 
 ## Why
 

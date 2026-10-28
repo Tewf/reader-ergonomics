@@ -12,9 +12,9 @@ Upper and lower bounds are kept apart, as in every topic ([method](../README.md)
 | Letter spacing, dyslexia | Zorzi 2012 | randomised, n = 74 and 20 children | errors halved, speed +0.3 syllables a second (11% to 20%) |
 | Light vs dark text | Piepenbrock 2013 | controlled experiments | light-on-dark loses in acuity |
 | Scannable layout | Nielsen 1997 | usability study | +47% scannable, +124% combined |
-| Words with their figure | Ginns 2006 | meta-analysis | d about 0.72 to 0.85 (secondary) |
+| Words with their figure | Ginns 2006 | meta-analysis | d = 0.72 (spatial, 37 effects); 0.85 pooled with temporal (50 effects, 2,375 novices) |
 | Visual cues | Richter 2016 | meta-analysis | r = 0.17 |
-| Decoration | Sundararajan 2020 | meta-analysis, 58 studies (68 effects) | g = -0.33 (secondary) |
+| Decoration | Sundararajan 2020 | meta-analysis, 58 papers (68 effects) | g = -0.33, strongly heterogeneous |
 | Text contrast | WCAG 1.4.3 | standard | 4.5:1 |
 
 ## Lower bounds (limits)
@@ -23,7 +23,7 @@ Upper and lower bounds are kept apart, as in every topic ([method](../README.md)
 - Dyslexia fonts: no benefit (Wery 2017, Kuster 2018).
 - Mid-range line spacing: no difference in comprehension (Rello 2016).
 - Syntax highlighting: no comprehension gain for novices (Hannebauer 2018).
-- Light-on-dark: no daytime advantage (Dobres 2017).
+- Light-on-dark: no daytime advantage; positive polarity was nominally lower in threshold, not significantly (Dobres 2017, 34 adults, single words at a glance).
 - No study fixes a column count for code.
 
 ## Most adopted (practice record)
