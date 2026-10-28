@@ -74,12 +74,13 @@ def check(root: Path, config: dict) -> list[Finding]:
     settings = config.get("logical_lines", {})
     trigger, ceiling = settings.get("trigger", 80), settings.get("ceiling", 500)
     exempt_from_trigger = settings.get("exempt_from_trigger", [])
+    exempt_from_ceiling = settings.get("exempt_from_ceiling", [])
     ignored_prefixes = tuple(settings.get("ignore_line_prefixes", []))
     findings = []
     for path in files_in_scope(root, config, TEXT_SUFFIXES):
         text = (root / path).read_text(encoding="utf-8", errors="replace")
         physical = len(text.splitlines())
-        if physical > ceiling:
+        if physical > ceiling and not matches_any(path, exempt_from_ceiling):
             findings.append(Finding(NAME, path, 1, f"{physical} lines, past the ceiling of {ceiling}. Review it: split it "
                 "only into pieces that change separately and each stay whole, or state why it stays one file.", "judgment"))
         if Path(path).suffix in MARKDOWN_SUFFIXES and not matches_any(path, exempt_from_trigger):
