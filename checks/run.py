@@ -53,7 +53,7 @@ def main() -> int:
     tiers = set((arguments.tiers or ",".join(config.get("run", {}).get("tiers", ["program"]))).split(","))
     selected = set(arguments.only.split(",")) if arguments.only else None
 
-    findings, skipped = [], set()
+    findings, ran, skipped = [], set(), set()
     for module in CHECKS:
         tier = getattr(module, "TIER", "program")
         if tier not in tiers or (selected is not None and module.NAME not in selected):
@@ -62,6 +62,7 @@ def main() -> int:
             skipped.add(tier)
             continue
         findings += module.check(root, config)
+        ran.add(tier)
     errors = [finding for finding in findings if finding.kind == "error"]
     warnings = [finding for finding in findings if finding.kind == "warning"]
     for finding in errors + warnings:
@@ -71,8 +72,14 @@ def main() -> int:
         print(f"notice   tier '{tier}' skipped: its library is not installed (see checks/README.md)")
     settings = config.get("judgment", {})
     print(judgment.dispatch(root, findings, arguments.judge or settings.get("backend", "flag"), settings))
-    print(f"{len(errors)} error(s), {len(warnings)} warning(s); tiers: {', '.join(sorted(tiers))}")
+    print(summary(len(errors), len(warnings), ran, skipped))
     return 1 if errors else 0
+
+
+def summary(errors: int, warnings: int, ran: set[str], skipped: set[str]) -> str:
+    """The last line: the tiers that ran, and apart from them the tiers whose library was missing."""
+    line = f"{errors} error(s), {warnings} warning(s); tiers run: {', '.join(sorted(ran)) or 'none'}"
+    return line + (f"; skipped: {', '.join(sorted(skipped))}" if skipped else "")
 
 
 if __name__ == "__main__":

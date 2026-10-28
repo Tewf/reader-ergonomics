@@ -13,6 +13,7 @@ from program import (co_change, cross_file_terms, defined_before_use, duplicatio
                      logical_lines, long_sentences, name_matches_title, outline_depth, overview_first, paragraph_length,
                      portable_paths, principle_coverage, provisional_tags, readable_measure, references, shape_conformance,
                      sufficient_contrast, tree_shape, type_buckets)
+import run
 from syntax import clause_nesting, dependency_length, parser
 
 CONFIG = {"scope": {"exclude": []}, "tree_shape": {"max_entries": 4, "min_entries": 2, "max_depth": 3},
@@ -258,6 +259,13 @@ class TestCleanRepository(ScratchRepository):
         self.write("guide/other.md", "A different sentence entirely.\n")
         for module in (portable_paths, links, duplication, defined_before_use):
             self.assertEqual(self.messages(module), [], module.NAME)
+
+
+class TestSummary(unittest.TestCase):
+    def test_a_skipped_tier_is_not_listed_as_run(self) -> None:
+        self.assertEqual(run.summary(0, 1, {"program"}, {"meaning"}),
+                         "0 error(s), 1 warning(s); tiers run: program; skipped: meaning")
+        self.assertEqual(run.summary(2, 0, {"program", "syntax"}, set()), "2 error(s), 0 warning(s); tiers run: program, syntax")
 
 
 if __name__ == "__main__":
