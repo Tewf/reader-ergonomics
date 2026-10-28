@@ -1,0 +1,52 @@
+project:
+  type: website
+  output-dir: _site
+  resources:
+    - llms.txt
+    - LICENSE
+    - LICENSES/
+    - "checks/*.py"
+    - "checks/*.toml"
+    - "shapes/**/*.tex"
+    - "**/*.md"
+
+website:
+  title: "Reader ergonomics"
+  site-url: "https://tewf.github.io/reader-ergonomics/"
+  repo-url: "https://github.com/Tewf/reader-ergonomics"
+  repo-actions: [source, issue]
+  page-navigation: true
+  navbar:
+    left:
+      - text: Standard
+        href: standard.md
+      - text: Principles
+        href: principles/index.qmd
+      - text: Reader styles
+        href: reader-styles/index.qmd
+      - text: Shapes
+        href: shapes/index.qmd
+      - text: Evidence
+        href: evidence/index.qmd
+      - text: Checks
+        href: checks/index.qmd
+    right:
+      - text: Français
+        href: README.fr.md
+  sidebar:
+    style: docked
+    search: true
+    contents: auto
+
+format:
+  html:
+    from: markdown-smart
+    shift-heading-level-by: -1
+    html-math-method: mathml
+    toc: true
+    toc-depth: 2
+    theme:
+      light: cosmo
+      dark: darkly
+    css: site.css
+    link-external-newwindow: false

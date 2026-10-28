@@ -1,0 +1,24 @@
+/* The site's one stylesheet: house tokens in the light theme, reading measures in both.
+   The tokens are served by the main site on the same origin; every value has a fallback,
+   so the page reads the same when they cannot be fetched. */
+@import url("https://tewf.github.io/site/tokens.css");
+
+body.quarto-light {
+  --bs-body-color: var(--ink, #101014);
+  --bs-body-bg: var(--paper, #F7F7F9);
+  --bs-secondary-color: var(--muted, #6A6D77);
+}
+
+/* Measure 55 to 75 characters, body 18 px, leading 1.5 to 1.6: the ranges in
+   evidence/typography-and-layout. */
+main.content {
+  font-size: 1.125rem;
+  line-height: 1.55;
+}
+main.content p,
+main.content li {
+  max-width: 66ch;
+}
+main.content table {
+  font-size: 1rem;
+}

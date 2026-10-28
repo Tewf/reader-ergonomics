@@ -8,3 +8,6 @@ __pycache__/
 *.pyc
 # Local output of the checks
 checks/out/
+
+/.quarto/
+**/*.quarto_ipynb
