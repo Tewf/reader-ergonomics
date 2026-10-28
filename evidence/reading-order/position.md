@@ -85,6 +85,7 @@ Changes to a corpus that would support the procedure:
 ## Practice and the evidence
 
 - Practice runs ahead of the evidence: BLUF and the Pyramid Principle have wide use, and no controlled comparison with narrative order for working readers was found.
-- Practice ignores the evidence: the inverted pyramid survives while its direct tests favour narrative for Thai news readers (Nildam 1998) or show no difference (Sternadori 2008).
+- Practice ignores the evidence: the inverted pyramid survives while its two direct tests disagree. Narrative order did better for Thai news readers
+(Nildam 1998); importance order did marginally better on comprehension, with no difference in memory (Sternadori 2008).
 - Reader state limits the rule: front-loading fits readers who scan for a fact (Nielsen 2006), and explanation first fits bad news that readers do not expect (Jansen 2010). Message valence was manipulated, and surprise is a proposed, untested mechanism.
 - ISO 2023 agrees on order and extends it. It puts importance first at the beginning (5.2.2 a, a convention with no evidence cited in the preview) and builds new information on known information. It adds relevance and evaluation with readers.

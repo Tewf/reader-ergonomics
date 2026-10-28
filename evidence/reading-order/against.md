@@ -38,5 +38,5 @@ This file lists null results, controversies, costs of the proposal, and practice
 
 | Practice | Principle at risk | Evidence |
 |---|---|---|
-| Inverted pyramid cited as support for overview first | overview first | it is importance order, not a map; Nildam 1998 and Sternadori 2008 do not support it |
+| Inverted pyramid cited as support for overview first | overview first | it is importance order, not a map; its two tests, both theses, disagree (Nildam 1998; Sternadori 2008) |
 | Conclusion first for every message | overview first | explanation first rated higher for bad news (Jansen 2010) |
