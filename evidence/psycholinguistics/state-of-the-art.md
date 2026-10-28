@@ -57,13 +57,14 @@ Its total cost is C = f(s_1) + ... + f(s_n).
 | Problem | Bound | Source | Kind | Grade |
 |---|---|---|---|---|
 | MinLA, general graph | NP-complete | Garey et al. 1976 | lower | measured (theorem) |
-| MinLA, tree | polynomial | Shiloach 1979; Chung 1984 | upper | measured (theorem) |
+| MinLA, tree | polynomial, O(n^2.2) (abstract only) | Shiloach 1979; Chung 1984 | upper | measured (theorem) |
 | Projective or planar minimum, tree | linear time | Alemany-Puig et al. 2022 | upper | measured (theorem) |
 | Arrangement of an acyclic directed graph | NP-complete | Even and Shiloach, as cited in Shiloach 1979 | lower | supported with caveat (secondary) |
-| Linear ordering, rooted tree | O(n log n) | Adolphson & Hu 1973, as cited in Shiloach 1979 | upper | supported with caveat (secondary) |
+| Linear ordering, rooted tree (root at the left end, each node after all its ancestors) | O(n log n) | Adolphson & Hu 1973, section 3 | upper | measured (theorem) |
 | Unit-time scheduling with precedence, weighted completion time | NP-hard | Lawler 1978, as stated in Lenstra & Rinnooy Kan 1980 | lower | supported with caveat (secondary) |
 
-- Caveat on the two rows cited through Shiloach 1979: its abstract does not say whether the directed version forces arcs to point forward.
+- Caveat on the acyclic directed row, cited through Shiloach 1979 (abstract only): its definition of the directed version was not read, nor was Even and Shiloach.
+- The rooted-tree row is the ordered version: Adolphson and Hu 1973 (section 2) place each node after its predecessors, so it is not MinLA on an undirected tree.
 - Futrell et al. 2015 compare to the projective minimum, not to unconstrained MinLA.
 - The unconstrained tree minimum (Chung 1984) is the baseline of Ferrer-i-Cancho et al. 2022.
 

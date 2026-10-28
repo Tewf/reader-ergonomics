@@ -64,7 +64,7 @@ Surveys first, then the seminal work, then forward citations.
 
 ## 6. The human constants
 
-- Miller 1981, Kiger 1984: depth versus breadth on menus of 64 items; two levels of eight beat deeper and flatter menus. Larson 1998, with web sites of 512 items: two levels of 16 by 32 were fastest and three levels of 8 slowest (see [against](against.md)).
+- Kiger 1984: on 64 targets, the three two-level trees (8x8, 4x16, 16x4) were equally fast and faster than three and six levels; 8x8 was ranked easiest and most preferred. Miller 1981 alone supplies the flatter-menu comparison. Larson 1998, with web sites of 512 items: two levels of 16 by 32 were fastest and three levels of 8 slowest (see [against](against.md)).
 - Pirolli 1999: **information foraging theory**.
 - Lawrance 2013: programmers navigate code by scent, and a scent model predicts their paths better than a hypothesis model.
 - Lawrie 2006, 2007: full words beat abbreviations and single letters for comprehension.

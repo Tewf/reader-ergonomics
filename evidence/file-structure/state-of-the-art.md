@@ -9,7 +9,7 @@ Upper bounds (what has been achieved) are kept apart from lower bounds (what is 
 | Find duplicated structure | subtree hashing (Baxter 1998), Deckard vectors, CCFinder tokens | precision and recall on Bellon 2007 and BigCloneBench |
 | Compress a tree by sharing | minimal DAG (Downey 1980); grammar and top-tree compression beyond it | size of the compressed representation |
 | Check architecture rules | ArchUnit, Lattix, import-linter, dependency-cruiser | violations found; no quality score |
-| Pick depth and breadth | two levels rather than three; up to 32 items on one level (Miller 1981, Kiger 1984, Larson 1998) | search time and errors on menus of 64 targets and sites of 512 items |
+| Pick depth and breadth | two levels rather than three (Kiger 1984); up to 32 items on one level (Larson 1998 alone; Miller 1981 for flat menus) | search time and errors on menus of 64 targets and sites of 512 items |
 
 ## Upper bounds
 

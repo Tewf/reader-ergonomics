@@ -56,7 +56,8 @@ The evidence against nine file and folder conventions, theme by theme: the claim
 
 - **Claim** (supported with caveat): any file within two clicks; a browsed folder splits past about 16 entries, citing an optimum of 8-16 items per level; subfolders only from 3 items.
 - Miller 1981 timed selection among 64 targets in menus shaped 2^6, 4^3, 8^2 and 64^1: two levels of eight was fastest and had fewest errors.
-- Kiger 1984 tested five 64-target menus: 4x16 was fastest, not reliably faster than 16x4 or 8x8, and users preferred 8x8 (secondary: read in Larson 1998).
+- Kiger 1984 tested five 64-target menus: 4x16 was fastest, not reliably faster than 16x4 or 8x8, and users preferred 8x8. It recommends menus of 8 or 9 items; its widest menu had 16.
+- Kiger 1984 reads the result as depth mattering more than breadth, and notes that the slow 4x4x4 tree may reflect system response time counted in task time. Its items were 1 to 5 words, so long items may need narrower menus.
 - Larson 1998 used three sites of 512 items each and 19 participants, with 24 searches per person and targets drawn from the 128 shared items. 16x32 was fastest (mean 36 s), 32x16 next (46 s), 8x8x8 slowest (58 s), and only the three-level tree was significantly slower.
 - So the best measured layout had two levels with 32 items on one of them. Breadth 8 lost when it forced a third level: an optimum of 8-16 per level is not what these studies found.
 - The direction of all three studies supports the 3-item floor: needless depth costs more than breadth.
@@ -135,6 +136,6 @@ Each item is a practice that pulls against one principle. The pages are tool own
 - Practice strand: Fowler 1999 is read on a Wikipedia page, not in the book. The Go 1.4 internal rule is read in its release notes; its later scope is not checked. Potvin's article of 2016, Turborepo and Nx were not re-read.
 
 - Read in summaries, not in the books: the 25-word test (Martin 2008), the length and classitis passages (Ousterhout 2018), the DRY restatement (Thomas 2019), and the redundancy technique (Lakos 1996, table of contents only).
-- Kiger 1984 is reported through Larson 1998; the paper itself was not read.
+- Kiger 1984 was read in full (browser check, batch B).
 - Hunt 2013: slides and summaries read, talk not watched; DeStefano 2007 and Madrid 2009: abstracts read in index summaries; Broughton 2015: term from the contents, definition from a glossary.
 - Syer 2015 appeared online in 2014; the key uses the issue year.

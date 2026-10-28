@@ -46,7 +46,7 @@ Order inside each strand: definitions, seminal work, forward citations.
 
 - **Center-embedding**: a clause inside another, with outer material on both sides; its **degree** counts nested clauses.
 - Miller & Chomsky 1963: center-embedded sentences are grammatical; their difficulty is a limit of finite memory.
-- Miller & Isard 1964: self-embedded sentences are harder to learn in free recall (secondary).
+- Miller & Isard 1964: self-embedded sentences are harder to learn in free recall (24 listeners, 5 trials; spoken, not written). Embedding effects are small beside the effect of scrambling the words.
 - Karlsson 2007: 119 multiple center-embeddings in 7 European languages: degree at most 3 in writing, practically none in speech.
 - Gibson & Thomas 1999: doubly nested relative clauses missing the middle verb phrase are rated as acceptable as complete ones.
 - Vasishth et al. 2010: in seven experiments, dropping the middle verb eases English reading and hurts German reading.
@@ -57,11 +57,11 @@ Order inside each strand: definitions, seminal work, forward citations.
 - **Proposition**: a predicate with its arguments; the **text base** is the network of a text's propositions.
 - **Situation model**: what the reader builds about the topic, from text base plus knowledge.
 - **Argument overlap**: two propositions share an argument; **reinstatement search**: retrieval from memory when nothing in the buffer overlaps.
-- Kintsch & Keenan 1973: reading time followed the number of propositions more than the number of words (secondary).
+- Kintsch & Keenan 1973: with sentence length fixed at 16 words, each extra proposition added about 1 s of reading time (about 1.5 s per proposition recalled). The paper does not pit propositions against words as competing predictors. Under restricted reading time, recall no longer rose with propositions presented.
 - Kintsch & van Dijk 1978: cycles through a limited buffer, coherence by argument overlap, macro-operators that reduce to gist.
 - Miller & Kintsch 1980: the model applied to readability of short passages. Abstract only: 20 texts and 600 undergraduates, with readability as reading time per proposition recalled. Predictions of readability, reading time and recall reached r = .8 to .9.
 - Kintsch 1988; Kintsch 1998: construction-integration: bottom-up activation, then integration by spreading activation.
-- Haviland & Clark 1974: the **given-new contract**: a sentence is read faster when its given part has a direct antecedent (secondary).
+- Haviland & Clark 1974: the [Given-New Strategy](../../principles/sentence/given-before-new.md). A target sentence is understood faster (button press, about 140 to 180 ms) when its Given part has a direct antecedent (3 experiments, N = 16, 10, 27). The measure is self-judged comprehension time; the authors warn against taking absolute differences very seriously.
 - Britton & Gülgöz 1991: the model located inference calls in a 1000-word text; each was repaired into a principled revision.
 - Gülgöz et al. 1999: revisions that add missing links help learning, most of all for readers short of inference skill, knowledge or motivation (secondary).
 - Gopen & Swan 1990: old information in the topic position first, new information in the stress position last, subject near its verb.

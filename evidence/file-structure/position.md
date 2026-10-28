@@ -29,7 +29,7 @@ The conventions can be read as one optimization problem, a cost of space plus a 
 | Addition | Source | Grade |
 |---|---|---|
 | No import cycles between folders | Murphy 2001, ArchUnit, Nx | convention, untested |
-| Breadth ceiling: split a folder past about 32 entries | Miller 1981, Kiger 1984, Larson 1998 | supported with caveat, by analogy from menus (see against.md) |
+| Breadth ceiling: split a folder past about 32 entries | Larson 1998 alone; Kiger 1984 supports fewer levels and menus of about 8, not this figure | supported with caveat, by analogy from menus (see against.md) |
 | Enter a folder through its index | Nx public API rule, Bazel visibility | convention, untested |
 | Scent test: a newcomer predicts content from the path | Lawrance 2013, Larson 1998 | supported with caveat |
 | Co-change edges from version history | Gall 1998, Zimmermann 2005, Tornhill 2015 | supported with caveat |

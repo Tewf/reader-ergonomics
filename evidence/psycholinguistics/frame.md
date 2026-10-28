@@ -24,7 +24,7 @@ How much information should each unit of a text carry, how deeply may units nest
 | 1 | surprisal theory; uniform information density; entropy rate constancy | UID, ERC | Hale; Levy; Jaeger; Genzel & Charniak | predictability effect, linking function, information density |
 | 2 | dependency locality theory; dependency length minimization; depth hypothesis | DLT, SPLT, DLM, DDm | Gibson; Futrell; Temperley & Gildea; Ferrer-i-Cancho; Yngve | dependency distance, integration cost, Yngve depth |
 | 3 | center-embedding; self-embedding; structural forgetting | none | Miller & Chomsky; Karlsson; Gibson & Thomas | missing-VP illusion, grammaticality illusion |
-| 4 | propositional text base; construction-integration; given-new contract | CI | Kintsch; van Dijk; Haviland & Clark | idea density, argument overlap, referential cohesion, reinstatement search, bridging inference |
+| 4 | propositional text base; construction-integration; [given-new strategy](../../principles/sentence/given-before-new.md) | CI | Kintsch; van Dijk; Haviland & Clark | idea density, argument overlap, referential cohesion, reinstatement search, bridging inference |
 | 5 | levels effect; rhetorical structure theory; centering; entity grid | RST | Meyer; Mann & Thompson; Grosz, Joshi & Weinstein; Barzilay & Lapata | content structure, macrostructure, local coherence |
 | Reader | reverse cohesion effect; expertise reversal effect | none | McNamara; Kalyuga | prior knowledge by text interaction |
 | Ordering | minimum linear arrangement; optimal linear ordering; weighted completion-time scheduling | MinLA, MLA, `1\|prec\|ΣwC` | Garey, Johnson & Stockmeyer; Shiloach; Chung; Adolphson & Hu; Lawler | graph layout, linear layout |
@@ -56,7 +56,7 @@ How much information should each unit of a text carry, how deeply may units nest
 | RST, centering | "rhetorical structure theory", "centering" | RST | Mann, Grosz | theory plus corpus test Poesio et al. 2004 |
 | MinLA | "minimum linear arrangement" | MinLA, MLA | Shiloach, Chung | complexity results and the graph layout survey |
 | Ordered variant | "precedence-constrained linear arrangement" | none | none | zero exact hits: the query was wrong |
-| Ordered variant, renamed | "optimal linear ordering"; "weighted completion time" with precedence | `1\|prec\|ΣwC` | Adolphson & Hu; Lawler | found, via the abstract of Shiloach 1979 |
+| Ordered variant, renamed | "optimal linear ordering"; "weighted completion time" with precedence | `1\|prec\|ΣwC` | Adolphson & Hu; Lawler | found: the ordered variant is single-machine weighted completion time with precedence, shown for trees by Adolphson & Hu 1973 section 4 and for directed graphs by Lawler 1978 |
 | Readability | "readability formula" | FRE, FKGL | Flesch, Crossley | formula and critiques |
 
 ## Scope

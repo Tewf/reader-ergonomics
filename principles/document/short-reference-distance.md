@@ -33,7 +33,7 @@ For example, with three prerequisite edges:
 ```
 
 In general it is a weighted sum of positions under precedence: single-machine scheduling, solvable in polynomial time when the
-prerequisites form a forest (Lawler 1978, secondary). Without precedence it is Minimum Linear Arrangement, NP-complete
+prerequisites form a forest (Lawler 1978, abstract only: it names series-parallel precedence, which includes forests). Without precedence it is Minimum Linear Arrangement, NP-complete
 in general (Garey et al. 1976) and polynomial on trees (Chung 1984).
 
 ## Limits

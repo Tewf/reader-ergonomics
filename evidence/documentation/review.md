@@ -5,7 +5,7 @@ Surveys first, then the standards, then the empirical studies.
 ## 1. Surveys and empirical studies
 
 - Rani 2023: systematic literature review of code comment quality assessment. Quality attributes cluster on **consistency** with the code, **completeness**, and **usefulness** beyond the code itself.
-- Pascarella 2019: a taxonomy of comments from 40 thousand comment lines in Java (secondary).
+- Pascarella 2019: a taxonomy of comments from over 40,000 comment lines in 14 Java projects; 6 categories, 16 subcategories. In open-source projects, 59% of comment lines fall in categories that say nothing about what the code does or why. Limits: Java only, and the code around each comment was not recorded.
 - Wen 2019: a large-scale study of code-comment inconsistencies; code and comments drift apart, and inconsistency is the dominant decay mode.
 - Prana 2019: 4,226 README sections from 393 repositories, annotated as What, Why, How, When, Who, References, Contribution. What and How are common; Why and project status are the two commonly missing.
 
