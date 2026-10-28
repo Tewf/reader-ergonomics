@@ -4,7 +4,7 @@
 
 - **Grade:** measured.
 - **Evidence:** [learning science](../../evidence/learning-science/review.md) (strand 5), [typography and layout](../../evidence/typography-and-layout/review.md) (strand 5).
-- **Check:** judgment.
+- **Check:** `paragraph-length` (heuristic): no paragraph past four sentences, no run past 25 statements under one heading.
 - **Reader styles:** strengthened by [visual-relational](../../reader-styles/visual-relational.md) and [LLM reader](../../reader-styles/llm-reader.md).
 
 ## What it asks

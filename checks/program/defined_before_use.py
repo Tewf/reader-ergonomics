@@ -13,7 +13,7 @@ from __future__ import annotations
 import re
 from pathlib import Path
 
-from check_api import MARKDOWN_SUFFIXES, Finding, files_in_scope, prose_only
+from framework.check_api import MARKDOWN_SUFFIXES, Finding, files_in_scope, prose_only
 
 NAME = "defined-before-use"
 EXACT = False

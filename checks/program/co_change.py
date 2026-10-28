@@ -18,7 +18,7 @@ from collections import Counter
 from itertools import combinations
 from pathlib import Path, PurePosixPath
 
-from check_api import Finding, files_in_scope, matches_any
+from framework.check_api import Finding, files_in_scope, matches_any
 
 NAME = "co-change"
 EXACT = False

@@ -4,7 +4,7 @@
 
 - **Grade:** measured for polarity; the 4.5:1 floor is a convention (a standard).
 - **Evidence:** [typography and layout](../../evidence/typography-and-layout/review.md) (strand 4), [baseline](../../evidence/typography-and-layout/baseline.md).
-- **Check:** none in `checks/`; any WCAG contrast checker computes it exactly.
+- **Check:** `sufficient-contrast` (exact, on the site's stylesheet): every text colour declared with its background reaches 4.5:1.
 - **Reader styles:** none override it.
 
 ## What it asks

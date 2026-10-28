@@ -4,7 +4,7 @@
 
 - **Grade:** supported with caveat.
 - **Evidence:** [file structure](../../evidence/file-structure/review.md), [against](../../evidence/file-structure/against.md) (one place per fact).
-- **Check:** `duplication` (exact, a run of 20 identical words in two files), `links` (exact, a link that replaces a copy must resolve).
+- **Check:** `duplication` (exact, 20 identical words in two files), `links` (exact, a link that replaces a copy must resolve), `paraphrase` (meaning: the same fact in other words).
 - **Reader styles:** strengthened by [LLM reader](../../reader-styles/llm-reader.md).
 
 ## What it asks

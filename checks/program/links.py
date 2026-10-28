@@ -13,7 +13,7 @@ import re
 import urllib.parse
 from pathlib import Path, PurePosixPath
 
-from check_api import MARKDOWN_SUFFIXES, Finding, files_in_scope, line_of, prose_only, repository_paths
+from framework.check_api import MARKDOWN_SUFFIXES, Finding, files_in_scope, line_of, prose_only, repository_paths
 
 NAME = "links"
 EXACT = True

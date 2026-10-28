@@ -4,7 +4,7 @@
 
 - **Grade:** measured.
 - **Evidence:** [reading order](../../evidence/reading-order/review.md) (strands 1 and 2).
-- **Check:** judgment.
+- **Check:** `overview-first` (heuristic): a long document's title is followed by an opening, not by another heading; whether the opening is an overview is judgment.
 - **Reader styles:** strengthened by [novice](../../reader-styles/novice.md) and [LLM reader](../../reader-styles/llm-reader.md).
 
 ## What it asks

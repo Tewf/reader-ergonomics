@@ -4,7 +4,7 @@
 
 - **Grade:** convention, untested; widely adopted.
 - **Evidence:** [documentation](../../evidence/documentation/review.md) (strand 2), [against](../../evidence/documentation/against.md).
-- **Check:** judgment.
+- **Check:** `document-mode` (meaning): a page reading about equally as two modes is asked about.
 - **Reader styles:** none override it.
 
 ## What it asks

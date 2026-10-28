@@ -4,7 +4,7 @@
 
 - **Grade:** supported with caveat.
 - **Evidence:** [psycholinguistics](../../evidence/psycholinguistics/review.md) (strands 4 and 5), [against](../../evidence/psycholinguistics/against.md).
-- **Check:** judgment.
+- **Check:** `sentence-links` (syntax, weekly): consecutive sentences share a noun or point back.
 - **Reader styles:** none override it.
 
 ## What it asks

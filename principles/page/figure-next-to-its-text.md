@@ -4,7 +4,7 @@
 
 - **Grade:** measured.
 - **Evidence:** [learning science](../../evidence/learning-science/review.md) (strand 5), [typography and layout](../../evidence/typography-and-layout/review.md) (strand 6).
-- **Check:** judgment.
+- **Check:** `figure-captions`: every image has alt text, and every drawn figure has words right beside it.
 - **Reader styles:** none override it.
 
 ## What it asks

@@ -15,7 +15,7 @@ import re
 from collections import defaultdict
 from pathlib import Path
 
-from check_api import MARKDOWN_SUFFIXES, Finding, files_in_scope, matches_any, prose_only
+from framework.check_api import MARKDOWN_SUFFIXES, Finding, files_in_scope, matches_any, prose_only
 
 NAME = "duplication"
 EXACT = True

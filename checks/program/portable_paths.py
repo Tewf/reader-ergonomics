@@ -15,7 +15,7 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from check_api import Finding, repository_paths
+from framework.check_api import Finding, repository_paths
 
 NAME = "portable-paths"
 EXACT = True

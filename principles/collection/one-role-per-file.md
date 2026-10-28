@@ -4,7 +4,7 @@
 
 - **Grade:** convention, untested.
 - **Evidence:** [file structure](../../evidence/file-structure/review.md), [against](../../evidence/file-structure/against.md) (one role per file).
-- **Check:** judgment, asked by `logical-lines` past the trigger; `co-change` raises files that keep changing together across folders.
+- **Check:** `logical-lines` asks past the trigger; `co-change` raises files that keep changing together across folders; `section-cohesion` (meaning) asks about a section far from all the others.
 - **Reader styles:** none override it.
 
 ## What it asks

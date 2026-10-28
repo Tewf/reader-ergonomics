@@ -1,23 +1,27 @@
-"""The standard's generated indexes: the principle table in standard.md, and llms.txt.
+"""The repository's generated indexes: the principle table in standard.md, llms.txt, and the check tables.
 
-Both are built from the principle files (their title, claim, grade and check lines), so
-a grade is written once, in its principle, and every index follows it. As a check, it
-fails when a committed index differs from what the principle files give.
+The first two are built from the principle files (their title, claim and grade), so a grade is
+written once, in its principle, and every index follows it. Each check tier's README lists its
+modules with the first line of their docstrings, so a check says what it does once, in its
+code. As a check, it fails when a committed index differs from what its sources give.
 
-Usage: python3 checks/standard_card.py [ROOT] [--write]
+Usage: python3 checks/program/standard_card.py [ROOT] [--write]
 Exact. Time O(size of the principle files), space O(number of principles).
 """
 from __future__ import annotations
 
+import ast
 import re
 import sys
 from pathlib import Path
 
-from check_api import Finding
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))  # run alone, it still finds framework/
+from framework.check_api import Finding
 
 NAME = "standard-card"
 EXACT = True
 START, END = "<!-- principles:start -->", "<!-- principles:end -->"
+CHECKS_START, CHECKS_END = "<!-- checks:start -->", "<!-- checks:end -->"
 SITE = "https://tewf.github.io/reader-ergonomics/"
 FACETS = [("collection", "Collection: files and folders"), ("document", "Document: order and depth"),
           ("sentence", "Sentence: density, locality and nesting"), ("page", "Page: figures, layout and type")]
@@ -75,11 +79,26 @@ def llms_index(items: list[dict], root: Path) -> str:
     return "\n".join(lines)
 
 
+def check_table(folder: Path) -> str:
+    header = "| Check | What it verifies |" if folder.name == "program" else "| File | Role |"
+    rows = []
+    for module in sorted(folder.glob("*.py")):
+        purpose = (ast.get_docstring(ast.parse(module.read_text(encoding="utf-8"))) or "").split("\n")[0].rstrip(".")
+        rows.append(f"| [{module.name}]({module.name}) | {purpose} |")
+    return "\n".join([CHECKS_START, header, "|---|---|", *rows, CHECKS_END])
+
+
 def expected(root: Path) -> dict[str, str]:
     items = principles(root)
     card = (root / "standard.md").read_text(encoding="utf-8")
     built = re.sub(re.escape(START) + ".*?" + re.escape(END), lambda _: table(items), card, flags=re.DOTALL)
-    return {"standard.md": built, "llms.txt": llms_index(items, root)}
+    outputs = {"standard.md": built, "llms.txt": llms_index(items, root)}
+    for readme in sorted((root / "checks").glob("*/README.md")):
+        text = readme.read_text(encoding="utf-8")
+        if CHECKS_START in text:
+            outputs[readme.relative_to(root).as_posix()] = re.sub(re.escape(CHECKS_START) + ".*?" + re.escape(CHECKS_END),
+                lambda _: check_table(readme.parent), text, flags=re.DOTALL)
+    return outputs
 
 
 def check(root: Path, config: dict) -> list[Finding]:
@@ -89,7 +108,7 @@ def check(root: Path, config: dict) -> list[Finding]:
     for name, text in expected(root).items():
         current = (root / name).read_text(encoding="utf-8") if (root / name).is_file() else ""
         if current != text:
-            findings.append(Finding(NAME, name, 0, "stale: rebuild with python3 checks/standard_card.py --write"))
+            findings.append(Finding(NAME, name, 0, "stale: rebuild with python3 checks/program/standard_card.py --write"))
     return findings
 
 

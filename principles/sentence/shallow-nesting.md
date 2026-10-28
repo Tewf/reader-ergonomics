@@ -4,7 +4,7 @@
 
 - **Grade:** measured.
 - **Evidence:** [psycholinguistics](../../evidence/psycholinguistics/review.md) (strand 3), [against](../../evidence/psycholinguistics/against.md).
-- **Check:** judgment; a parser counts nesting in polynomial time, and is not in `checks/`.
+- **Check:** `clause-nesting` (syntax, weekly): no sentence nests more than two clauses.
 - **Reader styles:** strengthened by [novice](../../reader-styles/novice.md); relaxed by [LLM reader](../../reader-styles/llm-reader.md).
 
 ## What it asks

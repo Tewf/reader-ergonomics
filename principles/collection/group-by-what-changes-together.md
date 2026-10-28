@@ -4,7 +4,7 @@
 
 - **Grade:** supported with caveat.
 - **Evidence:** [file structure](../../evidence/file-structure/review.md), [against](../../evidence/file-structure/against.md) (group folders by purpose).
-- **Check:** `co-change` (judgment): files that keep changing together but sit in different folders.
+- **Check:** `co-change` (judgment): files that keep changing together but sit in different folders; `type-buckets` (exact): no folder named for a kind of file.
 - **Reader styles:** none override it.
 
 ## What it asks

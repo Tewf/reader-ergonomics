@@ -4,7 +4,7 @@
 
 - **Grade:** measured.
 - **Evidence:** [learning science](../../evidence/learning-science/review.md) (strand 5), [typography and layout](../../evidence/typography-and-layout/review.md) (strand 6).
-- **Check:** judgment.
+- **Check:** `figures-present` (judgment): a long text with no figure or table is asked about.
 - **Reader styles:** strengthened by [visual-relational](../../reader-styles/visual-relational.md); replaced by an edge list or table for an [LLM reader](../../reader-styles/llm-reader.md).
 
 ## What it asks

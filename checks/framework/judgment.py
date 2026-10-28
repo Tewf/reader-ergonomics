@@ -20,7 +20,7 @@ import os
 import urllib.request
 from pathlib import Path
 
-from check_api import Finding
+from framework.check_api import Finding
 
 QUESTION_PROMPT = ("Answer the question about the file below in at most three sentences, then end with "
                    "a line 'VERDICT: pass' or 'VERDICT: fail'.\n\nQuestion: {question}\n\nFile {path}:\n{content}")

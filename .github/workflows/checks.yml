@@ -1,19 +1,23 @@
 name: Check the standard
 
+# Tier 1 (program) and tier 3 (meaning) run on every push and pull request.
+# Tier 2 (syntax) and the online reference check run weekly, and on demand.
 on:
   push:
   pull_request:
   schedule:
-    - cron: "17 6 * * 1"   # Mondays: resolve every reference, since links rot
+    - cron: "17 6 * * 1"   # Mondays
   workflow_dispatch:
 
 permissions:
   contents: read
 
 jobs:
-  checks:
+  every-push:
     if: github.event_name != 'schedule'
     runs-on: ubuntu-latest
+    env:
+      FASTEMBED_CACHE_PATH: /home/runner/.cache/fastembed   # outside the checked tree
     steps:
       - uses: actions/checkout@v4
         with:
@@ -21,15 +25,24 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+          cache: pip
+          cache-dependency-path: checks/meaning/requirements.txt
+      - name: Cache the embedding model
+        uses: actions/cache@v4
+        with:
+          path: /home/runner/.cache/fastembed
+          key: fastembed-${{ hashFiles('checks/meaning/requirements.txt') }}
+      - name: Install the meaning tier
+        run: pip install -r checks/meaning/requirements.txt
       - name: Test the checks themselves
         run: python3 -m unittest discover -s checks
-      - name: Check the repository against its own standard
-        run: python3 checks/run.py . --judge flag
+      - name: Check the repository, tiers program and meaning
+        run: python3 checks/run.py . --tiers program,meaning --judge flag
       - name: List the questions left for judgment
         if: always()
         run: cat checks/out/needs-judgment.md 2>/dev/null || echo "No questions for judgment."
 
-  references:
+  weekly:
     if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     steps:
@@ -37,5 +50,12 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+          cache: pip
+          cache-dependency-path: checks/syntax/requirements.txt
+      - name: Install the syntax tier
+        run: pip install -r checks/syntax/requirements.txt
+      - name: Check the repository, tier syntax
+        run: python3 checks/run.py . --tiers syntax --judge flag
       - name: Resolve every reference online
+        if: always()
         run: python3 checks/run.py . --online --only references --judge none

@@ -4,7 +4,7 @@
 
 - **Grade:** supported with caveat.
 - **Evidence:** [typography and layout](../../evidence/typography-and-layout/review.md) (strands 1 to 3), [baseline](../../evidence/typography-and-layout/baseline.md).
-- **Check:** none in `checks/`; measure the rendered line, not the CSS value.
+- **Check:** `readable-measure` (exact, on the site's stylesheet): a measure of 45 to 75 characters, body text of 16 px or more, line height of 1.5 or more.
 - **Reader styles:** none override it; letter spacing may be raised for readers with dyslexia.
 
 ## What it asks

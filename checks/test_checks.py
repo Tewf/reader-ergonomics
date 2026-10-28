@@ -8,15 +8,12 @@ import tempfile
 import unittest
 from pathlib import Path
 
-import co_change
-import defined_before_use
-import duplication
-import links
-import logical_lines
-import outline_depth
-import portable_paths
-import provisional_tags
-import tree_shape
+from meaning import document_mode, embeddings, paraphrase
+from program import (co_change, cross_file_terms, defined_before_use, duplication, figure_captions, figures_present, links,
+                     logical_lines, long_sentences, name_matches_title, outline_depth, overview_first, paragraph_length,
+                     portable_paths, principle_coverage, provisional_tags, readable_measure, shape_conformance,
+                     sufficient_contrast, tree_shape, type_buckets)
+from syntax import clause_nesting, dependency_length, parser
 
 CONFIG = {"scope": {"exclude": []}, "tree_shape": {"max_entries": 4, "min_entries": 2, "max_depth": 3},
           "duplication": {"words": 8}, "logical_lines": {"trigger": 3, "ceiling": 10}}
@@ -130,6 +127,109 @@ class TestPlantedViolations(ScratchRepository):
         found = self.messages(co_change)
         self.assertEqual(len(found), 1, found)
         self.assertIn("a/x.md changed together with b/y.md in 3 commits", found[0])
+
+
+    def test_type_buckets(self) -> None:
+        self.write("docs/a.md")
+        self.write("guides/b.md")
+        found = self.messages(type_buckets)
+        self.assertEqual(len(found), 1, found)
+
+    def test_name_matches_title(self) -> None:
+        self.write("guides/folder-depth.md", "# Folder depth\n\nText.\n")
+        self.write("guides/contrast-ratio.md", "# Something else entirely\n\nText.\n")
+        found = self.messages(name_matches_title)
+        self.assertEqual(len(found), 1, found)
+        self.assertIn("contrast-ratio", found[0])
+
+    def test_overview_first(self) -> None:
+        body = "\n".join(f"- item {index}" for index in range(25))
+        self.write("long.md", "# Title\n\n## Detail\n\n" + body + "\n")
+        self.write("good.md", "# Title\n\nWhat this is, in two parts.\n\n## Detail\n\n" + body + "\n")
+        found = self.messages(overview_first)
+        self.assertEqual(len(found), 1, found)
+        self.assertIn("long.md", found[0])
+
+    def test_cross_file_terms(self) -> None:
+        self.write("glossary/terms.md", "**Surprisal** is how unexpected a word is.\n")
+        self.write("notes/linked.md", "Surprisal matters, see [terms](../glossary/terms.md).\n")
+        self.write("notes/unlinked.md", "Surprisal matters here too.\n")
+        found = self.messages(cross_file_terms)
+        self.assertEqual(len(found), 1, found)
+        self.assertIn("notes/unlinked.md", found[0])
+
+    def test_shape_conformance(self) -> None:
+        self.write("notes/a.md", "# A\n\n## In three points\n\n## Check yourself\n")
+        self.write("notes/b.md", "# B\n\n## In three points\n")
+        config = dict(CONFIG, shape_conformance={"shapes": [{"name": "note", "files": ["notes/*.md"], "required": ["In three points", "Check yourself"]}]})
+        found = [finding.path for finding in shape_conformance.check(self.root, config)]
+        self.assertEqual(found, ["notes/b.md"])
+
+    def test_long_sentences(self) -> None:
+        self.write("a.md", "Short one. " + " ".join(["word"] * 40) + ".\n\n- one item\n- " + " ".join(["word"] * 10) + "\n")
+        found = self.messages(long_sentences)
+        self.assertEqual(len(found), 1, found)
+
+    def test_figures_present(self) -> None:
+        self.write("plain.md", "\n".join(f"Sentence {index}." for index in range(45)) + "\n")
+        self.write("drawn.md", "\n".join(f"Sentence {index}." for index in range(45)) + "\n\n| a | b |\n|---|---|\n")
+        found = self.messages(figures_present)
+        self.assertEqual(len(found), 1, found)
+        self.assertIn("plain.md", found[0])
+
+    def test_figure_captions(self) -> None:
+        self.write("a.md", "# A\n\n![](x.png)\n\n## B\n\n```text\nA -> B\n```\n\n## C\n\nWords.\n\n```text\nC -> D\n```\n")
+        found = self.messages(figure_captions)
+        self.assertEqual(len(found), 2, found)
+
+    def test_paragraph_length(self) -> None:
+        self.write("a.md", "One. Two. Three. Four. Five.\n\nOne. Two.\n")
+        found = self.messages(paragraph_length)
+        self.assertEqual(len(found), 1, found)
+
+    def test_site_stylesheet(self) -> None:
+        self.write("site.css", "main p { max-width: 90ch; font-size: 14px; line-height: 1.2; }\n"
+                   "body { color: #777777; background: #ffffff; }\n.ok { color: #101014; background: #F7F7F9; }\n")
+        config = dict(CONFIG, readable_measure={"stylesheets": ["site.css"]}, sufficient_contrast={"stylesheets": ["site.css"]})
+        self.assertEqual(len(readable_measure.check(self.root, config)), 3)
+        contrast = sufficient_contrast.check(self.root, config)
+        self.assertEqual(len(contrast), 1, contrast)
+        self.assertAlmostEqual(sufficient_contrast.ratio("000000", "ffffff"), 21.0)
+
+    def test_principle_coverage(self) -> None:
+        self.write("principles/page/a.md", "# A\n\n- **Check:** `links` (exact).\n")
+        self.write("principles/page/b.md", "# B\n\n- **Check:** judgment.\n")
+        config = dict(CONFIG, registered_checks=["links"])
+        found = [finding.path for finding in principle_coverage.check(self.root, config)]
+        self.assertEqual(found, ["principles/page/b.md"])
+
+
+@unittest.skipUnless(embeddings.available(), "fastembed is not installed")
+class TestMeaningTier(ScratchRepository):
+    def test_paraphrase(self) -> None:
+        self.write("a/x.md", "Readers remember the ideas at the top of a text much better than the details that sit deep below them.\n")
+        self.write("b/y.md", "People recall the top-level ideas of a text far better than the details placed deep underneath them.\n")
+        self.write("c/z.md", "The build runs on every push and stores its cache between runs so that installs stay quick today.\n")
+        found = paraphrase.check(self.root, dict(CONFIG, paraphrase={"threshold": 0.8, "min_words": 10}))
+        self.assertEqual([finding.path for finding in found], ["a/x.md"], found)
+
+    def test_document_mode_runs(self) -> None:
+        self.write("a.md", "\n".join(f"Step {index}: do the next thing." for index in range(25)) + "\n")
+        self.assertIsInstance(document_mode.check(self.root, CONFIG), list)
+
+
+@unittest.skipUnless(parser.available(), "spaCy with en_core_web_sm is not installed")
+class TestSyntaxTier(ScratchRepository):
+    def test_dependency_length(self) -> None:
+        self.write("a.md", "The cat sat.\n\nThe report that the committee which the board appointed in the spring of the year "
+                   "before last after long and careful deliberation finally wrote was rejected.\n")
+        found = dependency_length.check(self.root, dict(CONFIG, dependency_length={"max_distance": 10}))
+        self.assertEqual(len(found), 1, found)
+
+    def test_clause_nesting(self) -> None:
+        self.write("a.md", "The rat that the cat that the dog chased killed ate the malt.\n\nThe cat sat on the mat.\n")
+        found = clause_nesting.check(self.root, dict(CONFIG, clause_nesting={"max_depth": 1}))
+        self.assertEqual(len(found), 1, found)
 
 
 class TestCleanRepository(ScratchRepository):

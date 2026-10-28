@@ -4,7 +4,7 @@
 
 - **Grade:** supported with caveat.
 - **Evidence:** [file structure](../../evidence/file-structure/review.md), [against](../../evidence/file-structure/against.md) (names), [LLM readers](../../evidence/llm-readers/).
-- **Check:** judgment.
+- **Check:** `name-matches-title` (heuristic): the name's words appear in the title or opening; `name-content` (meaning): name and opening close in meaning.
 - **Reader styles:** strengthened by [expert](../../reader-styles/expert.md) and [LLM reader](../../reader-styles/llm-reader.md).
 
 ## What it asks

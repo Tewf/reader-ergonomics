@@ -1,34 +1,32 @@
 # Checks
 
-The checks are the standard's oracle. A rule a program can verify exactly is verified by a program,
-for free; a model is asked only what no program can answer. Every check runs in polynomial time and
-space, needs only the Python standard library (3.11 or later), and costs nothing to run. A check that
-would cost money exists but stays off until the maintainer turns it on.
+The standard's oracle. Every principle names at least one check that tests it, and CI fails if one names none. A rule
+a program can verify exactly is verified by a program, for free; a model is used only where meaning is at stake; a
+question no model should settle is left for judgment. Every check runs in polynomial time and space, and none costs
+money: the one paid backend exists but is off.
 
-## Contents
+## Tiers, and how often they run
 
-| Check | Principle | Kind | Time |
-|---|---|---|---|
-| [portable_paths.py](portable_paths.py) | [portable paths](../principles/collection/portable-paths.md) | exact | O(path length) |
-| [tree_shape.py](tree_shape.py) | [browsable folders](../principles/collection/browsable-folders.md), [dependencies without cycles](../principles/collection/dependencies-without-cycles.md) | exact, plus a judgment question | O(paths + imports) |
-| [links.py](links.py) | [one place per fact](../principles/collection/one-place-per-fact.md): a link replaces a copy only if it resolves | exact | O(text) |
-| [logical_lines.py](logical_lines.py) | [size is a prompt](../principles/collection/size-is-a-prompt.md) | judgment past the trigger and past the ceiling | O(text) |
-| [duplication.py](duplication.py) | [one place per fact](../principles/collection/one-place-per-fact.md) | exact | O(words), expected |
-| [outline_depth.py](outline_depth.py) | [shallow outline](../principles/document/shallow-outline.md) | exact count, warns past level 3 | O(text) |
-| [defined_before_use.py](defined_before_use.py) | [define before use](../principles/document/define-before-use.md) | heuristic (warns) | O(terms x text) |
-| [citations.py](citations.py) | every cited work listed once, every entry cited | heuristic (warns) | O(text) |
-| [standard_card.py](standard_card.py) | the card's principle table and `llms.txt` match the principle files they are built from | exact; `--write` rebuilds | O(principle files) |
-| [provisional_tags.py](provisional_tags.py) | [tunables in config](../principles/collection/tunables-in-config.md): a guess older than 90 days is asked about | exact date, judgment | O(text + lines blamed) |
-| [co_change.py](co_change.py) | [one role per file](../principles/collection/one-role-per-file.md), [group by what changes together](../principles/collection/group-by-what-changes-together.md): files that keep changing together across folders | judgment | O(commits × 20²) |
-| [references.py](references.py) | every DOI, arXiv id and link resolves | exact; offline by default | O(references) requests |
+```text
+ tier       needs                            runs                    finds
+ program    the Python standard library      every push              errors, warnings, questions
+ meaning    sentence embeddings (fastembed)  every push, model cached questions
+ syntax     a parser (spaCy)                 weekly, and on demand   warnings
+ judgment   a person, or a model if given    every push: listed      answers
+```
 
-| Support file | Role |
+| Folder | Holds |
 |---|---|
-| [run.py](run.py) | the one entry point: runs the checks, prints findings, sends judgment questions to the backend |
-| [check_api.py](check_api.py) | the interface every check shares: files in scope, the finding it returns |
-| [judgment.py](judgment.py) | the judgment backends |
-| [config.toml](config.toml) | every threshold, tagged PROVISIONAL where it is a convention |
-| [test_checks.py](test_checks.py) | the checks' own oracle: one planted violation per check |
+| [program/](program/) | the checks that need no model: paths, folders, links, size, outline, copies, terms, shapes, sentences, figures, stylesheet, citations, history |
+| [meaning/](meaning/) | the checks that compare meaning: paraphrased copies, page mode, name against content, section cohesion |
+| [syntax/](syntax/) | the checks that read a parse: [dependency length](../evidence/psycholinguistics/review.md), clause nesting, links between sentences |
+| [framework/](framework/) | what every check is built on: the interface, the prose units, the judgment backends |
+| [run.py](run.py) | the one entry point |
+| [config.toml](config.toml) | every threshold, tagged PROVISIONAL where it is a convention, and the default tiers |
+| [test_checks.py](test_checks.py) | the checks' own oracle: a planted violation per check |
+
+Which principle each check serves is said once, on the principle's **Check:** line; `principle-coverage` holds every
+principle to naming at least one registered check.
 
 ## Kinds of finding
 
@@ -40,12 +38,6 @@ would cost money exists but stays off until the maintainer turns it on.
                             (default), local model,
                             or api (paid, off)
 ```
-
-- **error:** certain. The run exits with status 1.
-- **warning:** a heuristic match. Read it; it may be wrong.
-- **judgment:** a question no program can answer exactly, such as "does this file's role fit in one sentence?". It goes to the backend.
-
-## Judgment backends
 
 | Backend | What happens | Cost |
 |---|---|---|
@@ -59,21 +51,19 @@ A model's answer is recorded as advice next to its question; it never fails the 
 ## Use
 
 ```sh
-python3 checks/run.py .                # this repository
-python3 checks/run.py path/to/repo     # another; its config wins
-python3 checks/run.py . --only links   # some checks only
+python3 checks/run.py .                    # tiers from config
+python3 checks/run.py . --tiers program    # no model at all
+python3 checks/run.py path/to/repo         # another; its config wins
 python3 checks/run.py . --online --only references
-python3 checks/run.py . --judge local  # needs the two variables
-python3 -m unittest discover -s checks # test the checks
+python3 -m unittest discover -s checks     # test the checks
+pip install -r checks/meaning/requirements.txt   # the meaning tier
+pip install -r checks/syntax/requirements.txt    # the syntax tier
 ```
 
-## On every push
-
-`.github/workflows/checks.yml` runs the tests and every check on each push to any branch and on each pull request,
-offline and for free, and lists the judgment questions in the log. Once a week it resolves every reference online,
-since links rot. No paid backend runs there.
+A tier whose library is missing is skipped with a notice, never failed. `.github/workflows/checks.yml` runs the program
+and meaning tiers on every push and pull request. It runs the syntax tier and the online references once a week.
 
 ## What is not checked here
 
-Contrast ratios, rendered line length and the shape of a figure are properties of the rendered page. A browser
-accessibility checker measures them exactly; they are not reimplemented here.
+The rendered page: contrast and measure are checked on the stylesheet's declared values, not on the pixels. A browser
+accessibility checker measures the rendered page exactly.

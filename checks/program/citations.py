@@ -19,7 +19,7 @@ import re
 import unicodedata
 from pathlib import Path
 
-from check_api import MARKDOWN_SUFFIXES, Finding, files_in_scope, line_of, matches_any, prose_only
+from framework.check_api import MARKDOWN_SUFFIXES, Finding, files_in_scope, line_of, matches_any, prose_only
 
 NAME = "citations"
 EXACT = False
@@ -27,7 +27,7 @@ PARTICLE = r"(?:(?:[Vv]an|[Vv]on|[Dd]e|[Dd]er|[Dd]en|[Dd]u|[Dd]a|[Dd]i|[Dd]os|[D
 SURNAME = rf"{PARTICLE}*(?:[A-Z][a-z]{{0,3}}\.\s)?[A-ZÀ-Ý][\w'’-]+"
 YEAR = r"(?:1[89]|20)\d\d[a-z]?"
 LOWERCASE_NAME = re.compile(r"\b([a-z][a-z]*[A-Za-z]*)\s((?:1[89]|20)\d\d[a-z]?)\b")
-CITATION = re.compile(rf"\b({SURNAME})(?:\s(?:et al\.|(?:&|and)\s{SURNAME}(?:\s[A-ZÀ-Ý][\w'’-]+)?))?,?\s({YEAR}(?:,\s{YEAR})*)\b")
+CITATION = re.compile(rf"\b({SURNAME})(?:\s+(?:et al\.|(?:&|and)\s+{SURNAME}(?:\s[A-ZÀ-Ý][\w'’-]+)?))?,?\s+({YEAR}(?:,\s{YEAR})*)\b")
 
 
 def normalised(key: str) -> str:

@@ -4,7 +4,7 @@
 
 - **Grade:** supported with caveat for judged quality; **not supported** as a way to read faster.
 - **Evidence:** [psycholinguistics](../../evidence/psycholinguistics/state-of-the-art.md) (sections 1 and 2), [against](../../evidence/psycholinguistics/against.md).
-- **Check:** judgment; word probabilities from a language model would measure it, and are not in `checks/`.
+- **Check:** `long-sentences` (heuristic): a sentence past 35 words; word probabilities from a language model would measure density itself, and are not in `checks/`.
 - **Reader styles:** none override it.
 
 ## What it asks

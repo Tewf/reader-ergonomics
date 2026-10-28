@@ -18,7 +18,8 @@ import re
 import sys
 from pathlib import Path
 
-from check_api import MARKDOWN_SUFFIXES, Finding, files_in_scope, matches_any
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))  # run alone, it still finds framework/
+from framework.check_api import MARKDOWN_SUFFIXES, Finding, files_in_scope, matches_any
 
 NAME = "logical-lines"
 EXACT = False

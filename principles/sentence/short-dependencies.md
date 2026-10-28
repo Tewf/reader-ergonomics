@@ -4,7 +4,7 @@
 
 - **Grade:** measured in controlled sentences; supported with caveat in natural reading.
 - **Evidence:** [psycholinguistics](../../evidence/psycholinguistics/review.md) (strand 2), [against](../../evidence/psycholinguistics/against.md).
-- **Check:** judgment; a dependency parser computes it in polynomial time, and is not in `checks/`.
+- **Check:** `dependency-length` (syntax, weekly): no word more than 12 words from the word it depends on; `long-sentences` on every push.
 - **Reader styles:** none override it.
 
 ## What it asks

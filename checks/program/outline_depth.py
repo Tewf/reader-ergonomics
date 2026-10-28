@@ -11,7 +11,7 @@ from __future__ import annotations
 import re
 from pathlib import Path
 
-from check_api import MARKDOWN_SUFFIXES, Finding, files_in_scope, line_of, matches_any, prose_only
+from framework.check_api import MARKDOWN_SUFFIXES, Finding, files_in_scope, line_of, matches_any, prose_only
 
 NAME = "outline-depth"
 EXACT = True

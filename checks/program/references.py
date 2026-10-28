@@ -19,7 +19,7 @@ import urllib.request
 import xml.etree.ElementTree as ElementTree
 from pathlib import Path
 
-from check_api import MARKDOWN_SUFFIXES, Finding, files_in_scope, matches_any
+from framework.check_api import MARKDOWN_SUFFIXES, Finding, files_in_scope, matches_any
 
 NAME = "references"
 EXACT = True

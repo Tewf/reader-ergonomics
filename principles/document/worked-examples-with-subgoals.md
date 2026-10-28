@@ -4,7 +4,7 @@
 
 - **Grade:** measured, for novices; reversed for experts.
 - **Evidence:** [learning science](../../evidence/learning-science/review.md) (strand 3).
-- **Check:** judgment.
+- **Check:** `shape-conformance` (exact, for documents declared as reports in config): the plan and its steps are present; whether the steps name goals is judgment.
 - **Reader styles:** strengthened by [novice](../../reader-styles/novice.md); relaxed by [expert](../../reader-styles/expert.md).
 
 ## What it asks

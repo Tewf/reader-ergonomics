@@ -4,7 +4,7 @@
 
 - **Grade:** supported with caveat: locality is measured in sentences and applied to documents by analogy.
 - **Evidence:** [psycholinguistics](../../evidence/psycholinguistics/state-of-the-art.md) (sections 3 and 6), [against](../../evidence/psycholinguistics/against.md).
-- **Check:** judgment.
+- **Check:** `cross-file-terms` (heuristic): a term defined in another folder is linked where it is used; the order of a whole document is judgment.
 - **Reader styles:** strengthened by [novice](../../reader-styles/novice.md).
 
 ## What it asks

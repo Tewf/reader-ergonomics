@@ -4,7 +4,7 @@
 
 - **Grade:** measured.
 - **Evidence:** [learning science](../../evidence/learning-science/review.md) (strands 1 and 2).
-- **Check:** judgment.
+- **Check:** `shape-conformance` (exact, for documents declared as notes in config): the questions are present; whether they test recall is judgment.
 - **Reader styles:** none override it; it does not apply to pure reference material.
 
 ## What it asks

@@ -18,7 +18,7 @@ import ast
 from collections import defaultdict
 from pathlib import Path, PurePosixPath
 
-from check_api import Finding, matches_any, repository_paths
+from framework.check_api import Finding, matches_any, repository_paths
 
 NAME = "tree-shape"
 EXACT = True
@@ -38,7 +38,7 @@ def folder_entries(paths: list[str]) -> dict[str, set[str]]:
 
 
 def imported_files(source: str, importer: str, known: set[str]) -> set[str]:
-    """Repository files a Python module imports statically, found next to it or from the root."""
+    """Repository files a Python module imports statically, found next to it or in any folder above it."""
     try:
         tree = ast.parse(source)
     except SyntaxError:
@@ -53,15 +53,16 @@ def imported_files(source: str, importer: str, known: set[str]) -> set[str]:
             if candidate in known:
                 found.add(candidate)
 
+    ancestors = [here, *here.parents]  # an entry script's folder on the path makes any of them a root
     for node in ast.walk(tree):
         if isinstance(node, ast.Import):
             for alias in node.names:
-                resolve(here, alias.name)
-                resolve(PurePosixPath("."), alias.name)
+                for base in ancestors:
+                    resolve(base, alias.name)
         elif isinstance(node, ast.ImportFrom):
             if node.level > 1 and node.level - 2 >= len(here.parents):
                 continue  # a relative import above the repository root
-            bases = [here.parents[node.level - 2] if node.level > 1 else here] if node.level else [here, PurePosixPath(".")]
+            bases = [here.parents[node.level - 2] if node.level > 1 else here] if node.level else ancestors
             for base in bases:
                 resolve(base, node.module or "")
                 for alias in node.names:

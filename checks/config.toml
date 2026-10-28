@@ -1,6 +1,9 @@
 # What the checks read. Values tagged PROVISIONAL are conventions, not measured optima;
 # the principle each one serves says how strong its evidence is.
 
+[run]
+tiers = ["program", "meaning"]   # every push; "syntax" runs weekly (see .github/workflows/checks.yml)
+
 [scope]
 exclude = ["LICENSE", "LICENSES/", "checks/out/"]
 
@@ -29,6 +32,82 @@ min_together = 3   # PROVISIONAL
 min_share = 0.75   # PROVISIONAL: of the commits of the rarer file
 exempt = ["standard.md", "llms.txt", "evidence/bibliography.md"]   # built from, or shared by, many files
 
+[type_buckets]
+names = ["docs", "doc", "assets", "misc", "utils", "util", "stuff", "other", "files", "helpers"]
+
+[overview_first]
+min_statements = 20   # PROVISIONAL
+
+[name_matches_title]
+exempt = ["evidence/bibliography.md", "*index.qmd", "reader-styles/template.md"]   # stubs include their README; a template's title is the copy's
+
+[cross_file_terms]
+min_length = 6
+max_files = 5   # PROVISIONAL: past it, a term is shared vocabulary
+exempt = ["evidence/bibliography.md", "standard.md", "llms.txt"]   # titles, and copies built from the principles
+
+[shape_conformance]
+shapes = []   # e.g. { name = "note", files = ["notes/*.md"], required = ["In three points", "Check yourself"] }
+
+[long_sentences]
+max_words = 35   # PROVISIONAL
+exempt = ["evidence/bibliography.md"]
+
+[paragraph_length]
+max_sentences = 4          # PROVISIONAL
+max_without_heading = 25   # PROVISIONAL
+exempt = ["evidence/bibliography.md"]
+
+[figures_present]
+min_statements = 40   # PROVISIONAL
+exempt = ["evidence/bibliography.md"]
+
+[figure_captions]
+exempt = []
+
+[readable_measure]
+stylesheets = ["site.css"]
+measure_ch = [45, 75]
+min_font_px = 16
+min_line_height = 1.5
+
+[sufficient_contrast]
+stylesheets = ["site.css"]
+min_ratio = 4.5
+
+[paraphrase]
+min_words = 15
+threshold = 0.9    # PROVISIONAL
+max_findings = 20
+exempt = ["evidence/bibliography.md"]
+
+[document_mode]
+min_statements = 20
+margin = 0.02      # PROVISIONAL
+exempt = ["evidence/bibliography.md"]
+
+[name_content]
+threshold = 0.2    # PROVISIONAL
+role_name_folders = 3
+exempt = ["evidence/bibliography.md"]
+
+[section_cohesion]
+min_words = 30
+threshold = 0.25   # PROVISIONAL
+exempt = []
+
+[dependency_length]
+max_distance = 12  # PROVISIONAL
+exempt = ["evidence/bibliography.md"]
+
+[clause_nesting]
+max_depth = 2      # Gibson & Thomas 1999: two nested clauses already mislead readers
+exempt = ["evidence/bibliography.md"]
+
+[sentence_links]
+max_unlinked = 0.5 # PROVISIONAL
+exempt = ["evidence/bibliography.md"]
+
 [portable_paths]
 allow_symlinks = false
 
@@ -46,7 +125,7 @@ exempt = []
 bibliography = "evidence/bibliography.md"
 files = ["evidence/", "principles/", "reader-styles/", "shapes/"]
 not_surnames = ["WCAG", "Colon", "Classification", "Prolegomena", "Python", "Since", "In", "From", "Until", "By", "After", "Before", "Around",
-                "CONSORT", "PRISMA", "Lancet", "NEJM", "BMJ", "JAMA"]   # guideline and journal names before a year
+                "CONSORT", "PRISMA", "Lancet", "NEJM", "BMJ", "JAMA", "On"]   # guideline and journal names before a year
 
 [references]
 files = ["evidence/bibliography.md"]   # where references live; empty means every markdown file

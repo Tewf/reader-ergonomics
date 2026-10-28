@@ -13,7 +13,7 @@ import subprocess
 import time
 from pathlib import Path
 
-from check_api import Finding, files_in_scope, matches_any
+from framework.check_api import Finding, files_in_scope, matches_any
 
 NAME = "provisional-tags"
 EXACT = True
