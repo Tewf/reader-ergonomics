@@ -44,12 +44,14 @@ class TestPlantedViolations(ScratchRepository):
         self.write("notes/same.md")
         self.write("notes/draft .md")
         self.write("notes/NUL.txt")
+        self.write("notes/COM¹.md")
         self.write("notes/ends.")
         found = " ".join(self.messages(portable_paths))
         self.assertIn("forbidden character", found)
         self.assertIn("only by case", found)
         self.assertIn("space before the extension", found)
         self.assertIn("reserved device name", found)
+        self.assertIn("COM¹", found)
         self.assertIn("trailing period", found)
 
     def test_links(self) -> None:

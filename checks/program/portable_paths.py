@@ -4,7 +4,8 @@ Each rule is a hard failure, because git aborts the checkout ("unable to create 
 and leaves the clone half-written:
 - no `: * ? " < > | \\` and no control character in a path component (reserved on FAT, exFAT, NTFS);
 - no leading or trailing space in a component, nor before its extension, and no trailing period;
-- no reserved device name (CON, PRN, AUX, NUL, COM1-9, LPT1-9), even with an extension;
+- no reserved device name (CON, PRN, AUX, NUL, COM1-9, LPT1-9, and COM or LPT with a superscript ¹ ² ³), even
+  with an extension;
 - no two paths that differ only by case (the second overwrites the first);
 - no versioned symbolic link (absent on some shared storage), unless config allows them.
 A path of 260 characters or more warns: Windows refuses it unless long paths are enabled.
@@ -20,7 +21,8 @@ from framework.check_api import Finding, repository_paths
 NAME = "portable-paths"
 EXACT = True
 FORBIDDEN_CHARACTERS = set(':*?"<>|\\') | {chr(code) for code in range(1, 32)}
-RESERVED_NAMES = {"con", "prn", "aux", "nul"} | {f"{port}{digit}" for port in ("com", "lpt") for digit in range(1, 10)}
+PORT_DIGITS = [str(digit) for digit in range(1, 10)] + ["¹", "²", "³"]  # Windows reads ¹ ² ³ as digits too
+RESERVED_NAMES = {"con", "prn", "aux", "nul"} | {f"{port}{digit}" for port in ("com", "lpt") for digit in PORT_DIGITS}
 LONGEST_PATH = 259
 
 
