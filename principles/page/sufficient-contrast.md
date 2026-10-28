@@ -15,7 +15,8 @@
 
 ## Why
 
-Light-on-dark text cost acuity and proofreading accuracy at every age, more as type shrank (Piepenbrock 2013).
+Light-on-dark text cost acuity and proofreading accuracy at every age (Piepenbrock 2013), and more as type
+shrank (Piepenbrock 2014).
 
 ## Limits
 

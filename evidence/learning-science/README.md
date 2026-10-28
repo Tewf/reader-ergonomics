@@ -8,11 +8,11 @@ Steps: [frame](frame.md) · [review](review.md) · [state of the art](state-of-t
 
 | Claim | Grade | Where |
 |---|---|---|
-| Practice testing beats restudy (g = 0.50) | measured | review.md 2 |
+| Practice testing beats restudy (g = 0.33; 0.50 against all controls) | measured | review.md 2 |
 | Spaced beats massed retrieval (g = 0.74) | measured | review.md 2 |
 | Worked examples help novices, reverse for experts | measured | review.md 3 |
 | Constructing a concept map beats studying one (g = 0.72) | measured | review.md 4 |
-| Words placed with their picture beat split placement (d = 0.85) | measured | review.md 5 |
+| Words placed with their picture beat split placement (d about 0.72 to 0.85, secondary) | measured | review.md 5 |
 | Signalling helps retention (g = 0.53) | measured | review.md 5 |
 | Each hypertext link adds load for novices | supported with caveat | review.md 6 |
 | Matching instruction to a learning style helps | not supported | against.md |

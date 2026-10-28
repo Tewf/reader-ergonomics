@@ -4,7 +4,7 @@
 
 | Claim at risk | Evidence against | Source |
 |---|---|---|
-| Overview first helps | organizer effect is small (d = 0.21, secondary) and needs unfamiliar material | Luiten 1980; Stone 1983 |
+| Overview first helps | organizer effect is small (d = 0.21, secondary) and helps most on unfamiliar material | Luiten 1980; Stone 1983; Mayer 1979 |
 | Any overview helps | complex overviews do not help novices | DeStefano and LeFevre 2007; Amadieu 2009 |
 | Zoom-lens and spiral sequencing | the few tests are null; spiral evidence is single-site and quasi-experimental | Van Patten 1986; Harden and Stamper 1999 |
 | Skim first | skimming gives only moderate comprehension | Rayner 2016 |

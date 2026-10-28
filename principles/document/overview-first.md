@@ -21,6 +21,6 @@ Telling readers what is relevant raises learning of that part at no extra readin
 
 ## Limits
 
-The classic advance organizer has a small effect, d = 0.21, and helps mostly on unfamiliar material (Luiten 1980,
-secondary). A complex overview does not help; a map should match the domain's own hierarchy (Amadieu 2009). Stating
+The classic advance organizer has a small effect, d = 0.21 (Luiten 1980, secondary), and helps most on unfamiliar
+material (Mayer 1979). A complex overview does not help; a map should match the domain's own hierarchy (Amadieu 2009). Stating
 what matters lowers learning of what was not named (Klauer 1984).

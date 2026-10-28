@@ -18,7 +18,8 @@
 
 A diagram puts related items next to each other, so the reader neither searches nor infers what the page could show
 (Larkin & Simon 1987). Words with pictures beat words alone across the multimedia literature (Mayer 2020). Building
-a concept map beats studying one, g = 0.82 against 0.37 (Nesbit 2006).
+a concept map beat activities without one, g = 0.82, and studying a map beat them by 0.37 (Nesbit 2006); in
+the North American studies alone, building gave 0.47.
 
 ## Limits
 

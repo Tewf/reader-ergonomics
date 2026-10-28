@@ -269,7 +269,8 @@ Every work cited anywhere in this repository, once. The text cites `Author Year`
 | Pascarella 2019 | Pascarella, Bruntink, Bacchelli (2019). Classifying code comments in Java software systems. Empirical Software Engineering | https://doi.org/10.1007/s10664-019-09694-w |
 | Pashler 2008 | Pashler, McDaniel, Rohrer, Bjork (2008). Learning styles: concepts and evidence. Psychological Science in the Public Interest | https://doi.org/10.1111/j.1539-6053.2009.01038.x |
 | Passos 2010 | Passos, Terra, Valente, Diniz, Mendonca (2010). Static architecture-conformance checking: an illustrative overview. IEEE Software | https://doi.org/10.1109/MS.2009.117 |
-| Piepenbrock 2013 | Piepenbrock, Mayr, Buchner (2013). Positive display polarity is advantageous for both younger and older adults. Ergonomics | https://doi.org/10.1080/00140139.2013.790485 |
+| Piepenbrock 2013 | Piepenbrock, Mayr, Mund, Buchner (2013). Positive display polarity is advantageous for both younger and older adults. Ergonomics | https://doi.org/10.1080/00140139.2013.790485 |
+| Piepenbrock 2014 | Piepenbrock, Mayr, Buchner (2014). Positive display polarity is particularly advantageous for small character sizes. Human Factors | https://doi.org/10.1177/0018720813515509 |
 | Pirolli 1999 | Pirolli, Card (1999). Information foraging. Psychological Review | https://doi.org/10.1037/0033-295X.106.4.643 |
 | Ploetzner 2020 | Ploetzner, Berney, Bétrancourt (2020). A review of learning demands in instructional animations. Instructional Science | https://doi.org/10.1007/s11251-021-09541-w |
 | Poesio 2004 | Poesio, Stevenson, Di Eugenio, Hitzeman (2004). Centering: A parametric theory and its instantiations. Computational Linguistics, 30(3), 309-363. | https://doi.org/10.1162/0891201041850911 |
@@ -295,7 +296,7 @@ Every work cited anywhere in this repository, once. The text cites `Author Year`
 | Rello 2013 | Rello, Baeza-Yates (2013). Good fonts for dyslexia. ASSETS | https://doi.org/10.1145/2513383.2513447 |
 | Rello 2016 | Rello, Pielot, Marcos (2016). Make it big! The effect of font size and line spacing on online readability. CHI | https://doi.org/10.1145/2858036.2858204 |
 | Renkl 2004 | Renkl, Atkinson, Große (2004). How fading worked solution steps works. Instructional Science | https://doi.org/10.1023/B:TRUC.0000021815.74806.f6 |
-| Richter 2016 | Richter, Scheiter, Eitel (2016). Signaling text-picture relations in multimedia learning: a comprehensive meta-analysis. Educational Research Review | https://doi.org/10.1016/j.edurev.2016.03.003 |
+| Richter 2016 | Richter, Scheiter, Eitel (2016). Signaling text-picture relations in multimedia learning: a comprehensive meta-analysis. Educational Research Review | https://doi.org/10.1016/j.edurev.2015.12.003 |
 | Rissanen 1978 | Rissanen (1978). Modeling by shortest data description. Automatica | https://doi.org/10.1016/0005-1098%2878%2990005-5 |
 | Rittle-Johnson 2007 | Rittle-Johnson, Star (2007). Does comparing solution methods facilitate conceptual and procedural knowledge? Journal of Educational Psychology | https://doi.org/10.1037/0022-0663.99.3.561 |
 | Rittle-Johnson 2009 | Rittle-Johnson, Koedinger (2009). Iterating between lessons on concepts and procedures. British J. Educational Psychology. | https://doi.org/10.1348/000709908X398106 |

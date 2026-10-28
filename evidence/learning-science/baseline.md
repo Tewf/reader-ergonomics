@@ -8,11 +8,11 @@ This is the control condition of the cited meta-analyses.
 
 | Rule or feature | Control it is compared against | Measure |
 |---|---|---|
-| Folded check question with feedback | restudy of the same text | g = 0.50 (0.73 with feedback) |
+| Folded check question with feedback | restudy of the same text | g = 0.33 (0.73 with feedback) |
 | Spaced review of checks | massed review | g = 0.74 |
 | Worked example, then faded | problem solving without examples | about g = 0.47 |
 | Reader draws the map | reader studies a given map | 0.72 vs 0.43 |
-| Words placed in the figure or code | words separate from it | d = 0.85 |
+| Words placed in the figure or code | words separate from it | d about 0.72 to 0.85 (secondary) |
 | Bold, headings, arrows | no cues | g = 0.53 retention |
 | Terms defined before use | terms defined in the flow | median d = 0.75 (one lab) |
 | Compare two cases with a prompt | the same cases studied one after another | d = 0.37 |

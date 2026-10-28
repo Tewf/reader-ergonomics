@@ -12,7 +12,7 @@ Upper and lower bounds are kept apart, as in every topic ([method](../README.md)
 | Letter spacing, dyslexia | Zorzi 2012 | randomised, n = 94 children | accuracy about doubled, speed +20% |
 | Light vs dark text | Piepenbrock 2013 | controlled experiments | light-on-dark loses in acuity |
 | Scannable layout | Nielsen 1997 | usability study | +47% scannable, +124% combined |
-| Words with their figure | Ginns 2006 | meta-analysis | d = 0.85 (secondary) |
+| Words with their figure | Ginns 2006 | meta-analysis | d about 0.72 to 0.85 (secondary) |
 | Visual cues | Richter 2016 | meta-analysis | r = 0.17 |
 | Decoration | Sundararajan 2020 | meta-analysis, 68 experiments | small negative |
 | Text contrast | WCAG 1.4.3 | standard | 4.5:1 |

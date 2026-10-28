@@ -30,7 +30,8 @@ Grouped by strand. Surveys first, then primary studies and standards.
 ## 4. Contrast and polarity
 
 - WCAG 2.2 sets the numeric floors (see baseline.md).
-- Piepenbrock 2013 (RCT): light-on-dark text lost on acuity and proofreading at every age, more as type shrank.
+- Piepenbrock 2013 (RCT, fixed 10 pt type): light-on-dark text lost on acuity and proofreading at every age.
+- Piepenbrock 2014 (RCT): the loss grows as characters shrink.
 - Dobres 2017 (S): no daytime difference between polarities; light wins at night.
 - Nielsen Norman Group (P): default to light, offer a switch.
 
@@ -45,7 +46,7 @@ Grouped by strand. Surveys first, then primary studies and standards.
 ## 6. Layout, signalling and figures
 
 - Gestalt (R): proximity is a strong grouping cue, and common region (a box) groups harder than whitespace.
-- Ginns 2006 (MA): placing words in the picture or code they explain, d = 0.85 (secondary). Ayres 2014 (R) gives the split-attention account.
+- Ginns 2006 (MA): placing words in the picture or code they explain, d about 0.72 to 0.85 (secondary). Ayres 2014 (R) gives the split-attention account.
 - Richter 2016 (MA): signalling r = 0.17, strongest for low prior knowledge.
 - Schneider 2018 (MA, 103 studies): signalling helps retention.
 - Sundararajan 2020 (MA, 68 experiments): seductive details, small negative effect.

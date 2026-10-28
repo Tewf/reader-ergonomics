@@ -15,8 +15,8 @@
 
 ## Why
 
-Spatial contiguity is one of the largest multimedia effects, about d = 0.85, and larger for complex material
-(Ginns 2006, secondary). A split figure makes the reader hold one part in memory while searching for the other
+Spatial contiguity is one of the larger multimedia effects, larger for complex material (Ginns 2006); secondary
+summaries give d between 0.72 and 0.85, and the paper's abstract gives no single value. A split figure makes the reader hold one part in memory while searching for the other
 (split attention; Ayres 2014).
 
 ## Limits

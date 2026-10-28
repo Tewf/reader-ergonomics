@@ -20,7 +20,7 @@ Upper bounds: what has been achieved. Lower bounds: what is shown not to work or
 
 | Limit | Source | Measured how |
 |---|---|---|
-| Organizer effect is small overall (d = 0.21, secondary) and needs unfamiliar material | Luiten 1980; Stone 1983 | meta-analysis |
+| Organizer effect is small overall (d = 0.21, secondary) and helps most on unfamiliar material | Luiten 1980; Stone 1983; Mayer 1979 | meta-analysis |
 | Skimming gives only moderate comprehension | Rayner 2016 | review |
 | Goal-bounded depth lowers learning of the non-goal part | Klauer 1984; McCrudden 2005 | meta-analysis; experiment |
 | Guidance hurts the advanced reader (-0.43) | Tetzlaff 2025 | meta-analysis |

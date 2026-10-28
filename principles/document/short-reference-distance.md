@@ -15,7 +15,7 @@
 
 ## Why
 
-Linking a word to a distant head costs in proportion to what intervenes (Gibson 1998), and languages keep dependencies
+Linking a word to a distant head costs more with each new discourse referent in between (Gibson 1998), and languages keep dependencies
 shorter than random reorderings in all 37 languages tested (Futrell et al. 2015).
 
 The order can be computed. Write the concepts as a graph, an edge u → v meaning v uses u, and an order π that puts u

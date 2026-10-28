@@ -44,6 +44,20 @@ Every work cited is listed once, in the [bibliography](bibliography.md).
 
 Each topic's README lists its claims with a grade, as defined in the [standard](../standard.md).
 
+## Audit
+
+On 2026-10-28, the 26 claims the principles lean on most were checked against their primary sources:
+
+| Verdict | Claims |
+|---|---|
+| correct | 15 |
+| wrong (misattributed, a wrong value, a wrong link) | 4 |
+| imprecise (right direction, narrower scope or other conditions) | 5 |
+| unverifiable (the primary source could not be read) | 2 |
+
+All eleven were corrected, or narrowed to what the source supports. The rest of the evidence has not been audited
+this way, so a claim is only as good as the review that cites it; a number read only in a summary says "(secondary)".
+
 ## Method
 
 The steps follow a thesis literature review: frame the problem in the field's words before searching, read surveys

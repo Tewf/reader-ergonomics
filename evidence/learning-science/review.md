@@ -13,7 +13,7 @@ Grouped by strand. Surveys first, then the seminal work, then later syntheses.
 
 - Roediger 2006: restudy wins at five minutes, testing wins at two days and one week.
 - Rowland 2014 (MA): testing vs restudy g = 0.50; 0.73 with feedback, 0.39 without (secondary).
-- Yang 2021 (MA): g = 0.50 over 222 classroom studies.
+- Yang 2021 (MA): g = 0.50 against all controls over 222 classroom studies; g = 0.33 against restudy.
 - Adesope 2017 (MA): about 0.6 against all controls (secondary).
 - Latimier 2021 (MA): spaced vs massed retrieval g = 0.74; expanding vs uniform gaps g = 0.03, not significant.
 - Cepeda 2008 (S, n above 1,350): best gap is 20-40% of the time left at a one-week horizon, 5-10% at one year.
@@ -36,13 +36,13 @@ Grouped by strand. Surveys first, then the seminal work, then later syntheses.
 - Catrambone 1998 and Margulieux 2016 (RCT): abstract subgoal labels transfer better; labels in both text and example beat either alone. No pooled estimate found.
 - Alemdag 2025 (MA): erroneous examples g = 0.14, larger with a prompt to explain the error.
 - Yeo 2019 (RCT): examples win while practice success is under 50%; testing wins at a delay once practice succeeds.
-- Mayer 2002 (RCT): pre-training on names and traits, median d = 0.75 in 13 of 16 tests, mostly one lab (secondary).
+- Mayer 2002 (RCT, 3 experiments): pre-training on names and traits helped transfer in all three and retention in two.
 - Kester 2006 (RCT): procedural information given just in time beats up-front.
 - Klauer 1984 (MA): stated objectives raise targeted learning and lower the rest, net slightly positive.
 
 ## 4. Concept maps, notes, organisers
 
-- Nesbit 2006 (MA, 55 studies, 5,818 participants): constructing a map g = 0.82, studying one g = 0.37.
+- Nesbit 2006 (MA, 55 studies, 5,818 participants): against activities without a map, constructing one g = 0.82, studying one g = 0.37; 0.47 for constructing in the North American studies alone.
 - Schroeder 2018 (MA, 142 effects): constructing 0.72, studying 0.43.
 - Karpicke 2011 and Blunt 2014 (RCT): free recall beat elaborative mapping at one week; a map drawn from memory equals free recall.
 - Robinson 1995 (RCT): graphic organisers beat outlines for relations among concepts, not always.
@@ -55,7 +55,7 @@ Grouped by strand. Surveys first, then the seminal work, then later syntheses.
 
 - Mayer 2020 summarises the principles: multimedia, coherence, signalling, contiguity, segmenting, pre-training, modality.
 - Mayer 2001 (RCT): sixteen learner-paced segments beat one continuous lesson on transfer, not recall.
-- Ginns 2006 (MA): spatial contiguity about d = 0.85 (secondary), larger for complex material.
+- Ginns 2006 (MA): spatial contiguity, larger for complex material; d between 0.72 and 0.85 in secondary summaries.
 - Schneider 2018 (MA, 103 studies): signalling retention g = 0.53, transfer 0.33 (secondary).
 - Richter 2016 (MA): signalling r = 0.17, strongest for low prior knowledge.
 - Sundararajan 2020 (MA, 68 experiments): seductive details, small negative.

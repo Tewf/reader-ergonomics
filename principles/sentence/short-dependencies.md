@@ -14,7 +14,7 @@
 
 ## Why
 
-Integration difficulty grows with the material between a word and its head (Grodner & Gibson 2005), as dependency
+Integration difficulty grows with the new discourse referents between a word and its head (Grodner & Gibson 2005), as dependency
 locality theory predicts (Gibson 1998). Every one of 37 languages keeps its dependencies shorter than random
 reorderings would (Futrell et al. 2015).
 
