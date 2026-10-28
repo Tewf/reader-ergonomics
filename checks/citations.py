@@ -6,6 +6,10 @@ years for one author (`Kester 2001, 2004`). It matches the
 bibliography entry keyed by the first surname and the year, compared without case, accents,
 spaces or punctuation. The bibliography is a markdown table whose first column is the key.
 
+An organisation as author ("Ad Hoc Working Group 1987") is found by trying the capitalised
+words just before the match; a name written in lower case ("eLife 2020") counts as a
+citation only when it matches an entry, and is never reported.
+
 Heuristic: a capitalised word before a year can be a false citation ("Colon Classification
 1933"); config lists words that never start one. Time O(text), space O(entries).
 """
@@ -22,6 +26,7 @@ EXACT = False
 PARTICLE = r"(?:(?:[Vv]an|[Vv]on|[Dd]e|[Dd]er|[Dd]en|[Dd]u|[Dd]a|[Dd]i|[Dd]os|[Dd]as|[Ee]l|[Ll]e|[Ll]a)\s)"
 SURNAME = rf"{PARTICLE}*(?:[A-Z][a-z]{{0,3}}\.\s)?[A-ZÀ-Ý][\w'’-]+"
 YEAR = r"(?:1[89]|20)\d\d[a-z]?"
+LOWERCASE_NAME = re.compile(r"\b([a-z][a-z]*[A-Za-z]*)\s((?:1[89]|20)\d\d[a-z]?)\b")
 CITATION = re.compile(rf"\b({SURNAME})(?:\s(?:et al\.|(?:&|and)\s{SURNAME}(?:\s[A-ZÀ-Ý][\w'’-]+)?))?,?\s({YEAR}(?:,\s{YEAR})*)\b")
 
 
@@ -50,12 +55,18 @@ def check(root: Path, config: dict) -> list[Finding]:
             surname = match.group(1)
             if surname in never_surnames:
                 continue
+            before = re.findall(r"[A-ZÀ-Ý][\w'’-]*", text[max(0, match.start() - 60):match.start()])[-4:]
             for year in re.findall(YEAR, match.group(2)):  # "Kester 2001, 2004" cites two works
                 key = normalised(surname + year)
+                for words in range(1, len(before) + 1):  # an organisation: "Ad Hoc Working Group 1987"
+                    longer = normalised("".join(before[-words:]) + surname + year)
+                    if longer in keys:
+                        key = longer
                 cited.add(key)
                 if key not in keys and normalised(surname + year.rstrip("abcdefgh")) not in keys:
                     findings.append(Finding(NAME, path, line_of(text, match.start()),
                         f"'{surname} {year}' has no entry in {bibliography}", "warning"))
+        cited.update(key for key in (normalised(name + year) for name, year in LOWERCASE_NAME.findall(text)) if key in keys)
     for key, number in sorted(keys.items(), key=lambda item: item[1]):
         if key not in cited:
             findings.append(Finding(NAME, bibliography, number, f"entry '{key}' is cited nowhere", "warning"))

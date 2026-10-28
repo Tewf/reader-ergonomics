@@ -30,7 +30,8 @@ exempt = []
 [citations]
 bibliography = "evidence/bibliography.md"
 files = ["evidence/", "principles/", "reader-styles/", "shapes/"]
-not_surnames = ["WCAG", "Colon", "Classification", "Prolegomena", "Python", "Since", "In", "From", "Until", "By", "After", "Before", "Around"]
+not_surnames = ["WCAG", "Colon", "Classification", "Prolegomena", "Python", "Since", "In", "From", "Until", "By", "After", "Before", "Around",
+                "CONSORT", "PRISMA", "Lancet", "NEJM", "BMJ", "JAMA"]   # guideline and journal names before a year
 
 [references]
 files = ["evidence/bibliography.md"]   # where references live; empty means every markdown file
