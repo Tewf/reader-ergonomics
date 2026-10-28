@@ -4,7 +4,9 @@ Offline (the default), only the form of each identifier is checked, which is exa
 needs no network. Online (`--online`), each one is resolved against doi.org, the arXiv
 API, GitHub and the link itself. Successes are cached in `checks/out/` for `cache_days`,
 so a rerun costs nothing. Resolving shows that a reference exists, not that it supports
-the claim it is cited for; that remains judgment.
+the claim it is cited for; that remains judgment. A server that refuses the checker (HTTP 401,
+403 or 429: a wall against robots or a rate limit) proves nothing about the reference, so it is
+a warning to open by hand, never an error.
 
 Exact offline. Online depends on remote servers (a timeout is reported, never hidden).
 Time O(references) requests, space O(references).
@@ -29,6 +31,7 @@ GITHUB = re.compile(r"(?<![\w.-])(?:www\.)?github\.com/([A-Za-z0-9-]+)/([A-Za-z0
 URL = re.compile(r"https?://(?:[^\s()\]>\"'`|]|\([^\s()]*\))+")  # balanced ( ) kept: Wikipedia titles
 HEADERS = {"User-Agent": "reader-ergonomics-reference-check/1.0"}
 ATOM = "{http://www.w3.org/2005/Atom}"
+REFUSED = ("HTTP 401", "HTTP 403", "HTTP 429")  # the server refused the checker, not the reference
 
 
 def fetch(url: str, method: str = "GET", timeout: int = 20) -> bytes:
@@ -87,7 +90,10 @@ def check(root: Path, config: dict) -> list[Finding]:
             if not online or time.time() - cache.get(f"{kind} {identifier}", 0) < settings.get("cache_days", 30) * 86400:
                 continue
             reason = resolve(kind, identifier)
-            if reason:
+            if reason in REFUSED:
+                findings.append(Finding(NAME, path, 0, f"{kind} {identifier}: {reason}, the server refused the checker; "
+                                        "open it by hand", "warning"))
+            elif reason:
                 findings.append(Finding(NAME, path, 0, f"{kind} {identifier}: {reason}"))
             else:
                 cache[f"{kind} {identifier}"] = time.time()

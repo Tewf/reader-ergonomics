@@ -44,6 +44,17 @@ class TestPlantedViolations(ScratchRepository):
         self.assertIn(("link", "https://en.wikipedia.org/wiki/Rule_of_three_(computer_programming)"), found)
         self.assertIn(("doi", "10.1002/(SICI)1097-4571(199806)49:8"), found)
 
+    def test_references_refusal_is_a_warning(self) -> None:
+        self.write("refs.md", "https://refused.example/a and https://gone.example/b\n")
+        answers = {"https://refused.example/a": "HTTP 403", "https://gone.example/b": "HTTP 404"}
+        original, references.resolve = references.resolve, lambda kind, identifier: answers[identifier]
+        try:
+            found = [f"{finding.kind} {finding.message}" for finding in references.check(self.root, {**CONFIG, "online": True})]
+        finally:
+            references.resolve = original
+        self.assertIn("warning link https://refused.example/a: HTTP 403, the server refused the checker; open it by hand", found)
+        self.assertIn("error link https://gone.example/b: HTTP 404", found)
+
     def test_portable_paths(self) -> None:
         self.write("notes/a:b.md")
         self.write("notes/Same.md")
