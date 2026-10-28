@@ -34,7 +34,7 @@ def logical_line_count(text: str, ignored_prefixes: tuple[str, ...] = ()) -> int
     if lines and lines[0].strip() == "---":
         closing = next((index for index in range(1, len(lines)) if lines[index].strip() == "---"), 0)
         lines = lines[closing + 1:]
-    count, paragraph, inside_block = 0, [], False
+    count, paragraph, fence = 0, [], ""  # fence: the backtick or tilde run that opened the block
 
     def close_paragraph() -> None:
         nonlocal count, paragraph
@@ -45,13 +45,15 @@ def logical_line_count(text: str, ignored_prefixes: tuple[str, ...] = ()) -> int
 
     for raw in lines:
         stripped = raw.strip()
-        if stripped.startswith(("```", "~~~")) or stripped == "$$":
-            if not inside_block:
-                close_paragraph()
-                count += 1
-            inside_block = not inside_block
+        run = re.match(r"^(`{3,}|~{3,}|\$\$)", stripped)
+        if fence:
+            if run and run.group(1)[0] == fence[0] and len(run.group(1)) >= len(fence) and stripped.strip("`~$ ") == "":
+                fence = ""
             continue
-        if inside_block:
+        if run and (run.group(1) != "$$" or stripped == "$$"):
+            close_paragraph()
+            count += 1
+            fence = run.group(1)
             continue
         content = re.sub(r"^(>\s?)+", "", stripped).strip()  # a callout counts by its content
         is_layout = (not content or content == "---" or content.startswith("#")

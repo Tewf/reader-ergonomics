@@ -14,7 +14,7 @@ from dataclasses import dataclass
 from pathlib import Path
 
 MARKDOWN_SUFFIXES = {".md", ".qmd"}
-FENCED_BLOCK = re.compile(r"^(```|~~~).*?^\1[ \t]*$", re.MULTILINE | re.DOTALL)
+FENCED_BLOCK = re.compile(r"^(`{3,}|~{3,})[^\n]*\n.*?^\1[`~]*[ \t]*$", re.MULTILINE | re.DOTALL)  # closes on a run at least as long
 INLINE_CODE = re.compile(r"`[^`\n]*`")
 
 
