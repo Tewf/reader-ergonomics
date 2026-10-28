@@ -16,6 +16,7 @@ from pathlib import Path
 
 from framework.check_api import Finding
 from syntax import parser
+from syntax.dependency_length import BETWEEN_CLAUSES, BOUNDARIES
 from syntax.sentences_of import parsed_paragraphs
 
 NAME = "clause-nesting"
@@ -34,9 +35,18 @@ def enclosing(token):
 
 
 def centred(token) -> bool:
-    """Whether words of the enclosing clause stand on both sides of this clause."""
+    """Whether words of the enclosing clause stand on both sides of this clause.
+
+    A clause coordinated with the enclosing one is not part of it, and neither is what follows a
+    semicolon or colon after this clause: the enclosing clause has ended there.
+    """
+    head = enclosing(token)
     inside = {word.i for word in token.subtree}
-    around = [word.i for word in enclosing(token).subtree if word.i not in inside and not word.is_punct]
+    apart = {word.i for child in head.children if child.dep_ in BETWEEN_CLAUSES for word in child.subtree}
+    stop = next((word.i for word in token.doc[token.right_edge.i + 1:head.right_edge.i + 1] if word.text in BOUNDARIES),
+                head.right_edge.i + 1)
+    around = [word.i for word in head.subtree if word.i not in inside and word.i not in apart and not word.is_punct
+              and word.i < stop]
     return any(i < token.left_edge.i for i in around) and any(i > token.right_edge.i for i in around)
 
 
