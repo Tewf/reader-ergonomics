@@ -1,13 +1,13 @@
 # Protocol of the multivocal review
 
 How the multivocal review of 2026-10-28 was run, and how its grey sources are scored. The method is the multivocal
-literature review (Garousi 2019): research and practice read together, each practice source scored for quality.
+literature review (Garousi 2019). It reads research and practice together and scores each practice source for quality.
 
 ## What was searched
 
 Eight strands, one agent each: plain language, style guides, linters and tools, answer-first structure, interface and
-type, repository layout, learning practice, agent instructions. Each read standards, company guides and practice,
-tools, practitioner books, communities and practitioner surveys, and stopped when new sources stopped adding claims.
+type, repository layout, learning practice, agent instructions. Each stopped when new sources stopped adding claims,
+after reading standards, company guides and practice, tools, practitioner books, communities and practitioner surveys.
 
 ## What was not recorded
 

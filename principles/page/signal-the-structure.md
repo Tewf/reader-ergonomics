@@ -23,5 +23,5 @@ measured usability by 47% on one test site (Nielsen 1997, company research).
 
 ## Limits
 
-Nielsen Norman Group reports that content folded behind a toggle is often missed (Wang 2023, a company article below
-the quality bar: an example, not evidence); fold only what is optional.
+Nielsen Norman Group reports that readers often miss content folded behind a toggle (Wang 2023). That source is a
+company article below the quality bar: an example, not evidence. Fold only what is optional.

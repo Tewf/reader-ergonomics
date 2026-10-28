@@ -1,8 +1,8 @@
 # Reader ergonomics
 
-How to write notes, documents and files so that they cost the reader as little as possible, according to
-what cognitive science, psycholinguistics and software engineering have measured. For people who write,
-and for language models that write.
+What cognitive science, psycholinguistics and software engineering have measured about how to write notes, documents
+and files so that they cost the reader as little as possible. For people who write, and for language models that
+write.
 
 > **Status:** a work in progress, shared as it is, in the hope that it helps whoever needs it. It is an informal
 > reading of published research: not an official standard, not a peer-reviewed study, not a new result, and not a

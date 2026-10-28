@@ -1,6 +1,6 @@
 # Psycholinguistics: density, depth and locality in text
 
-The psycholinguistic and discourse-processing evidence on how much a text unit should carry, how deep units may nest, and how far apart related units may sit, from the word to the document tree.
+The psycholinguistic and discourse-processing evidence covers three questions, from the word to the document tree: how much a text unit should carry, how deep units may nest, and how far apart related units may sit.
 
 Steps: [frame](frame.md) · [review](review.md) · [state of the art](state-of-the-art.md) · [position](position.md) · [against](against.md) · [baseline](baseline.md) · [bibliography](../bibliography.md)
 

@@ -62,7 +62,7 @@ The principles act at four scales; the first three nest, the fourth is how all o
 
 | Principle | Claim | Grade |
 |---|---|---|
-| [Browsable folders](principles/collection/browsable-folders.md) | a collection is shallow and broad: two levels rather than three, folders of at least 3 entries and at most about 32 that a reader can scan. | supported with caveat; the evidence is from menus and web pages, applied to folders by analogy |
+| [Browsable folders](principles/collection/browsable-folders.md) | a collection is shallow and broad: two levels rather than three, and folders a reader can scan, of at least 3 and at most about 32 entries. | supported with caveat; the evidence is from menus and web pages, applied to folders by analogy |
 | [Dependencies without cycles](principles/collection/dependencies-without-cycles.md) | code dependencies between folders never form a cycle, so every folder sits on a level above everything it uses. | convention, argued from design practice |
 | [Group by what changes together](principles/collection/group-by-what-changes-together.md) | a folder holds what serves one purpose and changes together, not files of one type; other ways of grouping are carried by links and indexes. | supported with caveat |
 | [Names predict content](principles/collection/names-predict-content.md) | a reader can predict what a file, folder or heading holds from its name before opening it, and each thing has one name throughout. | supported with caveat |
@@ -98,8 +98,8 @@ The principles act at four scales; the first three nest, the fourth is how all o
 | Principle | Claim | Grade |
 |---|---|---|
 | [Draw relations](principles/page/draw-relations.md) | a relation, a set, a quantity or a process is shown as a figure placed with the words that explain it, not as words alone. | measured |
-| [Figure next to its text](principles/page/figure-next-to-its-text.md) | the words that explain a figure, a formula or a block of code sit beside or inside it, not on another page or below the fold. | measured |
-| [Readable measure](principles/page/readable-measure.md) | body text is set at a line length of about 45 to 75 characters, at a size in the fluent range, with line spacing of at least 1.5. | supported with caveat |
+| [Figure next to its text](principles/page/figure-next-to-its-text.md) | the words that explain a figure, a formula or a block of code sit beside or inside it: not on another page, not below the fold. | measured |
+| [Readable measure](principles/page/readable-measure.md) | body text has a line length of about 45 to 75 characters, a size in the fluent range, and line spacing of at least 1.5. | supported with caveat |
 | [Signal the structure](principles/page/signal-the-structure.md) | the structure of a text is visible before it is read: headings that name their content, lists for parallel items, tables for comparisons, bold for the defined term. | measured |
 | [Sufficient contrast](principles/page/sufficient-contrast.md) | text has a contrast ratio of at least 4.5:1 against its background, dark text on a light ground by default, with a dark theme offered and never forced. | measured for polarity; the 4.5:1 floor is a convention (a standard) |
 

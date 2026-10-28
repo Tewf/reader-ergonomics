@@ -22,20 +22,22 @@ Telling readers what is relevant raises learning of that part at no extra readin
 ## Limits
 
 The classic advance organizer has a small effect: d = 0.21 on tests within a day, and 0.19 to 0.38 on later tests,
-rising with delay (Luiten 1980, 135 studies). On tests a week or more later, the median of 112 effects is 0.48 (Stone
-1983). Written organizers did worse than spoken ones, 0.17 against 0.37 (Luiten 1980), so a written overview is the
-weaker case. Whether it helps most on unfamiliar material is contested: Mayer's count of 44 studies said so, and
-Stone's effect sizes did not confirm it, from very few studies (Stone 1983).
+rising with delay (Luiten 1980, 135 studies). The effect on tests a week or more later has a median of 0.48 across 112
+effects (Stone 1983). Written organizers had a smaller effect than spoken ones, 0.17 against 0.37 (Luiten 1980), so a written overview is the weaker case. Whether it helps most on unfamiliar material is contested: Mayer's
+count of 44 studies said so, but Stone's effect sizes, from very few studies, did not confirm it (Stone 1983).
 
-A network map did worse than a hierarchical one, most for readers with little prior knowledge, so a map should follow the domain's own hierarchy (Amadieu 2009). Stating
-what matters lowers learning of what was not named (Klauer 1984).
+A network map did worse than a hierarchical one (Amadieu 2009), most for readers with little prior knowledge. A map
+should therefore follow the domain's own hierarchy. Stating what matters lowers learning of what was not named (Klauer
+1984).
 
-Overview first is not importance first: the evidence above is for organizers, which announce the parts. Putting the most important fact first, as news does, is a different order, and its two direct tests, both theses,
-disagree.
-Narrative order was better understood and recalled by Thai readers (Nildam 1998); importance order did marginally
-better on comprehension, with no difference in memory (Sternadori 2008). So the tests are too few to decide; the plain-language standard advises it as a convention, the most important message
-"commonly at the beginning" (ISO 2023, convention).
+Overview first is not importance first: the evidence above is for organizers, which announce the parts. Putting the
+most important fact first, as news does, is a different order, and its two direct tests, both theses, disagree. In
+these tests, narrative order was better understood and recalled by Thai readers (Nildam 1998); importance order did
+marginally better on comprehension, with no difference in memory (Sternadori 2008). So these tests are too few to
+decide; the plain-language standard advises it as a convention, the most important message "commonly at the beginning"
+(ISO 2023, convention).
 
-In two experiments with Dutch readers (450 and 574), bad-news letters and e-mails that gave the explanation before
-the decision were judged more persuasive in both experiments, and more polite in the first. Perceived readability rose only in
-the first, and a comprehension test in the second found no difference (Jansen 2010, measured attitudes). Ratings of hypothetical messages in one culture: a limit to keep in mind, not a rule.
+In two experiments with Dutch readers (450 and 574), readers judged bad-news letters and e-mails that gave the
+explanation before the decision more persuasive in both, and more polite in the first. Perceived readability rose only in the
+first, and a comprehension test in the second found no difference (Jansen 2010, measured attitudes). Ratings of
+hypothetical messages in one culture: a limit to keep in mind, not a rule.

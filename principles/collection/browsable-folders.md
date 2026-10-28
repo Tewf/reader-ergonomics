@@ -1,6 +1,6 @@
 # Browsable folders
 
-**Claim:** a collection is shallow and broad: two levels rather than three, folders of at least 3 entries and at most about 32 that a reader can scan.
+**Claim:** a collection is shallow and broad: two levels rather than three, and folders a reader can scan, of at least 3 and at most about 32 entries.
 
 - **Grade:** supported with caveat; the evidence is from menus and web pages, applied to folders by analogy.
 - **Evidence:** [file structure](../../evidence/file-structure/review.md), [against](../../evidence/file-structure/against.md) (navigation).
@@ -16,8 +16,9 @@
 
 ## Why
 
-Among three web sites of 512 items each, with 19 participants, two levels of 16 by 32 took 36 s, 32 by 16 took 46 s, and three levels of 8 took 58 s. The
-two two-level layouts did not differ significantly, and only the three-level one was slower (Larson 1998). Among 64 menu targets, two levels of eight beat both deeper and flatter menus (Miller 1981).
+Two levels of 16 by 32 took 36 s, 32 by 16 took 46 s, and three levels of 8 took 58 s, among three web sites of 512
+items each, with 19 participants. The two two-level layouts did not differ significantly, and only the three-level one
+was slower (Larson 1998). Among 64 menu targets, two levels of eight beat both deeper and flatter menus (Miller 1981).
 Needless depth costs more than breadth.
 
 ```text

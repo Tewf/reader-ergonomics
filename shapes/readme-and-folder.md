@@ -1,8 +1,8 @@
 # Shape: folder and its README
 
-A reader lands in a folder from a search result or a file listing, not from the front page. A
-signpost that sends them elsewhere makes them search again. A README that lists what is here and
-shows one real use lets them act from where they stand.
+A reader lands in a folder from a search result or a file listing, not from the front page. A signpost that sends them
+elsewhere makes them search again. Listing what is here and showing one real use in a README lets them act from where
+they stand.
 
 ## Skeleton
 

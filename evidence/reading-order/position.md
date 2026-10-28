@@ -1,6 +1,6 @@
 # Position
 
-This file holds what is known, what is not known, what is not claimed, and a proposal for iterative deepening for reading.
+This file holds what is known, what is not known, and what is not claimed. It also holds a proposal for iterative deepening for reading.
 
 ## Known
 

@@ -4,7 +4,15 @@ Levels: **MA** meta-analysis · **RCT** randomised experiments · **S** single s
 
 **(secondary)** marks a number read in a summary, not in the paper.
 
-Surveys to read first: Ponce 2025 (organizers), McCrudden 2007 (relevance), Rittle-Johnson 2015 (order of lessons), Loibl 2017 (problem first), Wickens 2013 (part-task training), Rayner 2016 (skimming), Brunmair 2019 (interleaving).
+Surveys to read first:
+
+- Ponce 2025 (organizers);
+- McCrudden 2007 (relevance);
+- Rittle-Johnson 2015 (order of lessons);
+- Loibl 2017 (problem first);
+- Wickens 2013 (part-task training);
+- Rayner 2016 (skimming);
+- Brunmair 2019 (interleaving).
 
 ## 1. Overview before detail
 

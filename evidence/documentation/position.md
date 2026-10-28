@@ -44,7 +44,8 @@ Guides disagree where evidence is silent:
 - Choosing one title form and keeping it satisfies names predict content under every guide.
 - The standard's size trigger sits between Microsoft and Make a README, since neither side is measured.
 
-A README is an index of modes by convention. GitHub, Make a README and standard-readme all put what, install, usage and contributing in one file, each section serving one mode.
+A README is an index of modes by convention. GitHub, Make a README and standard-readme all put what, install, usage
+and contributing in one file. Each section serves one mode.
 
 Google exempts well-known terms such as API from spelling out. The principle says every term, so the exemption is stated as depending on the reader.
 

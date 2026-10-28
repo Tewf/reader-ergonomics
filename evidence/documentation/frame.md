@@ -2,7 +2,8 @@
 
 ## The problem in one sentence
 
-Decide what a repository's documentation must say, how its pages are separated by purpose, and what a code comment must carry, so a reader finds what they need and can trust it.
+Decide three things so that a reader finds what they need and can trust it: what a repository's documentation must
+say, how its pages are separated by purpose, and what a code comment must carry.
 
 ## Two levels
 

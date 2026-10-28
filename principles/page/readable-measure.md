@@ -1,6 +1,6 @@
 # Readable measure
 
-**Claim:** body text is set at a line length of about 45 to 75 characters, at a size in the fluent range, with line spacing of at least 1.5.
+**Claim:** body text has a line length of about 45 to 75 characters, a size in the fluent range, and line spacing of at least 1.5.
 
 - **Grade:** supported with caveat.
 - **Evidence:** [typography and layout](../../evidence/typography-and-layout/review.md) (strands 1 to 3), [baseline](../../evidence/typography-and-layout/baseline.md).

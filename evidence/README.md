@@ -1,7 +1,7 @@
 # Evidence
 
-One folder per topic, each a literature review in five steps, so that every principle of the
-[standard](../standard.md) can be traced to what was measured, by whom, and what speaks against it.
+One folder per topic, each a literature review in five steps. Every principle of the [standard](../standard.md) can be
+traced through them to what was measured, by whom, and what speaks against it.
 
 ## The steps, the same in every topic
 
@@ -60,11 +60,10 @@ the 411 lines the multivocal review added, in the evidence and in the principles
 | research in the repository left uncited for a practice source | | | 2 |
 | a change that broke the principle it changed | | | 3 |
 
-Every wrong, imprecise or self-breaking line was corrected, or narrowed to what the source supports, here and in the
-principles that repeat it. An unverifiable one was read again; if it still could not be read, it says
+The audits corrected every line they found wrong, imprecise or self-breaking, or narrowed it to what the source supports, here
+and in the principles that repeat it. An unverifiable line was read again; if it still could not be read, it says
 "(secondary)" or "(not verified)", or was removed. The audits also fixed DOIs, titles and links in the bibliography.
-Claims without a number in the original reviews have not been audited this way, so such a claim is only as good as
-the review that cites it.
+The audits did not cover claims without a number in the original reviews: such a claim is only as good as the review that cites it.
 
 ## Multivocal review
 

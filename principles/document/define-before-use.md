@@ -26,8 +26,8 @@
 
 ## Limits
 
-Some high-knowledge readers learn more from a text that leaves links to infer (McNamara et al. 1996b), though not the
-skilled ones (O'Reilly & McNamara 2007).
+Some high-knowledge readers learn more from a text that leaves links to infer (McNamara et al. 1996b). The skilled
+ones do not (O'Reilly & McNamara 2007).
 
 A term the reader already knows needs no definition. Across 60 studies, assistance helped novices and hurt advanced
 learners (Tetzlaff 2025, a meta-analysis, measured; Kalyuga 2003 is an earlier review of the effect). The studies are mostly in

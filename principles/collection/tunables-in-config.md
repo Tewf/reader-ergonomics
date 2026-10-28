@@ -20,7 +20,7 @@ self-admitted technical debt appeared in 2.4% to 31% of files in four projects (
 
 ## Limits
 
-Every knob costs. Only 6.1% to 16.7% of parameters were set by most users and up to 54.1% were seldom set, and a
+Every parameter costs. Only 6.1% to 16.7% of parameters were set by most users and up to 54.1% were seldom set, and a
 commercial system could drop 51.9% of its parameters (Xu 2015). Most real misconfigurations are parameter mistakes
 (Yin 2011). Tags pile up: only 26.3% to 63.5% of tagged debt was later removed (Potdar 2014).
 

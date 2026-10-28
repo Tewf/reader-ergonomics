@@ -1,7 +1,7 @@
 # Shape: note
 
-One topic per note. A note is written to be read again: on the day it is written, before it is
-used, and long after, by search.
+One topic per note. A note is written to be read again: on the day it is written, before it is used, and, long after,
+by search.
 
 ## Skeleton
 
