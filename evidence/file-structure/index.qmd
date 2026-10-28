@@ -1,0 +1,5 @@
+---
+title: "File structure: how to cut files and arrange folders for the reader"
+---
+
+{{< include README.md >}}

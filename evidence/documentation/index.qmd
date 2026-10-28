@@ -1,0 +1,5 @@
+---
+title: "Documentation: how to structure a repository's pages and its code comments"
+---
+
+{{< include README.md >}}

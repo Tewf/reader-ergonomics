@@ -1,0 +1,84 @@
+# State of the art
+
+Terms are defined in `review.md`; works are listed in the [bibliography](../bibliography.md).
+
+- **Upper bound**: the best that has been achieved or shown.
+- **Lower bound**: what has been shown impossible, or ruled out.
+
+## 1. The shape of the linking function f
+
+| Measure | Holder | Method | Result | Grade |
+|---|---|---|---|---|
+| Reading time, English | Shain et al. 2024 | 6 datasets, many language models, nonlinear regression | f linear in surprisal | measured |
+| Reading time, 11 languages | Wilcox et al. 2023 | monolingual and multilingual models | f linear in surprisal | measured |
+| Reading time, super-linear claims | Meister et al. 2021; Hoover et al. 2023; Xu et al. 2023 | reading corpora | weak or model-dependent super-linearity | supported with caveat |
+| Reading time, cloze-controlled items | Brothers & Kuperberg 2021 vs Buggy et al. 2026 | same items, self-paced reading vs eye-tracking | linear in probability vs logarithmic | contested |
+| Acceptability | Meister et al. 2021 | acceptability judgments | non-uniform surprisal lowers acceptability | supported with caveat (one study) |
+
+## 2. Does spreading information evenly lower cost?
+
+A text of n words carries surprisals s_1 ... s_n, with total S = s_1 + ... + s_n.
+Its total cost is C = f(s_1) + ... + f(s_n).
+
+- f convex: by Jensen's inequality, C ≥ n·f(S/n), with equality when every s_i = S/n; uniform is the minimum.
+- f linear, f(s) = a + b·s: C = a·n + b·S; the distribution does not matter, only n and S do.
+- f concave: uniform is the maximum; clustering information is cheaper.
+- Cost linear in probability (Brothers & Kuperberg 2021) means f(s) = a - b·2^(-s), which is concave in s.
+
+| Measure | Best-supported f | Consequence at fixed n and S |
+|---|---|---|
+| Reading time | linear | spreading buys nothing measurable; lowering S or n does |
+| Acceptability | convex | uniform surprisal is judged better |
+
+- Grade: the argument is proved; the reading-time verdict is measured; the acceptability verdict is supported with caveat.
+- Caveat: a rewrite changes n and S, so "fixed n and S" is an idealization.
+- Caveat: cost spills over to the next words, so C is not exactly a sum of independent terms.
+
+## 3. Dependency length
+
+- Upper bound reached by languages: D between random and optimal in all 37 languages of Futrell et al. 2015.
+- Degree reached: half of 93 languages at 70% or more of the possible reduction (Ferrer-i-Cancho et al. 2022).
+- Not reached: the optimum; observed D stays above it, Indonesian coming closest (Futrell et al. 2015).
+- Processing: the cleanest effect is in controlled sentences (Grodner & Gibson 2005); naturalistic reading bounds it (Demberg & Keller 2008).
+
+## 4. Nesting
+
+- Observed maximum of use: degree 3 in writing, practically absent in speech (Karlsson 2007); a corpus count, not a processing limit.
+- Processing: degree 2 already yields an illusion in English (Gibson & Thomas 1999) but not in German (Vasishth et al. 2010).
+
+## 5. Text and text tree
+
+- Strongest applied evidence: model-guided revision (Britton & Gülgöz 1991), summarized by Gülgöz et al. 1999.
+- Levels effect: recall (Meyer & McConkie 1973), eye-tracking (Wu et al. 2016), conditional on reader skill (Meyer et al. 1980).
+- Coherence modelling: the entity grid is the classical baseline (Barzilay & Lapata 2008); neural successors not reviewed here.
+
+## 6. Ordering complexity
+
+| Problem | Bound | Source | Kind | Grade |
+|---|---|---|---|---|
+| MinLA, general graph | NP-complete | Garey et al. 1976 | lower | measured (theorem) |
+| MinLA, tree | polynomial | Shiloach 1979; Chung 1984 | upper | measured (theorem) |
+| Projective or planar minimum, tree | linear time | Alemany-Puig et al. 2022 | upper | measured (theorem) |
+| Arrangement of an acyclic directed graph | NP-complete | Even and Shiloach, as cited in Shiloach 1979 | lower | supported with caveat (secondary) |
+| Linear ordering, rooted tree | O(n log n) | Adolphson & Hu 1973, as cited in Shiloach 1979 | upper | supported with caveat (secondary) |
+| Unit-time scheduling with precedence, weighted completion time | NP-hard | Lawler 1978, as stated in Lenstra & Rinnooy Kan 1980 | lower | supported with caveat (secondary) |
+
+- Caveat on the two rows cited through Shiloach 1979: its abstract does not say whether the directed version forces arcs to point forward.
+- Futrell et al. 2015 compare to the projective minimum, not to unconstrained MinLA.
+- The unconstrained tree minimum (Chung 1984) is the baseline of Ferrer-i-Cancho et al. 2022.
+
+### Ordering notes as scheduling (derivation in this file)
+
+- Concepts form a directed graph: an edge u → v means v uses u; the order π must put u before v.
+- Every edge then points forward, so D(π) = Σ over edges of (π(v) - π(u)) = Σ over x of π(x)·(in(x) - out(x)).
+- That is a weighted sum of positions under precedence, with weight w(x) = in(x) - out(x).
+- With units of equal length, adding a constant to every weight changes D by a constant, so negative weights are harmless.
+- It is then unit-time single-machine scheduling with precedence, minimizing weighted completion time.
+- Known: with series-parallel precedence, forests included, that problem is solvable in polynomial time (Lawler 1978; supported with caveat, not read in full).
+- With sections of unequal length, positions become start offsets and the weights keep both signs; standard results assume non-negative weights, so none is claimed.
+- Not found: whether weights of the form in(x) - out(x) keep the general case NP-hard; this file makes no such claim.
+
+## 7. Measurement
+
+- Readability: models built from NLP features beat Flesch-Kincaid for adult comprehension, processing and familiarity (Crossley et al. 2017).
+- Surprisal source: larger transformer models with lower perplexity fit reading time worse (Oh & Schuler 2023).
