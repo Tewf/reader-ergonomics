@@ -23,7 +23,7 @@ Upper bounds: what has been achieved. Lower bounds: what is shown not to work or
 | Organizer effect small on immediate tests (d = 0.21, Luiten), 0.66 on delayed tests (Stone) (secondary); unfamiliar-material condition from Mayer's theory | Luiten 1980; Stone 1983; Mayer 1979 | meta-analyses; theory with experiments |
 | Skimming gives only moderate comprehension | Rayner 2016 | review |
 | Goal-bounded depth lowers learning of the non-goal part | Klauer 1984; McCrudden 2005 | meta-analysis; experiment |
-| Guidance hurts the advanced reader (-0.43) | Tetzlaff 2025 | meta-analysis |
+| Withholding assistance beat giving it for advanced learners (d = -0.43, CI -0.65 to -0.21, high heterogeneity); the gain for novices is larger (+0.51) | Tetzlaff 2025 | meta-analysis |
 | Parts trained apart transfer badly; fixed difficulty steps fail | Wickens 2013 | meta-analysis |
 | Felt understanding overstates real understanding | Rozenblit and Keil 2002 | experiments |
 | Overconfident learners stop too early | Dunlosky and Rawson 2012 | experiments |
@@ -41,6 +41,6 @@ A record of practice, kept apart from the research record above.
 |---|---|---|
 | Conclusion first | BLUF, Pyramid Principle, executive summary | no controlled test of BLUF found |
 | Importance order in news | inverted pyramid, the newsroom default | Nildam 1998 favours narrative for Thai news readers, Sternadori 2008 is mixed; both theses |
-| Conclusion first for bad news | taught as an exception | explanation first judged clearer (Jansen 2010) (secondary) |
+| Conclusion first for bad news | taught as an exception | explanation first rated slightly more readable in one experiment, with no comprehension difference (Jansen 2010) |
 | Web scanning | front-load the key facts (Nielsen 2006) | descriptive eyetracking, n = 232; no learning outcome |
 | Labelled structure | structured abstracts | more information, no recall gain at equal length (Hartley 2004) |

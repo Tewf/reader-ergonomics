@@ -42,6 +42,6 @@ Rule of method: the field's name for a thing is the search term; the author's ow
 | Executive summary, structured abstract | industry, journals | outline inside the text (Ponce 2023) |
 | Direct or indirect order | business communication research | conclusion first or explanation first |
 | Scannable text, front-loading | web usability | **satisficing**, **patch leaving** (Pirolli 1999) |
-| Relevant, findable, understandable, usable | plain language | task analysis; usability testing (ISO 2023) |
+| Relevant, findable, understandable, usable | plain language | reader analysis (interviews, surveys); evaluation with readers (ISO 2023) |
 
 The inverted pyramid orders by importance. An advance organizer orders by structure, so a test of one does not test the other.

@@ -29,7 +29,8 @@ Grouped by strand. Surveys first, then the seminal work, then later syntheses.
 - Barbieri 2023 (MA): worked examples beat problem solving in maths, g = 0.48, about 18 percentile points.
 - Correct examples beat incorrect ones; added self-explanation prompts lowered the gain in that pool.
 - Renkl 2004 (RCT): removing solution steps one by one beats a jump to whole problems.
-- Kalyuga 2003 (R) and Tetzlaff 2025 (MA, 60 studies): novices gain from more guidance (d = +0.51), advanced learners from less (d = -0.43).
+- Kalyuga 2003 (R) and Tetzlaff 2025 (MA, 60 studies, 5924 participants): novices gain from more assistance (d = +0.51, CI 0.26 to 0.75), advanced learners from less (d = -0.43, CI -0.65 to -0.21). Heterogeneity is high (I2 near 90%), and giving assistance to novices helps more than withholding it from experts.
+- Tetzlaff 2025 adds that most studies are STEM (38 of 60) and only 10 are humanities and language, where the evidence is least clear. Its limits include dichotomised knowledge and few studies per moderator level.
 - Pollock 2002 (RCT): showing complex material as isolated elements first, then together, helps novices.
 - Paas 1994 (RCT): varied worked examples give better transfer with less effort.
 - Costa 2022 (MA, 12 studies): whole 4C/ID programmes, built on simple-to-complex task classes, d = 0.79, larger in higher education.

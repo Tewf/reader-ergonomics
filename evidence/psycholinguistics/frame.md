@@ -40,7 +40,7 @@ How much information should each unit of a text carry, how deeply may units nest
 | avoid legalese, passives, nominalisations | center-embedding, dependency length, rare words | 2, 3 |
 | readability grade check (Vale, Hemingway, textstat) | automated readability formula | measurement |
 
-- Martinez et al. 2022 joins the two vocabularies: legalese measured as center-embedding, rare words and passives.
+- Martinez et al. 2022 joins the two vocabularies: legalese measured as center-embedding, rare words, passives and non-standard capitalisation.
 
 ## Search log: each term three ways
 

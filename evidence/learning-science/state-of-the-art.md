@@ -10,7 +10,7 @@ Upper and lower bounds are kept apart, as in every topic ([method](../README.md)
 | Does spacing help? | Latimier 2021 | meta-analysis | g = 0.74 spaced vs massed |
 | Best gap | Cepeda 2008 | one large study, n above 1,350 | 20-40% of delay at 1 week |
 | Do examples help novices? | Barbieri 2023 | meta-analysis, maths | g = 0.48 |
-| When do examples stop helping? | Tetzlaff 2025 | meta-analysis, 60 studies | +0.51 novices, -0.43 advanced |
+| When does assistance stop helping? (indirect evidence for examples) | Tetzlaff 2025 | meta-analysis, 60 studies on instructional assistance in general | +0.51 novices, -0.43 advanced |
 | Draw or study a concept map? | Schroeder 2018 | meta-analysis, 142 effects | 0.72 vs 0.43 |
 | Words with their picture? | Ginns 2006 | meta-analysis | d about 0.72 to 0.85 (secondary) |
 | Visual cues? | Schneider 2018 | meta-analysis, 103 studies | g = 0.53 retention |

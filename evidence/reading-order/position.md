@@ -86,5 +86,5 @@ Changes to a corpus that would support the procedure:
 
 - Practice runs ahead of the evidence: BLUF and the Pyramid Principle have wide use, and no controlled comparison with narrative order for working readers was found.
 - Practice ignores the evidence: the inverted pyramid survives while its direct tests favour narrative for Thai news readers (Nildam 1998) or show no difference (Sternadori 2008).
-- Reader state limits the rule: front-loading fits readers who scan for a fact (Nielsen 2006), and explanation first fits readers who will resist the conclusion (Jansen 2010) (secondary).
-- ISO 2023 extends the standard: it adds relevance and testing with readers, which reading order does not cover.
+- Reader state limits the rule: front-loading fits readers who scan for a fact (Nielsen 2006), and explanation first fits bad news that readers do not expect (Jansen 2010). Message valence was manipulated, and surprise is a proposed, untested mechanism.
+- ISO 2023 agrees on order and extends it. It puts importance first at the beginning (5.2.2 a, a convention with no evidence cited in the preview) and builds new information on known information. It adds relevance and evaluation with readers.

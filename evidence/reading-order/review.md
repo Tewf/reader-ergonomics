@@ -38,7 +38,7 @@ Surveys to read first: Ponce 2025 (organizers), McCrudden 2007 (relevance), Ritt
 | Dunlosky and Rawson 2012 | overconfident learners stop early and score lower; checking against the key's idea units corrected it (secondary) | RCT |
 | Rozenblit and Keil 2002 | felt understanding of a mechanism exceeds the explanation; asking for it exposes the gap (12 studies) | RCT |
 | Kalyuga and Sweller 2004 | writing the first step of a problem is a fast check of expertise (secondary) | RCT |
-| Tetzlaff 2025 | expertise reversal: guidance helps novices (+0.51), hurts the advanced (-0.43) | MA |
+| Tetzlaff 2025 | expertise reversal: assistance helps novices (+0.51), hurts the advanced (-0.43); the reversal is asymmetric, with a larger gain for novices | MA |
 | Kester 2001, 2004 | just-in-time model: theory before practice, how-to during it; the experiment (n = 72) found the reverse most efficient | T; S |
 | Doignon and Falmagne 1985 | study what all prerequisites are mastered for (outer fringe) | T |
 
@@ -87,12 +87,12 @@ Kinds: **standard** · **company research** · **thesis** · **review**. Practic
 
 | Source | What it prescribes or found | Kind | Adoption |
 |---|---|---|---|
-| ISO 2023 | plain language organised by four principles: relevant, findable, understandable, usable; usable is confirmed by evaluating with readers (principles read in a search summary, the standard is paid) (secondary) | standard | principles not read on the page (not verified) |
+| ISO 2023 | plain language organised by four principles: relevant, findable, understandable, usable; usable is confirmed by evaluating with readers (principles and clauses 5.1 to 5.2.3 read in the 11-page preview) | standard | clauses 5.2.4 to 5.4 and the annexes not read, so evaluation with readers is known from a title only |
 | Nielsen 2006 | eyetracking of 232 users; a rough F shape; "The first two paragraphs must state the most important information." Its owner sells consulting | company research | descriptive |
 | Morkes 1997 | three studies, 81 users; on a fictional site, concise text scored 58% better, scannable 47%, objective 27%, combined 124%, all against a promotional control; its owner's own claim | company research | one site, web only |
 | Nildam 1998 | 320 readers, mock newspaper page: narrative stories gave better understanding and recall than inverted pyramid, and more interest; credibility did not differ | thesis | Thai readers, crime and science stories, not peer reviewed |
 | Sternadori 2008 | four stories, within subjects: no difference in memory or enjoyment; comprehension marginally favoured the pyramid; chronological stories slowed a secondary task (read in a repository summary) (secondary) | thesis | not peer reviewed |
-| Jansen 2010 | two experiments on Dutch bad-news letters and emails: explanation first was judged clearer and the writer more caring (abstract read in a search summary) (secondary) | experiment | bad news only |
+| Jansen 2010 | two experiments on Dutch bad-news letters (N = 450) and emails (N = 574), convenience samples, 83% graduates in the first, hypothetical scenarios: explanation first was judged more persuasive and more polite, with a better sender image; readability rating was slightly higher in the first experiment only (p = .044, not significant in the second); the comprehension test showed no difference, with a ceiling effect | experiment | bad news only; ratings, not behaviour |
 | Hartley 2004 | structured abstracts hold more information and are longer (+21% over all 11 studies, about 35% in three independent comparisons); a recall gain appeared only when they were longer and more readable, and recall evidence is thin | review | many student samples |
 
 The direct tests of the inverted pyramid do not support importance-first order. Neither thesis is peer reviewed, so they do not refute it either.

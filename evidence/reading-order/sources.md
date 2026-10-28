@@ -8,7 +8,7 @@ This file lists every source cited in `evidence/reading-order/`; the scoring fol
 |---|---|---|---|
 | Morkes 1997 | company page (NN/g) | A4 M5.5 O1.5 D1 P0.5 N1 I1 T0.5 = 15 | review |
 | Nielsen 2006 | company page (NN/g) | A4 M4.5 O1.5 D1 P1 N1 I1 T0.5 = 14.5 | position, review, state-of-the-art |
-| ISO 2023 | standard | A4 M3.5 O2 D1 P0.5 N0.5 I1 T1 = 13.5 (principles not on the page) | frame, position, review |
+| ISO 2023 | standard | A4 M3.5 O2 D1 P0.5 N0.5 I1 T1 = 13.5 (preview of 11 pages read; clauses 5.2.4 to 5.4 and annexes not read) | frame, position, review |
 | Nildam 1998 | thesis (abstract read) | A2 M3.5 O2.5 D1 P0 N1 I0 T1 = 11 | against, position, review, state-of-the-art |
 | Sternadori 2008 | thesis | D1 T1 = 2 (not read: page returned 403) | against, position, review, state-of-the-art |
 | Kenny 1993 | ERIC report | D1 T1 = 2 (not read: scanned PDF, no text) | review |

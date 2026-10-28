@@ -20,7 +20,7 @@ This file lists null results, controversies, costs of the proposal, and practice
 - **Problem first or instruction first.** Problem first g = 0.36 on concepts and transfer, none on procedures (g = -0.03) (Sinha and Kapur 2021), but reversed when many elements interact (Ashman 2020). Loibl 2017 says it works only with contrasting cases or built-on instruction.
 - **Just-in-time timing.** The model predicts theory first, how-to during practice; its own experiment found the reverse most efficient (Kester 2001, 2004).
 - **Depth versus breadth.** Depth went with better grades (Schwartz 2009), but the data are correlational.
-- **Expertise reversal.** The same scaffold helps novices (+0.51) and hurts the advanced (-0.43) (Tetzlaff 2025), so a single procedure for all readers is suspect.
+- **Expertise reversal.** The same scaffold helps novices (+0.51) and hurts the advanced (-0.43) (Tetzlaff 2025), so a single procedure for all readers is suspect. The authors themselves advise providing assistance rather than withholding it when in doubt, which supports a default for an unknown reader.
 
 ## Costs of the proposal
 
@@ -39,4 +39,4 @@ This file lists null results, controversies, costs of the proposal, and practice
 | Practice | Principle at risk | Evidence |
 |---|---|---|
 | Inverted pyramid cited as support for overview first | overview first | it is importance order, not a map; Nildam 1998 and Sternadori 2008 do not support it |
-| Conclusion first for every message | overview first | explanation first preferred for bad news (Jansen 2010) (secondary) |
+| Conclusion first for every message | overview first | explanation first rated higher for bad news (Jansen 2010) |

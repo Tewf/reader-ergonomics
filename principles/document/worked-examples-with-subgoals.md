@@ -22,5 +22,6 @@ both the text and the example (Catrambone 1998; Margulieux 2016).
 
 ## Limits
 
-The benefit reverses with expertise: novices gain from more guidance, d = +0.51, advanced learners from less,
-d = -0.43 (Tetzlaff 2025). For a new procedure, examples beat testing on an immediate test; a week later testing caught up, and pulled ahead only on problems identical to those practised (Yeo 2019).
+The benefit reverses with expertise. For assistance in general, novices gain from more, d = +0.51, advanced
+learners from less, d = -0.43 (Tetzlaff 2025, a meta-analysis); for worked examples the reversal is reviewed in
+Kalyuga 2003 (not read here). For a new procedure, examples beat testing on an immediate test; a week later testing caught up, and pulled ahead only on problems identical to those practised (Yeo 2019).

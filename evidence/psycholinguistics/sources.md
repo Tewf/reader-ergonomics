@@ -66,7 +66,7 @@ This file lists every source cited in `evidence/psycholinguistics/`; the scoring
 | Lewis 2005 | model | against, review |
 | Liu 2024 | experiment | position |
 | Mann 1988 | theory | frame, review |
-| Martinez 2022 | corpus study | frame, position, review, state-of-the-art |
+| Martinez 2022 | corpus study and experiments | frame, position, review, state-of-the-art |
 | Meyer 1973 | experiment | review, state-of-the-art |
 | McNamara 1996a | experiment | against, review |
 | McNamara 1996b | experiment | against, baseline, review |

@@ -18,8 +18,10 @@ With two nested relative clauses, English readers rate a sentence missing its mi
 complete one (Gibson & Thomas 1999). Difficulty comes from finite memory, not from grammar (Miller & Chomsky 1963).
 In seven European languages, written text never nests past three clauses, and speech hardly nests at all (Karlsson 2007).
 
-The effect holds for legal text too, in experiments: centre-embedded clauses hurt recall most, even for readers who
-work with such texts (Martinez 2022, a peer-reviewed experiment, read in its abstract only).
+Legal text agrees, in experiments with lay readers recruited online. Legalese, which bundles centre-embedding with
+passives, rare words and capitals, lowered recall (35% against 42% for plain versions) and comprehension, even for
+readers with much reading experience (Martinez 2022, measured). That centre-embedding weighed most comes from an
+exploratory analysis the authors call underpowered.
 
 ## Limits
 

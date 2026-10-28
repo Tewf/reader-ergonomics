@@ -27,9 +27,10 @@ what matters lowers learning of what was not named (Klauer 1984).
 
 Overview first is not importance first: the evidence above is for organizers, which announce the parts. Putting the
 most important fact first, as news does, is a different order. Its few direct tests favour narrative order or find
-no difference (Nildam 1998, a master's thesis; Sternadori 2008, a doctoral thesis, not read). So importance first
-has no support yet, and is not refuted either.
+no difference (Nildam 1998, a master's thesis; Sternadori 2008, a doctoral thesis, not read). So importance first has no support from tests yet,
+and is not refuted either; the plain-language standard advises it as a convention, the most important message
+"commonly at the beginning" (ISO 2023, convention).
 
-In two experiments with Dutch readers, bad-news letters and e-mails that gave the explanation before the decision
-were rated clearer, and the decision more accepted (Jansen 2010, abstract only). One culture, so a limit to keep in
-mind, not a rule.
+In two experiments with Dutch readers (450 and 574), bad-news letters and e-mails that gave the explanation before
+the decision were judged more persuasive and polite, and the decision more acceptable. Comprehension did not differ (Jansen 2010,
+measured attitudes). Ratings of hypothetical messages in one culture: a limit to keep in mind, not a rule.
