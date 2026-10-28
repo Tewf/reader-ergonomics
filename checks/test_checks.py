@@ -11,7 +11,7 @@ from pathlib import Path
 from meaning import document_mode, embeddings, paraphrase
 from program import (co_change, cross_file_terms, defined_before_use, duplication, figure_captions, figures_present, links,
                      logical_lines, long_sentences, name_matches_title, outline_depth, overview_first, paragraph_length,
-                     portable_paths, principle_coverage, provisional_tags, readable_measure, shape_conformance,
+                     portable_paths, principle_coverage, provisional_tags, readable_measure, references, shape_conformance,
                      sufficient_contrast, tree_shape, type_buckets)
 from syntax import clause_nesting, dependency_length, parser
 
@@ -38,6 +38,12 @@ class ScratchRepository(unittest.TestCase):
 
 
 class TestPlantedViolations(ScratchRepository):
+    def test_references_keep_balanced_parentheses(self) -> None:
+        found = references.cited("see https://en.wikipedia.org/wiki/Rule_of_three_(computer_programming) and "
+                                 "doi 10.1002/(SICI)1097-4571(199806)49:8 (Smith 2020).")
+        self.assertIn(("link", "https://en.wikipedia.org/wiki/Rule_of_three_(computer_programming)"), found)
+        self.assertIn(("doi", "10.1002/(SICI)1097-4571(199806)49:8"), found)
+
     def test_portable_paths(self) -> None:
         self.write("notes/a:b.md")
         self.write("notes/Same.md")

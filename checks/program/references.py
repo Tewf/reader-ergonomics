@@ -24,9 +24,9 @@ from framework.check_api import MARKDOWN_SUFFIXES, Finding, files_in_scope, matc
 NAME = "references"
 EXACT = True
 ARXIV = re.compile(r"(?:arxiv\.org/(?:abs|pdf|html)/|arXiv[:\s]\s*)(\d{4}\.\d{4,5}|[a-z\-]+(?:\.[A-Z]{2})?/\d{7})", re.IGNORECASE)
-DOI = re.compile(r"\b(10\.\d{4,9}/[^\s)\]>\"'`,;|]+)")
+DOI = re.compile(r"\b(10\.\d{4,9}/(?:[^\s()\]>\"'`,;|]|\([^\s()]*\))+)")  # balanced ( ) kept: 10.1002/(SICI)...
 GITHUB = re.compile(r"(?<![\w.-])(?:www\.)?github\.com/([A-Za-z0-9-]+)/([A-Za-z0-9_.-]+)")
-URL = re.compile(r"https?://[^\s)\]>\"'`|]+")
+URL = re.compile(r"https?://(?:[^\s()\]>\"'`|]|\([^\s()]*\))+")  # balanced ( ) kept: Wikipedia titles
 HEADERS = {"User-Agent": "reader-ergonomics-reference-check/1.0"}
 ATOM = "{http://www.w3.org/2005/Atom}"
 
