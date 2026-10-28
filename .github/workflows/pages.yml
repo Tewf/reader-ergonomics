@@ -1,7 +1,11 @@
 name: Publish the site
 
+# The site publishes only a commit whose checks passed: it waits for "Check the standard" to
+# finish on a push to master, and builds the commit that was checked.
 on:
-  push:
+  workflow_run:
+    workflows: ["Check the standard"]
+    types: [completed]
     branches: [master]
   workflow_dispatch:
 
@@ -16,12 +20,17 @@ concurrency:
 
 jobs:
   publish:
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.event == 'push')
     runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.workflow_run.head_sha || github.sha }}
       - uses: quarto-dev/quarto-actions/setup@v2
         with:
           version: 1.8.26
