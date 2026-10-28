@@ -63,6 +63,26 @@ pip install -r checks/syntax/requirements.txt    # the syntax tier
 A tier whose library is missing is skipped with a notice, never failed. `.github/workflows/checks.yml` runs the program
 and meaning tiers on every push and pull request. It runs the syntax tier and the online references once a week.
 
+## What other tools already check
+
+Most of these checks have no counterpart elsewhere: no tool found checks overview first, terms defined across files,
+a missing figure, folder breadth, document mode, paraphrase, a name against its content, or a stylesheet's measure.
+Where a tool does the same job, it is named below. The checks stay on the standard library so that one command runs
+them with nothing to install; a repository that already uses one of these tools can keep it.
+
+| Check | Tool that covers it | How it differs |
+|---|---|---|
+| `links`, `references` | [lychee](https://github.com/lycheeverse/lychee) | also web links and fragments; no check of a DOI or arXiv form |
+| `shape-conformance`, `outline-depth` | [markdownlint](https://github.com/DavidAnson/markdownlint) MD043, [mdschema](https://github.com/jackchuka/mdschema) | required headings in order; mdschema also sets a maximum heading depth |
+| `long-sentences`, `paragraph-length` | [Vale](https://github.com/errata-ai/vale) | a rule from a style package or a custom one, not a statement count |
+| `duplication` | [jscpd](https://github.com/kucherenko/jscpd) | copies of tokens, not of normalised prose |
+| `sufficient-contrast` | [axe-core](https://github.com/dequelabs/axe-core) | measures the rendered page (see below) |
+| `tree-shape`, for cycles | [import-linter](https://import-linter.readthedocs.io/en/stable/), for Python | cycles and layers per module; no tool counts the entries of a folder |
+| `portable-paths` | [pre-commit-hooks](https://github.com/pre-commit/pre-commit-hooks) | case conflicts, illegal Windows names and symlinks, as separate hooks |
+| `co-change` | [code-maat](https://github.com/adamtornhill/code-maat) | coupling per file from the history, not per folder |
+
+For every other check, the search found no tool that does the same job (October 2026).
+
 ## What is not checked here
 
 The rendered page: contrast and measure are checked on the stylesheet's declared values, not on the pixels. A browser
