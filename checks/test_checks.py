@@ -246,6 +246,15 @@ class TestSyntaxTier(ScratchRepository):
         found = dependency_length.check(self.root, dict(CONFIG, dependency_length={"max_distance": 10}))
         self.assertEqual(len(found), 1, found)
 
+    def test_dependency_length_skips_links_between_complete_clauses(self) -> None:
+        self.write("a.md", "The program checks the form of every identifier in the bibliography without the network, and "
+                   "the weekly job resolves each one.\n\nThe tests run on every push of every branch to the "
+                   "repository; the site is rendered again.\n")
+        self.write("README.fr.md", "Les notes que le lecteur garde en mémoire pendant toute la lecture du long "
+                   "paragraphe restent cognitives.\n")
+        found = dependency_length.check(self.root, dict(CONFIG, dependency_length={"max_distance": 10}))
+        self.assertEqual(found, [])
+
     def test_clause_nesting(self) -> None:
         self.write("a.md", "The rat that the cat that the dog chased killed ate the malt.\n\nThe cat sat on the mat.\n")
         found = clause_nesting.check(self.root, dict(CONFIG, clause_nesting={"max_depth": 1}))
