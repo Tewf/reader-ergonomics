@@ -7,7 +7,7 @@ demand, not on every push. Findings are warnings: exact given the parse, but the
 <!-- checks:start -->
 | File | Role |
 |---|---|
-| [clause_nesting.py](clause_nesting.py) | Shallow nesting: no sentence puts a clause inside a clause inside a clause |
+| [clause_nesting.py](clause_nesting.py) | Shallow nesting: no sentence centre-embeds a clause inside a centre-embedded clause |
 | [dependency_length.py](dependency_length.py) | Short dependencies: no word sits more than `max_distance` words from the word it depends on |
 | [parser.py](parser.py) | The dependency parser the syntax checks share: spaCy's small English model, loaded once, on CPU |
 | [sentence_links.py](sentence_links.py) | Given before new: each sentence of a paragraph picks up something the one before it gave |

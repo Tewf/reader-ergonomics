@@ -4,7 +4,8 @@
 
 - **Grade:** measured.
 - **Evidence:** [psycholinguistics](../../evidence/psycholinguistics/review.md) (strand 3), [against](../../evidence/psycholinguistics/against.md).
-- **Check:** `clause-nesting` (syntax, weekly): no sentence nests more than two clauses.
+- **Check:** `clause-nesting` (syntax, weekly): no sentence puts a clause in the middle of a clause that is itself in the
+  middle of another; a clause at the end does not count.
 - **Reader styles:** strengthened by [novice](../../reader-styles/novice.md); relaxed by [LLM reader](../../reader-styles/llm-reader.md).
 
 ## What it asks

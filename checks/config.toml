@@ -102,7 +102,7 @@ max_distance = 12  # PROVISIONAL
 exempt = ["evidence/bibliography.md"]
 
 [clause_nesting]
-max_depth = 2      # Gibson & Thomas 1999: two nested clauses already mislead readers
+max_depth = 1      # the claim: one clause inside another at most; two already mislead (Gibson & Thomas 1999)
 exempt = ["evidence/bibliography.md"]
 
 [sentence_links]

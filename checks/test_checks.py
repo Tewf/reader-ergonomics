@@ -260,6 +260,11 @@ class TestSyntaxTier(ScratchRepository):
         found = clause_nesting.check(self.root, dict(CONFIG, clause_nesting={"max_depth": 1}))
         self.assertEqual(len(found), 1, found)
 
+    def test_clause_nesting_ignores_clauses_at_the_end(self) -> None:
+        self.write("a.md", "The board said that the committee thought that the report showed that the plan failed.\n")
+        found = clause_nesting.check(self.root, dict(CONFIG, clause_nesting={"max_depth": 1}))
+        self.assertEqual(found, [])
+
 
 class TestCleanRepository(ScratchRepository):
     def test_nothing_found(self) -> None:
