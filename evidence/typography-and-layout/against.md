@@ -19,7 +19,7 @@
 
 ## Layout and design
 
-- Tufte's data-ink rule: intuition; Bateman 2010 found embellishment harmless for accuracy.
+- Tufte's data-ink rule (Tufte 1983): intuition; Bateman 2010 found embellishment harmless for accuracy.
 - F-pattern: a description of scanning on cluttered pages, not a law for structured text.
 - Chunking advice rests on Miller 1956 and anecdote.
 - Syntax highlighting: no comprehension effect (Hannebauer 2018).

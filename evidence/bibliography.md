@@ -417,7 +417,7 @@ Every work cited anywhere in this repository, once. The text cites `Author Year`
 | Tornhill 2015 | Tornhill (2015). Your Code as a Crime Scene. Pragmatic Bookshelf | https://pragprog.com/titles/atcrime/your-code-as-a-crime-scene/ |
 | Treude 2026 | Treude, Baltes (2026). Context Rot in AI-Assisted Software Development: Repurposing Documentation Consistency for AI Configuration Artifacts. Preprint. | arXiv:2606.09090 |
 | Tsipidi 2024 | Tsipidi, Nowak, Cotterell, Wilcox, Giulianelli, Warstadt (2024). Surprise! Uniform information density isn't the whole story: Predicting surprisal contours in long-form discourse. | https://arxiv.org/abs/2410.16062 |
-| Tufte 2006 | Tufte (2006). Beautiful Evidence | https://blas.com/beautiful-evidence |
+| Tufte 1983 | Tufte (1983). The Visual Display of Quantitative Information. Graphics Press; second edition 2001 | https://openlibrary.org/works/OL2824012W |
 | Tversky 2002 | Tversky, Morrison, Bétrancourt (2002). Animation: can it facilitate? International Journal of Human-Computer Studies | https://doi.org/10.1006/ijhc.2002.1017 |
 | Tzerpos 1999 | Tzerpos, Holt (1999). MoJo: a distance metric for software clusterings. WCRE | https://doi.org/10.1109/wcre.1999.806959 |
 | Urry 2021 | Urry et al. (2021). Don't ditch the laptop just yet. Psychological Science | https://doi.org/10.1177/0956797620965541 |

@@ -53,7 +53,7 @@ Grouped by strand. Surveys first, then primary studies and standards.
 - Bateman 2010 (S): embellished charts were no worse for accuracy and better for recall.
 - Cleveland 1984 (S): position and length are judged more accurately than angle, area or colour.
 - Vessey 1991 (R): tables fit symbolic look-up; graphs fit spatial tasks.
-- Tufte 2006 (P): the data-ink rule is intuition, not tested.
+- Tufte 1983 (P): the data-ink rule is intuition, not tested.
 
 ## 7. Navigation
 

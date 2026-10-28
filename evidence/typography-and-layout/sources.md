@@ -31,7 +31,7 @@ Cited in review.md without a bibliography key, so not scored: Bringhurst, Krug, 
 | Pa11y 2026 | open-source repository, tier 3 | A1 M3 O2 D0.5 P1 N0.5 I1 T0 = 9 | review.md |
 | GOVUK 2024 | government design system, tier 2 | A3 M2 O1.5 D0 P0.5 N0.5 I0.5 T0.5 = 8.5 | baseline.md, position.md, review.md, state-of-the-art.md |
 | Horn 1969 | encyclopedia page, tier 3 | A0.5 M3 O1 D1 P0.5 N0 I0.5 T0 = 6.5 (a Wikipedia page, not Horn) | review.md |
-| Tufte 2006 | blog summary of a book, tier 3 | A0.5 M2 O1 D1 P0.5 N0 I0.5 T0 = 5.5 (the linked page summarises the book, which was not seen) | review.md |
+| Tufte 1983 | book, tier 1 | not scored: the book was not read; the earlier entry cited Beautiful Evidence (2006), which is not where the data-ink rule is set out | review.md, against.md |
 | Knuth 1989 | course notes, book, tier 1 | A0 M0 O0 D0 P0 N0 I0 T1 = 1 (not read), PDF unreadable | review.md |
 | Akhmadeeva 2016 | user-group journal article, tier 2 | A0 M0 O0 D0 P0 N0 I0 T0.5 = 0.5 (not read), HTTP 403 | review.md |
 
