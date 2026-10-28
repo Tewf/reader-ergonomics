@@ -26,6 +26,11 @@ exempt = ["LICENSES/"]
 words = 20         # PROVISIONAL: the length of a copied run that counts as one fact held twice
 exempt = []
 
+[citations]
+bibliography = "evidence/bibliography.md"
+files = ["evidence/", "principles/", "reader-styles/", "shapes/"]
+not_surnames = ["WCAG", "Colon", "Classification", "Prolegomena", "Python", "Since", "In", "From", "Until", "By", "After", "Before", "Around"]
+
 [references]
 files = ["evidence/bibliography.md"]   # where references live; empty means every markdown file
 cache_days = 30

@@ -12,6 +12,7 @@ import sys
 import tomllib
 from pathlib import Path
 
+import citations
 import defined_before_use
 import duplication
 import judgment
@@ -21,7 +22,7 @@ import portable_paths
 import references
 import tree_shape
 
-CHECKS = [portable_paths, tree_shape, links, logical_lines, duplication, defined_before_use, references]
+CHECKS = [portable_paths, tree_shape, links, logical_lines, duplication, defined_before_use, citations, references]
 
 
 def main() -> int:
