@@ -16,7 +16,8 @@
 ## Why
 
 - Idea units high in a text's content structure are recalled better than low ones, the **levels effect** (Meyer &
-  McConkie 1973; Meyer 1975, secondary).
+  McConkie 1973; Meyer 1975, secondary). Read first-hand: superordinate propositions were recalled better than
+  subordinate ones, 86% against 74% (Kintsch 1973).
 - Readers slow down more at a changed word high in the hierarchy than low in it (Wu et al. 2016).
 - Readers who follow the top-level structure comprehend better (Meyer et al. 1980), and adults who attend to headings
   write the best summaries (Hyönä et al. 2002).
