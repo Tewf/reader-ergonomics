@@ -13,6 +13,16 @@ from framework.prose import blocks
 from syntax import parser
 
 TRANSLATION = re.compile(r"\.(?!en\.)[a-z]{2}\.(?:md|qmd)$")  # README.fr.md, not README.en.md
+LINK = re.compile(r"\[([^\]]*)\]\((?:[^()\s]|\([^()\s]*\))*\)")  # balanced ( ) kept, as in references
+EMPHASIS = re.compile(r"\*+")
+
+
+def as_read(text: str) -> str:
+    """The paragraph as a reader sees it: link text without its address, bold without its asterisks.
+
+    Left in, `**Claim:**` reaches the parser as asterisks with the colon glued to one of them.
+    """
+    return EMPHASIS.sub("", LINK.sub(r"\1", text))
 
 
 def parsed_paragraphs(root: Path, config: dict, exempt: list[str]):
@@ -23,5 +33,5 @@ def parsed_paragraphs(root: Path, config: dict, exempt: list[str]):
             continue
         for block in blocks(prose_only((root / path).read_text(encoding="utf-8", errors="replace"))):
             if block.kind == "paragraph":
-                units.append((path, block.line, block.text))
+                units.append((path, block.line, as_read(block.text)))
     return [(path, line, document) for (path, line, _), document in zip(units, parser.parse([text for _, _, text in units]))]

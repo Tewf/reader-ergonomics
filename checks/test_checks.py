@@ -270,6 +270,13 @@ class TestCleanRepository(ScratchRepository):
             self.assertEqual(self.messages(module), [], module.NAME)
 
 
+class TestParserInput(unittest.TestCase):
+    def test_the_parser_reads_what_the_reader_reads(self) -> None:
+        from syntax import sentences_of
+        self.assertEqual(sentences_of.as_read("**Claim:** see [the guide](https://example.org/a_(b))."),
+                         "Claim: see the guide.")
+
+
 class TestSummary(unittest.TestCase):
     def test_a_skipped_tier_is_not_listed_as_run(self) -> None:
         self.assertEqual(run.summary(0, 1, {"program"}, {"meaning"}),
