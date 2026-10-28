@@ -4,6 +4,10 @@ How to write notes, documents and files so that they cost the reader as little a
 what cognitive science, psycholinguistics and software engineering have measured. For people who write,
 and for language models that write.
 
+> **Status:** a work in progress, shared as it is. It is a personal reading of published research: not a
+> peer-reviewed study, not a new result, and not a claim to the state of the art. Each principle says how strong
+> its evidence is, and many are conventions nobody has tested. Corrections are welcome as issues.
+
 [Lire en français](README.fr.md). The content is in English; only this page has a French version.
 
 ## Three doors
@@ -44,7 +48,7 @@ written to `checks/out/needs-judgment.md`. See [checks/](checks/).
 
 [AGENTS.md](AGENTS.md) holds the rules for changing this repository, for people and models alike.
 
-## Licence and citation
+## Licence
 
-Code under the [Apache License 2.0](LICENSE); prose under [CC BY 4.0](LICENSES/CC-BY-4.0.txt). Reuse it as you wish and
-cite it: [CITATION.cff](CITATION.cff).
+Code under the [Apache License 2.0](LICENSE); prose under [CC BY 4.0](LICENSES/CC-BY-4.0.txt). Reuse it as you wish, with
+credit to this repository.
