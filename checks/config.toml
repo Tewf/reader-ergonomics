@@ -44,6 +44,7 @@ exempt = ["evidence/bibliography.md", "*index.qmd", "reader-styles/template.md"]
 [cross_file_terms]
 min_length = 6
 max_files = 5   # PROVISIONAL: past it, a term is shared vocabulary
+ignore_terms = ["materials", "upper bound", "lower bound"]   # bold list labels, not defined terms
 exempt = ["evidence/bibliography.md", "standard.md", "llms.txt"]   # titles, and copies built from the principles
 
 [shape_conformance]

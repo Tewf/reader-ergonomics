@@ -30,7 +30,8 @@ def check(root: Path, config: dict) -> list[Finding]:
     for path, text in texts.items():
         for match in DEFINITION.finditer(text):
             term = match.group(1).strip().lower()
-            if len(term) >= min_length and term[0].isalpha() and not term.endswith(":"):  # "Check:" is a label
+            if (len(term) >= min_length and term[0].isalpha() and not term.endswith(":")  # "Check:" is a label
+                    and term not in settings.get("ignore_terms", [])):
                 defined_in.setdefault(term, path)
     pattern = {term: re.compile(rf"(?<![\w*]){re.escape(term)}(?![\w*])", re.IGNORECASE) for term in defined_in}
     spread = {term: sum(1 for text in texts.values() if pattern[term].search(text)) for term in defined_in}
