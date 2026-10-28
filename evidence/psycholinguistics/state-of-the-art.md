@@ -61,7 +61,7 @@ Its total cost is C = f(s_1) + ... + f(s_n).
 | Projective or planar minimum, tree | linear time | Alemany-Puig et al. 2022 | upper | measured (theorem) |
 | Arrangement of an acyclic directed graph | NP-complete | Even and Shiloach, as cited in Shiloach 1979 | lower | supported with caveat (secondary) |
 | Linear ordering, rooted tree (root at the left end, each node after all its ancestors) | O(n log n) | Adolphson & Hu 1973, section 3 | upper | measured (theorem) |
-| Unit-time scheduling with precedence, weighted completion time | NP-hard | Lawler 1978, as stated in Lenstra & Rinnooy Kan 1980 | lower | supported with caveat (secondary) |
+| Unit-time scheduling with precedence, weighted completion time | NP-hard | Lawler 1978 (proved in its 1976 report, p. 4; weights arbitrary) | lower | supported with caveat |
 
 - Caveat on the acyclic directed row, cited through Shiloach 1979 (abstract only): its definition of the directed version was not read, nor was Even and Shiloach.
 - The rooted-tree row is the ordered version: Adolphson and Hu 1973 (section 2) place each node after its predecessors, so it is not MinLA on an undirected tree.
@@ -75,7 +75,9 @@ Its total cost is C = f(s_1) + ... + f(s_n).
 - That is a weighted sum of positions under precedence, with weight w(x) = in(x) - out(x).
 - With units of equal length, adding a constant to every weight changes D by a constant, so negative weights are harmless.
 - It is then unit-time single-machine scheduling with precedence, minimizing weighted completion time.
-- Known: with series-parallel precedence, forests included, that problem is solvable in polynomial time (Lawler 1978; supported with caveat, not read in full).
+- Known: with series-parallel precedence, rooted forests included, that problem is solvable in O(n log n) time once
+  the decomposition is given (Lawler 1978; its 1976 report read, the published chapter not). An undirected path need
+  not be series-parallel.
 - With sections of unequal length, positions become start offsets and the weights keep both signs; standard results assume non-negative weights, so none is claimed.
 - Not found: whether weights of the form in(x) - out(x) keep the general case NP-hard; this file makes no such claim.
 

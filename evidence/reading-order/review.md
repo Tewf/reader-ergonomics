@@ -32,7 +32,7 @@ Surveys to read first: Ponce 2025 (organizers), McCrudden 2007 (relevance), Ritt
 | McCrudden 2005; McCrudden and Schraw 2007 | relevance instructions: relevant parts learned better at no extra reading time; the rest learned less | RCT; R |
 | Klauer 1984; St. Hilaire 2023 | objectives and prequestions: targeted content up; the rest down with objectives (Klauer), unchanged with prequestions (g = 0.54 vs 0.04, St. Hilaire) | MA |
 | Dee-Lucas and Larkin 1995, 1999 | hypertext in small units, read with a goal: deep on the goal, narrow overall; overviews widen recall | S |
-| Ariel 2009 | a goal-set agenda decides what is studied, overriding item difficulty (secondary) | RCT |
+| Ariel 2009 | when the experimenter's reward favoured some word pairs, learners chose which half of 30 to restudy by reward more than by difficulty; weaker for sequential choice and low working-memory span | RCT (4 experiments) |
 | Metcalfe and Kornell 2005 | learners skip items they judge known, take the nearly known first, stop when judged learning rate nears zero; describes behaviour, efficacy untested (8 experiments) | RCT |
 | Nelson and Leonesio 1988 | extra time on the hardest items gives little gain; correlational (secondary) | S |
 | Pirolli and Card 1999 | leave a source when its gain rate falls to the average elsewhere | T |
