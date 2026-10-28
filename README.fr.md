@@ -28,8 +28,8 @@ et pour les modèles de langue qui écrivent.
 
 | Dossier | Rôle |
 |---|---|
-| [principles/](principles/) | l'optimum général, un fichier par principe, rangé par échelle : collection, document, phrase, page |
-| [reader-styles/](reader-styles/) | les ajustements pour un lecteur connu, car le véritable optimum dépend de qui lit |
+| [principles/](principles/) | la meilleure hypothèse actuelle pour tout lecteur, un fichier par principe, rangé par échelle : collection, document, phrase, page |
+| [reader-styles/](reader-styles/) | les ajustements pour un lecteur connu, car ce qui marche le mieux dépend de qui lit |
 | [shapes/](shapes/) | des squelettes fixes par type de document : note, README de dossier, rapport, message de commit |
 | [evidence/](evidence/) | les revues derrière les principes, et une [bibliographie](evidence/bibliography.md) commune |
 | [checks/](checks/) | des programmes qui vérifient ce qu'un programme peut vérifier ; des questions pour le jugement sinon |

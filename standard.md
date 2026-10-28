@@ -1,6 +1,6 @@
 # The reader-ergonomics standard
 
-The principles below are the optimum for a reader nobody knows. When the reader is known, their
+The principles below are the best current guess for a reader nobody knows, as far as the evidence goes. When the reader is known, their
 [reader style](reader-styles/) overrides what it names, and everything else here still holds.
 
 ## How to use it

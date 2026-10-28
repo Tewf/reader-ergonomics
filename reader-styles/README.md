@@ -1,7 +1,7 @@
 # Reader styles
 
-The [standard](../standard.md) is the optimum for a reader nobody knows. Once the reader
-is known, the optimum moves: what helps a novice slows an expert down (**expertise
+The [standard](../standard.md) is the best current guess for a reader nobody knows. Once the
+reader is known, the best choice moves: what helps a novice slows an expert down (**expertise
 reversal**: an aid that helps beginners hurts readers who no longer need it; Kalyuga et al.
 2003), and a model reads differently from a person. A reader style says what moves, for
 whom, and on what evidence.

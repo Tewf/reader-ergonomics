@@ -1,6 +1,6 @@
 # Principles
 
-The general optimum, one file per principle, grouped by the scale it acts on. Each file follows
+The best current guess for a reader nobody knows, one file per principle, grouped by the scale it acts on. Each file follows
 the same shape: the claim, its grade, the evidence, the check that enforces it, the reader styles
 that override it; then what it asks, why, and its limits.
 

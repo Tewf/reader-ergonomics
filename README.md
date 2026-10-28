@@ -28,8 +28,8 @@ and for language models that write.
 
 | Folder | Role |
 |---|---|
-| [principles/](principles/) | the general optimum, one file per principle, grouped by scale: collection, document, sentence, page |
-| [reader-styles/](reader-styles/) | the overrides for a known reader, because the true optimum depends on who reads |
+| [principles/](principles/) | the best current guess for any reader, one file per principle, grouped by scale: collection, document, sentence, page |
+| [reader-styles/](reader-styles/) | the overrides for a known reader, because what works best depends on who reads |
 | [shapes/](shapes/) | fixed skeletons for kinds of documents: note, folder README, report, commit message |
 | [evidence/](evidence/) | the reviews behind the principles, and one shared [bibliography](evidence/bibliography.md) |
 | [checks/](checks/) | programs that verify what a program can verify; questions for judgment otherwise |
