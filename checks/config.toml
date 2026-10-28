@@ -1,0 +1,38 @@
+# What the checks read. Values tagged PROVISIONAL are conventions, not measured optima;
+# the principle each one serves says how strong its evidence is.
+
+[scope]
+exclude = ["LICENSE", "LICENSES/", "checks/out/"]
+
+[logical_lines]
+trigger = 80    # PROVISIONAL: past it, state the file's role in one sentence; not a limit
+ceiling = 500   # PROVISIONAL: physical lines, a hard limit
+exempt_from_trigger = ["evidence/bibliography.md"]   # a data table, one row per work
+ignore_line_prefixes = []                            # footer lines a site adds to every page
+
+[links]
+wikilinks = "resolve"   # resolve | ignore (for vaults whose links may point at notes not yet written)
+
+[portable_paths]
+allow_symlinks = false
+
+[tree_shape]
+max_entries = 16   # menu-breadth studies: 8 to 16 per level (see principles/collection)
+min_entries = 3    # PROVISIONAL
+max_depth = 4      # PROVISIONAL
+exempt = ["LICENSES/"]
+
+[duplication]
+words = 20         # PROVISIONAL: the length of a copied run that counts as one fact held twice
+exempt = []
+
+[references]
+files = ["evidence/bibliography.md"]   # where references live; empty means every markdown file
+cache_days = 30
+
+[judgment]
+backend = "flag"   # none | flag | local | api
+timeout_seconds = 120
+
+[judgment.api]
+enabled = false    # PROVISIONAL: paid; stays off until the maintainer turns it on
