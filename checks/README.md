@@ -47,7 +47,10 @@ principle to naming at least one registered check.
 | `local` | each question sent to a model on this machine through an OpenAI-compatible endpoint, set only by `READER_ERGONOMICS_LOCAL_URL` and `READER_ERGONOMICS_LOCAL_MODEL` | free, local |
 | `api` | the same protocol to a paid provider (`READER_ERGONOMICS_API_URL`, `_KEY`, `_MODEL`); refuses to run unless `[judgment.api] enabled = true` | paid, off |
 
-A model's answer is recorded as advice next to its question; it never fails the run.
+A model's answer is recorded as advice next to its question; it never fails the run. An answer that settles a question
+goes in `checks/judgments.toml`, committed with the repository, with the fingerprint of the file it concerns: the
+question stays answered until that file changes. Open questions are also written as entries to fill in, in
+`checks/out/judgments-to-answer.toml`.
 
 ## Use
 
