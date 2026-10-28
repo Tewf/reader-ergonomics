@@ -134,6 +134,7 @@ cache_days = 30
 
 [judgment]
 backend = "flag"   # none | flag | local | api
+answers = "checks/judgments.toml"   # answers kept with the repository; an edit to a file reopens its questions
 timeout_seconds = 120
 
 [judgment.api]

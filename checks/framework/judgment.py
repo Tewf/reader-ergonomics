@@ -12,11 +12,19 @@ Backends, cheapest first:
   but stays off until the maintainer turns it on.
 
 A model's answer is recorded next to its question as advice; it never fails the run.
+
+Answers are kept in the file named by `[judgment] answers` (by default `checks/judgments.toml`),
+committed with the repository, so a question answered once is not asked on every run. Each
+answer carries the fingerprint of its file when it was given; once the file changes, the question
+is asked again. The open questions are also written as entries ready to fill in, in
+`checks/out/judgments-to-answer.toml`.
 """
 from __future__ import annotations
 
+import hashlib
 import json
 import os
+import tomllib
 import urllib.request
 from pathlib import Path
 
@@ -46,14 +54,46 @@ def endpoint(backend: str, settings: dict) -> tuple[str, str, str | None] | str:
     return url, model, os.environ.get(f"{prefix}_KEY") if backend == "api" else None
 
 
+def fingerprint(root: Path, path: str) -> str:
+    """The first 12 hex characters of the file's SHA-256, or "" when the path is not a file."""
+    file = root / path
+    return hashlib.sha256(file.read_bytes()).hexdigest()[:12] if file.is_file() else ""
+
+
+def answered(root: Path, settings: dict) -> set[tuple[str, str, str, str]]:
+    """(check, path, question, fingerprint) of every answer given and not left empty."""
+    file = root / settings.get("answers", "checks/judgments.toml")
+    if not file.is_file():
+        return set()
+    entries = tomllib.loads(file.read_text(encoding="utf-8")).get("answer", [])
+    return {(entry["check"], entry["path"], entry["question"], entry["file"]) for entry in entries
+            if str(entry.get("answer", "")).strip()}
+
+
+def to_answer(root: Path, questions: list[Finding]) -> str:
+    """The open questions as entries of the answers file, each with its fingerprint and an empty answer."""
+    entries = []
+    for finding in questions:
+        entries += ["[[answer]]", f"check = {json.dumps(finding.check)}", f"path = {json.dumps(finding.path)}",
+                    f"question = {json.dumps(finding.message, ensure_ascii=False)}",
+                    f"file = {json.dumps(fingerprint(root, finding.path))}", 'answer = ""', ""]
+    return "\n".join(entries)
+
+
 def dispatch(root: Path, findings: list[Finding], backend: str, settings: dict) -> str:
     """Send the judgment findings to the backend; return one line saying what happened."""
-    questions = [finding for finding in findings if finding.kind == "judgment"]
+    asked = [finding for finding in findings if finding.kind == "judgment"]
+    known = answered(root, settings)
+    questions = [finding for finding in asked
+                 if (finding.check, finding.path, finding.message, fingerprint(root, finding.path)) not in known]
+    done = f", {len(asked) - len(questions)} answered in {settings.get('answers', 'checks/judgments.toml')}" if known else ""
     output = root / "checks" / "out" / "needs-judgment.md"
+    stub = output.with_name("judgments-to-answer.toml")
     if backend == "none" or not questions:
-        if not questions and output.exists():
-            output.unlink()  # a file left by an earlier run would ask questions that no longer apply
-        return f"judgment: {len(questions)} question(s), backend {backend}"
+        for left in (output, stub):
+            if not questions and left.exists():
+                left.unlink()  # a file left by an earlier run would ask questions that no longer apply
+        return f"judgment: {len(asked)} question(s){done}, backend {backend}"
     answers, note = {}, ""
     if backend in ("local", "api"):
         target = endpoint(backend, settings)
@@ -75,4 +115,5 @@ def dispatch(root: Path, findings: list[Finding], backend: str, settings: dict) 
         if finding in answers:
             lines += ["", "  " + answers[finding].replace("\n", "\n  "), ""]
     output.write_text("\n".join(lines) + "\n", encoding="utf-8")
-    return f"judgment: {len(questions)} question(s) written to checks/out/needs-judgment.md{note}"
+    stub.write_text(to_answer(root, questions), encoding="utf-8")
+    return f"judgment: {len(asked)} question(s){done}, {len(questions)} written to checks/out/needs-judgment.md{note}"

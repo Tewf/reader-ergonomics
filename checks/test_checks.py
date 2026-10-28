@@ -275,6 +275,21 @@ class TestCleanRepository(ScratchRepository):
             self.assertEqual(self.messages(module), [], module.NAME)
 
 
+class TestJudgmentAnswers(ScratchRepository):
+    def test_an_answer_holds_until_its_file_changes(self) -> None:
+        from framework import judgment
+        from framework.check_api import Finding
+        self.write("long.md", "first version\n")
+        question = [Finding("logical-lines", "long.md", 0, "state this file's role in one sentence", "judgment")]
+        self.assertIn("1 written", judgment.dispatch(self.root, question, "flag", {}))
+        stub = (self.root / "checks" / "out" / "judgments-to-answer.toml").read_text(encoding="utf-8")
+        self.write("checks/judgments.toml", stub.replace('answer = ""', 'answer = "one role: the long note"'))
+        self.assertIn("1 answered in checks/judgments.toml, backend flag", judgment.dispatch(self.root, question, "flag", {}))
+        self.assertFalse((self.root / "checks" / "out" / "needs-judgment.md").exists())
+        self.write("long.md", "second version\n")
+        self.assertIn("0 answered in checks/judgments.toml, 1 written", judgment.dispatch(self.root, question, "flag", {}))
+
+
 class TestParserInput(unittest.TestCase):
     def test_the_parser_reads_what_the_reader_reads(self) -> None:
         from syntax import sentences_of
