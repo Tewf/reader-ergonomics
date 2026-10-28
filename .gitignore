@@ -1,0 +1,10 @@
+# Built site and Quarto caches
+_site/
+.quarto/
+_freeze/
+/.luarc.json
+# Python
+__pycache__/
+*.pyc
+# Local output of the checks
+checks/out/
