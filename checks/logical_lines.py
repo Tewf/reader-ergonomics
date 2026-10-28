@@ -1,12 +1,14 @@
-"""File size: a ceiling on physical lines, and a trigger on logical lines that asks a question.
+"""File size: a trigger on logical lines and a ceiling on physical lines, each asking a question.
 
 A logical line of markdown is a statement: one sentence of prose, one list item, one
 table row, one fenced or math block. Layout counts zero: headings, blank lines,
 frontmatter, separators, callout markers, table separators. Re-cutting a paragraph into
 bullets therefore changes nothing. Past the trigger, the file's role must be stated in
-one sentence; that question is judgment, so it goes to the judgment backend.
+one sentence; past the ceiling, the file is reviewed for a split into pieces that change
+separately. Size alone never decides a split (no defect threshold has held up), so both
+are judgment questions, sent to the judgment backend.
 
-Exact for the ceiling. The sentence count is a heuristic (abbreviations split badly).
+The sentence count is a heuristic (abbreviations split badly).
 Time O(n) in the size of the files, space O(longest paragraph).
 Usage alone: python3 logical_lines.py FILE... [--over N]
 """
@@ -19,7 +21,7 @@ from pathlib import Path
 from check_api import MARKDOWN_SUFFIXES, Finding, files_in_scope, matches_any
 
 NAME = "logical-lines"
-EXACT = True
+EXACT = False
 SENTENCE_BOUNDARY = re.compile(r"(?<=[.!?:;])\s+(?=[A-ZÀ-Ý\[\$`(0-9*])")
 LIST_ITEM = re.compile(r"^([-*+]|\d+[.)])\s")
 TABLE_SEPARATOR = re.compile(r"^\|?\s*:?-{2,}")
@@ -76,7 +78,8 @@ def check(root: Path, config: dict) -> list[Finding]:
         text = (root / path).read_text(encoding="utf-8", errors="replace")
         physical = len(text.splitlines())
         if physical > ceiling:
-            findings.append(Finding(NAME, path, 1, f"{physical} lines, over the ceiling of {ceiling}: split it"))
+            findings.append(Finding(NAME, path, 1, f"{physical} lines, past the ceiling of {ceiling}. Review it: split it "
+                "only into pieces that change separately and each stay whole, or state why it stays one file.", "judgment"))
         if Path(path).suffix in MARKDOWN_SUFFIXES and not matches_any(path, exempt_from_trigger):
             logical = logical_line_count(text, ignored_prefixes)
             if logical > trigger:

@@ -1,7 +1,7 @@
 """Tree shape: folders stay browsable, and dependencies between folders never form a cycle.
 
-- Breadth: a folder past `max_entries` visible entries fails (menu-breadth studies put
-  the optimum at 8 to 16 items per level; the threshold is in config).
+- Breadth: a folder past `max_entries` visible entries fails (the fastest layout measured on
+  menus and web pages had two levels, one of 32 items; the threshold is in config).
 - Narrowness: a folder under `min_entries` is a question, not a failure: fold it into its
   parent unless it is one record of a collection (a job folder, a chapter).
 - Depth: a file deeper than `max_depth` folders warns.
@@ -120,9 +120,9 @@ def check(root: Path, config: dict) -> list[Finding]:
         if matches_any(folder + "/", excluded) or (folder and matches_any(folder, excluded)):
             continue
         shown = folder or "(root)"
-        if len(entries) > settings.get("max_entries", 16):
+        if len(entries) > settings.get("max_entries", 32):
             findings.append(Finding(NAME, shown, 0,
-                f"{len(entries)} entries, over {settings.get('max_entries', 16)}: split it by purpose"))
+                f"{len(entries)} entries, over {settings.get('max_entries', 32)}: split it by purpose"))
         if folder and len(entries) < settings.get("min_entries", 3):
             findings.append(Finding(NAME, shown, 0,
                 f"{len(entries)} entries: fold into the parent folder, unless this folder is one record "

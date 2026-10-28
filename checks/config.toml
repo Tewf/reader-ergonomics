@@ -6,7 +6,7 @@ exclude = ["LICENSE", "LICENSES/", "checks/out/"]
 
 [logical_lines]
 trigger = 80    # PROVISIONAL: past it, state the file's role in one sentence; not a limit
-ceiling = 500   # PROVISIONAL: physical lines, a hard limit
+ceiling = 500   # PROVISIONAL: physical lines; past it, a review, never an automatic split
 exempt_from_trigger = ["evidence/bibliography.md"]   # a data table, one row per work
 ignore_line_prefixes = []                            # footer lines a site adds to every page
 
@@ -17,7 +17,7 @@ wikilinks = "resolve"   # resolve | ignore (for vaults whose links may point at 
 allow_symlinks = false
 
 [tree_shape]
-max_entries = 16   # menu-breadth studies: 8 to 16 per level (see principles/collection)
+max_entries = 32   # PROVISIONAL: the fastest measured layout had 32 on one level (Larson 1998)
 min_entries = 3    # PROVISIONAL
 max_depth = 4      # PROVISIONAL
 exempt = ["LICENSES/"]

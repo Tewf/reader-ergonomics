@@ -43,10 +43,14 @@ class TestPlantedViolations(ScratchRepository):
         self.write("notes/Same.md")
         self.write("notes/same.md")
         self.write("notes/draft .md")
+        self.write("notes/NUL.txt")
+        self.write("notes/ends.")
         found = " ".join(self.messages(portable_paths))
         self.assertIn("forbidden character", found)
         self.assertIn("only by case", found)
         self.assertIn("space before the extension", found)
+        self.assertIn("reserved device name", found)
+        self.assertIn("trailing period", found)
 
     def test_links(self) -> None:
         self.write("a.md", "[ok](b.md) [broken](missing.md) [[nowhere]] `[code](skipped.md)`\n")
@@ -86,7 +90,7 @@ class TestPlantedViolations(ScratchRepository):
         self.write("long.md", text)
         found = " ".join(self.messages(logical_lines))
         self.assertIn("judgment long.md 6 logical lines", found)
-        self.assertIn("over the ceiling of 10", found)
+        self.assertIn("judgment long.md 14 lines, past the ceiling of 10", found)
 
 
 class TestCleanRepository(ScratchRepository):
