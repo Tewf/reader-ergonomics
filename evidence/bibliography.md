@@ -290,7 +290,7 @@ Every work cited anywhere in this repository, once. The text cites `Author Year`
 | Rawson 2011 | Rawson, Dunlosky (2011). Optimizing schedules of retrieval practice: how much is enough? JEP: General. | https://doi.org/10.1037/a0023956 |
 | Rawson 2013 | Rawson, Dunlosky, Sciartelli (2013). The power of successive relearning. Educational Psychology Review | https://doi.org/10.1007/s10648-013-9240-4 |
 | Rayner 2016 | Rayner, Schotter, Masson, Potter, Treiman (2016). So much to read, so little time. Psychological Science in the Public Interest. | https://doi.org/10.1177/1529100615623267 |
-| Reigeluth 1983 | Reigeluth, Stein (1983). The elaboration theory of instruction. In Reigeluth (ed.), Instructional-design theories and models. Erlbaum. | https://openlibrary.org/works/OL18283899W |
+| Reigeluth 1983 | Reigeluth, Stein (1983). The elaboration theory of instruction. In Reigeluth (ed.), Instructional-design theories and models. Erlbaum. | https://doi.org/10.4324/9780203824283 |
 | Reinhart 2025 | Reinhart, A., Markey, B., Laudenbach, M., Pantusen, K., Yurko, R., Weinberg, G., Brown, D. W. (2025). Do LLMs write like humans? Variation in grammatical and rhetorical styles. PNAS 122, e2422455122. | doi:10.1073/pnas.2422455122 |
 | Rello 2013 | Rello, Baeza-Yates (2013). Good fonts for dyslexia. ASSETS | https://doi.org/10.1145/2513383.2513447 |
 | Rello 2016 | Rello, Pielot, Marcos (2016). Make it big! The effect of font size and line spacing on online readability. CHI | https://doi.org/10.1145/2858036.2858204 |
