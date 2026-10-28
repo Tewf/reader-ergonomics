@@ -29,7 +29,7 @@ Practice runs ahead of the evidence:
 - No style guide read cites a study for its length or depth limit.
 
 Practice agrees across guides:
-- Sentence-case headings, descriptive headings, one purpose per topic, a short lead before detail.
+- Sentence-case headings (Google, Microsoft, GitLab); descriptive headings, one purpose per topic, a short lead before detail (not checked per guide).
 - These support the principles on names, structure, overview and one mode. Adoption adds weight of use, never a grade.
 
 Guides disagree where evidence is silent:

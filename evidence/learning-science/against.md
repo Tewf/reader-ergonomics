@@ -35,5 +35,5 @@ The evidence and the practice that cut against the learning principles, one case
 
 ## Practice that contradicts the evidence
 
-- Belief in learning styles is 89.1% in a review of 37 samples (Newton 2020) and persists after the evidence is shown (Newton 2017: 32%).
+- Belief in learning styles is 89.1% in a review of 37 samples (Newton 2020) and persists after the evidence is shown (Newton 2017: 32% of 114 UK academics).
 - Edtech efficacy pages report association or engagement; Oreopoulos 2026 finds 0.06 to 0.08 SD per year, small.

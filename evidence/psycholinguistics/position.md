@@ -40,7 +40,7 @@ Each item below is "not seen in this review", which is a claim about the search,
 
 ## Practice and the evidence
 
-- Practice runs ahead: sentence targets of 15, 20 and 25 words (EC 2011; Style Manual AU 2026) come with no test in the sources read.
+- Practice runs ahead: sentence targets of 15, 20 and 25 words (EC 2011; Style Manual AU 2024) come with no test in the sources read.
 - Practice ignores evidence: US state law still fixes a Flesch floor (NAIC 2025) after Redish 2000 and Crossley et al. 2017.
 - Practice agrees: the legalese advice matches Martinez et al. 2022 on center-embedding.
 - Critics and the standard meet: Redish 2000 and Schriver 2017 name usability testing as the benchmark.

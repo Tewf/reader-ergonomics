@@ -101,9 +101,9 @@ The evidence against nine file and folder conventions, theme by theme: the claim
 
 Each item is a practice that pulls against one principle. The pages are tool owners and a practitioner guide, so the claims are theirs.
 
-- **Group folders by purpose:** Maven 2026, Cargo 2026 and Rails 2026 group by type at the top level (src/main, tests/, app/ with models, views, controllers). The folder name predicts content across projects, which is the same reader benefit. Amendment: where a tool finds files by folder name, the tool's convention wins.
+- **Group folders by purpose:** Maven 2026, Cargo 2026 and Rails 2026 group by kind of file (code, tests) at the top level (src/main, tests/, app/ with models, views, controllers). The folder name predicts content across projects, which is the same reader benefit. Amendment: where a tool finds files by folder name, the tool's convention wins.
 - **Tunables in config:** Wiggins 2011 puts configuration in environment variables, not files, while granting that files outside version control beat constants. Both keep values out of code. Amendment: outside the code, in a file or the environment.
-- **One place per fact:** the Rule of Three (Fowler 1999, secondary) adds a threshold, merge at the third copy. Dodds 2020 and Metz 2016 push the threshold later. Amendment: none; the change-together test stays primary.
+- **One place per fact:** the Rule of Three (Fowler 1999, secondary) adds a threshold, merge at the third copy. Dodds 2020 argues against abstracting too early; Metz 2016 prefers duplication to the wrong abstraction and sets no threshold. Amendment: none; the change-together test stays primary.
 - **File length:** ESLint 2026a defaults to 300 and Checkstyle 2026 to 2000, against the principle's 500 ceiling. ESLint says recommendations usually range from 100 to 500. Amendment: none; the defaults differ without a study.
 - **Navigation:** Nielsen Norman 2017 favours options visible at once and gives no numeric limit. Nielsen Norman 2024 offers a tree-test benchmark (median 62%), which could serve as a baseline for a findability claim but not as a breadth limit.
 - **Portable paths:** Microsoft 2024 also reserves COM and LPT followed by the superscript digits 1 to 3. Amendment: add those forms to the reserved-name check.

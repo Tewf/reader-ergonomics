@@ -34,13 +34,13 @@ What is measured, what is not, and where practice runs ahead of the evidence.
 ## Practice against evidence
 
 Practice runs ahead of the evidence:
-- Line length ranges in USWDS 2026, GOVUK 2024 and Baymard 2022 come from craft tradition. Baymard's own text credits Ruder, not data.
+- Line length ranges in USWDS 2026, GOVUK 2024 and Baymard 2022 come from craft tradition. Baymard's own text credits Ruder and reports no numeric line-length test results.
 - APCA thresholds are published by their authors with no experimental data on the page.
-- The 4.5:1 floor has a stated derivation, a loss factor, but no reading experiment.
+- The 4.5:1 floor has a stated derivation, a loss factor, but the page cites no reading experiment.
 
 Practice ignores the evidence:
 - 83.9% of home pages fail 4.5:1 (WebAIM 2026): a known rule, widely broken.
-- Speed and comprehension peak at different lengths (Dyson 2004). No design system names the trade-off; each gives one range.
+- Speed and comprehension peak at different lengths (Dyson 2004). None of the three design systems read names the trade-off; each gives one range.
 
 Pending change:
 - WCAG 3 has not chosen a contrast method (W3C 2026), so 4.5:1 stays the floor until it does.

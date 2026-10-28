@@ -88,12 +88,12 @@ Every source here is a tool default, a company guide or a practitioner text. All
 - Maven 2026: fixed paths such as src/main/java and src/test/java; the stated reason is that users of one project feel at home in another. Tool default.
 - Cargo 2026: src/, tests/, examples/ and benches/ by convention, kebab-case target names. Tool default.
 - Rails 2026: app/ holds the controllers, models, views, helpers, mailers, jobs and assets together. Framework default.
-- Go 2026: start with one flat package; put commands in cmd/ and code to keep private in internal/. It calls file and package names arbitrary. Company guide.
-- Cox 2021: a Go team member's issue says the golang-standards layout misdescribes Go, since most packages do not use pkg/. closed on 2023-08-19. Community critique.
-- Go 2014: a package under internal/ is importable only from the tree rooted at the parent of internal/; the go command enforces it. Language rule.
-- Bazel 2026: a target is private to its package by default, and breaking a dependency's visibility fails the build at analysis. Build tool rule.
+- Go 2026: start with one flat package; put commands in cmd/ and code to keep private in internal/. It uses placeholder names. Company guide.
+- Cox 2021: an issue opened by rsc says the golang-standards layout misdescribes Go, since most packages do not use pkg/. closed on 2023-08-19. Community critique.
+- Go 2014: a package under internal/ is importable only from the tree rooted at the parent of internal/. The go command enforced it for the main Go repository in Go 1.4, and the page extends it to any repository from Go 1.5. Language rule.
+- Bazel 2026: a target is private to its package unless default_visibility says otherwise, and breaking a dependency's visibility fails the build at analysis. Build tool rule.
 - GitHub 2026b: CODEOWNERS maps path patterns to reviewers, the last matching pattern wins, the file must stay under 3 MB. Platform feature.
-- Wiggins 2011: configuration lives in environment variables. Litmus test: could the code be open source now without leaking credentials. It calls config files outside version control a big improvement on constants, yet scattered. Practitioner guide.
+- Wiggins 2011: configuration lives in environment variables. Litmus test: could the code be open source now without leaking credentials. It calls config files outside version control a huge improvement on constants, yet scattered. Practitioner guide.
 - ESLint 2026a: default 300 lines per file; recommendations usually range from 100 to 500. Linter default.
 - ESLint 2026b: default 50 lines per function. Linter default.
 - Checkstyle 2026: default 2000 lines per file. Linter default.

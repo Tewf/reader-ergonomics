@@ -20,9 +20,9 @@
 ## Practice against the principles
 
 - **One mode per document:** Diataxis critics argue the cost of strict separation.
-  - Viktorin 2022: one participant asks for guidance on pages that mix forms, another warns a heavy method may be ignored or half followed.
+  - Viktorin 2022: one participant asks for guidance on pages that mix forms, Batchelder asks for guidance on applying the four perspectives, and Wichmann warns developers may just end up ignoring a heavy method.
   - Hacker News 2024: critics call strict use rigid and overkill for small projects, and say some explanation inside a guide is helpful.
-  - The same critics report poor links between split pages and duplicated content that goes stale.
+  - Some commenters report poor links between split pages and duplicated content that goes stale; one calls repetition not a big problem.
 - **A README mixes modes by design:** GitHub, Make a README and standard-readme each place several modes in one file. Read as an index, it does not break the principle.
 - **Define before use:** Google leaves well-known terms undefined. The exemption turns on the audience, so it is a reader-style choice, not a contradiction.
 - **Diataxis tutorials:** minimal explanation can put a term before its definition unless the step links to it.

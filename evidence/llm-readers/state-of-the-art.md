@@ -56,7 +56,7 @@ This record is kept apart from the research record above. Holders differ, and no
 | Sub-question | Most adopted practice | Measured how | Same holder as the research record? |
 |---|---|---|---|
 | file length | under 200 lines (Anthropic 2026b); 32 KiB combined (OpenAI 2026a) | none stated | no: research tests rule count, not lines (Jaroslawicz 2025) |
-| where instructions go | long data first, query last (Anthropic 2026a); both ends (OpenAI 2025) | vendor tests, no data shown | yes: agrees with Liu 2024 |
+| where instructions go | long data first, query last (Anthropic 2026a); both ends (OpenAI 2025) | vendor tests, no data shown | agrees in direction with Liu 2024 |
 | delimiters | XML tags (Anthropic 2026a); XML good, JSON poor (OpenAI 2025) | vendor tests, no data shown | partly: Sclar 2024 finds model-specific results |
-| llms.txt | 28% of 137,210 domains publish it, an upper bound (Ahrefs 2026) | server logs, 2026-05 | no: 97% of files had zero requests |
+| llms.txt | 28% of 137,210 domains using Ahrefs Web Analytics publish it, an upper bound (Ahrefs 2026) | server logs, 2026-05 | no: 97% of files had zero requests |
 | docs the model lacks | an 8 KB index in AGENTS.md: 100% against 53% (Vercel 2026) | vendor evaluation, one domain | no: Gloaguen 2026 finds no net gain from files |

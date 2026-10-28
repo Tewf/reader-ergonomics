@@ -32,6 +32,6 @@ Upper and lower bounds are kept apart, as in every topic ([method](../README.md)
 | Sub-question | Most adopted | Best evidence |
 |---|---|---|
 | Scheduling reviews | Anki (SM-2, FSRS option), Duolingo's own model | recall-prediction benchmarks by the schedulers' own community; no trial on exam scores found |
-| Edtech efficacy | Khan Academy, Duolingo pages by their owners | Oreopoulos 2026, an independent RCT, small gains |
+| Edtech efficacy | Khan Academy, Duolingo pages by their owners | Oreopoulos 2026, an academic RCT, small gains |
 | Note-taking | Zettelkasten, second brain | skeletal notes (Kiewra 1985); linked notes untested |
 | Matching teaching to style | belief in 89.1% of educators (Newton 2020) | not supported (Pashler 2008) |

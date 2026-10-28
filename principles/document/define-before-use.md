@@ -30,9 +30,9 @@ Some high-knowledge readers learn more from a text that leaves links to infer (M
 skilled ones (O'Reilly & McNamara 2007).
 
 A term the reader already knows needs no definition. Across 60 studies, guidance helped novices and hurt advanced
-readers (Tetzlaff 2025, a meta-analysis, measured; reviewed in Kalyuga 2003); that it holds for definitions is an
-inference. Practice agrees: Google's style guide exempts well-known terms such as API (Google 2026, convention).
+readers (Tetzlaff 2025, a meta-analysis of 60 studies, measured; Kalyuga 2003 first reviewed the effect); that it holds for definitions is an
+inference. Practice agrees: Google's style guide exempts well-known terms such as API (Google 2026b, convention).
 Which terms are known depends on the reader, so the reader style decides.
 
-A tutorial that withholds explanation, as the Diátaxis documentation framework advises, links the term instead
+A tutorial that withholds explanation, as the Diátaxis documentation framework advises, links the explanation instead
 (Procida 2026, convention).

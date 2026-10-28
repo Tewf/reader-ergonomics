@@ -46,8 +46,8 @@ These are gaps in what this review found, not claims that nobody has studied the
 
 - Practice runs ahead: llms.txt is widely published, yet no accuracy test was found and 97% of files drew no requests in 2026-05 (Ahrefs 2026).
 - Practice runs ahead: line caps (200, 32 KiB) state no method (Anthropic 2026b; OpenAI 2026a); research measures rule count instead (Jaroslawicz 2025).
-- Practice supports the evidence: both ends beat one end (OpenAI 2025), as query-aware contextualization did (Liu 2024).
+- Practice supports the evidence: both ends beat one end (OpenAI 2025), which agrees in direction with query-aware contextualization (Liu 2024).
 - Practice refines overview first: with long data, the task goes last as well as first (Anthropic 2026a).
 - Practice refines one place per fact: an index copied into AGENTS.md beat a link the agent never followed, in one vendor evaluation (Vercel 2026).
 - The Vercel result covers one domain, Next.js 16 facts absent from training, and one vendor's own tests.
-- Practice ignores the evidence: vendor guides recommend generated files while Gloaguen 2026 found them lowering success; no guide was found citing it.
+- Practice ignores the evidence: Gloaguen 2026 found generated files did not raise success (-0.5%, -2%, not significant) and raised cost by about a fifth.

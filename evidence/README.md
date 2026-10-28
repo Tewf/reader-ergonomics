@@ -46,38 +46,44 @@ Each topic's README lists its claims with a grade, as defined in the [standard](
 
 ## Audit
 
-Two audits checked claims against their primary sources on 2026-10-28. The first took the 26 claims the principles
-lean on most. The second took every line of the evidence files that carries a number: 109 lines, of which 17
-repeated a claim the first had settled.
+Three audits checked claims against their primary sources on 2026-10-28, each by agents that had not written the
+lines they checked. The first took the 26 claims the principles lean on most. The second took every line of the
+evidence files that carries a number: 109 lines, of which 17 repeated a claim the first had settled. The third took
+the 411 lines the multivocal review added, in the evidence and in the principles.
 
-| Verdict | First audit | Second audit |
-|---|---|---|
-| correct | 15 | 34 |
-| wrong (misattributed, a wrong value, a wrong link) | 4 | 10 |
-| imprecise (right direction, narrower scope or other conditions) | 5 | 40 |
-| unverifiable (the primary source could not be read) | 2 | 8 |
+| Verdict | First | Second | Third |
+|---|---|---|---|
+| correct | 15 | 34 | 87 |
+| wrong (misattributed, a wrong value, a wrong link) | 4 | 10 | 2 |
+| imprecise (right direction, narrower scope or other conditions) | 5 | 40 | 46 |
+| unverifiable (the primary source could not be read) | 2 | 8 | 22 |
+| research in the repository left uncited for a practice source | | | 2 |
+| a change that broke the principle it changed | | | 3 |
 
-Every wrong or imprecise claim was corrected, or narrowed to what the source supports, here and in the principles that
-repeat it. An unverifiable one says "(secondary)" or names what was not checked. The second audit also fixed two DOIs
-and four titles in the bibliography. Claims without a number have not been audited this way, so such a claim is only
-as good as the review that cites it.
+Every wrong, imprecise or self-breaking line was corrected, or narrowed to what the source supports, here and in the
+principles that repeat it. An unverifiable one was read again; if it still could not be read, it says
+"(secondary)" or "(not verified)", or was removed. The audits also fixed DOIs, titles and links in the bibliography.
+Claims without a number in the original reviews have not been audited this way, so such a claim is only as good as
+the review that cites it.
 
 ## Multivocal review
 
 On 2026-10-28 every topic was read again for what exists outside the academic literature: standards, company guides
 and practice, tools, practitioner books, communities and practitioner surveys. The method is the multivocal
 literature review (Garousi 2019). Eight agents searched eight strands and read about 240 sources. Every claim brought
-in was re-read on its own page; one read only in a summary says "(secondary)".
+in was re-read on its own page, then checked by the third audit; one read only in a summary says "(secondary)".
+
+The sources were re-read, but not scored on the quality criteria the method asks for (Garousi 2019).
 
 | Result | Count |
 |---|---|
-| sources added to the bibliography | 75 |
+| sources added to the bibliography | 76 |
 | principles whose grade changed | 0 |
-| principles given a new limit or caveat | 9 |
-| principle claims widened | 1 (tunables in config: a file or the environment) |
+| principles given a new limit or caveat, each with its own grade | 9 |
+| principle claims changed | 0 (one widening, on practice alone, was reverted by the audit) |
 
-- **No practice source raised a grade.** Practice shows adoption, and in places it contradicts a principle.
-- **Overview first is not importance first.** The few tests of putting the main fact first, as news does, do not support it.
+- **No practice source raised a grade.** Practice shows what is done, never what works.
+- **Overview first is not importance first.** Putting the main fact first, as news does, has no support yet.
 - **Practice sets numbers without studies:** sentence lengths, line lengths up to 90 characters, file-length limits.
 - **Most of the checks have no counterpart** among existing tools; the ones that do are named in [checks](../checks/README.md).
 

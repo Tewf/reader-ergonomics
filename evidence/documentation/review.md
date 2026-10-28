@@ -42,17 +42,17 @@ Surveys first, then the standards, then the empirical studies.
 
 Each row is the owner's own page. None states a method or tests an effect, so each is **convention, untested**. Adoption is a count the owner reports.
 
-- Google 2026 headings: task headings start with a base-form verb, concept headings are noun phrases, one h1, no skipped level, sentence case.
-- Google 2026 abbreviations: spell out on first mention when the audience may not know the term; API, HTML and URL "rarely need to be spelled out".
+- Google 2026 (headings): task headings start with a base-form verb, concept headings are noun phrases, one h1, no skipped level, sentence case.
+- Google 2026b (abbreviations): spell out on first mention when the audience may not know the term; API, HTML and URL "rarely need to be spelled out".
 - Microsoft 2026: "Shorter is always better"; lead with what matters; sentence case. The page is dated 2026-07-02 and cites no study.
 - GitLab 2026: topic types, sentence case, no skipped level, and "Avoid heading levels greater than H5". The pipeline lints these rules.
 - Red Hat 2026a: procedure titles are imperative, concept titles are noun phrases, no "Understanding" or "About", short description of 50 to 300 characters.
 - Red Hat 2026b: concept, procedure and reference modules; procedures take no subheadings; procedure titles are gerunds; one short intro paragraph each.
-- Django 2026: the writing guide names four kinds, tutorials, topic guides, reference and how-to. The intro page lists more parts, among them deployment guides. Neither page names Diataxis.
+- Django 2026: the writing guide names four kinds, tutorials, topic guides, reference and how-to. Neither page names Diataxis; the "What to read next" page was not read.
 - GitHub 2026a README docs: a README says what, why, how to start, where to get help, who maintains it. GitHub builds an outline from headings and truncates past 500 KiB.
 - Guo 2026: one maintainer, Danny Guo; a list of twelve optional sections; "too long is better than too short".
 - Litt 2026: a spec for README section order, 6.4k stars and 2.5k forks. Its linter is marked work in progress.
-- Diataxis site (Procida 2020): "hundreds of documentation projects" and three testimonials, from Vonage, Gatsby and Cloudflare. No list of projects, no study.
+- Diataxis site (Procida 2020): "hundreds of documentation projects" and three testimonials, from Vonage, Gatsby and one on Cloudflare docs. No list of projects, no study.
 - Canonical 2021: the framework's author announces an ongoing restructuring and names five products. No metrics. Written by Procida, so adoption is self-reported.
 - Procida 2026: show the destination early, give each step a visible result, keep explanation out and link to it. The page cites no research and asks for tests with real users.
 - Viktorin 2022: a proposal to adopt Diataxis for the Python docs. Support came from several core developers; no decision is recorded.

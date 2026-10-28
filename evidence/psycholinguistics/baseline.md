@@ -66,7 +66,7 @@ People compare against a grade score and a sentence cap, not Coh-Metrix.
 | Practice | Number | Source |
 |---|---|---|
 | Sentence average | 20 words | EC 2011 |
-| Sentence average and cap | 15 and 25 words | Style Manual AU 2026 (secondary) |
+| Sentence average and cap | 15 and 25 words | Style Manual AU 2024 |
 | Flesch floor in law | 40 to 50 | NAIC 2025 |
 | Tool grade target | grade 9 default | Hemingway 2026 |
 

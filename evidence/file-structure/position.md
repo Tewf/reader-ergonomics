@@ -42,9 +42,9 @@ The conventions can be read as one optimization problem, a cost of space plus a 
 Practice runs ahead of the evidence:
 
 - Layout by tool convention is shipped to every user of Maven, Cargo and Rails with no comparison against an alternative. The one stated reason is familiarity across projects (Maven 2026).
-- The Rule of Three is a numeric threshold whose source is a book attribution (Fowler 1999, secondary). Dodds 2020 and Metz 2016 argue against copying too early, still without a study.
+- The Rule of Three is a numeric threshold whose source is a book attribution (Fowler 1999, secondary). Dodds 2020 and Metz 2016 argue against abstracting too early, still without a study.
 - Language and build tools turn folders into checked units: Go internal/ and Bazel visibility fail the build, CODEOWNERS routes review by path. No study measures their effect on readers.
 
 Practice ignores the evidence:
 
-- Linter defaults differ by a factor of about 7 (300 against 2000 lines), so none is an optimum. Syer 2015 and El Emam 2002 found no size threshold that held.
+- Linter defaults differ by a factor of about 7 (300 against 2000 lines), so none can be the optimum for all repositories. Syer 2015 and El Emam 2002 found no size threshold that held.

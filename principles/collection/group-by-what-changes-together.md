@@ -25,6 +25,7 @@ closure principle groups what changes for the same reasons at the same times (Ma
 No controlled comparison of grouping by feature against grouping by layer exists. Declared purpose and actual change
 can diverge (Silva 2014).
 
-Where a tool finds files by a folder's name, its convention wins: Maven, Cargo, Rails and Go expect folders such as
-`src/`, `tests/` or `cmd/` (Maven 2026; Cargo 2026; Rails 2026; Go 2026). Those names group by type, yet they
-predict the content of every repository that uses the tool. Convention: the tools' own documentation, no study.
+Where a tool finds files by a folder's name, its convention wins. Cargo expects `src/` and `tests/`, Maven
+`src/main` and `src/test` (it allows others), Rails `app/` and `test/`, and Go recommends `cmd/` (Cargo 2026;
+Maven 2026; Rails 2026; Go 2026). Those names group by type, yet they predict the content of most repositories
+that use the tool. Convention: the tools' own documentation, no study.

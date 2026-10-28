@@ -25,7 +25,7 @@ Not every copy is harmful: up to 71% of the clones studied in two systems helped
 shared piece bent to fit callers that diverge costs more than the copy it replaced (Metz 2016). Each link costs
 the reader a decision and a context switch (DeStefano 2007).
 
-For an agent, a link may never be followed: in one vendor's evaluation, an index written into AGENTS.md (the
-instructions file an agent loads) beat skills the agent had to open (Vercel 2026). That is the vendor's own
-claim, with no method stated and no replication: convention at best. So what an agent must always know goes into the file it loads,
-or is imported into it.
+For an agent, a link may go unread. In one vendor's evaluation, an index written into AGENTS.md (the instructions
+file an agent loads) beat skills the agent had to open (Vercel 2026: its own claim, method partly stated, sample
+size not, one domain). Yet instruction files changed agents' task success by no significant amount on average
+(Gloaguen 2026, a preprint). So the rule stays: link, and remind where the reader needs it.

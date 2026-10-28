@@ -91,11 +91,12 @@ Each page below is its owner's claim about its own product. None states a method
 - Anthropic 2026a (company guide): long documents at the top, the query at the end; it reports gains "up to 30 percent" with no method.
 - Anthropic 2026b (product docs): target under 200 lines per CLAUDE.md; longer files reduce adherence; contradictory rules may be picked arbitrarily.
 - Anthropic 2026b also says memory files are context, not enforcement, and points to a hook to block an action.
-- OpenAI 2025 (company cookbook): instructions at both start and end beat either alone; XML delimiters did well and JSON did particularly poorly.
+- OpenAI 2025 (company cookbook): instructions at both start and end beat one end only; XML delimiters did well and JSON did particularly poorly.
 - OpenAI 2026a (product docs): AGENTS.md files are layered from root to current directory, with a combined cap of 32 KiB by default.
-- AGENTS.md 2026 (de facto specification): the page claims use by over 60k open-source projects and lists 23 tools; stewarded under the Linux Foundation.
-- Howard 2024 (llms.txt): 28% of 137,210 domains publish one, an upper bound (Ahrefs 2026).
-- Ahrefs 2026 (SEO company, stated method, server logs, 2026-05): 97% of llms.txt files received zero requests; AI retrieval bots made 1.1% of requests.
+- AGENTS.md 2026 (de facto specification): the page claims use by over 60k open-source projects and lists logos of 23 tools (counted here); stewarded under the Linux Foundation.
+- Howard 2024 (llms.txt): the proposal; its page says only that thousands of sites publish one.
+- Ahrefs 2026 reports llms.txt on 28% of 137,210 domains using Ahrefs Web Analytics, an upper bound.
+- Ahrefs 2026 (SEO company, stated method, server logs, 2026-05): 97% of llms.txt files received zero requests; AI retrieval bots made 1.1%. The page's heading says of total requests, but its body says of AI bot requests.
 - Ahrefs 2026 states that a fetch is not a read, so these shares are ceilings on use.
 - Vercel 2026 (vendor evaluation, one domain): baseline 53%; a skill by default 53%; a skill with explicit instructions 79%; an 8 KB docs index in AGENTS.md 100%.
 - In Vercel 2026 the skill was never invoked in 56% of cases; the page gives no model name and no task count.

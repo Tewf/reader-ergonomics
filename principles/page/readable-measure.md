@@ -26,5 +26,6 @@ Speed and preference disagree on line length: about 100 characters is read faste
 best and preferred (Dyson 2004). Fonts designed for dyslexia do not help (Wery 2017; Kuster 2018); extra letter spacing
 does help dyslexic children read accurately (Zorzi 2012).
 
-The upper bound is contested in practice: WCAG's AAA criterion allows 80 characters (W3C 2023a) and the US Web
-Design System 90 (USWDS 2026). Neither cites a study: both are convention.
+The upper bound is contested in practice: WCAG's AAA criterion allows 80 characters, 40 in CJK (W3C 2023a), and the
+US Web Design System 90, with 66 as its target (USWDS 2026). Neither page cites a study: both are convention, and
+the data above split speed from understanding (Dyson 2004).

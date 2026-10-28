@@ -87,12 +87,12 @@ Kinds: **standard** · **company research** · **thesis** · **review**. Practic
 
 | Source | What it prescribes or found | Kind | Adoption |
 |---|---|---|---|
-| ISO 2023 | plain language organised by four principles: relevant, findable, understandable, usable; usable is confirmed by evaluating with readers (principles read in a search summary, the standard is paid) (secondary) | standard | drafted by experts of 25 countries |
+| ISO 2023 | plain language organised by four principles: relevant, findable, understandable, usable; usable is confirmed by evaluating with readers (principles read in a search summary, the standard is paid) (secondary) | standard | principles not read on the page (not verified) |
 | Nielsen 2006 | eyetracking of 232 users; a rough F shape; "The first two paragraphs must state the most important information." Its owner sells consulting | company research | descriptive |
-| Morkes 1997 | three studies, 81 users; on a fictional site, concise text scored 58% better, scannable 47%, objective 27%, combined 124%; its owner's own claim | company research | one site, web only |
-| Nildam 1998 | 320 readers, mock newspaper page: narrative stories gave better understanding and recall than inverted pyramid, and more interest; credibility did not differ | thesis | not peer reviewed |
+| Morkes 1997 | three studies, 81 users; on a fictional site, concise text scored 58% better, scannable 47%, objective 27%, combined 124%, all against a promotional control; its owner's own claim | company research | one site, web only |
+| Nildam 1998 | 320 readers, mock newspaper page: narrative stories gave better understanding and recall than inverted pyramid, and more interest; credibility did not differ | thesis | Thai readers, crime and science stories, not peer reviewed |
 | Sternadori 2008 | four stories, within subjects: no difference in memory or enjoyment; comprehension marginally favoured the pyramid; chronological stories slowed a secondary task (read in a repository summary) (secondary) | thesis | not peer reviewed |
-| Jansen 2010 | two experiments on Dutch bad-news letters and emails: explanation first was judged clearer and the writer more caring (abstract read in a search summary) (secondary) | RCT | bad news only |
-| Hartley 2004 | structured abstracts hold more information and are longer (+21%); a recall gain appeared only when they were longer and more readable | review | many student samples |
+| Jansen 2010 | two experiments on Dutch bad-news letters and emails: explanation first was judged clearer and the writer more caring (abstract read in a search summary) (secondary) | experiment | bad news only |
+| Hartley 2004 | structured abstracts hold more information and are longer (+21% over all 11 studies, about 35% in three independent comparisons); a recall gain appeared only when they were longer and more readable, and recall evidence is thin | review | many student samples |
 
-The direct tests of the inverted pyramid do not support importance-first order. Both theses are small or unreviewed, so they do not refute it either.
+The direct tests of the inverted pyramid do not support importance-first order. Neither thesis is peer reviewed, so they do not refute it either.

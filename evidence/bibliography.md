@@ -20,7 +20,7 @@ Every work cited anywhere in this repository, once. The text cites `Author Year`
 | APCA 2026 | Myndex (2026). APCA introduction (repository, a fork) | https://github.com/Myndex/apca-introduction |
 | Ariel 2009 | Ariel, Dunlosky, Bailey (2009). Agenda-based regulation of study-time allocation. JEP: General. | https://doi.org/10.1037/a0015928 |
 | Ashman 2020 | Ashman, Kalyuga, Sweller (2020). Problem-solving or explicit instruction: which first? Educational Psychology Review. | https://doi.org/10.1007/s10648-019-09500-5 |
-| AU 2026 | Australian Government (2026, page undated). Style Manual: Sentence length | https://web.archive.org/web/20260508145352/https://www.stylemanual.gov.au/style-manual-resources/government-writing-handbook/editors-tips/sentence-length |
+| AU 2024 | Australian Government (2024, updated 2024-12-19). Style Manual: Sentence length | https://web.archive.org/web/20260508145352/https://www.stylemanual.gov.au/style-manual-resources/government-writing-handbook/editors-tips/sentence-length |
 | Ayres 2014 | Ayres, Sweller (2014). The split-attention principle in multimedia learning. In Cambridge Handbook of Multimedia Learning | https://doi.org/10.1017/CBO9781139547369.011 |
 | Baldwin 2000 | Baldwin, Clark (2000). Design Rules, Volume 1: The Power of Modularity. MIT Press | https://doi.org/10.7551/mitpress/2366.001.0001 |
 | Barbieri 2023 | Barbieri, Miller-Cotto, Clerjuste, Chawla (2023). A meta-analysis of the worked examples effect on mathematics performance. Educational Psychology Review | https://doi.org/10.1007/s10648-023-09745-1 |
@@ -133,7 +133,8 @@ Every work cited anywhere in this repository, once. The text cites `Author Year`
 | Go 2014 | Go team (2014). Go 1.4 release notes, internal packages. go.dev | https://go.dev/doc/go1.4 |
 | Go 2026 | Go team (accessed 2026). Organizing a Go module. go.dev | https://go.dev/doc/modules/layout |
 | Gong 2024 | Gong, Wan, Wang (2024). Working Memory Capacity of ChatGPT: An Empirical Study. AAAI 2024. | arXiv:2305.03731 |
-| Google 2026 | Google (accessed 2026). Google developer documentation style guide: headings; abbreviations. Pages undated | https://developers.google.com/style/headings |
+| Google 2026 | Google (accessed 2026). Google developer documentation style guide: headings. Page undated | https://developers.google.com/style/headings |
+| Google 2026b | Google (accessed 2026). Google developer documentation style guide: abbreviations. Page undated | https://developers.google.com/style/abbreviations |
 | Gopen 1990 | Gopen, Swan (1990). The science of scientific writing. American Scientist, 78(6), 550-558. | https://www.jstor.org/stable/29774235 |
 | Gordon 1993 | Gordon, Grosz, Gilliom (1993). Pronouns, names, and the centering of attention in discourse. Cognitive Science, 17(3), 311-347. | https://doi.org/10.1207/s15516709cog1703_1 |
 | Gou 2024 | Gou, Shao, Gong, Shen, Yang, Duan, Chen (2024). CRITIC: Large Language Models Can Self-Correct with Tool-Interactive Critiquing. ICLR 2024. | arXiv:2305.11738 |
