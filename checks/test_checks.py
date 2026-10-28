@@ -8,11 +8,14 @@ import tempfile
 import unittest
 from pathlib import Path
 
+import co_change
 import defined_before_use
 import duplication
 import links
 import logical_lines
+import outline_depth
 import portable_paths
+import provisional_tags
 import tree_shape
 
 CONFIG = {"scope": {"exclude": []}, "tree_shape": {"max_entries": 4, "min_entries": 2, "max_depth": 3},
@@ -91,6 +94,42 @@ class TestPlantedViolations(ScratchRepository):
         found = " ".join(self.messages(logical_lines))
         self.assertIn("judgment long.md 6 logical lines", found)
         self.assertIn("judgment long.md 14 lines, past the ceiling of 10", found)
+
+
+    def commit(self, message: str, date: str | None = None) -> None:
+        environment = {"GIT_AUTHOR_NAME": "test", "GIT_AUTHOR_EMAIL": "test@example.org",
+                       "GIT_COMMITTER_NAME": "test", "GIT_COMMITTER_EMAIL": "test@example.org", "PATH": "/usr/bin:/bin"}
+        if date:
+            environment.update({"GIT_AUTHOR_DATE": date, "GIT_COMMITTER_DATE": date})
+        subprocess.run(["git", "-C", str(self.root), "add", "-A"], check=True)
+        subprocess.run(["git", "-C", str(self.root), "-c", "core.hooksPath=/dev/null", "commit", "-q", "-m", message],
+                       check=True, env=environment)
+
+    def test_outline_depth(self) -> None:
+        self.write("deep.md", "# Title\n\n## Part\n\n### Sub\n\n#### Too deep\n\n```\n#### not a heading\n```\n")
+        found = self.messages(outline_depth)
+        self.assertEqual(len(found), 1, found)
+        self.assertIn("level 4", found[0])
+
+    def test_provisional_tags(self) -> None:
+        self.write("old.toml", "limit = 3   # PROVISIONAL\n")
+        self.commit("old guess", "2020-01-01T00:00:00")
+        self.write("new.toml", "limit = 4   # PROVISIONAL\n")
+        self.commit("new guess")
+        found = self.messages(provisional_tags)
+        self.assertEqual(len(found), 1, found)
+        self.assertIn("old.toml", found[0])
+
+    def test_co_change(self) -> None:
+        for round_number in range(3):
+            self.write("a/x.md", f"version {round_number}\n")
+            self.write("b/y.md", f"version {round_number}\n")
+            self.commit(f"together {round_number}")
+        self.write("c/z.md", "alone\n")
+        self.commit("alone")
+        found = self.messages(co_change)
+        self.assertEqual(len(found), 1, found)
+        self.assertIn("a/x.md changed together with b/y.md in 3 commits", found[0])
 
 
 class TestCleanRepository(ScratchRepository):

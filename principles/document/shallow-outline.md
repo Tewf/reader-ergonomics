@@ -4,7 +4,7 @@
 
 - **Grade:** measured for recall of top-level ideas; the three-level limit is a convention.
 - **Evidence:** [psycholinguistics](../../evidence/psycholinguistics/review.md) (strand 5), [against](../../evidence/psycholinguistics/against.md).
-- **Check:** judgment; counting heading levels is a planned exact check.
+- **Check:** `outline-depth` (exact count; warns past level 3); whether the top levels carry the main claims is judgment.
 - **Reader styles:** none override it.
 
 ## What it asks

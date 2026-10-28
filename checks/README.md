@@ -14,9 +14,12 @@ would cost money exists but stays off until the maintainer turns it on.
 | [links.py](links.py) | [one place per fact](../principles/collection/one-place-per-fact.md): a link replaces a copy only if it resolves | exact | O(text) |
 | [logical_lines.py](logical_lines.py) | [size is a prompt](../principles/collection/size-is-a-prompt.md) | judgment past the trigger and past the ceiling | O(text) |
 | [duplication.py](duplication.py) | [one place per fact](../principles/collection/one-place-per-fact.md) | exact | O(words), expected |
+| [outline_depth.py](outline_depth.py) | [shallow outline](../principles/document/shallow-outline.md) | exact count, warns past level 3 | O(text) |
 | [defined_before_use.py](defined_before_use.py) | [define before use](../principles/document/define-before-use.md) | heuristic (warns) | O(terms x text) |
 | [citations.py](citations.py) | every cited work listed once, every entry cited | heuristic (warns) | O(text) |
 | [standard_card.py](standard_card.py) | the card's principle table and `llms.txt` match the principle files they are built from | exact; `--write` rebuilds | O(principle files) |
+| [provisional_tags.py](provisional_tags.py) | [tunables in config](../principles/collection/tunables-in-config.md): a guess older than 90 days is asked about | exact date, judgment | O(text + lines blamed) |
+| [co_change.py](co_change.py) | [one role per file](../principles/collection/one-role-per-file.md), [group by what changes together](../principles/collection/group-by-what-changes-together.md): files that keep changing together across folders | judgment | O(commits × 20²) |
 | [references.py](references.py) | every DOI, arXiv id and link resolves | exact; offline by default | O(references) requests |
 
 | Support file | Role |

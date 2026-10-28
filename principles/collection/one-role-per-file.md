@@ -4,7 +4,7 @@
 
 - **Grade:** convention, untested.
 - **Evidence:** [file structure](../../evidence/file-structure/review.md), [against](../../evidence/file-structure/against.md) (one role per file).
-- **Check:** judgment, asked by `logical-lines` past the trigger; a co-change measure is the planned exact test.
+- **Check:** judgment, asked by `logical-lines` past the trigger; `co-change` raises files that keep changing together across folders.
 - **Reader styles:** none override it.
 
 ## What it asks

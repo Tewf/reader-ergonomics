@@ -14,6 +14,21 @@ ignore_line_prefixes = []                            # footer lines a site adds 
 [links]
 wikilinks = "resolve"   # resolve | ignore (for note collections whose links may point at notes not yet written)
 
+[outline_depth]
+max_level = 3      # PROVISIONAL: the levels effect favours few levels; three is a convention
+exempt = []
+
+[provisional_tags]
+max_age_days = 90  # PROVISIONAL: how long a guess may stand before it is measured or kept knowingly
+files = ["*.toml", "*.py", "*.yml", "*.yaml", "*.json", "*.cfg", "*.ini"]
+exempt = []
+
+[co_change]
+max_files = 20     # PROVISIONAL: a commit touching more is a rename or a format pass
+min_together = 3   # PROVISIONAL
+min_share = 0.75   # PROVISIONAL: of the commits of the rarer file
+exempt = ["standard.md", "llms.txt", "evidence/bibliography.md"]   # built from, or shared by, many files
+
 [portable_paths]
 allow_symlinks = false
 

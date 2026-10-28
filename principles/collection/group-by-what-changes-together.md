@@ -4,7 +4,7 @@
 
 - **Grade:** supported with caveat.
 - **Evidence:** [file structure](../../evidence/file-structure/review.md), [against](../../evidence/file-structure/against.md) (group folders by purpose).
-- **Check:** judgment; a co-change measure is the planned exact test.
+- **Check:** `co-change` (judgment): files that keep changing together but sit in different folders.
 - **Reader styles:** none override it.
 
 ## What it asks

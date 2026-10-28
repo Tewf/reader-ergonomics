@@ -4,7 +4,7 @@
 
 - **Grade:** convention, supported with caveat.
 - **Evidence:** [against](../../evidence/file-structure/against.md) (configuration).
-- **Check:** judgment; counting and ageing PROVISIONAL tags is a planned exact check.
+- **Check:** `provisional-tags`: a tag older than 90 days becomes a question; whether a value belongs in config is judgment.
 - **Reader styles:** none override it.
 
 ## What it asks
