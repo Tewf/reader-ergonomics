@@ -31,3 +31,17 @@ Rule of method: the field's name for a thing is the search term; the author's ow
 - Academic: sequencing of instruction, elaboration theory, hypertext navigation, study-time allocation, self-regulated learning.
 - Acronyms: SQ3R (survey, question, read, recite, review), 4C/ID (four-component instructional design), JIT (just-in-time information).
 - Authors to chase forward: Reigeluth, Salmerón, McCrudden, Metcalfe, Pirolli, Rittle-Johnson.
+
+## Names practitioners use
+
+| Practitioners' name | Tradition | Field's name |
+|---|---|---|
+| BLUF, bottom line up front | military and business writing | **relevance instruction**, advance organizer (McCrudden and Schraw 2007) |
+| Pyramid Principle, governing thought | consulting | advance organizer plus hierarchical outline |
+| Inverted pyramid | journalism | importance order, a different construct from an organizer |
+| Executive summary, structured abstract | industry, journals | outline inside the text (Ponce 2023) |
+| Direct or indirect order | business communication research | conclusion first or explanation first |
+| Scannable text, front-loading | web usability | **satisficing**, **patch leaving** (Pirolli 1999) |
+| Relevant, findable, understandable, usable | plain language | task analysis; usability testing (ISO 2023) |
+
+The inverted pyramid orders by importance. An advance organizer orders by structure, so a test of one does not test the other.

@@ -41,3 +41,13 @@ These are gaps in what this review found, not claims that nobody has studied the
 - A split of every rule into what a program can check exactly and what needs judgment, since program feedback is the reliable kind (Kamoi 2024).
 - An instruction file limited to rules an agent would not infer, which is where Gloaguen 2026 found the files earn their cost.
 - The comparison in `baseline.md`, which would fill the first gap above for this repository's own documents.
+
+## Where practice runs ahead of, or against, the evidence
+
+- Practice runs ahead: llms.txt is widely published, yet no accuracy test was found and 97% of files drew no requests in 2026-05 (Ahrefs 2026).
+- Practice runs ahead: line caps (200, 32 KiB) state no method (Anthropic 2026b; OpenAI 2026a); research measures rule count instead (Jaroslawicz 2025).
+- Practice supports the evidence: both ends beat one end (OpenAI 2025), as query-aware contextualization did (Liu 2024).
+- Practice refines overview first: with long data, the task goes last as well as first (Anthropic 2026a).
+- Practice refines one place per fact: an index copied into AGENTS.md beat a link the agent never followed, in one vendor evaluation (Vercel 2026).
+- The Vercel result covers one domain, Next.js 16 facts absent from training, and one vendor's own tests.
+- Practice ignores the evidence: vendor guides recommend generated files while Gloaguen 2026 found them lowering success; no guide was found citing it.

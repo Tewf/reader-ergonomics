@@ -70,3 +70,23 @@ Grouped by strand. Surveys first, then primary studies and standards.
 - No controlled study supports an 80-column limit.
 - Knuth 1989 (P): separate symbols with words, never open a sentence with one.
 - Math markup that emits only HTML hides the accessible layer screen readers use (Isaac Physics, P).
+
+## 9. Practice (design systems, standards, practitioner surveys)
+
+Each line gives what the source prescribes, its kind and its adoption. A company page is its owner's claim about itself.
+Practice is graded convention, untested; an adoption count is measured, descriptive.
+
+- USWDS 2026 (government design system): body at least 16px, lines 45 to 90 characters, 66 for long text, line height at least 1.5. It cites no study.
+- GOVUK 2024 (government design system): lines usually no more than 75 characters, page container 1020px. No study cited.
+- Carbon 2026 (vendor design system): a type scale on a 12px base; no line length, no numeric line height, no study.
+- Baymard 2022 (research firm blog): 50 to 75 characters. The text credits Ruder, other web typography sources and WCAG 1.4.8, and reports no figures from its own tests.
+- W3C 2023a (WCAG 2.2, a W3C Recommendation): 1.4.3 sets 4.5:1, and 3:1 for large text. Level AAA 1.4.8 limits width to 80 characters.
+- W3C 2023b (Understanding WCAG 2.2, informative): 3:1 comes from ISO 9241-3 and ANSI/HFES 100-1988. 4.5:1 is 3 times 1.5, the contrast sensitivity loss at 20/40 acuity (an acuity study it cites), so it derives from a loss factor.
+- W3C 2026 (WCAG 3, a Working Draft): the contrast algorithm is "yet to be determined", and a size and weight factor is assumed.
+- APCA 2026 (advocate repository, a fork): Lc 75 is the minimum for body text over 18px, Lc 90 preferred. The page says W3C recommends neither method and shows no experimental data.
+- WebAIM 2026 (automated scan, 1,000,000 home pages, data from the second month of 2026): 83.9% have low-contrast text, about 34 instances per page. The scan counts only what WAVE detects.
+- Nielsen Norman 2008 (company, 25 users, 45,237 page views): users read about 20% of the words on an average page.
+- Nielsen 2006 (company, eye tracking, 232 users): an F-shaped scan; start subheads and bullets with informative words. The page does not describe tasks or equipment.
+- Nielsen Norman 2019 (company, eye tracking): descriptive headings give a layer-cake scan, called "by far the most effective way to scan pages". The page shows one heatmap from 9 participants and no measured effect.
+- Nielsen Norman 2020 (company literature review): light mode for normal vision, offer a dark option. NN/g ran no study of its own.
+- axe-core, pa11y and Lighthouse (tools; Deque 2026; Pa11y 2026; Lighthouse 2026): check contrast on the rendered page at 4.5:1 and 3:1. axe skips text over background images and reports 1:1 as needing review.

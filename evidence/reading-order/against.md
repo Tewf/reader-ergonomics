@@ -1,5 +1,7 @@
 # Against
 
+This file lists null results, controversies, costs of the proposal, and practice that contradicts a principle.
+
 ## Null or weak results
 
 | Claim at risk | Evidence against | Source |
@@ -31,3 +33,10 @@
 
 - None was located for the organizer, relevance or hypertext-order findings.
 - That is a statement about this search, not about the literature.
+
+## Practice against a principle
+
+| Practice | Principle at risk | Evidence |
+|---|---|---|
+| Inverted pyramid cited as support for overview first | overview first | it is importance order, not a map; Nildam 1998 and Sternadori 2008 do not support it |
+| Conclusion first for every message | overview first | explanation first preferred for bad news (Jansen 2010) (secondary) |

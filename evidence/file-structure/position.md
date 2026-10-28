@@ -36,3 +36,15 @@ The conventions can be read as one optimization problem, a cost of space plus a 
 | Hotspots: size times change frequency | Tornhill 2015 (4 % of code held 72 % of defects in one case, secondary: reported from a 2015 talk) | supported with caveat |
 | Duplication ratio | Bellon 2007, jscpd, PMD CPD | convention, untested |
 | Propagation cost | MacCormack 2006 | supported with caveat |
+
+## Practice against the evidence
+
+Practice runs ahead of the evidence:
+
+- Layout by tool convention is shipped to every user of Maven, Cargo and Rails with no comparison against an alternative. The one stated reason is familiarity across projects (Maven 2026).
+- The Rule of Three is a numeric threshold whose source is a book attribution (Fowler 1999, secondary). Dodds 2020 and Metz 2016 argue against copying too early, still without a study.
+- Language and build tools turn folders into checked units: Go internal/ and Bazel visibility fail the build, CODEOWNERS routes review by path. No study measures their effect on readers.
+
+Practice ignores the evidence:
+
+- Linter defaults differ by a factor of about 7 (300 against 2000 lines), so none is an optimum. Syer 2015 and El Emam 2002 found no size threshold that held.

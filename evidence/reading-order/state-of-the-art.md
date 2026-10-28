@@ -32,3 +32,15 @@ Upper bounds: what has been achieved. Lower bounds: what is shown not to work or
 
 - No study holds a record for breadth-first against depth-first reading of the same hierarchical material: none was found.
 - The best-supported components are separate: overview first, goal-set depth, self-test as the stop.
+
+## Most adopted
+
+A record of practice, kept apart from the research record above.
+
+| Sub-question | Most adopted | Best evidence |
+|---|---|---|
+| Conclusion first | BLUF, Pyramid Principle, executive summary | organizer g = 0.70 (Ponce 2025); no controlled test of BLUF found |
+| Importance order in news | inverted pyramid, the newsroom default | Nildam 1998 favours narrative, Sternadori 2008 is mixed; both theses |
+| Conclusion first for bad news | taught as an exception | explanation first judged clearer (Jansen 2010) (secondary) |
+| Web scanning | front-load the key facts (Nielsen 2006) | descriptive eyetracking, n = 232; no learning outcome |
+| Labelled structure | structured abstracts | more information, no recall gain at equal length (Hartley 2004) |

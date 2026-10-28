@@ -38,3 +38,15 @@ Which structure of text and files lets a **large language model** (LLM, a neural
 - In: how the input is structured, instruction files for agents, the model as a writer bound by rules.
 - Out: training methods, except where a trained model changes a conclusion drawn from prompted ones.
 - Out: retrieval system design, except where it shows what text in the context does to the answer.
+
+## What practitioners call each part
+
+| Practitioners say | The field says |
+|---|---|
+| prompt engineering; context engineering | context engineering (Mei 2025); prompt compression (Jiang 2023) |
+| CLAUDE.md, AGENTS.md, copilot-instructions.md, cursor rules | repository context files; instruction files |
+| instruction budget; the agent "ignores" my file | instruction density (Jaroslawicz 2025); distractibility |
+| long data at the top, query at the end | query-aware contextualization (Liu 2024) |
+| XML tags against Markdown against JSON | prompt formatting sensitivity (Sclar 2024) |
+| progressive disclosure; skills; path-scoped rules | selective loading of context |
+| llms.txt; GEO | no academic name; closest is retrieval-oriented site indexing |

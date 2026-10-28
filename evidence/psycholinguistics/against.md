@@ -60,3 +60,12 @@ Terms are defined in `review.md`; works are listed in the [bibliography](../bibl
 - Gopen & Swan 1990 report no controlled test; parts of it agree with given-new evidence (Haviland & Clark 1974) and locality (Grodner & Gibson 2005).
 - Centering's uniqueness constraint holds or fails depending on parameter settings (Poesio et al. 2004).
 - RST describes structure; this review found no test that RST depth itself predicts reading cost.
+
+## 8. Practice that contradicts a principle
+
+- Practice: rewrite until a grade tool passes (Vale 2026; Hemingway 2026; textstat 2026).
+- Principle: Even information density is not supported as a way to read faster.
+- Evidence: adaptations written to a formula can read worse (Davison & Kantor 1982); formulas ignore readers (Redish 2000; Schriver 2017).
+- Practice: a Flesch floor fixed by statute (NAIC 2025), against the weak adult baseline in section 6.
+- Practice: splitting to a word cap; the EC warns to keep link words so coherence survives (EC 2011).
+- Tool caveat: textstat's own README limits SMOG to texts of at least 30 sentences.

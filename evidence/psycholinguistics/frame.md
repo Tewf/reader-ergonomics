@@ -30,6 +30,18 @@ How much information should each unit of a text carry, how deeply may units nest
 | Ordering | minimum linear arrangement; optimal linear ordering; weighted completion-time scheduling | MinLA, MLA, `1\|prec\|ΣwC` | Garey, Johnson & Stockmeyer; Shiloach; Chung; Adolphson & Hu; Lawler | graph layout, linear layout |
 | Measurement | automated text analysis; readability formulas | Coh-Metrix, TAACO, FRE | Graesser; McNamara; Crossley; Flesch | text difficulty, cohesion indices |
 
+## What practitioners call it
+
+| Practitioners say | Field says | Scale |
+|---|---|---|
+| plain language, plain English | text comprehensibility, readability | 4, 5 |
+| short sentences, one idea per sentence | idea density, propositions per sentence | 1, 4 |
+| reading age, grade level, Flesch score | readability formula (FRE, FKGL) | measurement |
+| avoid legalese, passives, nominalisations | center-embedding, dependency length, rare words | 2, 3 |
+| readability grade check (Vale, Hemingway, textstat) | automated readability formula | measurement |
+
+- Martinez et al. 2022 joins the two vocabularies: legalese measured as center-embedding, rare words and passives.
+
 ## Search log: each term three ways
 
 | Term | Academic name | Acronym | Author | Outcome |

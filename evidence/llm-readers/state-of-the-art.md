@@ -48,3 +48,15 @@
 | with test feedback | up to +12% with unit tests (Chen 2024a) | often modest, sometimes absent, once the cost of repair is counted (Olausson 2024) | MBPP and TransCoder (Chen); HumanEval and APPS (Olausson) |
 | prevalence of LLM text | | at least 13.5% of 2024 PubMed abstracts LLM-processed (Kobak 2025); 6.5-16.9% of AI-conference peer-review text substantially LLM-modified (Liang 2024) | excess vocabulary; corpus-level estimation |
 | per-document detection | | defeated by recursive paraphrasing (Sadasivan 2023); false positives on non-native writing (Liang 2023) | stress tests of detectors |
+
+## Most adopted: the practice record
+
+This record is kept apart from the research record above. Holders differ, and none of these numbers comes with a method.
+
+| Sub-question | Most adopted practice | Measured how | Same holder as the research record? |
+|---|---|---|---|
+| file length | under 200 lines (Anthropic 2026b); 32 KiB combined (OpenAI 2026a) | none stated | no: research tests rule count, not lines (Jaroslawicz 2025) |
+| where instructions go | long data first, query last (Anthropic 2026a); both ends (OpenAI 2025) | vendor tests, no data shown | yes: agrees with Liu 2024 |
+| delimiters | XML tags (Anthropic 2026a); XML good, JSON poor (OpenAI 2025) | vendor tests, no data shown | partly: Sclar 2024 finds model-specific results |
+| llms.txt | 28% of 137,210 domains publish it, an upper bound (Ahrefs 2026) | server logs, 2026-05 | no: 97% of files had zero requests |
+| docs the model lacks | an 8 KB index in AGENTS.md: 100% against 53% (Vercel 2026) | vendor evaluation, one domain | no: Gloaguen 2026 finds no net gain from files |

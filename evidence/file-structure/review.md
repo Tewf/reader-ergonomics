@@ -80,3 +80,25 @@ Surveys first, then the seminal work, then forward citations.
 - Zimmermann 2005: mining version histories for files that change together.
 - Tornhill 2015: **hotspots**, size times change frequency; 4 % of code held 72 % of defects in the cited case (secondary: reported from a 2015 talk).
 - jscpd and PMD CPD: duplication detectors; jscpd also reads markdown.
+
+## 8. Practice
+
+Every source here is a tool default, a company guide or a practitioner text. All grade as convention, untested: none compared its layout with an alternative. The owner of each page speaks about its own tool.
+
+- Maven 2026: fixed paths such as src/main/java and src/test/java; the stated reason is that users of one project feel at home in another. Tool default.
+- Cargo 2026: src/, tests/, examples/ and benches/ by convention, kebab-case target names. Tool default.
+- Rails 2026: app/ holds the controllers, models, views, helpers, mailers, jobs and assets together. Framework default.
+- Go 2026: start with one flat package; put commands in cmd/ and code to keep private in internal/. It calls file and package names arbitrary. Company guide.
+- Cox 2021: a Go team member's issue says the golang-standards layout misdescribes Go, since most packages do not use pkg/. closed on 2023-08-19. Community critique.
+- Go 2014: a package under internal/ is importable only from the tree rooted at the parent of internal/; the go command enforces it. Language rule.
+- Bazel 2026: a target is private to its package by default, and breaking a dependency's visibility fails the build at analysis. Build tool rule.
+- GitHub 2026b: CODEOWNERS maps path patterns to reviewers, the last matching pattern wins, the file must stay under 3 MB. Platform feature.
+- Wiggins 2011: configuration lives in environment variables. Litmus test: could the code be open source now without leaking credentials. It calls config files outside version control a big improvement on constants, yet scattered. Practitioner guide.
+- ESLint 2026a: default 300 lines per file; recommendations usually range from 100 to 500. Linter default.
+- ESLint 2026b: default 50 lines per function. Linter default.
+- Checkstyle 2026: default 2000 lines per file. Linter default.
+- Fowler 1999: the Rule of Three, tolerate a second copy and extract at the third, credited to Don Roberts (secondary: read on a Wikipedia page, not in the book).
+- Dodds 2020: AHA, avoid hasty abstractions, credited to Cher Scarlett; it calls Write Everything Twice dogmatic. Blog post.
+- Microsoft 2024: reserved device names include COM and LPT followed by the superscript digits 1 to 3, with or without an extension. Platform specification.
+- Nielsen Norman 2017: mega menus show every option at once and give no numeric limit. Company article.
+- Nielsen Norman 2024: a review of 98 tree tests found median task success of 62%, quartiles 37% and 83%. It benchmarks findability and does not test breadth. Company article.

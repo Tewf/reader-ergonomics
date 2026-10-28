@@ -28,3 +28,6 @@ Steps: [frame](frame.md) · [review](review.md) · [state of the art](state-of-t
 | Ordering concepts under prerequisites is NP-complete in general | supported with caveat | `state-of-the-art.md` §6 |
 | Classic readability formulas predict adult comprehension worse than NLP models | measured | `against.md` §6 |
 | Lab findings transfer to notes that are reread and searched | convention, untested | `against.md` §5 |
+| Contracts carry more center-embedding, rare words and passives than nine other genres; center-embedding hurt recall most | measured (secondary) | `review.md` §8 |
+| US state insurance law fixes a minimum Flesch score of 40 to 50 | measured, descriptive | `review.md` §8 |
+| Government word caps for sentences come with no test in the sources read | convention, untested | `position.md` |

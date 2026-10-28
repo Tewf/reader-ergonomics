@@ -24,3 +24,14 @@ Decide what a repository's documentation must say, how its pages are separated b
 - Academic: code comment quality, README classification, scientific software documentation.
 - Acronym: JOSS, PEP, SLR (systematic literature review).
 - Author: Procida, Lee, Prana, Pascarella, Wen, Rani, Ousterhout.
+
+## Practitioners' names, beside the field's
+
+| Practitioners say | The field says |
+|---|---|
+| topic types: concept, task, reference (GitLab); modules: concept, procedure, reference (Red Hat) | documentation taxonomy, page forms (Diataxis) |
+| front-load keywords, scannable content (Microsoft) | signal the structure, overview first |
+| short description of a module (Red Hat) | abstract, overview first |
+| spell out on first use (Google) | define before use |
+| delete dead docs, docs change with the code (Google) | code-comment inconsistency (Wen 2019) |
+| README sections, standard README | README content (Prana 2019) |

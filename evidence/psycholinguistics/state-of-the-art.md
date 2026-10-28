@@ -82,3 +82,14 @@ Its total cost is C = f(s_1) + ... + f(s_n).
 
 - Readability: models built from NLP features beat Flesch-Kincaid for adult comprehension, processing and familiarity (Crossley et al. 2017).
 - Surprisal source: larger transformer models with lower perplexity fit reading time worse (Oh & Schuler 2023).
+
+## 8. Most adopted, kept apart from best evidence
+
+| Sub-question | Most adopted (practice record) | Best evidence (research record) |
+|---|---|---|
+| Sentence length | average 20 words (EC 2011); average 15, cap 25 (Style Manual AU 2026, secondary) | dependency length, not word count (Futrell et al. 2015) |
+| Readability number | Flesch floor of 40 to 50 in US state law (NAIC 2025); grade 9 default (Hemingway 2026) | NLP-feature models beat Flesch for adults (Crossley et al. 2017) |
+| Nesting | advice to avoid legalese | center-embedding hurt recall most, N = 184 (Martinez et al. 2022, secondary) |
+
+- No source read here states a comprehension test of any word cap.
+- The practice record is convention, untested; the adoption counts are measured, descriptive.

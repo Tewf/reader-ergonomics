@@ -1,5 +1,7 @@
 # Frame
 
+The problem in one sentence, the names research and practice give it, and the terms searched.
+
 ## The problem, one sentence
 
 Which typographic and layout choices (line length, size, spacing, contrast, structure, figures) change how fast, how accurately and how comfortably people read on screen?
@@ -26,3 +28,14 @@ Which typographic and layout choices (line length, size, spacing, contrast, stru
 | Grouping | Gestalt proximity; common region; chunking |
 | Words and pictures | spatial contiguity; split attention; signalling; coherence |
 | Standard | **WCAG 2.2** (Web Content Accessibility Guidelines) |
+
+## What practitioners call it
+
+| Practitioners say | The field says |
+|---|---|
+| line length, column width, "no more than 75 characters" | measure, cpl |
+| body size 16px | fluent range, x-height |
+| line height 1.5 | leading |
+| contrast ratio, Lc (APCA) | luminance contrast, polarity |
+| dark mode | polarity |
+| F-pattern, layer-cake, scanning | information foraging, scanning |

@@ -19,3 +19,5 @@ Steps: [frame](frame.md) · [review](review.md) · [state of the art](state-of-t
 | Co-change and hotspot measures add what imports cannot see | supported with caveat | review.md 7 |
 | Size confounds class-level metrics | measured | review.md 6 |
 | Smaller files have fewer defects, so files should be split by length | not supported: defects grow more slowly than size | against.md |
+| Linter defaults for file length differ by a factor of about 7 (300 against 2000 lines) | convention, untested | review.md 8, against.md |
+| Tools enforce folder boundaries (Go internal/, Bazel visibility) | convention, untested | review.md 8, position.md |

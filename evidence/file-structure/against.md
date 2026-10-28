@@ -97,6 +97,18 @@ The evidence against nine file and folder conventions, theme by theme: the claim
 - Accented names can be stored decomposed on macOS, and git recomposes them only when core.precomposeUnicode is on (Git 2023).
 - **Verdict: keep with an amendment.** Amendment: add reserved device names, trailing periods, control characters and a path-length budget to the check.
 
+## Practice against the principles
+
+Each item is a practice that pulls against one principle. The pages are tool owners and a practitioner guide, so the claims are theirs.
+
+- **Group folders by purpose:** Maven 2026, Cargo 2026 and Rails 2026 group by type at the top level (src/main, tests/, app/ with models, views, controllers). The folder name predicts content across projects, which is the same reader benefit. Amendment: where a tool finds files by folder name, the tool's convention wins.
+- **Tunables in config:** Wiggins 2011 puts configuration in environment variables, not files, while granting that files outside version control beat constants. Both keep values out of code. Amendment: outside the code, in a file or the environment.
+- **One place per fact:** the Rule of Three (Fowler 1999, secondary) adds a threshold, merge at the third copy. Dodds 2020 and Metz 2016 push the threshold later. Amendment: none; the change-together test stays primary.
+- **File length:** ESLint 2026a defaults to 300 and Checkstyle 2026 to 2000, against the principle's 500 ceiling. ESLint says recommendations usually range from 100 to 500. Amendment: none; the defaults differ without a study.
+- **Navigation:** Nielsen Norman 2017 favours options visible at once and gives no numeric limit. Nielsen Norman 2024 offers a tree-test benchmark (median 62%), which could serve as a baseline for a findability claim but not as a breadth limit.
+- **Portable paths:** Microsoft 2024 also reserves COM and LPT followed by the superscript digits 1 to 3. Amendment: add those forms to the reserved-name check.
+- **Dependencies:** Go internal/ and Bazel visibility enforce boundaries in the compiler or build, where the principle only asks that folders never form a cycle. Amendment: none; boundaries extend the rule.
+
 ## The common thread
 
 - Most sources above define their unit by change:
@@ -119,6 +131,8 @@ The evidence against nine file and folder conventions, theme by theme: the claim
 - Mechanical commits (renames, reformatting) create false co-change and must be filtered; thresholds stay PROVISIONAL until measured on the repository's own history.
 
 ## Not verified
+
+- Practice strand: Fowler 1999 is read on a Wikipedia page, not in the book. The Go 1.4 internal rule is read in its release notes; its later scope is not checked. Potvin's article of 2016, Turborepo and Nx were not re-read.
 
 - Read in summaries, not in the books: the 25-word test (Martin 2008), the length and classitis passages (Ousterhout 2018), the DRY restatement (Thomas 2019), and the redundancy technique (Lakos 1996, table of contents only).
 - Kiger 1984 is reported through Larson 1998; the paper itself was not read.

@@ -13,3 +13,12 @@ The review is finished because the baselines can be named. All three run on the 
 - If A beats B and C on cost while its top proposed moves are accepted, the conventions are calibrated.
 - If B or C beat A and their moves are refused, the Candela 2016 finding has reproduced: the cost needs a term the literature lacks.
 - Constraint checks (no cycles, breadth ceiling, entry through an index) need no baseline: they pass or fail.
+
+## Practice baselines
+
+People compare a layout with the tool default they know, so these are named as well. They are not run on the reference graph.
+
+| Baseline | What it is |
+|---|---|
+| D, tool layout | the fixed layout of the build tool or framework in use (Maven 2026, Cargo 2026, Rails 2026) |
+| E, linter default | 300 lines per file (ESLint 2026a) or 2000 (Checkstyle 2026) |

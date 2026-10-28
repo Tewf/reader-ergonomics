@@ -24,6 +24,10 @@ Which ways of structuring and presenting written material make a reader learn, r
 | Partial notes | skeletal notes; guided notes |
 | Links | hypertext; cognitive overhead; disorientation |
 | Styles | learning styles; meshing hypothesis |
+| Practitioners: flashcards, Anki, SRS, forgetting curve | retrieval practice; spacing effect |
+| Practitioners: scheduler, FSRS, SM-2 | memory model predicting recall probability |
+| Practitioners: Zettelkasten, atomic notes, second brain | note-taking; no matching research term |
+| Practitioners: VAK, learning styles | meshing hypothesis (not supported) |
 
 ## Terms used in this folder
 

@@ -1,5 +1,7 @@
 # Position
 
+What is measured, what is not, and where practice runs ahead of the evidence.
+
 ## Known (measured)
 
 - Retrieval and spacing are the best-supported study techniques, and gains grow after a delay.
@@ -30,3 +32,11 @@
 - It restates each field result as a general claim about readers, with its grade.
 - It keeps measured claims apart from conventions, so a rule can be traced to its level of evidence.
 - It does not claim that no one has tested a rule, only that the review below found no test.
+
+## Practice against the evidence
+
+- Practice runs ahead: schedulers publish a rigorous public benchmark, but it predicts recall, not learning.
+- The 20-30% fewer reviews figure is a simulation, so it grades nothing.
+- Company efficacy pages are owners' claims; the one independent RCT found small gains.
+- Practice ignores the evidence: most educators surveyed believe in learning styles, and some keep using them when told.
+- The standard relies on no style, so nothing changes; readers may still expect style-based design.

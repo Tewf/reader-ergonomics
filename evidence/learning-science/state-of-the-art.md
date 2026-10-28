@@ -26,3 +26,12 @@ Upper and lower bounds are kept apart, as in every topic ([method](../README.md)
 - Surface outcomes gain more than deep ones across techniques (0.60 vs 0.26).
 - Seductive details cost a little (Sundararajan 2020).
 - No pooled effect exists for subgoal labels, atomic notes or maps of content.
+
+## Most adopted, kept apart from best evidence
+
+| Sub-question | Most adopted | Best evidence |
+|---|---|---|
+| Scheduling reviews | Anki (SM-2, FSRS option), Duolingo's own model | recall-prediction benchmarks by the schedulers' own community; no trial on exam scores found |
+| Edtech efficacy | Khan Academy, Duolingo pages by their owners | Oreopoulos 2026, an independent RCT, small gains |
+| Note-taking | Zettelkasten, second brain | skeletal notes (Kiewra 1985); linked notes untested |
+| Matching teaching to style | belief in 89.1% of educators (Newton 2020) | not supported (Pashler 2008) |

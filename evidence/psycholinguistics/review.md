@@ -91,3 +91,19 @@ Order inside each strand: definitions, seminal work, forward citations.
 - **Minimum linear arrangement (MinLA)**: vertices on a line, minimizing the sum of edge lengths; results in `state-of-the-art.md`.
 - Flesch 1948: reading ease from sentence length and syllables per word.
 - Coh-Metrix: Graesser et al. 2004; McNamara et al. 2014; Graesser et al. 2011; open tools in `baseline.md`.
+
+## 8. Practice
+
+Kinds: G government guide, L law, T tool, P paper. Practice is **convention, untested** unless a study is named; adoption figures are **measured, descriptive**.
+
+- EC 2011 (G): average of 20 words per sentence, with a few short ones; keep link words when splitting; the guide calls its advice "hints, not rules".
+- Style Manual AU 2026 (G, secondary): average of 15 words, split above 25; read in a search summary, not on the page.
+- GSA 2026 (G): gives no word count and cites no study; it grounds the advice in the Plain Writing Act of 2010.
+- NAIC 2025 (L): a chart of US state insurance rules; minimum Flesch score 40 in WV, NH, MT and NV, 45 in FL and NY, 50 in ME and NC.
+- Vale 2026 (T): averages the listed metrics (Gunning Fog, Coleman-Liau, Flesch-Kincaid, SMOG, ARI); a `grade` parameter sets the highest acceptable level; owner documentation.
+- Hemingway 2026 (T): grade score; the Editor Plus default target is grade 9; the page names no formula; owner documentation.
+- textstat 2026 (T): MIT-licensed readability library, 1.4k GitHub stars on 2026-10-28; its README calls SMOG on texts under 30 sentences statistically invalid.
+- Redish 2000 (P, commentary): formulas were built for children's school books and ignore reader differences, layout and retrieval aids.
+- Schriver 2017 (P, secondary): a review of 1940 to 2015 finds formulas often unreliable and invalid; usability testing is the best benchmark; read on an advocacy page.
+- Martinez et al. 2022 (P, secondary): in about 10 million words, contracts carry more rare words, center-embedding and passives than nine other genres.
+- Martinez et al. 2022: in experiments with N = 184, center-embedding hurt recall most, for experienced readers too; read as an abstract summary.

@@ -1,5 +1,7 @@
 # Against
 
+The evidence and the practice that cut against the learning principles, one case per section.
+
 ## Learning styles
 
 - Pashler 2008 (R): no adequate evidence that matching instruction to a learner's style improves learning.
@@ -30,3 +32,8 @@
 - Short lab materials dominate; classroom courses are fewer.
 - Several effect sizes were read in summaries (marked secondary).
 - Surface gains exceed deep gains, so recall tools do not replace problem practice.
+
+## Practice that contradicts the evidence
+
+- Belief in learning styles is 89.1% in a review of 37 samples (Newton 2020) and persists after the evidence is shown (Newton 2017: 32%).
+- Edtech efficacy pages report association or engagement; Oreopoulos 2026 finds 0.06 to 0.08 SD per year, small.

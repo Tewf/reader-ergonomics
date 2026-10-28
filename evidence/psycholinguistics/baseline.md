@@ -58,3 +58,17 @@ Terms are defined in `review.md`; works are listed in the [bibliography](../bibl
 3. Report the differences per scale, never a single score.
 4. Claim a reader effect only from reader data: reading time plus questions split into text base and situation model (McNamara et al. 1996b).
 5. Run each comparison for at least two reader levels, since cohesion effects reverse with knowledge (O'Reilly & McNamara 2007).
+
+## Practice baseline
+
+People compare against a grade score and a sentence cap, not Coh-Metrix.
+
+| Practice | Number | Source |
+|---|---|---|
+| Sentence average | 20 words | EC 2011 |
+| Sentence average and cap | 15 and 25 words | Style Manual AU 2026 (secondary) |
+| Flesch floor in law | 40 to 50 | NAIC 2025 |
+| Tool grade target | grade 9 default | Hemingway 2026 |
+
+- Report the grade tools beside the indices above, never in place of them.
+- A tool grade is a floor-type baseline, like Flesch; it was not shown to track comprehension.

@@ -62,6 +62,25 @@ repeat it. An unverifiable one says "(secondary)" or names what was not checked.
 and four titles in the bibliography. Claims without a number have not been audited this way, so such a claim is only
 as good as the review that cites it.
 
+## Multivocal review
+
+On 2026-10-28 every topic was read again for what exists outside the academic literature: standards, company guides
+and practice, tools, practitioner books, communities and practitioner surveys. The method is the multivocal
+literature review (Garousi 2019). Eight agents searched eight strands and read about 240 sources. Every claim brought
+in was re-read on its own page; one read only in a summary says "(secondary)".
+
+| Result | Count |
+|---|---|
+| sources added to the bibliography | 75 |
+| principles whose grade changed | 0 |
+| principles given a new limit or caveat | 9 |
+| principle claims widened | 1 (tunables in config: a file or the environment) |
+
+- **No practice source raised a grade.** Practice shows adoption, and in places it contradicts a principle.
+- **Overview first is not importance first.** The few tests of putting the main fact first, as news does, do not support it.
+- **Practice sets numbers without studies:** sentence lengths, line lengths up to 90 characters, file-length limits.
+- **Most of the checks have no counterpart** among existing tools; the ones that do are named in [checks](../checks/README.md).
+
 ## Method
 
 The steps follow a thesis literature review:

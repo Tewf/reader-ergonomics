@@ -32,3 +32,14 @@ Rules are compared against the **WCAG 2.2 success criteria** (pass or fail) and 
 - Test with the WCAG 1.4.12 overrides applied.
 - Test at 320 px width and 200% zoom.
 - Record each rule as inside or outside its range, and as pass or fail.
+
+## Practice baseline
+
+What people compare against in practice, apart from the measured ranges:
+
+| Variable | Practice baseline | Source |
+|---|---|---|
+| Measure | 45 to 75 characters; upper bounds 80 (AAA) and 90 | GOVUK 2024, W3C 2023a, USWDS 2026 |
+| Body size | at least 16px | USWDS 2026 |
+| Line height | at least 1.5 | USWDS 2026 |
+| Contrast check | rendered-page scan at 4.5:1 and 3:1 | axe-core, pa11y, Lighthouse |

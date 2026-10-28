@@ -85,3 +85,16 @@ Grouped by strand. Surveys first, then the seminal work, then later syntheses.
 - Sinha 2021 (MA): problem before instruction g = 0.36, reversed for young learners.
 - Ainsworth 2006 (R): translating between representations is hard and needs support.
 - Fyfe 2014 (R): concreteness fading, with later doubt.
+
+## 8. Practice
+
+Graded convention, untested unless a study measured the effect. A company page is its owner's claim about itself.
+
+- Open Spaced Repetition 2026a (tool, community benchmark): about 10,000 Anki collections, 349,923,850 evaluated reviews. Log loss without same-day reviews: FSRS-6 0.3460, FSRS v4 0.3726, HLR 0.4694, a neural model 0.2773. It scores recall prediction, run by the FSRS community.
+- Open Spaced Repetition 2026b (tool docs): 20-30% fewer reviews than SM-2 at equal retention. The page states the figure is from simulation.
+- Duolingo 2026 (company blog): half-life regression error "nearly half" that of the Leitner method, over 12 million sessions. It reports prediction, retention and activity, no learning gains.
+- Khan Academy 2024 (company): about 350K students; 30+ minutes a week is associated with about 20% greater-than-expected gains, reached by about 9%. The page calls its design non-randomised.
+- Oreopoulos 2026 (independent): a two-year cluster RCT in 18 Tennessee middle schools. Khanmigo assignment gave 0.06 to 0.08 SD per school year.
+- Newton 2020 (R, 37 samples, 15,405 educators): 89.1% weighted belief in matching teaching to learning styles.
+- Newton 2017 (S, 114 UK academics): 58% believe, 33% used styles in the past year, 32% would keep using them after seeing the evidence.
+- Zettelkasten, second brain: widely used, and the only trial found is Malashenko 2023 (see against.md).

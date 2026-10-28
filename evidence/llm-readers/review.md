@@ -57,7 +57,7 @@ Each strand: arXiv search by title and abstract phrase, then by author, then a w
 ## Strand 4: instruction files for agents
 
 - Howard 2024 proposed llms.txt: one required H1, a summary blockquote, link lists, and an "Optional" section an agent may skip.
-- The AGENTS.md site (AGENTS.md n.d.) defines a plain Markdown file for agents; the nearest file in the tree wins, and the chat prompt overrides it.
+- The AGENTS.md site (Agentic AI Foundation 2026) defines a plain Markdown file for agents; the nearest file in the tree wins, and the chat prompt overrides it.
 - Neither site cites an evaluation of accuracy.
 - Jiang 2025 built a taxonomy of cursor rules from 401 repositories: conventions, guidelines, project information, directives, examples.
 - Zarzycki 2026 censused 22,854 repositories and annotated 341,852 statements in their instruction files.
@@ -83,3 +83,20 @@ Each strand: arXiv search by title and abstract phrase, then by author, then a w
 - Olausson 2024 counted the cost of self-repair and found feedback quality is the bottleneck.
 - Panickssery 2024 showed evaluators recognise and favour their own outputs.
 - Kumar 2025 (SCoRe) trained self-correction with reinforcement learning.
+
+## Strand 6: Practice
+
+Each page below is its owner's claim about its own product. None states a method for its numbers, except where noted.
+
+- Anthropic 2026a (company guide): long documents at the top, the query at the end; it reports gains "up to 30 percent" with no method.
+- Anthropic 2026b (product docs): target under 200 lines per CLAUDE.md; longer files reduce adherence; contradictory rules may be picked arbitrarily.
+- Anthropic 2026b also says memory files are context, not enforcement, and points to a hook to block an action.
+- OpenAI 2025 (company cookbook): instructions at both start and end beat either alone; XML delimiters did well and JSON did particularly poorly.
+- OpenAI 2026a (product docs): AGENTS.md files are layered from root to current directory, with a combined cap of 32 KiB by default.
+- AGENTS.md 2026 (de facto specification): the page claims use by over 60k open-source projects and lists 23 tools; stewarded under the Linux Foundation.
+- Howard 2024 (llms.txt): 28% of 137,210 domains publish one, an upper bound (Ahrefs 2026).
+- Ahrefs 2026 (SEO company, stated method, server logs, 2026-05): 97% of llms.txt files received zero requests; AI retrieval bots made 1.1% of requests.
+- Ahrefs 2026 states that a fetch is not a read, so these shares are ceilings on use.
+- Vercel 2026 (vendor evaluation, one domain): baseline 53%; a skill by default 53%; a skill with explicit instructions 79%; an 8 KB docs index in AGENTS.md 100%.
+- In Vercel 2026 the skill was never invoked in 56% of cases; the page gives no model name and no task count.
+- Chatlatanagulchai 2026 (preprint) describes content only: in 2,303 files from 1,925 repositories, test procedures appear in 75.9%, security in 14.8%.

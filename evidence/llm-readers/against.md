@@ -40,3 +40,10 @@ This file lists what does not transfer from human readers, results that changed 
 - The instruction-file studies (Gloaguen 2026; Lulla 2026; Khatri 2026; McMillan 2026; Zarzycki 2026) are preprints.
 - Hong 2025 is a company technical report; its page gives no per-condition accuracies.
 - Corpus-level prevalence estimates (Kobak 2025; Liang 2024) cannot classify a single document, and per-document detectors are unreliable (Sadasivan 2023; Liang 2023).
+
+## Practice that contradicts a principle
+
+- Vendors cap file size (Anthropic 2026b; OpenAI 2026a); the standard says size alone never decides a split. A file under a cap can still fail the one-role test.
+- Vercel 2026 found a copied index beat a link, against the principle that every other place links. The link was often never followed: the skill went uninvoked in 56% of cases.
+- OpenAI 2025 reports JSON delimiters did particularly poorly for long document sets. This is a vendor test with no data shown, and a model-specific result is expected (Sclar 2024).
+- Vendor pages are owners' claims about themselves: Anthropic 2026a, Anthropic 2026b, OpenAI 2025, OpenAI 2026a, Vercel 2026.

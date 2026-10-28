@@ -29,3 +29,9 @@
 
 - Many studies use short passages, small samples or screens of the 2000s.
 - Practitioner sources (Nielsen Norman Group, Bringhurst, BDA) give guidance, not controlled trials.
+
+## Practice that contradicts a principle
+
+- Readable measure says 45 to 75 characters. USWDS 2026 allows up to 90, and WCAG 1.4.8 (AAA) allows 80. Neither cites a study.
+- Sufficient contrast states one ratio. APCA 2026 says the threshold depends on size and weight; W3C has not adopted it.
+- Layer-cake claims (Nielsen Norman 2019) rest on one 9-participant heatmap and no measured effect; the F-pattern is descriptive (Nielsen 2006).

@@ -21,3 +21,17 @@ Upper bounds (what has been achieved) are kept apart from lower bounds (what is 
 - Minimizing Dasgupta's cost is NP-hard (Dasgupta 2016).
 - No constant-factor approximation exists under the Small-Set Expansion hypothesis (Charikar 2017).
 - Exhaustive search for modularization quality works only on small systems (Mitchell 2006).
+
+## Most adopted, kept apart from best evidence
+
+The first column is a practice record. The second is a research record. They name different holders.
+
+| Sub-question | Most adopted | Best evidence |
+|---|---|---|
+| Folders by purpose or by type | by type at the top: Maven, Cargo, Rails (review.md 8) | no controlled study found; Silva 2014 shows declared and actual change diverge |
+| Breadth and findability | no figure from practice; Nielsen Norman 2024 gives a tree-test median of 62% | Larson 1998: 16 by 32 fastest, 8 by 8 by 8 slowest |
+| Folder boundaries | enforced by tools: Go internal/, Bazel visibility | argued, not measured |
+| File length | ESLint 300 lines, Checkstyle 2,000 lines (ESLint 2026a; Checkstyle 2026) | Syer 2015, El Emam 2002: no threshold held |
+| Duplication | Rule of Three (Fowler 1999, secondary) | Juergens 2009, Kapser 2008 |
+| Configuration source | environment variables (Wiggins 2011) | Xu 2015, Yin 2011; neither compares file with environment |
+| Reserved names | Microsoft 2024 list | a platform specification, not a study |

@@ -16,3 +16,5 @@ Steps: [frame](frame.md) · [review](review.md) · [state of the art](state-of-t
 | A comment earns its place only by carrying what the code cannot | convention, untested | review.md 3 |
 | Declaration comments describe use; definition comments describe operation | convention, untested | review.md 3 |
 | Error messages should point at their fix | convention, untested | review.md 2 |
+| A README is an index of modes by convention, not a mixed page | convention, untested | position.md |
+| Diataxis adoption is self-reported; critics name the cost of strict separation | convention, untested; adoption descriptive | review.md 4, against.md |
