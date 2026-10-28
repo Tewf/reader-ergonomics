@@ -1,0 +1,5 @@
+---
+title: "Page: figures, layout and type"
+---
+
+{{< include README.md >}}
