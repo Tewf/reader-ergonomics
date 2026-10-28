@@ -8,7 +8,11 @@ The principles below are the optimum for a reader nobody knows. When the reader 
 1. **Name the reader.** If they are known, open their style in [reader-styles/](reader-styles/).
 2. **Pick the shape** of the document from [shapes/](shapes/).
 3. **Write to the principles** below; each file says what it asks, why, and where it stops.
-4. **Check:** `python3 checks/run.py .` Fix every error, read every warning, and answer the questions in `checks/out/needs-judgment.md`. A program verifies what a program can; judgment answers the rest; nobody reviews their own text in place of the checks.
+4. **Check:** `python3 checks/run.py .` (or the path to this repository's `checks/run.py`, followed by the folder to check).
+   - Fix every **error**: it is certain.
+   - Fix every **warning**, or say in one line why it is a false match: warnings come from heuristics.
+   - Answer the **judgment** questions in `checks/out/needs-judgment.md`, a file written only when there are questions. The default backend, `flag`, writes them there for whoever is at work; none is a normal result for a short text.
+   - A program verifies what a program can; judgment answers the rest; nobody reviews their own text in place of the checks.
 
 ## Grades
 

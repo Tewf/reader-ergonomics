@@ -21,11 +21,14 @@ used, and long after, by search.
 ## The idea                 figure first when the content is a relation, a set or a process;
                             then the text, one idea per line, no block past three lines
 
-## Check yourself           two or three questions answered from memory, answers folded
+## Check yourself           two or three questions answered from memory; each answer folded
+                            in <details><summary>Answer</summary> ... </details>, or listed
+                            under a last heading, Answers
 
 ## Open                     what is still unclear, as questions
 
-## Links                    the notes this one leans on and the notes that lean on it
+## Links                    the notes this one leans on and the notes that lean on it;
+                            omit the section while there are none
 ```
 
 ## The principles it applies
