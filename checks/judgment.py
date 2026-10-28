@@ -49,7 +49,10 @@ def endpoint(backend: str, settings: dict) -> tuple[str, str, str | None] | str:
 def dispatch(root: Path, findings: list[Finding], backend: str, settings: dict) -> str:
     """Send the judgment findings to the backend; return one line saying what happened."""
     questions = [finding for finding in findings if finding.kind == "judgment"]
+    output = root / "checks" / "out" / "needs-judgment.md"
     if backend == "none" or not questions:
+        if not questions and output.exists():
+            output.unlink()  # a file left by an earlier run would ask questions that no longer apply
         return f"judgment: {len(questions)} question(s), backend {backend}"
     answers, note = {}, ""
     if backend in ("local", "api"):
@@ -65,7 +68,6 @@ def dispatch(root: Path, findings: list[Finding], backend: str, settings: dict) 
                     answers[finding] = ask(url, model, key, prompt, settings.get("timeout_seconds", 120))
                 except Exception as error:  # an unreachable model leaves the question open, it does not crash
                     answers[finding] = f"(no answer: {error.__class__.__name__})"
-    output = root / "checks" / "out" / "needs-judgment.md"
     output.parent.mkdir(parents=True, exist_ok=True)
     lines = ["# Questions for judgment", "", f"Backend: {backend}. Answer each one; a model's answer is advice.", ""]
     for finding in questions:
