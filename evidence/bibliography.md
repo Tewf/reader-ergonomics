@@ -356,7 +356,7 @@ Every work cited anywhere in this repository, once. The text cites `Author Year`
 | Rayner 2016 | Rayner, Schotter, Masson, Potter, Treiman (2016). So much to read, so little time. Psychological Science in the Public Interest. | https://doi.org/10.1177/1529100615623267 |
 | Red Hat 2026a | Red Hat (accessed 2026). Red Hat supplementary style guide for product documentation | https://redhat-documentation.github.io/supplementary-style-guide/ |
 | Red Hat 2026b | Red Hat (accessed 2026). Modular documentation reference guide | https://redhat-documentation.github.io/modular-docs/ |
-| Redish 2000 | Redish (2000). Readability formulas have even more limitations than Klare discusses. Journal of Computer Documentation, 24(3), 132-137. | http://www.acm.org/pubs/citations/journals/jcd/2000-24-3/p132-redish/ |
+| Redish 2000 | Redish (2000). Readability formulas have even more limitations than Klare discusses. ACM Journal of Computer Documentation, 24(3), 132-137. | https://doi.org/10.1145/344599.344637 |
 | Reigeluth 1983 | Reigeluth, Stein (1983). The elaboration theory of instruction. In Reigeluth (ed.), Instructional-design theories and models. Erlbaum. | https://doi.org/10.4324/9780203824283 |
 | Reinhart 2025 | Reinhart, Markey, Laudenbach, Pantusen, Yurko, Weinberg, Brown (2025). Do LLMs write like humans? Variation in grammatical and rhetorical styles. PNAS 122, e2422455122. | doi:10.1073/pnas.2422455122 |
 | Rello 2013 | Rello, Baeza-Yates (2013). Good fonts for dyslexia. ASSETS | https://doi.org/10.1145/2513383.2513447 |
@@ -383,7 +383,7 @@ Every work cited anywhere in this repository, once. The text cites `Author Year`
 | Satija 2017 | Satija (2017). Colon Classification. ISKO Encyclopedia of Knowledge Organization; Knowledge Organization 44(4) | https://www.isko.org/cyclo/colon_classification |
 | Schankin 2018 | Schankin, Berger, Behringer, Hofmeister, Beigl (2018). Descriptive compound identifier names improve source code comprehension. ICPC | https://doi.org/10.1145/3196321.3196332 |
 | Schneider 2018 | Schneider, Beege, Nebel, Rey (2018). A meta-analysis of how signaling affects learning with media. Educational Research Review | https://doi.org/10.1016/j.edurev.2017.11.001 |
-| Schriver 2017 | Schriver (2017). Plain language in the United States gains momentum: 1940-2015. IEEE Transactions on Professional Communication, 60(4). Summary page: Center for Plain Language | https://centerforplainlanguage.org/most-readability-formulas-outdated/ |
+| Schriver 2017 | Schriver (2017). Plain language in the US gains momentum: 1940-2015. IEEE Transactions on Professional Communication, 60(4); read in the Center for Plain Language's summary | https://doi.org/10.1109/TPC.2017.2765118 |
 | Schroeder 2018 | Schroeder, Nesbit, Anguiano, Adesope (2018). Studying and constructing concept maps: a meta-analysis. Educational Psychology Review | https://doi.org/10.1007/s10648-017-9403-9 |
 | Schwartz 1998 | Schwartz, Bransford (1998). A time for telling. Cognition and Instruction | https://doi.org/10.1207/s1532690xci1604_4 |
 | Schwartz 2009 | Schwartz, Sadler, Sonnert, Tai (2009). Depth versus breadth. Science Education. | https://doi.org/10.1002/sce.20328 |
