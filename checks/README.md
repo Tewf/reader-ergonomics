@@ -65,10 +65,13 @@ and meaning tiers on every push and pull request. It runs the syntax tier and th
 
 ## What other tools already check
 
-Most of these checks have no counterpart elsewhere: no tool found checks overview first, terms defined across files,
-a missing figure, folder breadth, document mode, paraphrase, a name against its content, or a stylesheet's measure.
-Where a tool does the same job, it is named below. The checks stay on the standard library so that one command runs
-them with nothing to install; a repository that already uses one of these tools can keep it.
+Of the 31 checks, 11 have no counterpart among the tools searched (October 2026). None of those tools checks
+overview first, terms defined across files, a missing figure, document mode, paraphrase, a name against its content,
+or a stylesheet's measure. 13 checks have a partial counterpart, a tool that checks a related but different thing, and
+7 have a tool that does the same job. The table below names the closest tool for each, with how it differs.
+
+The program-tier checks stay on the standard library, so one
+command runs them with nothing to install; a repository that already uses one of these tools can keep it.
 
 | Check | Tool that covers it | How it differs |
 |---|---|---|
@@ -77,11 +80,13 @@ them with nothing to install; a repository that already uses one of these tools 
 | `long-sentences`, `paragraph-length` | [Vale](https://github.com/errata-ai/vale) | a rule from a style package or a custom one, not a statement count |
 | `duplication` | [jscpd](https://github.com/kucherenko/jscpd) | copies of tokens, not of normalised prose |
 | `sufficient-contrast` | [axe-core](https://github.com/dequelabs/axe-core) | measures the rendered page (see below) |
-| `tree-shape`, for cycles | [import-linter](https://import-linter.readthedocs.io/en/stable/), for Python | cycles and layers per module; no tool counts the entries of a folder |
+| `tree-shape`, for cycles | [import-linter](https://import-linter.readthedocs.io/en/stable/), for Python | cycles and layers per module; none of the tools searched counts the entries of a folder |
 | `portable-paths` | [pre-commit-hooks](https://github.com/pre-commit/pre-commit-hooks) | case conflicts, illegal Windows names and symlinks, as separate hooks |
 | `co-change` | [code-maat](https://github.com/adamtornhill/code-maat) | coupling per file from the history, not per folder |
 
-For every other check, the search found no tool that does the same job (October 2026).
+Partial matches not in the table: ESLint's max-lines (physical lines, not statements), ls-lint (names, not content),
+markdownlint MD045 (alt text only), Vale's conditional rule (acronyms only) and eslint-plugin-unicorn's expiring-todo
+(a date written in the comment).
 
 ## What is not checked here
 

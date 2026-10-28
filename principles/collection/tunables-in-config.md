@@ -24,5 +24,4 @@ Every knob costs. Only 6.1% to 16.7% of parameters were set by most users and up
 commercial system could drop 51.9% of its parameters (Xu 2015). Most real misconfigurations are parameter mistakes
 (Yin 2011). Tags pile up: only 26.3% to 63.5% of tagged debt was later removed (Potdar 2014).
 
-Practice also keeps such values in the environment: the Twelve-Factor App does so (Wiggins 2011, convention). No
-study compares the two; the evidence above is about configuration files.
+Practice also keeps such values in the environment: the Twelve-Factor App does so (Wiggins 2011, convention). This review found no study comparing the two; the evidence above is about configuration files.

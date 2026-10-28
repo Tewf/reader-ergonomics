@@ -15,8 +15,9 @@
 
 ## Why
 
-Placing words next to the picture they explain raised learning, d = 0.72, and far more for complex material than for
-simple (0.78 against 0.28), in novices only (Ginns 2006, a meta-analysis). A split figure makes the reader hold one part in memory while searching for the other
+Placing words next to the picture they explain raised learning, d = 0.72, and more for complex material than for
+simple (0.78 against 0.28, the latter from 7 effects whose interval reaches zero). Every learner studied was a novice
+(Ginns 2006, a meta-analysis). A split figure makes the reader hold one part in memory while searching for the other
 (split attention; Ayres 2014).
 
 ## Limits

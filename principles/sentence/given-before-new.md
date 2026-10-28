@@ -14,8 +14,8 @@
 
 ## Why
 
-A sentence is read faster when its given part has a direct antecedent, the **given-new strategy** (Haviland & Clark
-1974, secondary). In five reading-time experiments, the entity linking a sentence to the previous one was read best as
+A sentence is judged understood sooner when its given part has a direct antecedent, the **given-new strategy**
+(Haviland & Clark 1974: three small experiments, a self-timed button press). In five reading-time experiments, the entity linking a sentence to the previous one was read best as
 the subject (Gordon et al. 1993). Gopen & Swan 1990 turned this into writing advice for scientists: topic first, stress
 position last.
 

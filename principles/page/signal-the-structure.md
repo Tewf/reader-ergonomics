@@ -18,8 +18,8 @@
 
 Signalling raises retention, g = 0.53, and transfer, 0.33, over 103 studies (Schneider 2018, measured). Whether
 readers with low prior knowledge gain most is contested: one meta-analysis says so (Richter 2016), and this one
-found no important moderator. Most web users scan, and a scannable layout raised measured
-usability by 47% (Nielsen 1997).
+found no important moderator. Most web users scan, and a scannable page raised
+measured usability by 47% on one test site (Nielsen 1997, company research).
 
 ## Limits
 

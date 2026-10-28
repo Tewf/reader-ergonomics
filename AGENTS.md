@@ -15,7 +15,7 @@ somewhere else, read [standard.md](standard.md) instead; this file is about this
 - Evidence against a principle goes into the topic's `against.md`, never deleted to make a principle look stronger.
 - A number read in a summary rather than in the paper is marked "(secondary)".
 - A limit or caveat added to a principle carries its own grade and its kind of source (study, thesis, standard,
-  company page, opinion), and the change obeys the principle it changes. Practice shows what is done, never what works.
+  company page, opinion), and the change obeys the principle it changes. Practice shows what is done; an outcome it reports is its owner's claim.
 
 ## Before handing back
 

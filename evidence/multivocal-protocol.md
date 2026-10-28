@@ -11,8 +11,7 @@ tools, practitioner books, communities and practitioner surveys, and stopped whe
 
 ## What was not recorded
 
-The search strings and their hit counts were not logged, so the pool cannot be rerun exactly. That is this review's
-main departure from Garousi 2019.
+The search strings and their hit counts were not logged, so the pool cannot be rerun exactly. That is one departure from Garousi 2019; the other is one scorer per topic.
 
 ## Quality of grey sources
 
@@ -32,8 +31,8 @@ Twenty criteria (Garousi 2019, Table 7), each scored 1, 0.5 or 0, in eight group
 - **Threshold: 10 of 20.** A source below it is kept only as an example of practice, never as support for a claim.
   It may still be quoted for what it says itself (a guide's own rule, a tool's own method); it may not support a
   claim about readers or about the world.
-- **A low score often means "not read":** a book or a paywalled page scores 0 on every part not seen, so below 10
-  can measure the scorer's access rather than the source. Such a source is marked "(secondary)" or "(not read)".
+- **A low score sometimes means "not read":** a book or a paywalled page scores 0 on every part not seen, so a score can measure the scorer's access
+  rather than the source. Of the 42 sources below 10, 11 carry such a note. Such a source is marked "(secondary)" or "(not read)".
 - **A part of a source that was not seen scores 0** on its criteria.
 - **Formal sources** (peer-reviewed papers) are not scored this way; they carry their evidence grade.
 - **One scorer per topic**, an agent, with no second rater: the scores are a first pass, not an agreement.

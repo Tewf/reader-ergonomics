@@ -37,5 +37,5 @@ better on comprehension, with no difference in memory (Sternadori 2008). So the 
 "commonly at the beginning" (ISO 2023, convention).
 
 In two experiments with Dutch readers (450 and 574), bad-news letters and e-mails that gave the explanation before
-the decision were judged more persuasive and polite, and the decision more acceptable. Comprehension did not differ (Jansen 2010,
-measured attitudes). Ratings of hypothetical messages in one culture: a limit to keep in mind, not a rule.
+the decision were judged more persuasive in both experiments, and more polite in the first. Perceived readability rose only in
+the first, and a comprehension test in the second found no difference (Jansen 2010, measured attitudes). Ratings of hypothetical messages in one culture: a limit to keep in mind, not a rule.

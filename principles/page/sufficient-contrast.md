@@ -20,9 +20,8 @@ shrank (Piepenbrock 2014).
 
 ## Limits
 
-By day the polarities did not differ for single words read at a glance, and at night white text on black was
-clearly less legible (Dobres 2017, measured, 34 adults). The
-claim that dark mode improves reading is **not supported**.
+By day the polarities did not differ. In a dark room (about 0 lux), white text on black was less legible (Dobres
+2017, measured: 34 adults, single Italian words read at a glance). The claim that dark mode improves reading is **not supported**.
 
 The 4.5:1 floor is a convention under revision. APCA makes the threshold depend on the size of the text, and on
 its weight in principle (APCA 2026); WCAG 3 has not chosen a method (W3C 2026). It is also widely broken: on 83.9% of the million home

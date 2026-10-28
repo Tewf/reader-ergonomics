@@ -28,7 +28,7 @@ statement of need, installation, a real example, API, tests, community guideline
 No controlled study compares readers on separated and mixed pages; the split is a framework, not a result. A small
 repository may be better served by one README holding several forms, signposted.
 
-Practice agrees for a README. Three README guides put what it is, how to install it and how to use it in one file
+Practice agrees for a README. Three README guides, practice examples below the quality bar, put what it is, how to install it and how to use it in one file
 (Guo 2026; GitHub 2026a; Litt 2026, read from its example). This repository reads a README as an index of modes,
 not a breach; that reading is untested. On strict separation, a Hacker News discussion warns that a complete set can harm an early project (Hacker News
 2024), and a Python discussion found mixing worked in one case (Viktorin 2022).

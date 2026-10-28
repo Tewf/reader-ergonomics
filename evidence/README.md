@@ -70,8 +70,10 @@ the review that cites it.
 
 On 2026-10-28 every topic was read again for what exists outside the academic literature: standards, company guides
 and practice, tools, practitioner books, communities and practitioner surveys. The method is the multivocal
-literature review (Garousi 2019). Eight agents searched eight strands and read about 240 sources. Every claim brought
-in was re-read on its own page, then checked by the third audit; one read only in a summary says "(secondary)".
+literature review (Garousi 2019). Eight agents searched eight strands and found about 240 sources, some read only in a summary.
+
+The agents that merged them were asked to re-read each claim on its page; the third audit then checked 162 claims from
+the 411 lines added, and later passes read 26 works in full. A claim read only in a summary or an abstract says so.
 
 The grey sources were then scored on the method's quality criteria ([protocol](multivocal-protocol.md)); each topic's
 `sources.md` lists the scores. One scorer per topic, so the scores are a first pass, not an agreement.
@@ -81,14 +83,17 @@ The grey sources were then scored on the method's quality criteria ([protocol](m
 | sources added to the bibliography | 76 |
 | principles whose grade changed | 0 |
 | principles given a new limit or caveat, each with its own grade | 9 |
-| principle claims changed | 0 (one widening, on practice alone, was reverted by the audit) |
-| grey sources scored on the protocol's 20 criteria | 126 |
-| scored below 10, so examples only, never support | 43, most for want of a readable copy |
+| principles whose one-line claim changed | 0 (one widening, on practice alone, was reverted by the audit) |
+| principles whose limits, numbers or evidence changed | 18 |
+| grey sources scored on the protocol's 20 criteria | 125 |
+| scored below 10, so examples only, never support | 42, of which 11 partly because the source could not be read |
 
-- **No practice source raised a grade.** Practice shows what is done, never what works.
-- **Overview first is not importance first.** Putting the main fact first, as news does, has no support yet.
+- **No practice source raised a grade.** Practice shows what is done; an outcome it reports is its owner's claim.
+- **Overview first is not importance first.** Putting the main fact first, as news does, has no tested support: two
+  theses disagree, and the plain-language standard advises it as a convention.
 - **Practice sets numbers without studies:** sentence lengths, line lengths up to 90 characters, file-length limits.
-- **Most of the checks have no counterpart** among existing tools; the ones that do are named in [checks](../checks/README.md).
+- **11 of the 31 checks have no counterpart** among the tools searched, and 7 have one that does the same job; see
+  [checks](../checks/README.md).
 
 ## Method
 
