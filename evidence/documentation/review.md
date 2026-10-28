@@ -52,7 +52,7 @@ Each row is the owner's own page. None states a method or tests an effect, so ea
 - GitHub 2026a README docs: a README says what, why, how to start, where to get help, who maintains it. GitHub builds an outline from headings and truncates past 500 KiB.
 - Guo 2026: one maintainer, Danny Guo; a list of twelve optional sections; "too long is better than too short".
 - Litt 2026: a spec for README section order, 6.4k stars and 2.5k forks. Its linter is marked work in progress.
-- Diataxis site (Procida 2020): "hundreds of documentation projects" and three testimonials, from Vonage, Gatsby and one on Cloudflare docs. No list of projects, no study.
+- Diataxis site (Procida 2020): Procida reports "hundreds of documentation projects" (below the quality bar: an example, not evidence) and three testimonials, from Vonage, Gatsby and one on Cloudflare docs. No list of projects, no study.
 - Canonical 2021: the framework's author announces an ongoing restructuring and names five products. No metrics. Written by Procida, so adoption is self-reported.
 - Procida 2026: show the destination early, give each step a visible result, keep explanation out and link to it. The page cites no research and asks for tests with real users.
 - Viktorin 2022: a proposal to adopt Diataxis for the Python docs. Support came from several core developers; no decision is recorded.

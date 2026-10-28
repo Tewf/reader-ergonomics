@@ -16,7 +16,7 @@ Grouped by strand. Surveys first, then primary studies and standards.
 - Legge 2011 (R, S): a tenfold fluent range of print size (x-height 0.2 to 2 degrees) gives full reading speed; below it speed falls.
 - Rello 2016 (S, n = 104): comprehension was higher at 18 pt and 26 pt than at smaller sizes; mid-range line spacing made no difference.
 - Bernard 2002 (S): no reading-speed difference between common serif and sans faces on screen.
-- Justified text: results are mixed (Akhmadeeva 2016, R).
+- Justified text: Akhmadeeva 2016 (not read) is cited as finding mixed results (below the quality bar: an example, not evidence).
 - Rello 2013 (S, n = 48 dyslexic readers aged 11 to 50, 12 fonts): sans serif, monospaced and roman gave shorter fixations than serif, proportional and italic; reading time did not differ.
 
 ## 3. Dyslexia-related evidence
@@ -61,7 +61,7 @@ Grouped by strand. Surveys first, then primary studies and standards.
 - Krug (P): the clicked label should equal the page name; breadcrumbs show location.
 - Conklin 1987 (R): disorientation and cognitive overhead limit hypertext.
 - NN/g (P): deep hierarchies bury content, broad ones blur labels.
-- Wang 2023 (S): collapsed content may be missed altogether; accordions fit independent sections.
+- Wang 2023 (company article, score 9): collapsed content may be missed altogether; accordions fit independent sections.
 
 ## 8. Code and mathematics
 
@@ -87,6 +87,6 @@ Practice is graded convention, untested; an adoption count is measured, descript
 - WebAIM 2026 (automated scan, 1,000,000 home pages, data from February): 83.9% have low-contrast text, about 34 instances per page. The scan counts only failures that WAVE detects automatically.
 - Nielsen Norman 2008 (company, 25 users, 45,237 page views after cleaning): users read about 20% of the words on an average page, 28% at most.
 - Nielsen 2006 (company, eye tracking, 232 users): an F-shaped scan; start subheads and bullets with informative words. The page does not describe tasks or equipment.
-- Nielsen Norman 2019 (company, eye tracking): descriptive headings give a layer-cake scan, called "by far the most effective way to scan pages". The page shows one heatmap from 9 participants and no measured effect.
+- Nielsen Norman 2019 (company, eye tracking): descriptive headings give a layer-cake scan, which the page calls "by far the most effective way to scan pages" (below the quality bar: an example, not evidence). The page shows one heatmap from 9 participants and no measured effect.
 - Nielsen Norman 2020 (company literature review): light mode for normal vision, offer a dark option. NN/g ran no study of its own.
 - axe-core, pa11y and Lighthouse (tools; Deque 2026; Pa11y 2026; Lighthouse 2026): check contrast on the rendered page at 4.5:1 and 3:1. axe skips text over background images and reports 1:1 as needing review.

@@ -22,7 +22,8 @@ caused by changing one copy and not the others (Juergens 2009). The rule is abou
 ## Limits
 
 Not every copy is harmful: up to 71% of the clones studied in two systems helped maintenance (Kapser 2008). A
-shared piece bent to fit callers that diverge costs more than the copy it replaced (Metz 2016). Each link costs
+shared piece bent to fit callers that diverge costs more than the copy it replaced, argues a practitioner (Metz 2016,
+a blog post: argument, not evidence). Each link costs
 the reader a decision and a context switch (DeStefano 2007).
 
 For an agent, a link may go unread. In one vendor's evaluation, an index written into AGENTS.md (the instructions

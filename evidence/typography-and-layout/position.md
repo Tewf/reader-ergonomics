@@ -16,7 +16,7 @@ What is measured, what is not, and where practice runs ahead of the evidence.
 
 - 45-75 cpl as a safe band: practitioner consensus around one review.
 - Off-white paper, left alignment, no italics: guidance with weak direct evidence.
-- Collapsed content is missed: one study and design practice.
+- Collapsed content is missed: one company article and design practice, no study.
 
 ## Not known
 

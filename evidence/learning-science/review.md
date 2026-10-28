@@ -91,7 +91,7 @@ Grouped by strand. Surveys first, then the seminal work, then later syntheses.
 Graded convention, untested unless a study measured the effect. A company page is its owner's claim about itself.
 
 - Open Spaced Repetition 2026a (tool, community benchmark): 9,999 Anki collections, 349,923,850 evaluated reviews. Log loss without same-day reviews: FSRS-6 0.3460, FSRS v4 0.3726, HLR 0.4694, an LSTM neural model 0.3332. It scores recall prediction, run by the FSRS community.
-- Open Spaced Repetition 2026b (tool docs): 20-30% fewer reviews than SM-2 at equal retention. The page states the figure is from simulation.
+- Open Spaced Repetition 2026b (tool docs): the project reports 20-30% fewer reviews than SM-2 at equal retention (below the quality bar: an example, not evidence). The page states the figure is from simulation.
 - Duolingo 2026 (company blog): half-life regression error "nearly half" that of the Leitner method, over 12 million sessions. It reports prediction, retention and activity, no learning gains.
 - Khan Academy 2024 (company): about 350K students; 30+ minutes a week is associated with about 20% greater-than-expected gains, reached by about 9%. The page calls its design non-randomised.
 - Oreopoulos 2026 (academic): a two-year cluster RCT in 18 Tennessee middle schools. Khanmigo assignment gave 0.06 to 0.08 SD per school year, about 0.14 SD per full year of active use.

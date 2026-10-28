@@ -26,7 +26,7 @@ The first record is practice. The second is research. They have different holder
 
 | Sub-question | Most adopted | Best evidence |
 |---|---|---|
-| Separate page forms | Diataxis (hundreds of projects, self-reported); GitLab and Red Hat topic types; Django's four kinds | none controlled |
+| Separate page forms | Diataxis (Procida reports hundreds of projects, below the quality bar); GitLab and Red Hat topic types; Django's four kinds | none controlled |
 | README sections | standard-readme (6.4k stars); GitHub's what, why, how, help, who | Prana 2019 |
 | Heading style | sentence case (Google, Microsoft, GitLab agree) | none read; a convention |
 | Brevity | Microsoft "shorter is always better" | no comparison with "too long is better than too short" |

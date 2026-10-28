@@ -36,7 +36,7 @@ What is measured, what is not, and where practice runs ahead of the evidence.
 ## Practice against the evidence
 
 - Practice runs ahead: schedulers publish a public benchmark, where neural models score lower loss than FSRS-6, but it predicts recall, not learning.
-- The 20-30% fewer reviews figure is a simulation, so it grades nothing.
+- The project's own 20-30% fewer reviews figure (below the quality bar: an example, not evidence) is a simulation, so it grades nothing.
 - Company efficacy pages are owners' claims; the only academic RCT found gave small gains.
 - Practice ignores the evidence: most educators surveyed believe in learning styles, and some keep using them when told.
 - The standard relies on no style, so nothing changes; readers may still expect style-based design.

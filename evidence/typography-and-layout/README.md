@@ -20,4 +20,4 @@ Steps: [frame](frame.md) · [review](review.md) · [state of the art](state-of-t
 | Readers scan; scannable layout raises usability | measured | review.md 5 |
 | Words placed with the figure beat split placement | measured | review.md 6 |
 | Decorative figures help learning | not supported | against.md |
-| Collapsed content is often missed | supported with caveat | review.md 7 |
+| Collapsed content is often missed | convention: one company article, below the quality bar | review.md 7 |

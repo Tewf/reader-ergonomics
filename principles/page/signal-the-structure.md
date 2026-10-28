@@ -22,4 +22,5 @@ usability by 47% (Nielsen 1997).
 
 ## Limits
 
-Content folded behind a toggle is often missed altogether (Wang 2023); fold only what is optional.
+Nielsen Norman Group reports that content folded behind a toggle is often missed (Wang 2023, a company article below
+the quality bar: an example, not evidence); fold only what is optional.

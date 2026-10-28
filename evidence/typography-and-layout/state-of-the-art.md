@@ -36,4 +36,4 @@ Kept apart from the best-evidence table above: a different record, with differen
 | Body size and leading | at least 16px, line height at least 1.5 (USWDS 2026) | convention, untested |
 | Text contrast | WCAG 4.5:1, checked by axe-core, pa11y and Lighthouse | 83.9% of 1,000,000 home pages fail it (WebAIM 2026) |
 | Next contrast method | APCA Lc, advocated, not adopted by W3C | WCAG 3 method undecided (W3C 2026) |
-| Scanning | F-pattern, then layer-cake (Nielsen 2006, Nielsen Norman 2019) | eye tracking, 232 users in the first |
+| Scanning | F-pattern, then layer-cake (Nielsen 2006; layer-cake: Nielsen Norman 2019, below the quality bar) | eye tracking, 232 users in the first |

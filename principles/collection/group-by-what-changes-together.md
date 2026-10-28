@@ -17,8 +17,8 @@
 
 Any single decomposition forces every other concern to cut across it, the tyranny of the dominant decomposition
 (Tarr 1999). Library science met this first: a faceted classification combines independent aspects in a chosen
-citation order, and the aspects cited later are scattered and reconnected by an index (Ranganathan 1937). The common
-closure principle groups what changes for the same reasons at the same times (Martin 2017).
+citation order, and the aspects cited later are scattered and reconnected by an index (Ranganathan 1937, secondary). The common
+closure principle groups what changes for the same reasons at the same times (Martin 2017, secondary).
 
 ## Limits
 

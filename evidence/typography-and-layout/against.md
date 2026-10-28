@@ -3,7 +3,7 @@
 ## Dyslexia fonts and folk rules
 
 - Dyslexia-specific fonts: null effects in Rello 2013, Wery 2017 and Kuster 2018 (n = 170).
-- Italic, underline and justified text are widely discouraged. Only italic has direct support (worse in Rello 2013). Justification evidence is mixed.
+- Italic, underline and justified text are widely discouraged. Only italic has direct support (worse in Rello 2013). No source of 10 or more was read on justification; Akhmadeeva 2016 is below the quality bar: an example, not evidence.
 - Sans serif is recommended for dyslexia; Bernard 2002 finds no speed difference for typical readers.
 - The letter-spacing gains come from one research group (Zorzi 2012); replications by other groups were not reviewed here.
 
@@ -34,4 +34,4 @@
 
 - Readable measure says 45 to 75 characters. USWDS 2026 allows up to 90, and WCAG 1.4.8 (AAA) offers 80. Neither cites a study.
 - Sufficient contrast states one ratio. APCA 2026 says the threshold depends on size and weight; W3C has not adopted it.
-- Layer-cake claims (Nielsen Norman 2019) rest on what the page shows: one 9-participant heatmap and no measured effect; the F-pattern is descriptive (Nielsen 2006).
+- The layer-cake claims of Nielsen Norman 2019 (below the quality bar: an example, not evidence) rest on what the page shows: one 9-participant heatmap and no measured effect; the F-pattern is descriptive (Nielsen 2006).

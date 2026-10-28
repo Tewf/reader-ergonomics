@@ -25,7 +25,7 @@ What the evidence settles about documentation, what it leaves open, and where pr
 ## Where practice meets the evidence
 
 Practice runs ahead of the evidence:
-- Diataxis spread through hundreds of projects by its own count, with no controlled study and no list of projects.
+- Procida reports that Diataxis spread through hundreds of projects (below the quality bar: an example, not evidence), with no controlled study and no list of projects.
 - No style guide read cites a study for its length or depth limit.
 
 Practice agrees across guides:

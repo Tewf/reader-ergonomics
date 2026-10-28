@@ -73,7 +73,8 @@ and practice, tools, practitioner books, communities and practitioner surveys. T
 literature review (Garousi 2019). Eight agents searched eight strands and read about 240 sources. Every claim brought
 in was re-read on its own page, then checked by the third audit; one read only in a summary says "(secondary)".
 
-The sources were re-read, but not scored on the quality criteria the method asks for (Garousi 2019).
+The grey sources were then scored on the method's quality criteria ([protocol](multivocal-protocol.md)); each topic's
+`sources.md` lists the scores. One scorer per topic, so the scores are a first pass, not an agreement.
 
 | Result | Count |
 |---|---|
@@ -81,6 +82,8 @@ The sources were re-read, but not scored on the quality criteria the method asks
 | principles whose grade changed | 0 |
 | principles given a new limit or caveat, each with its own grade | 9 |
 | principle claims changed | 0 (one widening, on practice alone, was reverted by the audit) |
+| grey sources scored on the protocol's 20 criteria | 126 |
+| scored below 10, so examples only, never support | 43, most for want of a readable copy |
 
 - **No practice source raised a grade.** Practice shows what is done, never what works.
 - **Overview first is not importance first.** Putting the main fact first, as news does, has no support yet.

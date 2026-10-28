@@ -19,7 +19,7 @@ This file lists what does not transfer from human readers, results that changed 
 - Lost in the middle has not replicated consistently in later long-context studies (Veseli 2025), and did not appear for one NIAH task in 18 models (Hong 2025).
 - Plain NIAH is nearly solved (Hsieh 2024a), so a high NIAH score no longer says a model reads long documents well.
 - Self-correction failed for prompted models (Huang 2024), but models trained for it do self-correct (Kumar 2025; Kamoi 2024).
-- Prompt repetition is reported for non-reasoning use only (Leviathan 2025); the effect with reasoning enabled is not claimed.
+- Leviathan 2025 reports prompt repetition for non-reasoning use only (below the quality bar: an example, not evidence); the effect with reasoning enabled is not claimed.
 
 ## Contradictions
 
