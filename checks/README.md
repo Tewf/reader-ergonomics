@@ -55,6 +55,12 @@ python3 checks/run.py . --judge local         # after setting the two environmen
 python3 -m unittest discover -s checks        # test the checks themselves
 ```
 
+## On every push
+
+`.github/workflows/checks.yml` runs the tests and every check on each push to any branch and on each pull request,
+offline and for free, and lists the judgment questions in the log. Once a week it resolves every reference online,
+since links rot. No paid backend runs there.
+
 ## What is not checked here
 
 Contrast ratios, rendered line length and the shape of a figure are properties of the rendered page. A browser

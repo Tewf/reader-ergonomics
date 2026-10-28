@@ -1,0 +1,39 @@
+name: Check the standard
+
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: "17 6 * * 1"   # Mondays: resolve every reference, since links rot
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    if: github.event_name != 'schedule'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Test the checks themselves
+        run: python3 -m unittest discover -s checks
+      - name: Check the repository against its own standard
+        run: python3 checks/run.py . --judge flag
+      - name: List the questions left for judgment
+        if: always()
+        run: cat checks/out/needs-judgment.md 2>/dev/null || echo "No questions for judgment."
+
+  references:
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Resolve every reference online
+        run: python3 checks/run.py . --online --only references --judge none
