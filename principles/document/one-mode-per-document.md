@@ -9,7 +9,11 @@
 
 ## What it asks
 
-- Four forms, from two axes, study against work and action against cognition: a **tutorial** (learning by doing), a **how-to** (one task, for someone who knows the basics), a **reference** (facts to look up), an **explanation** (why things are as they are) (Procida 2020).
+- Four forms, from two axes (study against work, action against cognition) (Procida 2020):
+  - a **tutorial** (learning by doing)
+  - a **how-to** (one task, for someone who knows the basics)
+  - a **reference** (facts to look up)
+  - an **explanation** (why things are as they are)
 - One form per page; a page that needs two forms becomes two pages that link to each other.
 - A repository's front page answers what the project is, why it exists, how to install and use it, and its status. Why and status are the two most often missing (Prana 2019).
 

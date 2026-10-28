@@ -60,6 +60,9 @@ this way, so a claim is only as good as the review that cites it; a number read 
 
 ## Method
 
-The steps follow a thesis literature review: frame the problem in the field's words before searching, read surveys
-first, keep upper bounds (what has been achieved) apart from lower bounds (what is impossible), and stop only when the
-baseline can be named.
+The steps follow a thesis literature review:
+
+- frame the problem in the field's words before searching;
+- read surveys first;
+- keep upper bounds (what has been achieved) apart from lower bounds (what is impossible);
+- stop only when the baseline can be named.

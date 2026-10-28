@@ -15,7 +15,7 @@
 
 ## Controversies
 
-- **Problem first or instruction first.** Problem first g = 0.36 pooled (Sinha and Kapur 2021), but reversed when many elements interact (Ashman 2020); Loibl 2017 says it works only with contrasting cases or built-on instruction.
+- **Problem first or instruction first.** Problem first g = 0.36 pooled (Sinha and Kapur 2021), but reversed when many elements interact (Ashman 2020). Loibl 2017 says it works only with contrasting cases or built-on instruction.
 - **Just-in-time timing.** The model predicts theory first, how-to during practice; its own experiment found the reverse most efficient (Kester 2001, 2004).
 - **Depth versus breadth.** Depth went with better grades (Schwartz 2009), but the data are correlational.
 - **Expertise reversal.** The same scaffold helps novices (+0.51) and hurts the advanced (-0.43) (Tetzlaff 2025), so a single procedure for all readers is suspect.

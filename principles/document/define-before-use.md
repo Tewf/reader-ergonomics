@@ -15,12 +15,14 @@
 
 ## Why
 
-A reader holds a few propositions at a time and links each new sentence to them by a shared argument; when nothing
-in the buffer matches, they search memory, which is slow (Kintsch & van Dijk 1978). Revising a text where a
-comprehension model found such gaps improved learning, most for readers short of skill or knowledge (Britton & Gülgöz
-1991; Gülgöz et al. 1999, secondary). Learning the names and parts before the lesson helped transfer in all three experiments and
-retention in two (Mayer 2002). Language models reason better when premises come in the order they are used (see
-[LLM readers](../../evidence/llm-readers/)).
+- A reader holds a few propositions at a time and links each new sentence to them by a shared argument. When
+  nothing in the buffer matches, they search memory, which is slow (Kintsch & van Dijk 1978).
+- Revising a text where a comprehension model found such gaps improved learning, most for readers short of skill or
+  knowledge (Britton & Gülgöz 1991; Gülgöz et al. 1999, secondary).
+- Learning the names and parts before the lesson helped transfer in all three experiments and retention in two
+  (Mayer 2002).
+- Language models reason better when premises come in the order they are used (see
+  [LLM readers](../../evidence/llm-readers/)).
 
 ## Limits
 

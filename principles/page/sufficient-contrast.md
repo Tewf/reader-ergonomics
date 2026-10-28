@@ -3,7 +3,7 @@
 **Claim:** text has a contrast ratio of at least 4.5:1 against its background, dark text on a light ground by default, with a dark theme offered and never forced.
 
 - **Grade:** measured for polarity; the 4.5:1 floor is a convention (a standard).
-- **Evidence:** [typography and layout](../../evidence/typography-and-layout/review.md) (strand 4), [baseline](../../evidence/typography-and-layout/baseline.md).
+- **Evidence:** [typography and layout](../../evidence/typography-and-layout/review.md) (strand 4), [baseline](../../evidence/typography-and-layout/baseline.md), [terms](../../evidence/typography-and-layout/frame.md).
 - **Check:** `sufficient-contrast` (exact, on the site's stylesheet): every text colour declared with its background reaches 4.5:1.
 - **Reader styles:** none override it.
 

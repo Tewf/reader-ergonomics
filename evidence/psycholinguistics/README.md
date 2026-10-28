@@ -1,4 +1,4 @@
-# Density, depth and locality in text
+# Psycholinguistics: density, depth and locality in text
 
 The psycholinguistic and discourse-processing evidence on how much a text unit should carry, how deep units may nest, and how far apart related units may sit, from the word to the document tree.
 

@@ -15,11 +15,15 @@
 ## Why
 
 **Surprisal** is how unexpected a word is, $s = -\log_2 P(\text{word} \mid \text{context})$. A text of $n$ words with
-surprisals $s_i$, summing to $S$, costs the reader $C = \sum_i f(s_i)$. If $f$ is convex, Jensen's inequality makes
-the uniform spread the cheapest; if $f$ is linear, $C = an + bS$ and only $n$ and $S$ matter. Reading time is linear in
-surprisal, across 6 datasets and 11 languages (Shain et al. 2024; Wilcox et al. 2023), while uneven surprisal lowers how
-acceptable a sentence is judged (Meister et al. 2021, who also find reading times consistent with a weakly
-super-linear effect). So evenness buys judged quality; cutting buys time.
+surprisals $s_i$, summing to $S$, costs the reader $C = \sum_i f(s_i)$.
+
+- If $f$ is convex, Jensen's inequality makes the uniform spread the cheapest.
+- If $f$ is linear, $C = an + bS$, and only $n$ and $S$ matter.
+- Reading time is linear in surprisal, across 6 datasets and 11 languages (Shain et al. 2024; Wilcox et al. 2023).
+- Uneven surprisal lowers how acceptable a sentence is judged (Meister et al. 2021, who also find reading times
+  consistent with a weakly super-linear effect).
+
+So evenness buys judged quality; cutting buys time.
 
 ## Limits
 

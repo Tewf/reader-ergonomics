@@ -2,7 +2,7 @@
 
 ## The named baseline
 
-A **plain linear text**: prose or bullets in the order of the source, with no retrieval prompts, no worked examples with fading, no pre-training of terms, no concept map, split placement of words and figures, and no cues.
+A **plain linear text**: prose or bullets in the order of the source. It has no retrieval prompts, no worked examples with fading, no pre-training of terms, no concept map, split placement of words and figures, and no cues.
 
 This is the control condition of the cited meta-analyses.
 

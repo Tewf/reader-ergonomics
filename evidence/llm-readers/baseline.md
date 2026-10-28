@@ -1,5 +1,7 @@
 # Baseline: what this repository's rules are compared against
 
+This file defines the baseline conditions, then the comparison for reading, acting and writing, and ends with a decision rule.
+
 ## The conditions
 
 | Name | Content | Role |

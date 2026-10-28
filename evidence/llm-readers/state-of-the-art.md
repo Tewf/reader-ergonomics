@@ -35,7 +35,7 @@
 |---|---|---|---|
 | task success | developer-written files: +2.4%, not significant (Gloaguen 2026) | generated files: -0.5% (SWE-bench Lite, 300 tasks) and -2% (138 instances), not significant (Gloaguen 2026) | gold tests, several agents and models |
 | cost | median runtime -28.64%, output tokens -16.58% (Lulla 2026) | cost +20% and +23% with generated files, up to +19% with developer files (Gloaguen 2026) | 124 pull requests; agent traces |
-| effect size bound | correctness change bounded to at most 10-15 points (Khatri 2026) | | 288 runs, equivalence tests |
+| [effect size](../learning-science/frame.md) bound | correctness change bounded to at most 10-15 points (Khatri 2026) | | 288 runs, equivalence tests |
 | file structure | size, rule position, layout, contradictions: no detectable effect (McMillan 2026) | odds of compliance fall about 5.6% per generated function, OR 0.944 (McMillan 2026) | 1,650 sessions, one trivial target rule |
 | many rules | best model 68% at 500 instructions (Jaroslawicz 2025) | earlier instructions favoured over later ones (Jaroslawicz 2025) | 20 models, keyword-inclusion rules |
 | where files rot | | stale code references in 23.0% of 356 repositories (Treude 2026) | documentation consistency checker |

@@ -1,5 +1,7 @@
 # Position
 
+This file holds what is known, what is not known, what is not claimed, and a proposal for iterative deepening for reading.
+
 ## Known
 
 - A map, outline or topic given before the text helps memory and comprehension (organizers small, maps larger).
@@ -15,7 +17,7 @@
 - Elaboration theory, zoom-lens and spiral sequencing have no positive controlled test.
 - Stop thresholds (minutes, number of descents, number of recalls) come from word-pair laboratory tasks.
 - Whether goal-bounded depth pays off when the later test asks outside the goal.
-- Whether instruction first or problem first wins for a given course: the moderator is element interactivity, and no study of a specific course exists.
+- Whether instruction first or problem first wins for a given course: the moderator is [element interactivity](../learning-science/frame.md), and no study of a specific course exists.
 - Depth over breadth (Schwartz 2009) is correlational and about school science.
 
 ## What is not claimed
@@ -49,7 +51,7 @@ Stop rule, per notion:
 1. Depth 1 always.
 2. Depth 2 if and only if the notion is in the task set.
 3. Depth 3 only when a failed check traces to that link, or the proof is marked must-know.
-4. Go back up when any holds: the check passes from memory; two descents in a row changed no answer (PROVISIONAL); the link leaves the unit (log it as a black box: what it gives, not how).
+4. Go back up when any holds: the check passes from memory, or two descents in a row changed no answer (PROVISIONAL). Also go back up when the link leaves the unit (log it as a black box: what it gives, not how).
 5. The unit is done when the self-test passes, and again a day later.
 
 Evidence per step:

@@ -1,5 +1,5 @@
 ---
-title: "Density, depth and locality in text"
+title: "Psycholinguistics: density, depth and locality in text"
 ---
 
 {{< include README.md >}}

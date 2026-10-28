@@ -38,6 +38,6 @@ text it supports, and every result is checked.
 
 ## Fading
 
-Across a series of reports on one method, solve the first in full, leave the last steps of the next to the reader,
-and give a later one as a whole problem with its answer under Checks (Renkl et al. 2004). See
+Across a series of reports on one method, solve the first in full and leave the last steps of the next to the reader.
+Then give a later one as a whole problem with its answer under Checks (Renkl et al. 2004). See
 [learning science](../evidence/learning-science/).

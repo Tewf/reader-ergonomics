@@ -1,5 +1,7 @@
 # Position: what is known, what is not, what this repository adds
 
+This file sets out what is known, what was not found in this review, which human-reader principles transfer, and what this repository adds.
+
 ## Known
 
 - Extra input costs accuracy as well as money: length, irrelevant text and distractors each lower it (Levy 2024; Shi 2023; Hong 2025).

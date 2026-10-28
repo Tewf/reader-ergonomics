@@ -23,7 +23,7 @@ All of these are in [evidence/llm-readers](../evidence/llm-readers/).
 
 ## When the model writes
 
-- **Keep the instructions short.** Agents follow instruction files, but in the one measured comparison the files did not raise task success, and adherence fell as rules multiplied and as a session went on (supported with caveat, preprints). So the instructions are a one-page card, [standard.md](../standard.md), and enforcement does not rest on them.
+- **Keep the instructions short.** Agents follow instruction files, but in the one measured comparison the files did not raise task success. Adherence fell as rules multiplied and as a session went on (supported with caveat, preprints). So the instructions are a one-page card, [standard.md](../standard.md), and enforcement does not rest on them.
 - **Check with programs, not with the model.** A model reviewing its own output without outside feedback does not reliably correct it, while tests and tools do (measured). So the model writes, runs `python3 checks/run.py .`, fixes every error, and answers the questions in `checks/out/needs-judgment.md`.
 - **Do not detect, check.** Detecting model-written text in a single document is unreliable (measured). A rule is enforced by what the text does, never by guessing who wrote it.
 

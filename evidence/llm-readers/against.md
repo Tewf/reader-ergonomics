@@ -1,5 +1,7 @@
 # Against: what does not transfer, what changed, what is an artefact
 
+This file lists what does not transfer from human readers, results that changed with newer models, contradictions, benchmark artefacts and weak sources, one section each.
+
 ## What does not transfer from human readers
 
 - Working-memory limits: a human holds a few chunks at once; a model attends to its whole context. Its limits take other shapes: length, rule count, position (Levy 2024; Jaroslawicz 2025; Liu 2024).

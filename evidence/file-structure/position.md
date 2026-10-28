@@ -1,5 +1,7 @@
 # Position: what is known, what is not, what this repository adds
 
+This file holds what is known, what is not known, and what this repository adds, under one heading each, plus the formal reading and candidate additions.
+
 ## Known
 
 - Each file convention is a known result, sometimes fifty years old, restated for files.

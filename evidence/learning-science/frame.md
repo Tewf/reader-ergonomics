@@ -1,5 +1,7 @@
 # Frame
 
+This file frames the problem in one sentence, names what the field calls it, and defines the terms used in this folder.
+
 ## The problem, one sentence
 
 Which ways of structuring and presenting written material make a reader learn, retain, and apply to new problems more?

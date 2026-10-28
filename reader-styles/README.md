@@ -31,7 +31,8 @@ questions now start at 120 statements.
 
 ## What a style cannot do
 
-**Matching the presentation to a preferred learning style** (the meshing hypothesis) does not improve learning
-in the experiments that tested it properly (Pashler et al. 2008). So a style states preferences and known
-expertise. It does not promise better learning from matching alone. See
+**Matching the presentation to a preferred learning style** (the meshing hypothesis) does not improve learning in the
+experiments that tested it properly (Pashler et al. 2008).
+
+So a style states preferences and known expertise, and promises nothing from matching alone. See
 [evidence/learning-science](../evidence/learning-science/).

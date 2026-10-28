@@ -15,11 +15,13 @@
 
 ## Why
 
-Idea units high in a text's content structure are recalled better than low ones, the **levels effect** (Meyer &
-McConkie 1973; Meyer 1975, secondary), and readers slow down more at a changed word high in the hierarchy (Wu et al.
-2016). Readers who follow the top-level structure comprehend better (Meyer et al. 1980), and adults who attend to
-headings write the best summaries (Hyönä et al. 2002). The tree of a text can be made explicit: Rhetorical Structure
-Theory describes it as nucleus and satellite spans (Mann & Thompson 1988).
+- Idea units high in a text's content structure are recalled better than low ones, the **levels effect** (Meyer &
+  McConkie 1973; Meyer 1975, secondary).
+- Readers slow down more at a changed word high in the hierarchy than low in it (Wu et al. 2016).
+- Readers who follow the top-level structure comprehend better (Meyer et al. 1980), and adults who attend to headings
+  write the best summaries (Hyönä et al. 2002).
+- The tree of a text can be made explicit: Rhetorical Structure Theory describes it as nucleus and satellite spans
+  (Mann & Thompson 1988).
 
 ## Limits
 

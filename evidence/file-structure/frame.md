@@ -2,7 +2,7 @@
 
 ## The problem in one sentence
 
-Given a set of files and the references between them, choose how content is cut into files and how files are arranged in folders, so that nothing is held twice, each file does one thing, and a reader or an import reaches what it needs in few steps.
+Given a set of files and the references between them, choose how content is cut into files and how files are arranged in folders. The aim is that nothing is held twice, each file does one thing, and a reader or an import reaches what it needs in few steps.
 
 ## What the field calls it
 

@@ -1,8 +1,10 @@
 # Frame: the problem and its names
 
+This file states the problem in one sentence, defines the terms used in this folder, names what the field calls each part, and sets the scope.
+
 ## The problem in one sentence
 
-Which structure of text and files lets a **large language model** (LLM, a neural network that reads and writes text as tokens) answer and act correctly from them at the least cost, and how is a model that writes into the repository held to the repository's rules?
+Which structure of text and files lets a **large language model** (LLM, a neural network that reads and writes text as tokens) answer and act correctly from them at the least cost? And how is a model that writes into the repository held to the repository's rules?
 
 ## Terms used in every file of this folder
 

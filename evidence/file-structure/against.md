@@ -6,19 +6,20 @@ The evidence against nine file and folder conventions, theme by theme: the claim
 
 - **Claim** (supported with caveat): every fact or snippet lives in one file; others link to it and never copy it.
 - Thomas 2019 restates **DRY** (don't repeat yourself) as a rule about knowledge and intent, not about text, and concedes that the first edition explained it poorly (secondary: read in a summary quoting the book).
-- Kapser 2008 judged up to 71% of the **clones** (copied code fragments) in Apache and Gnumeric to have a positive effect on maintainability; boiler-plating and replicate-and-specialize were mostly beneficial, verbatim snippets and parameterized code mostly harmful.
-- Juergens 2009 supports the rule where knowledge is shared: about half of the clones (52%) held inconsistencies, and developers confirmed 107 faults caused by changing one copy and not the others (five systems, about 1800 clone groups assessed).
+- Kapser 2008 judged up to 71% of the **clones** (copied code fragments) in Apache and Gnumeric to have a positive effect on maintainability. Boiler-plating and replicate-and-specialize were mostly beneficial, verbatim snippets and parameterized code mostly harmful.
+- Juergens 2009 supports the rule where knowledge is shared: about half of the clones (52%) held inconsistencies. Developers confirmed 107 faults caused by changing one copy and not the others (five systems, about 1800 clone groups assessed).
 - Metz 2016 names the opposite risk, "duplication is far cheaper than the wrong abstraction", once one shared piece is bent to fit callers that diverge.
-- A link has a reading cost: DeStefano 2007 found in its review that the extra decisions and visual processing of hypertext impair reading, most for readers with low working memory or low prior knowledge; Madrid 2009 found that 3 versus 8 links per page did not change learning, while an incoherent reading order raised load (secondary: both abstracts read in index summaries).
+- A link has a reading cost: DeStefano 2007 found in its review that the extra decisions and visual processing of hypertext impair reading, most for readers with low working memory or low prior knowledge.
+- Madrid 2009 found that 3 versus 8 links per page did not change learning, while an incoherent reading order raised load (secondary: both abstracts read in index summaries).
 - **Verdict: keep with an amendment.** Amendment: one place per piece of knowledge that must change together; a short copy is allowed when the copies change for different reasons, and it names its source.
 
 ## One role per file
 
 - **Claim** (convention, untested): a file's role fits one sentence without "and"; structure, style and behaviour (HTML, CSS, JS) live in separate files.
 - The test comes from Martin 2008, chapter 10: describe a class in about 25 words without "if", "and", "or" or "but" (secondary: wording read in a chapter summary).
-- Martin 2017 restated the single responsibility principle as responsibility to one **actor** (a group of users or stakeholders who require a change) and wrote that the old name is misread as a rule that each module does one thing: the test moved from wording to change.
-- A sentence test fails both ways, and Ousterhout 2025 makes both points against the related one-thing rule: anything can be given a name (a false pass), and two closely related steps, such as taking a lock and then updating, belong together (a false fail).
-- **Co-change** (files modified in the same commit) tests roles by behaviour: Gall 1998 recovered logical coupling from 20 releases of a telecom switching system, and Zimmermann 2005, across eight projects and in the 82% of queries where it suggested anything, named a file that was changed next 72% of the time, including couplings program analysis cannot see.
+- Martin 2017 restated the single responsibility principle as responsibility to one **actor** (a group of users or stakeholders who require a change). He wrote that the old name is misread as a rule that each module does one thing: the test moved from wording to change.
+- A sentence test fails both ways, and Ousterhout 2025 makes both points against the related one-thing rule. Anything can be given a name (a false pass). Two closely related steps, such as taking a lock and then updating, belong together (a false fail).
+- **Co-change** (files modified in the same commit) tests roles by behaviour. Gall 1998 recovered logical coupling from 20 releases of a telecom switching system. Zimmermann 2005, across eight projects and in the 82% of queries where it suggested anything, named a file that was changed next 72% of the time, including couplings program analysis cannot see.
 - The HTML, CSS and JS clause is contested: Hunt 2013 argued that separating markup from display logic separates technologies rather than concerns, since the two change together (slides and summaries read, talk not watched).
 - That clause also splits by file type, which the grouping convention forbids at folder level, so the two conventions disagree with each other.
 - **Verdict: keep with an amendment.** Amendment: keep the sentence as the cheap first test, confirm it against co-change, and split by component rather than by language.
@@ -26,10 +27,13 @@ The evidence against nine file and folder conventions, theme by theme: the claim
 ## File length
 
 - **Claim** (supported with caveat): past about 80 statements a file restates its role and splits if the sentence needs "and"; about 500 lines is a ceiling.
-- No size threshold has held up: El Emam 2002 found no threshold effect of class size in three systems with four size measures, and traced earlier U-curves to a mathematical artifact (dividing defects by size, then plotting the ratio against size).
-- The shape of the curve is contested: Basili 1984 found larger modules less error-prone even when more complex (370 Fortran modules, about 90,000 lines); Hatton 1997 reported medium components most reliable; Fenton 1999 judged this **Goldilocks conjecture** (an optimal module size) unsupported.
+- No size threshold has held up: El Emam 2002 found no threshold effect of class size in three systems with four size measures. He traced earlier U-curves to a mathematical artifact (dividing defects by size, then plotting the ratio against size).
+- The shape of the curve is contested.
+  - Basili 1984 found larger modules less error-prone even when more complex (370 Fortran modules, about 90,000 lines).
+  - Hatton 1997 reported medium components most reliable.
+  - Fenton 1999 judged this **Goldilocks conjecture** (an optimal module size) unsupported.
 - Koru 2008, Koru 2009 and Koru 2010a found defect-proneness rising more slowly than size in ten open-source products, then Mozilla, Eclipse, JBoss and Cn3d, then ten closed-source products: smaller modules carry proportionally more defects.
-- Syer 2015 replicated Koru 2008, extended it to Chrome, Eclipse, Firefox and Netbeans, and judged its conclusions not generalizable; with defects dated at their introduction and the survival model's assumptions checked, defect density formed an inverted U, highest in medium files.
+- Syer 2015 replicated Koru 2008, extended it to Chrome, Eclipse, Firefox and Netbeans, and judged its conclusions not generalizable. With defects dated at their introduction and the survival model's assumptions checked, defect density formed an inverted U, highest in medium files.
 - Splitting leaves total size unchanged, and size is the confounder behind most metric-defect links: in El Emam 2001 the studied object-oriented metrics lost their association with faults once class size was controlled.
 - Koru 2010b found smaller modules proportionally more coupled, more so after refactoring, so a split can add dependencies per line.
 - Ousterhout 2018 holds that length alone rarely justifies a split, prefers **deep modules** (a simple interface over much functionality) and names **classitis** (many shallow classes) as a failure (secondary: wording read in reader notes).
@@ -41,10 +45,11 @@ The evidence against nine file and folder conventions, theme by theme: the claim
 
 - **Claim** (convention, untested): folders group by what they serve, not by file type; no `docs/`, `assets/` or `misc/` buckets.
 - Tarr 1999 named the **tyranny of the dominant decomposition**: one decomposition, whichever it is, forces every other concern to cut across it.
-- Library science met this first: Ranganathan 1933 composed class numbers from **facets** (independent aspects of a subject), theorized in Ranganathan 1937, and the **citation order** (the order facets are combined, later written as the PMEST formula: personality, matter, energy, space, time; Satija 2017) decides which facet stays together on the shelf.
+- Library science met this first: Ranganathan 1933 composed class numbers from **facets** (independent aspects of a subject), theorized in Ranganathan 1937.
+- The **citation order** (the order facets are combined, later written as the PMEST formula: personality, matter, energy, space, time; Satija 2017) decides which facet stays together on the shelf.
 - Aspects cited later are scattered; Broughton 2015 calls them **distributed relatives**, reconnected by a relative index (secondary: definition read in a glossary).
 - Martin 2017 groups by change, not by name: the **common closure principle** gathers classes that change for the same reasons at the same times.
-- No controlled comparison of package-by-feature against package-by-layer was found; Silva 2014 projected co-change clusters onto the packages of three systems and found a different pattern in each, so declared purpose and actual change can diverge.
+- No controlled comparison of package-by-feature against package-by-layer was found. Silva 2014 projected co-change clusters onto the packages of three systems and found a different pattern in each, so declared purpose and actual change can diverge.
 - **Verdict: keep with an amendment.** Amendment: purpose is the first facet because it should predict change; index the other facets, and check folder boundaries against co-change.
 
 ## Navigation
@@ -53,15 +58,15 @@ The evidence against nine file and folder conventions, theme by theme: the claim
 - Miller 1981 timed selection among 64 targets in menus shaped 2^6, 4^3, 8^2 and 64^1: two levels of eight was fastest and had fewest errors.
 - Kiger 1984 tested five 64-target menus: 4x16 was fastest, not reliably faster than 16x4 or 8x8, and users preferred 8x8 (secondary: read in Larson 1998).
 - Larson 1998 used 512 targets and 19 participants: 16x32 was fastest (mean 36 s), 32x16 next (46 s), 8x8x8 slowest (58 s), and only the three-level tree was significantly slower.
-- So the best measured layout had two levels with 32 items on one of them, and breadth 8 lost when it forced a third level: an optimum of 8-16 per level is not what these studies found.
+- So the best measured layout had two levels with 32 items on one of them. Breadth 8 lost when it forced a third level: an optimum of 8-16 per level is not what these studies found.
 - The direction of all three studies supports the 3-item floor: needless depth costs more than breadth.
-- The transfer is untested: the studies timed search for a named target through category labels, while Sadowski 2015 logged about five search sessions and 12 queries per developer per workday at Google, often aimed at a known location.
+- The transfer is untested. The studies timed search for a named target through category labels. Sadowski 2015 logged about five search sessions and 12 queries per developer per workday at Google, often aimed at a known location.
 - Ko 2006 found developers spent about 35% of their time on the mechanics of navigating within and between files, and their searches often failed on misleading cues.
 - **Verdict: weaken.** Amendment: prefer two levels to three, allow up to about 32 scannable entries, and cite the menu studies as analogy, not measurement.
 
 ## Dependencies
 
-- **Claim** (convention, untested; argued from design practice): a file sits at the depth of its usage scope; imports reach up to a common ancestor, never up-then-down into a sibling; folders never import in a cycle.
+- **Claim** (convention, untested; argued from design practice): a file sits at the depth of its usage scope. Imports reach up to a common ancestor, never up-then-down into a sibling. Folders never import in a cycle.
 - The sources support acyclicity by argument, not by controlled study: Lakos 1996 **levelization** (each component gets a level above everything it uses, possible only without cycles) and the **acyclic dependencies principle** of Martin 2017.
 - Tension with breadth: a file shared by several subtrees lifts to their common ancestor, often the root, which then grows past the breadth ceiling.
 - Tension with its own sources: levelization puts shared code in a separate lower-level component, which in a tree is a sibling folder, and importing a sibling is the up-then-down shape the rule forbids.
@@ -88,13 +93,17 @@ The evidence against nine file and folder conventions, theme by theme: the claim
 ## Portable paths
 
 - **Claim** (supported with caveat: a platform specification, not a study): no `: * ? " < > | \` in a path component, no leading or trailing space, no names differing only by case, no versioned symlink.
-- No source argues against the rule, but Microsoft 2024 shows it incomplete: it also reserves device names (CON, PRN, AUX, NUL, COM1-9, LPT1-9, even with an extension, as in NUL.txt), forbids a trailing period and characters 1-31, and caps paths at 260 characters unless long paths are enabled.
+- No source argues against the rule, but Microsoft 2024 shows it incomplete. It also reserves device names (CON, PRN, AUX, NUL, COM1-9, LPT1-9, even with an extension, as in NUL.txt). It forbids a trailing period and characters 1-31. It caps paths at 260 characters unless long paths are enabled.
 - Accented names can be stored decomposed on macOS, and git recomposes them only when core.precomposeUnicode is on (Git 2023).
 - **Verdict: keep with an amendment.** Amendment: add reserved device names, trailing periods, control characters and a path-length budget to the check.
 
 ## The common thread
 
-- Most sources above define their unit by change: Parnas 1972 hides in each module a design decision likely to change; Martin 2017 groups by reasons and times of change; Thomas 2019 locates duplication in knowledge; Gall 1998 and Zimmermann 2005 read coupling from co-change.
+- Most sources above define their unit by change:
+  - Parnas 1972 hides in each module a design decision likely to change.
+  - Martin 2017 groups by reasons and times of change.
+  - Thomas 2019 locates duplication in knowledge.
+  - Gall 1998 and Zimmermann 2005 read coupling from co-change.
 - The conventions test text instead: copied text for duplication, a sentence for role, a folder name for purpose, a count for length and breadth.
 - Text tests are cheap and work on day one; they fail where wording and change diverge, which is where the evidence above concentrates.
 - Proposal: make co-change from version history the operational test, and keep the text tests as the fallback while history is short.
@@ -106,7 +115,7 @@ The evidence against nine file and folder conventions, theme by theme: the claim
 | Group by purpose | a folder named for a purpose | co-change clusters fall inside folders (Silva 2014) |
 | File length | 80 statements, 500 lines | a split is valid when the pieces change separately |
 
-- Co-change is sparse at first: Beck 2011 reports earlier work where structural dependencies clustered better than co-change for that reason and combining both did best, and in its own 16 projects co-change was among the couplings most congruent with real modules, no principle dominating.
+- Co-change is sparse at first: Beck 2011 reports earlier work where structural dependencies clustered better than co-change for that reason and combining both did best. In its own 16 projects co-change was among the couplings most congruent with real modules, no principle dominating.
 - Mechanical commits (renames, reformatting) create false co-change and must be filtered; thresholds stay PROVISIONAL until measured on the repository's own history.
 
 ## Not verified

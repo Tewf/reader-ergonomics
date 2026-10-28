@@ -6,6 +6,8 @@ someone wrote it down.
 
 ## Skeleton
 
+The parts, in order:
+
 ```text
 One line saying what changed, imperative, capitalised, no full stop, at most 72 characters
 
