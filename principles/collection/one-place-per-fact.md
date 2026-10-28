@@ -24,3 +24,7 @@ caused by changing one copy and not the others (Juergens 2009). The rule is abou
 Not every copy is harmful: up to 71% of the clones studied in two systems helped maintenance (Kapser 2008). A
 shared piece bent to fit callers that diverge costs more than the copy it replaced (Metz 2016). Each link costs
 the reader a decision and a context switch (DeStefano 2007).
+
+For an agent, a link may never be followed: in one vendor's evaluation, an index written into AGENTS.md beat skills
+the agent had to open (Vercel 2026, its own claim). So what an agent must always know goes into the file it loads,
+or is imported into it.

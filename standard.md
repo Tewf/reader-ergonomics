@@ -70,7 +70,7 @@ The principles act at four scales; the first three nest, the fourth is how all o
 | [One role per file](principles/collection/one-role-per-file.md) | a file holds one role: what it does fits one sentence, and its parts change for the same reasons. | convention, untested |
 | [Portable paths](principles/collection/portable-paths.md) | every path in a repository can be checked out on any common filesystem. | convention (a platform specification) |
 | [Size is a prompt](principles/collection/size-is-a-prompt.md) | past a length, a file is asked to state its role; size alone never decides a split. | convention, untested. The belief that smaller files have fewer defects is **not supported** |
-| [Tunables in config](principles/collection/tunables-in-config.md) | a value someone will set (a quota, a threshold, a price) lives in a configuration file, read at run time, and a value nobody has measured yet is tagged PROVISIONAL. | convention, supported with caveat |
+| [Tunables in config](principles/collection/tunables-in-config.md) | a value someone will set (a quota, a threshold, a price) lives outside the code, in a file or the environment read at run time; a value nobody has measured is tagged PROVISIONAL. | convention, supported with caveat |
 
 ### Document: order and depth
 

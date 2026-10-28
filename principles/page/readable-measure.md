@@ -25,3 +25,6 @@ Reading speed holds across a tenfold range of print sizes and falls below it (Le
 Speed and preference disagree on line length: about 100 characters is read fastest on screen, about 55 is understood
 best and preferred (Dyson 2004). Fonts designed for dyslexia do not help (Wery 2017; Kuster 2018); extra letter spacing
 does help dyslexic children read accurately (Zorzi 2012).
+
+The upper bound is contested in practice: WCAG's AAA criterion allows 80 characters (W3C 2023a) and the US Web
+Design System 90 (USWDS 2026). Neither cites a study.

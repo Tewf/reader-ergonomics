@@ -28,3 +28,7 @@
 
 Some high-knowledge readers learn more from a text that leaves links to infer (McNamara et al. 1996b), though not the
 skilled ones (O'Reilly & McNamara 2007).
+
+A term the reader already knows needs no definition: Google's style guide exempts well-known terms such as API
+(Google 2026). Which terms are known depends on the reader, so the reader style decides. A tutorial that withholds
+explanation, as Diátaxis advises, links the term instead (Procida 2026).

@@ -29,3 +29,6 @@ So evenness buys judged quality; cutting buys time.
 
 The shape of $f$ is still contested, by measure and by the language model used to estimate surprisal (Brothers &
 Kuperberg 2021; Xu et al. 2023). Speakers spreading information (Jaeger 2010) is evidence about writers, not readers.
+
+Governments set sentence lengths without a test. The European Commission's average of 20 words comes as "hints,
+not rules" (EC 2011), and the US plain-language guide sets no number at all (GSA 2026).

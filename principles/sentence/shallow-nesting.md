@@ -18,6 +18,9 @@ With two nested relative clauses, English readers rate a sentence missing its mi
 complete one (Gibson & Thomas 1999). Difficulty comes from finite memory, not from grammar (Miller & Chomsky 1963).
 In seven European languages, written text never nests past three clauses, and speech hardly nests at all (Karlsson 2007).
 
+The effect holds outside the laboratory: in legal text, centre-embedded clauses hurt recall most, even for readers
+who work with such texts (Martinez 2022, secondary).
+
 ## Limits
 
 The limit depends on the language: German readers are not fooled the way English readers are (Vasishth et al. 2010).

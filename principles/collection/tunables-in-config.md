@@ -1,6 +1,6 @@
 # Tunables in config
 
-**Claim:** a value someone will set (a quota, a threshold, a price) lives in a configuration file, read at run time, and a value nobody has measured yet is tagged PROVISIONAL.
+**Claim:** a value someone will set (a quota, a threshold, a price) lives outside the code, in a file or the environment read at run time; a value nobody has measured is tagged PROVISIONAL.
 
 - **Grade:** convention, supported with caveat.
 - **Evidence:** [against](../../evidence/file-structure/against.md) (configuration).
@@ -23,3 +23,6 @@ self-admitted technical debt appeared in 2.4% to 31% of files in four projects (
 Every knob costs. Only 6.1% to 16.7% of parameters were set by most users and up to 54.1% were seldom set, and a
 commercial system could drop 51.9% of its parameters (Xu 2015). Most real misconfigurations are parameter mistakes
 (Yin 2011). Tags pile up: only 26.3% to 63.5% of tagged debt was later removed (Potdar 2014).
+
+Where the value lives is practice, not evidence: the Twelve-Factor App puts configuration in the environment
+(Wiggins 2011), most tools in a file. Either keeps the value out of the code, which is what the principle asks.
