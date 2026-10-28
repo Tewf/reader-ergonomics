@@ -4,9 +4,15 @@ How to write notes, documents and files so that they cost the reader as little a
 what cognitive science, psycholinguistics and software engineering have measured. For people who write,
 and for language models that write.
 
-> **Status:** a work in progress, shared as it is. It is a personal reading of published research: not a
-> peer-reviewed study, not a new result, and not a claim to the state of the art. Each principle says how strong
-> its evidence is, and many are conventions nobody has tested. Corrections are welcome as issues.
+> **Status:** a work in progress, shared as it is, in the hope that it helps whoever needs it. It is an informal
+> reading of published research: not an official standard, not a peer-reviewed study, not a new result, and not a
+> claim to the state of the art. Each principle says how strong its evidence is, and many are conventions nobody
+> has tested.
+>
+> **How it was made:** with Claude, an AI assistant by Anthropic, under the maintainer's direction. AI agents
+> drafted the literature reviews; every reference was resolved by script and claims were spot-checked, but not
+> every source was read in full, and a number read only in a summary is marked "(secondary)". Corrections are
+> welcome as issues.
 
 [Lire en français](README.fr.md). The content is in English; only this page has a French version.
 

@@ -4,10 +4,15 @@ Comment écrire des notes, des documents et des fichiers qui coûtent le moins p
 les sciences cognitives, la psycholinguistique et le génie logiciel ont mesuré. Pour les personnes qui écrivent,
 et pour les modèles de langue qui écrivent.
 
-> **État :** un travail en cours, partagé tel quel. C'est une lecture personnelle de la recherche publiée : ni
-> une étude relue par des pairs, ni un résultat nouveau, ni une prétention à l'état de l'art. Chaque principe dit
-> la force de ses preuves, et beaucoup sont des conventions que personne n'a testées. Les corrections sont les
-> bienvenues sous forme d'issues.
+> **État :** un travail en cours, partagé tel quel, dans l'espoir qu'il serve à qui en a besoin. C'est une lecture
+> informelle de la recherche publiée : ni un standard officiel, ni une étude relue par des pairs, ni un résultat
+> nouveau, ni une prétention à l'état de l'art. Chaque principe dit la force de ses preuves, et beaucoup sont des
+> conventions que personne n'a testées.
+>
+> **Comment il a été fait :** avec Claude, un assistant d'IA d'Anthropic, sous la direction du mainteneur. Des
+> agents d'IA ont rédigé les revues de littérature ; chaque référence a été résolue par un script et les
+> affirmations ont été vérifiées par sondage, mais toutes les sources n'ont pas été lues en entier, et un chiffre
+> lu seulement dans un résumé est marqué « (secondary) ». Les corrections sont les bienvenues sous forme d'issues.
 
 [Read in English](README.md)
 
