@@ -11,7 +11,7 @@ Steps: [frame](frame.md) · [review](review.md) · [state of the art](state-of-t
 | Decompose by decisions likely to change; one role per module | supported with caveat | review.md 1 |
 | Every clustering objective is a ratio of coupling to cohesion | supported with caveat | review.md 1, 2 |
 | Developers do not balance cohesion and coupling the way recommenders do (100 systems, 29 developers) | measured | review.md 2 |
-| Automated recovery reaches 38-59 % MoJoFM against expert architectures | measured | state-of-the-art.md |
+| Automated recovery averages 31-59 % MoJoFM against expert architectures | measured | state-of-the-art.md |
 | Exact minimization of a hierarchy cost is NP-hard | proved (Dasgupta 2016) | position.md |
 | Two levels beat three for search; the fastest layout had 32 items on one level | measured, on menus | against.md |
 | Navigation follows scent; descriptive names are read faster | supported with caveat | review.md 6 |

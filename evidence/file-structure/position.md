@@ -33,6 +33,6 @@ The conventions can be read as one optimization problem, a cost of space plus a 
 | Enter a folder through its index | Nx public API rule, Bazel visibility | convention, untested |
 | Scent test: a newcomer predicts content from the path | Lawrance 2013, Larson 1998 | supported with caveat |
 | Co-change edges from version history | Gall 1998, Zimmermann 2005, Tornhill 2015 | supported with caveat |
-| Hotspots: size times change frequency | Tornhill 2015 (4 % of code held 72 % of defects in one case) | supported with caveat |
+| Hotspots: size times change frequency | Tornhill 2015 (4 % of code held 72 % of defects in one case, secondary: reported from a 2015 talk) | supported with caveat |
 | Duplication ratio | Bellon 2007, jscpd, PMD CPD | convention, untested |
 | Propagation cost | MacCormack 2006 | supported with caveat |

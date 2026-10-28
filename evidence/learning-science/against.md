@@ -10,7 +10,7 @@
 
 - Laptop deficit: Mueller 2014 found worse conceptual recall with typing; Urry 2021 (preregistered replication) found negligible effects.
 - Testing effect and complexity: van Gog 2015 argue the effect shrinks with element interactivity; Karpicke and Aue 2015 reply that a small effect remains.
-- Worked examples vs testing: examples win while practice success is under 50%, testing wins later (Yeo 2019).
+- Worked examples vs testing: for a new procedure, studying examples wins on an immediate test (Yeo 2019). A week later testing equals it with varied problems, and wins only with problems identical to those practised.
 - Expanding gaps: Latimier 2021 find no advantage over uniform gaps.
 - Cheat sheets: Dickson 2005 find no exam gain from a prepared sheet.
 - Concreteness fading: Fyfe 2014 review is positive; problem-first wins in school maths (Sinha 2021).

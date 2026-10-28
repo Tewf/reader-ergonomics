@@ -6,12 +6,12 @@ Upper bounds: what has been achieved. Lower bounds: what is shown not to work or
 
 | Sub-question | Best result | Method | Measured how |
 |---|---|---|---|
-| Overview first | graphic organizer g = 0.70 memory, 0.53 comprehension (Ponce 2025) | meta-analysis | mostly school texts, immediate tests |
+| Overview first | graphic organizer g = 0.70 memory, 0.53 comprehension (Ponce 2025; publication bias, so possibly inflated) | meta-analysis | memory and comprehension tests |
 | Context timing | topic before the passage helps, after does not (Bransford and Johnson 1972) | randomised experiment | comprehension and recall |
-| Goal-set depth | prequestions g = 0.54 (St. Hilaire 2023) | meta-analysis | memory tests |
+| Goal-set depth | prequestions g = 0.54 on prequestioned items, 0.04 on the rest (St. Hilaire 2023) | meta-analysis | memory tests |
 | Order within a unit | example then problem beats problems only (van Gog 2011) | randomised experiment | similar and transfer problems |
 | Order of lessons | alternating concepts and procedures beats concepts first (Rittle-Johnson 2015) | review and experiments | procedures and transfer |
-| Order across units | simple-to-complex task classes d = 0.79 (Costa 2022); interleaving g = 0.42 (Brunmair 2019) | meta-analyses | transfer and retention |
+| Order across units | whole 4C/ID programmes d = 0.79 (Costa 2022, sequencing not isolated); interleaving g = 0.42, reversed for words (Brunmair 2019) | meta-analyses | performance tests (Costa); transfer and retention (Brunmair) |
 | Hypertext order | most-related-next helps low-knowledge readers (Salmerón 2005, 2006) | randomised experiments | comprehension after hypertext reading |
 | Proofs | self-explanation training d = 0.95 (Hodds 2014) | randomised experiments | proof comprehension tests |
 | Where to stop | a few correct recalls, then returns diminish (Rawson and Dunlosky 2011) | randomised experiments | delayed recall |
@@ -20,7 +20,7 @@ Upper bounds: what has been achieved. Lower bounds: what is shown not to work or
 
 | Limit | Source | Measured how |
 |---|---|---|
-| Organizer effect is small overall (d = 0.21, secondary) and helps most on unfamiliar material | Luiten 1980; Stone 1983; Mayer 1979 | meta-analysis |
+| Organizer effect small on immediate tests (d = 0.21, Luiten), 0.66 on delayed tests (Stone) (secondary); unfamiliar-material condition from Mayer's theory | Luiten 1980; Stone 1983; Mayer 1979 | meta-analyses; theory with experiments |
 | Skimming gives only moderate comprehension | Rayner 2016 | review |
 | Goal-bounded depth lowers learning of the non-goal part | Klauer 1984; McCrudden 2005 | meta-analysis; experiment |
 | Guidance hurts the advanced reader (-0.43) | Tetzlaff 2025 | meta-analysis |

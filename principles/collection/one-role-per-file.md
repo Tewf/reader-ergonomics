@@ -17,8 +17,8 @@
 
 A module should hide one design decision likely to change (Parnas 1972). Its author later restated the single
 responsibility principle as responsibility to one actor, a group who request changes (Martin 2017). Files that change
-together can be read from version history: in the 82% of queries where it suggested
-anything, co-change named a file that was changed next 72% of the time (Zimmermann 2005).
+together can be read from version history. In the 82% of queries where it suggested
+anything, co-change named a file changed in the same commit among its top three suggestions 72% of the time (Zimmermann 2005).
 
 ## Limits
 

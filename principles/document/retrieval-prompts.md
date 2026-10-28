@@ -18,7 +18,7 @@
 Practice testing beats restudy, g = 0.33, and g = 0.50 against all control conditions, over 222 classroom
 studies (Yang 2021); it helps more with feedback (Rowland 2014).
 Spaced retrieval beats massed, g = 0.74 (Latimier 2021). Prequestions give g = 0.54 on the questioned material and
-0.04 on the rest (St. Hilaire 2023, secondary).
+0.04 on the rest (St. Hilaire 2023).
 
 ## Limits
 

@@ -16,12 +16,12 @@
 
 ## Why
 
-Among 512 web targets, two levels of 16 by 32 took 36 s, 32 by 16 took 46 s, and three levels of 8 took 58 s. The
+Among three web sites of 512 items each, with 19 participants, two levels of 16 by 32 took 36 s, 32 by 16 took 46 s, and three levels of 8 took 58 s. The
 two two-level layouts did not differ significantly, and only the three-level one was slower (Larson 1998). Among 64 menu targets, two levels of eight beat both deeper and flatter menus (Miller 1981).
 Needless depth costs more than breadth.
 
 ```text
- time to find one of 512 targets (Larson 1998), one mark per 2 s
+ time to find an item among 512 (Larson 1998), one mark per 2 s
  16 × 32, two levels      ██████████████████          36 s
  32 × 16, two levels      ███████████████████████     46 s
  8 × 8 × 8, three levels  █████████████████████████████ 58 s

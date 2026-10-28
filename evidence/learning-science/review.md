@@ -19,23 +19,23 @@ Grouped by strand. Surveys first, then the seminal work, then later syntheses.
 - Cepeda 2008 (S, n above 1,350): best gap is 20-40% of the time left at a one-week horizon, 5-10% at one year.
 - Rawson 2013: successive relearning to criterion raised course exam scores on key terms (RCT in courses).
 - Brunmair 2019 (MA): interleaving g = 0.42; maths 0.34; heterogeneous.
-- Bisra 2018 (MA): self-explanation prompts g = 0.55, holding when time on task is controlled.
-- St. Hilaire 2023 and Pan 2023 (MA): prequestions g = 0.54 on questioned material, 0.04 on the rest (secondary).
+- Bisra 2018 (MA): self-explanation prompts g = 0.55; 0.41 in the five studies that equalised time on task.
+- St. Hilaire 2023 (MA): prequestions g = 0.54 on questioned material, 0.04 on the rest; Pan 2023 (R) reviews the same effect.
 - Hamaker 1986 (R): questions placed after a passage help questioned and related content.
 
 ## 3. Cognitive load, worked examples, subgoals
 
 - Sweller 2019 (R): the CLT framework and its effects.
-- Barbieri 2023 (MA): worked examples beat problem solving in maths by about 18 percentile points (about g = 0.47, converted).
+- Barbieri 2023 (MA): worked examples beat problem solving in maths, g = 0.48, about 18 percentile points.
 - Correct examples beat incorrect ones; added self-explanation prompts lowered the gain in that pool.
 - Renkl 2004 (RCT): removing solution steps one by one beats a jump to whole problems.
 - Kalyuga 2003 (R) and Tetzlaff 2025 (MA, 60 studies): novices gain from more guidance (d = +0.51), advanced learners from less (d = -0.43).
 - Pollock 2002 (RCT): showing complex material as isolated elements first, then together, helps novices.
 - Paas 1994 (RCT): varied worked examples give better transfer with less effort.
-- Costa 2022 (MA): simple-to-complex task classes (4C/ID) d = 0.79, larger in higher education.
+- Costa 2022 (MA, 12 studies): whole 4C/ID programmes, built on simple-to-complex task classes, d = 0.79, larger in higher education.
 - Catrambone 1998 and Margulieux 2016 (RCT): abstract subgoal labels transfer better; labels in both text and example beat either alone. No pooled estimate found.
 - Alemdag 2025 (MA): erroneous examples g = 0.14, larger with a prompt to explain the error.
-- Yeo 2019 (RCT): examples win while practice success is under 50%; testing wins at a delay once practice succeeds.
+- Yeo 2019 (RCT, 3 experiments): for a new procedure, studying examples beat testing on an immediate test; at one week testing equalled studying with varied problems and beat it with identical ones.
 - Mayer 2002 (RCT, 3 experiments): pre-training on names and traits helped transfer in all three and retention in two.
 - Kester 2006 (RCT): procedural information given just in time beats up-front.
 - Klauer 1984 (MA): stated objectives raise targeted learning and lower the rest, net slightly positive.
@@ -58,8 +58,8 @@ Grouped by strand. Surveys first, then the seminal work, then later syntheses.
 - Ginns 2006 (MA): spatial contiguity, larger for complex material; d between 0.72 and 0.85 in secondary summaries.
 - Schneider 2018 (MA, 103 studies): signalling retention g = 0.53, transfer 0.33 (secondary).
 - Richter 2016 (MA): signalling r = 0.17, strongest for low prior knowledge.
-- Sundararajan 2020 (MA, 68 experiments): seductive details, small negative.
-- Hoffler 2007 (MA): animation over static pictures d = 0.37, only for representational graphics.
+- Sundararajan 2020 (MA, 58 studies, 68 effects): seductive details hurt learning, g = -0.33 (secondary).
+- Höffler 2007 (MA): animation over static pictures d = 0.37; larger for realistic (0.76) and procedural-motor (1.06) content, 0.40 for representational graphics.
 - Berney 2016 (MA): g = 0.23, high heterogeneity.
 - Ploetzner 2020 (R): animation helps when the change shown is what must be learned.
 - Tversky 2002 (R): animations are often too fast or complex to perceive; interactivity can help.
@@ -67,16 +67,16 @@ Grouped by strand. Surveys first, then the seminal work, then later syntheses.
 
 ## 6. Hypertext and navigation load
 
-- DeStefano 2007 (R, 38 studies): each link is a decision that loads working memory.
+- DeStefano 2007 (R, 38 studies, secondary): each link is a decision that loads working memory.
 - Novices are helped only by a hierarchy matching the domain; restricting links helps.
-- Amadieu 2009 (S, n = 24): complex overview structures did not help.
+- Amadieu 2009 (S, n = 24): a network concept map did worse than a hierarchical one, most for low-prior-knowledge learners.
 - Doignon 1985 (theory): prerequisites as a quasi-order; the outer fringe is what a learner is ready for.
-- Fang 2019 and Sun 2021 (MA): an adaptive system built on it equals classroom teaching (g = 0.05) and adds 0.43 as a supplement.
+- Fang 2019 and Sun 2021 (MA): an adaptive system built on it equals classroom teaching (g = 0.05, Sun); Sun finds 0.43 as a supplement, Fang no such difference.
 - Kulik 1990 (MA): mastery learning about 0.52 on exams (secondary), larger for weaker students, at a cost in time.
 
 ## 7. Comparison and transfer
 
-- Alfieri 2013 (MA, k = 201): case comparison d = 0.50; against studying the same cases one after the other d = 0.37; maths 0.23.
+- Alfieri 2013 (MA, 57 experiments, 336 tests): case comparison d = 0.50; against studying the same cases one after the other d = 0.37 and in maths 0.23 (not checked against the paper).
 - Gick 1983 (RCT): one case plus a principle did not transfer; two cases did.
 - Gentner 2003 (RCT): two cases compared beat the same two studied apart.
 - Catrambone 1989 (RCT): comparison must be prompted.

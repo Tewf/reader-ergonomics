@@ -22,7 +22,7 @@ Order inside each strand: definitions, seminal work, forward citations.
 - Meister et al. 2021: reading times fit a weakly super-linear f; acceptability shows a clearer penalty for non-uniform surprisal.
 - Hoover et al. 2023: with better language models, reading time grows super-linearly in surprisal, and so does its variance.
 - Brothers & Kuperberg 2021: self-paced reading (N = 216), picture naming (N = 36) and an eye-tracking meta-analysis (N = 218) show cost linear in probability.
-- Wilcox et al. 2023: in 11 languages from 5 families, surprisal and contextual entropy predict reading time, with a linear link.
+- Wilcox et al. 2023: in 11 languages from 5 families, surprisal predicts reading time in all of them and contextual entropy adds to it in most (significant when pooled), with a linear link.
 - Xu et al. 2023: in eye-tracking corpora of 7 languages, super-linearity appears in some, and depends strongly on the language model.
 - Shain et al. 2024: 6 reading datasets, many language models, nonlinear regression: f is linear in surprisal.
 - Buggy et al. 2026 (preprint): the materials of Brothers & Kuperberg 2021, read with eye-tracking, give a logarithmic effect of probability.

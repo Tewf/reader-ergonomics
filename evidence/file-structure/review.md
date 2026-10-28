@@ -20,7 +20,7 @@ Surveys first, then the seminal work, then forward citations.
 - Kohler 2012: the same problem as a mixed-integer program.
 - Tzerpos 1999: **MoJo**, the move-or-join distance between two clusterings. MoJoFM is its normalized form and the standard accuracy measure.
 - Shtern 2012: the survey, with quality-assessment methods.
-- Garcia 2013: six recovery techniques against eight expert-verified architectures. MoJoFM 38 to 59 %; ARC and ACDC best.
+- Garcia 2013: six recovery techniques against eight expert-verified architectures. MoJoFM averages 31 to 59 % (Table II; the text says 38 to 59 %); ARC and ACDC best.
 - Harman 2012: the search-based software engineering survey.
 - Praditwong 2011: clustering as multi-objective search on 17 systems.
 - Mkaouer 2015: NSGA-III with semantics and change history added.
@@ -64,7 +64,7 @@ Surveys first, then the seminal work, then forward citations.
 
 ## 6. The human constants
 
-- Miller 1981, Kiger 1984: depth versus breadth on menus of 64 items; two levels of eight beat deeper and flatter menus. Larson 1998, with 512 web targets: two levels of 16 by 32 were fastest and three levels of 8 slowest (see [against](against.md)).
+- Miller 1981, Kiger 1984: depth versus breadth on menus of 64 items; two levels of eight beat deeper and flatter menus. Larson 1998, with web sites of 512 items: two levels of 16 by 32 were fastest and three levels of 8 slowest (see [against](against.md)).
 - Pirolli 1999: **information foraging theory**.
 - Lawrance 2013: programmers navigate code by scent, and a scent model predicts their paths better than a hypothesis model.
 - Lawrie 2006, 2007: full words beat abbreviations and single letters for comprehension.
@@ -78,5 +78,5 @@ Surveys first, then the seminal work, then forward citations.
 
 - Gall 1998: logical coupling from release history.
 - Zimmermann 2005: mining version histories for files that change together.
-- Tornhill 2015: **hotspots**, size times change frequency; 4 % of code held 72 % of defects in the cited case.
+- Tornhill 2015: **hotspots**, size times change frequency; 4 % of code held 72 % of defects in the cited case (secondary: reported from a 2015 talk).
 - jscpd and PMD CPD: duplication detectors; jscpd also reads markdown.

@@ -5,7 +5,7 @@
 - Dyslexia-specific fonts: null effects in Rello 2013, Wery 2017 and Kuster 2018 (n = 170).
 - Italic, underline and justified text are widely discouraged. Only italic has direct support (worse in Rello 2013). Justification evidence is mixed.
 - Sans serif is recommended for dyslexia; Bernard 2002 finds no speed difference for typical readers.
-- Letter-spacing gains (Zorzi 2012) were only partly replicated.
+- The letter-spacing gains come from one research group (Zorzi 2012); replications by other groups were not reviewed here.
 
 ## Line length
 

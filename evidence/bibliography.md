@@ -27,7 +27,7 @@ Every work cited anywhere in this repository, once. The text cites `Author Year`
 | Beelders 2015 | Beelders, du Plessis (2015). Syntax highlighting as an influencing factor when reading and comprehending source code. Journal of Eye Movement Research | https://bop.unibe.ch/JEMR/article/view/2429 |
 | Bellon 2007 | Bellon, Koschke, Antoniol, Krinke, Merlo (2007). Comparison and evaluation of clone detection tools. IEEE TSE | https://doi.org/10.1109/TSE.2007.70725 |
 | Bernard 2002 | Bernard, Mills, Peterson, Storrer (2002). More about fonts: serif versus sans serif on screen. Usability News | https://www.humanfactors.com/newsletters/more_about_fonts.asp |
-| Berney 2016 | Berney, Bétrancourt (2016). Does animation enhance learning? A meta-analysis. Computers & Education | https://doi.org/10.1016/j.compedu.2015.11.003 |
+| Berney 2016 | Berney, Bétrancourt (2016). Does animation enhance learning? A meta-analysis. Computers & Education | https://doi.org/10.1016/j.compedu.2016.06.005 |
 | Bille 2015 | Bille, Gortz, Landau, Weimann (2015). Tree compression with top trees. Information and Computation | https://doi.org/10.1016/j.ic.2014.12.012 |
 | Binkley 2008 | Binkley, Lawrie, Maex, Morrell (2008). Impact of limited memory resources. ICPC | https://doi.org/10.1109/ICPC.2008.31 |
 | Binkley 2009 | Binkley, Lawrie, Maex, Morrell (2009). Identifier length and limited programmer memory. Science of Computer Programming | https://doi.org/10.1016/j.scico.2009.02.006 |
@@ -124,7 +124,7 @@ Every work cited anywhere in this repository, once. The text cites `Author Year`
 | Haviland 1974 | Haviland, Clark (1974). What's new? Acquiring new information as a process in comprehension. Journal of Verbal Learning and Verbal Behavior, 13(5), 512-521. | https://doi.org/10.1016/S0022-5371%2874%2980003-4 |
 | He 2024 | He, Rungta, Koleczek, Sekhon, Wang, Hasan (2024). Does Prompt Formatting Have Any Impact on LLM Performance? Preprint. | arXiv:2411.10541 |
 | Hodds 2014 | Hodds, Alcock, Inglis (2014). Self-explanation training improves proof comprehension. J. Research in Mathematics Education. | https://doi.org/10.5951/jresematheduc.45.1.0062 |
-| Höffler 2007 | Höffler, Leutner (2007). Instructional animation versus static pictures: a meta-analysis. Learning and Instruction | https://doi.org/10.1016/j.learninstruc.2007.02.001 |
+| Höffler 2007 | Höffler, Leutner (2007). Instructional animation versus static pictures: a meta-analysis. Learning and Instruction | https://doi.org/10.1016/j.learninstruc.2007.09.013 |
 | Hofmeister 2017 | Hofmeister, Siegmund, Holt (2017). Shorter identifier names take longer to comprehend. SANER | https://doi.org/10.1109/SANER.2017.7884623 |
 | Hogemo 2021 | Hogemo, Bergougnoux, Brandes, Paul, Telle (2021). On Dasgupta's hierarchical clustering objective and its relation to other graph parameters | https://arxiv.org/abs/2105.12093 |
 | Hong 2025 | Hong, Troynikov, Huber (2025). Context Rot: How Increasing Input Tokens Impacts LLM Performance. Chroma technical report, 14 July 2025. | https://www.trychroma.com/research/context-rot |
@@ -152,7 +152,7 @@ Every work cited anywhere in this repository, once. The text cites `Author Year`
 | Karlsson 2007 | Karlsson (2007). Constraints on multiple center-embedding of clauses. Journal of Linguistics, 43(2), 365-392. | https://doi.org/10.1017/S0022226707004616 |
 | Karpicke 2011 | Karpicke, Blunt (2011). Retrieval practice produces more learning than elaborative studying with concept mapping. Science | https://doi.org/10.1126/science.1199327 |
 | Karpicke 2015 | Karpicke, Aue (2015). The testing effect is alive and well with complex materials. Educational Psychology Review | https://doi.org/10.1007/s10648-015-9309-3 |
-| Kenny 1993 | Kenny (1993). Advance organizers, summary of the meta-analyses (source of the secondary organizer numbers). ERIC ED362172. | https://files.eric.ed.gov/fulltext/ED362172.pdf |
+| Kenny 1993 | Kenny (1993). The Effectiveness of Instructional Orienting Activities in Computer-Based Instruction (source of the secondary organizer numbers). ERIC ED362172. | https://files.eric.ed.gov/fulltext/ED362172.pdf |
 | Kester 2001 | Kester, Kirschner, van Merriënboer, Bäumer (2001). Just-in-time information presentation. Computers in Human Behavior. | https://doi.org/10.1016/S0747-5632%2801%2900011-5 |
 | Kester 2004 | Kester, Kirschner, van Merriënboer (2004). Timing of information presentation in learning statistics. Instructional Science. | https://doi.org/10.1023/B:TRUC.0000024191.27560.e3 |
 | Kester 2006 | Kester, Kirschner, van Merriënboer (2006). Just in time information presentation: improving learning a troubleshooting skill. Contemporary Educational Psychology | https://doi.org/10.1016/j.cedpsych.2005.05.002 |
@@ -204,7 +204,7 @@ Every work cited anywhere in this repository, once. The text cites `Author Year`
 | Lohrey 2013a | Lohrey, Maneth, Mennicke (2013). XML tree structure compression using RePair. Information Systems | https://doi.org/10.1016/j.is.2013.06.006 |
 | Lohrey 2013b | Lohrey, Maneth, Mennicke (2013). XML compression via DAGs. ICDT | https://doi.org/10.1145/2448496.2448506 |
 | Lohrey 2015 | Lohrey (2015). Grammar-based tree compression. DLT | https://doi.org/10.1007/978-3-319-21500-6_3 |
-| Loibl 2017 | Loibl, Roll, Rummel (2017). When problem solving followed by instruction supports learning. Educational Psychology Review. | https://doi.org/10.1007/s10648-016-9379-x |
+| Loibl 2017 | Loibl, Roll, Rummel (2017). Towards a Theory of When and How Problem Solving Followed by Instruction Supports Learning. Educational Psychology Review. | https://doi.org/10.1007/s10648-016-9379-x |
 | Luiten 1980 | Luiten, Ames, Ackerson (1980). Advance organizers, meta-analysis. AERJ. | https://doi.org/10.3102/00028312017002211 |
 | Lulla 2026 | Lulla, Mohsenimofidi, Galster, Zhang, Baltes, Treude (2026). On the Impact of AGENTS.md Files on the Efficiency of AI Coding Agents. Preprint. | arXiv:2601.20404 |
 | MacCormack 2006 | MacCormack, Rusnak, Baldwin (2006). Exploring the structure of complex software designs. Management Science | https://doi.org/10.1287/mnsc.1060.0552 |
@@ -307,7 +307,7 @@ Every work cited anywhere in this repository, once. The text cites `Author Year`
 | Rowland 2014 | Rowland (2014). The effect of testing versus restudy on retention: a meta-analytic review. Psychological Bulletin | https://doi.org/10.1037/a0037559 |
 | Roy 2009 | Roy, Cordy, Koschke (2009). Comparison and evaluation of code clone detection techniques and tools: a qualitative approach. Science of Computer Programming | https://doi.org/10.1016/j.scico.2009.02.007 |
 | Roy 2017 | Roy, Pokutta (2017). Hierarchical clustering via spreading metrics. JMLR | https://arxiv.org/abs/1610.09269 |
-| Rozenblit 2002 | Rozenblit, Keil (2002). The illusion of explanatory depth. Cognitive Science. | https://doi.org/10.1207/s15516709cog2605_1 |
+| Rozenblit 2002 | Rozenblit, Keil (2002). The misunderstood limits of folk science: an illusion of explanatory depth. Cognitive Science. | https://doi.org/10.1207/s15516709cog2605_1 |
 | Sadasivan 2023 | Sadasivan, Kumar, Balasubramanian, Wang, Feizi (2023). Can AI-Generated Text be Reliably Detected? Transactions on Machine Learning Research. | arXiv:2303.11156 |
 | Sadowski 2015 | Sadowski, Stolee, Elbaum (2015). How developers search for code: a case study. ESEC/FSE | https://doi.org/10.1145/2786805.2786855 |
 | Salmerón 2005 | Salmerón, Cañas, Kintsch, Fajardo (2005). Reading strategies and hypertext comprehension. Discourse Processes. | https://doi.org/10.1207/s15326950dp4003_1 |
@@ -329,7 +329,7 @@ Every work cited anywhere in this repository, once. The text cites `Author Year`
 | Sinha 2021 | Sinha, Kapur (2021). When problem solving followed by instruction works: productive failure. Review of Educational Research | https://doi.org/10.3102/00346543211019105 |
 | Smith 2013 | Smith, Levy (2013). The effect of word predictability on reading time is logarithmic. Cognition, 128(3), 302-319. | https://doi.org/10.1016/j.cognition.2013.02.013 |
 | Stevens 1974 | Stevens, Myers, Constantine (1974). Structured design. IBM Systems Journal | https://doi.org/10.1147/sj.132.0115 |
-| St. Hilaire 2023 | St. Hilaire, Chan, Ahn (2023). The prequestion effect: a meta-analysis. Psychonomic Bulletin & Review | https://doi.org/10.3758/s13423-023-02353-8 |
+| St. Hilaire 2023 | St. Hilaire, Chan, Ahn (2023). Guessing as a learning intervention: A meta-analytic review of the prequestion effect. Psychonomic Bulletin & Review | https://doi.org/10.3758/s13423-023-02353-8 |
 | Stone 1983 | Stone (1983). A meta-analysis of advance organizer studies. J. Experimental Education. | https://doi.org/10.1080/00220973.1983.11011862 |
 | Sui 2024 | Sui, Zhou, Zhou, Han, Zhang (2024). Table Meets LLM: Can Large Language Models Understand Structured Table Data? A Benchmark and Empirical Study. WSDM 2024. | doi:10.1145/3616855.3635752 |
 | Sun 2021 | Sun et al. (2021). ALEKS, meta-analysis. Investigations in Mathematics Learning | https://doi.org/10.1080/19477503.2021.1926194 |

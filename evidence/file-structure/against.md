@@ -7,7 +7,7 @@ The evidence against nine file and folder conventions, theme by theme: the claim
 - **Claim** (supported with caveat): every fact or snippet lives in one file; others link to it and never copy it.
 - Thomas 2019 restates **DRY** (don't repeat yourself) as a rule about knowledge and intent, not about text, and concedes that the first edition explained it poorly (secondary: read in a summary quoting the book).
 - Kapser 2008 judged up to 71% of the **clones** (copied code fragments) in Apache and Gnumeric to have a positive effect on maintainability. Boiler-plating and replicate-and-specialize were mostly beneficial, verbatim snippets and parameterized code mostly harmful.
-- Juergens 2009 supports the rule where knowledge is shared: about half of the clones (52%) held inconsistencies. Developers confirmed 107 faults caused by changing one copy and not the others (five systems, about 1800 clone groups assessed).
+- Juergens 2009 supports the rule where knowledge is shared: about half of the clones (52%) held inconsistencies. Developers confirmed 107 faults caused by changing one copy and not the others (five systems, 1,427 clone groups, about 1800 manual assessments).
 - Metz 2016 names the opposite risk, "duplication is far cheaper than the wrong abstraction", once one shared piece is bent to fit callers that diverge.
 - A link has a reading cost: DeStefano 2007 found in its review that the extra decisions and visual processing of hypertext impair reading, most for readers with low working memory or low prior knowledge.
 - Madrid 2009 found that 3 versus 8 links per page did not change learning, while an incoherent reading order raised load (secondary: both abstracts read in index summaries).
@@ -19,7 +19,7 @@ The evidence against nine file and folder conventions, theme by theme: the claim
 - The test comes from Martin 2008, chapter 10: describe a class in about 25 words without "if", "and", "or" or "but" (secondary: wording read in a chapter summary).
 - Martin 2017 restated the single responsibility principle as responsibility to one **actor** (a group of users or stakeholders who require a change). He wrote that the old name is misread as a rule that each module does one thing: the test moved from wording to change.
 - A sentence test fails both ways, and Ousterhout 2025 makes both points against the related one-thing rule. Anything can be given a name (a false pass). Two closely related steps, such as taking a lock and then updating, belong together (a false fail).
-- **Co-change** (files modified in the same commit) tests roles by behaviour. Gall 1998 recovered logical coupling from 20 releases of a telecom switching system. Zimmermann 2005, across eight projects and in the 82% of queries where it suggested anything, named a file that was changed next 72% of the time, including couplings program analysis cannot see.
+- **Co-change** (files modified in the same commit) tests roles by behaviour. Gall 1998 recovered logical coupling from 20 releases of a telecom switching system. Zimmermann 2005 covered eight projects. In the 82% of queries where it suggested anything, it named a file changed in the same commit among its top three suggestions 72% of the time, including couplings program analysis cannot see.
 - The HTML, CSS and JS clause is contested: Hunt 2013 argued that separating markup from display logic separates technologies rather than concerns, since the two change together (slides and summaries read, talk not watched).
 - That clause also splits by file type, which the grouping convention forbids at folder level, so the two conventions disagree with each other.
 - **Verdict: keep with an amendment.** Amendment: keep the sentence as the cheap first test, confirm it against co-change, and split by component rather than by language.
@@ -57,7 +57,7 @@ The evidence against nine file and folder conventions, theme by theme: the claim
 - **Claim** (supported with caveat): any file within two clicks; a browsed folder splits past about 16 entries, citing an optimum of 8-16 items per level; subfolders only from 3 items.
 - Miller 1981 timed selection among 64 targets in menus shaped 2^6, 4^3, 8^2 and 64^1: two levels of eight was fastest and had fewest errors.
 - Kiger 1984 tested five 64-target menus: 4x16 was fastest, not reliably faster than 16x4 or 8x8, and users preferred 8x8 (secondary: read in Larson 1998).
-- Larson 1998 used 512 targets and 19 participants: 16x32 was fastest (mean 36 s), 32x16 next (46 s), 8x8x8 slowest (58 s), and only the three-level tree was significantly slower.
+- Larson 1998 used three sites of 512 items each and 19 participants, with 24 searches per person and targets drawn from the 128 shared items. 16x32 was fastest (mean 36 s), 32x16 next (46 s), 8x8x8 slowest (58 s), and only the three-level tree was significantly slower.
 - So the best measured layout had two levels with 32 items on one of them. Breadth 8 lost when it forced a third level: an optimum of 8-16 per level is not what these studies found.
 - The direction of all three studies supports the 3-item floor: needless depth costs more than breadth.
 - The transfer is untested. The studies timed search for a named target through category labels. Sadowski 2015 logged about five search sessions and 12 queries per developer per workday at Google, often aimed at a known location.
@@ -85,7 +85,7 @@ The evidence against nine file and folder conventions, theme by theme: the claim
 
 - **Claim** (convention, untested): tunables live in a config file loaded at runtime; placeholder values carry a PROVISIONAL tag.
 - Xu 2015: only 6.1-16.7% of parameters were set by most users and up to 54.1% were seldom set; its guidelines would remove 51.9% of a commercial storage system's parameters.
-- Each knob costs: in Xu 2015, 17.3-48.5% of users' configuration issues were about finding or setting the right parameter, and 17.5-53.3% of 620 configuration errors came from defaults wrongly left in place.
+- Each knob costs. In Xu 2015, 17.3-48.5% of users' configuration issues were about finding or setting the right parameter. Of 620 user-reported issues, 17.5-53.3% of the configuration errors came from defaults wrongly left in place.
 - Yin 2011: of 546 real misconfigurations, 70.0-85.5% were parameter mistakes, and 38.1-53.7% of those were illegal values.
 - Potdar 2014 supports the tag and shows its limit: **self-admitted technical debt** (comments marking a known shortcut) appeared in 2.4-31% of files in four projects, but only 26.3-63.5% of it was later removed.
 - **Verdict: keep with an amendment.** Amendment: a value moves to config only when someone will set it, otherwise it is a named constant; a check counts and ages PROVISIONAL tags.
@@ -115,7 +115,7 @@ The evidence against nine file and folder conventions, theme by theme: the claim
 | Group by purpose | a folder named for a purpose | co-change clusters fall inside folders (Silva 2014) |
 | File length | 80 statements, 500 lines | a split is valid when the pieces change separately |
 
-- Co-change is sparse at first: Beck 2011 reports earlier work where structural dependencies clustered better than co-change for that reason and combining both did best. In its own 16 projects co-change was among the couplings most congruent with real modules, no principle dominating.
+- Co-change is sparser than structural dependencies: Beck 2011 reports earlier work where structural dependencies clustered better for that reason and combining both improved the result. In its own 16 projects co-change was among the couplings most congruent with real modules, no principle dominating.
 - Mechanical commits (renames, reformatting) create false co-change and must be filtered; thresholds stay PROVISIONAL until measured on the repository's own history.
 
 ## Not verified

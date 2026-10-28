@@ -16,11 +16,11 @@
 
 ## Why
 
-Worked examples beat problem solving in mathematics by about 18 percentile points (Barbieri 2023). Removing steps one by
+Worked examples beat problem solving in mathematics, g = 0.48, about 18 percentile points (Barbieri 2023). Removing steps one by
 one beats jumping to whole problems (Renkl 2004). Subgoal labels transfer to new problems, more when they appear in
 both the text and the example (Catrambone 1998; Margulieux 2016).
 
 ## Limits
 
 The benefit reverses with expertise: novices gain from more guidance, d = +0.51, advanced learners from less,
-d = -0.43 (Tetzlaff 2025). Once practice succeeds, testing beats more examples (Yeo 2019).
+d = -0.43 (Tetzlaff 2025). For a new procedure, examples beat testing on an immediate test; a week later testing caught up, and pulled ahead only on problems identical to those practised (Yeo 2019).

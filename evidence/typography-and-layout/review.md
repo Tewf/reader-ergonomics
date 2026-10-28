@@ -17,11 +17,11 @@ Grouped by strand. Surveys first, then primary studies and standards.
 - Rello 2016 (S, n = 104): comprehension was higher at 18 pt and 26 pt than at smaller sizes; mid-range line spacing made no difference.
 - Bernard 2002 (S): no reading-speed difference between common serif and sans faces on screen.
 - Justified text: results are mixed (Akhmadeeva 2016, R).
-- Rello 2013 (S, n = 48 dyslexic adults, 12 fonts): sans serif, monospaced and roman beat serif, proportional and italic.
+- Rello 2013 (S, n = 48 dyslexic readers aged 11 to 50, 12 fonts): sans serif, monospaced and roman gave shorter fixations than serif, proportional and italic; reading time did not differ.
 
 ## 3. Dyslexia-related evidence
 
-- Zorzi 2012 (RCT, n = 94 dyslexic children): extra letter spacing roughly doubled accuracy and raised speed about 20%; typical readers were unaffected; a replication kept only the accuracy gain.
+- Zorzi 2012 (RCT, n = 74 and 20 dyslexic children, two experiments): extra letter spacing halved errors and raised speed by about 0.3 syllables a second (11% to 20%); reading-level controls were unaffected.
 - Rello 2013: the dyslexia font OpenDyslexic changed nothing; spacing was uncontrolled.
 - Wery 2017 (S): dyslexia-specific fonts gave no benefit.
 - Kuster 2018 (S, n = 170): no benefit of a dyslexia font.
@@ -49,7 +49,7 @@ Grouped by strand. Surveys first, then primary studies and standards.
 - Ginns 2006 (MA): placing words in the picture or code they explain, d about 0.72 to 0.85 (secondary). Ayres 2014 (R) gives the split-attention account.
 - Richter 2016 (MA): signalling r = 0.17, strongest for low prior knowledge.
 - Schneider 2018 (MA, 103 studies): signalling helps retention.
-- Sundararajan 2020 (MA, 68 experiments): seductive details, small negative effect.
+- Sundararajan 2020 (MA, 58 studies, 68 effects): seductive details hurt learning, g = -0.33 (secondary).
 - Bateman 2010 (S): embellished charts were no worse for accuracy and better for recall.
 - Cleveland 1984 (S): position and length are judged more accurately than angle, area or colour.
 - Vessey 1991 (R): tables fit symbolic look-up; graphs fit spatial tasks.

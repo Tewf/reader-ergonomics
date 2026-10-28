@@ -4,8 +4,8 @@
 
 | Claim at risk | Evidence against | Source |
 |---|---|---|
-| Overview first helps | organizer effect is small (d = 0.21, secondary) and helps most on unfamiliar material | Luiten 1980; Stone 1983; Mayer 1979 |
-| Any overview helps | complex overviews do not help novices | DeStefano and LeFevre 2007; Amadieu 2009 |
+| Overview first helps | organizer effect small on immediate tests (d = 0.21, Luiten), 0.66 on delayed tests (Stone), both secondary; the unfamiliar-material condition is Mayer's theory (Mayer 1979), not a tested moderator | Luiten 1980; Stone 1983; Mayer 1979 |
+| Any overview helps | a network map did worse than a hierarchical one, most for novices | DeStefano and LeFevre 2007; Amadieu 2009 |
 | Zoom-lens and spiral sequencing | the few tests are null; spiral evidence is single-site and quasi-experimental | Van Patten 1986; Harden and Stamper 1999 |
 | Skim first | skimming gives only moderate comprehension | Rayner 2016 |
 | Concrete before abstract | no pooled effect | Fyfe 2014 |
@@ -15,7 +15,7 @@
 
 ## Controversies
 
-- **Problem first or instruction first.** Problem first g = 0.36 pooled (Sinha and Kapur 2021), but reversed when many elements interact (Ashman 2020). Loibl 2017 says it works only with contrasting cases or built-on instruction.
+- **Problem first or instruction first.** Problem first g = 0.36 on concepts and transfer, none on procedures (g = -0.03) (Sinha and Kapur 2021), but reversed when many elements interact (Ashman 2020). Loibl 2017 says it works only with contrasting cases or built-on instruction.
 - **Just-in-time timing.** The model predicts theory first, how-to during practice; its own experiment found the reverse most efficient (Kester 2001, 2004).
 - **Depth versus breadth.** Depth went with better grades (Schwartz 2009), but the data are correlational.
 - **Expertise reversal.** The same scaffold helps novices (+0.51) and hurts the advanced (-0.43) (Tetzlaff 2025), so a single procedure for all readers is suspect.

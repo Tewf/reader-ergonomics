@@ -21,6 +21,6 @@ Telling readers what is relevant raises learning of that part at no extra readin
 
 ## Limits
 
-The classic advance organizer has a small effect, d = 0.21 (Luiten 1980, secondary), and helps most on unfamiliar
-material (Mayer 1979). A complex overview does not help; a map should match the domain's own hierarchy (Amadieu 2009). Stating
+The classic advance organizer has a small effect on immediate tests, d = 0.21 (Luiten 1980, secondary), and 0.66 on delayed tests (Stone 1983, secondary).
+Mayer 1979 predicts it helps most on unfamiliar material. A network map did worse than a hierarchical one, most for readers with little prior knowledge, so a map should follow the domain's own hierarchy (Amadieu 2009). Stating
 what matters lowers learning of what was not named (Klauer 1984).

@@ -23,5 +23,5 @@ the North American studies alone, building gave 0.47.
 
 ## Limits
 
-Animation adds little over static frames unless the change itself is what is learned (Höffler 2007; Ploetzner 2020).
+Animation beats static pictures only modestly, d = 0.37 overall and more for procedural-motor content (Höffler 2007); it helps when the change itself is what is learned (Ploetzner 2020).
 Translating between two representations is itself hard and needs support (Ainsworth 2006).

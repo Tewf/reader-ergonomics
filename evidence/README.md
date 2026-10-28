@@ -46,17 +46,21 @@ Each topic's README lists its claims with a grade, as defined in the [standard](
 
 ## Audit
 
-On 2026-10-28, the 26 claims the principles lean on most were checked against their primary sources:
+Two audits checked claims against their primary sources on 2026-10-28. The first took the 26 claims the principles
+lean on most. The second took every line of the evidence files that carries a number: 109 lines, of which 17
+repeated a claim the first had settled.
 
-| Verdict | Claims |
-|---|---|
-| correct | 15 |
-| wrong (misattributed, a wrong value, a wrong link) | 4 |
-| imprecise (right direction, narrower scope or other conditions) | 5 |
-| unverifiable (the primary source could not be read) | 2 |
+| Verdict | First audit | Second audit |
+|---|---|---|
+| correct | 15 | 34 |
+| wrong (misattributed, a wrong value, a wrong link) | 4 | 10 |
+| imprecise (right direction, narrower scope or other conditions) | 5 | 40 |
+| unverifiable (the primary source could not be read) | 2 | 8 |
 
-All eleven were corrected, or narrowed to what the source supports. The rest of the evidence has not been audited
-this way, so a claim is only as good as the review that cites it; a number read only in a summary says "(secondary)".
+Every wrong or imprecise claim was corrected, or narrowed to what the source supports, here and in the principles that
+repeat it. An unverifiable one says "(secondary)" or names what was not checked. The second audit also fixed two DOIs
+and four titles in the bibliography. Claims without a number have not been audited this way, so such a claim is only
+as good as the review that cites it.
 
 ## Method
 
