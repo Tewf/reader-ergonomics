@@ -20,9 +20,10 @@ import links
 import logical_lines
 import portable_paths
 import references
+import standard_card
 import tree_shape
 
-CHECKS = [portable_paths, tree_shape, links, logical_lines, duplication, defined_before_use, citations, references]
+CHECKS = [portable_paths, tree_shape, links, logical_lines, duplication, defined_before_use, citations, standard_card, references]
 
 
 def main() -> int:
