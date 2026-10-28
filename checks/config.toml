@@ -11,7 +11,7 @@ exempt_from_trigger = ["evidence/bibliography.md"]   # a data table, one row per
 ignore_line_prefixes = []                            # footer lines a site adds to every page
 
 [links]
-wikilinks = "resolve"   # resolve | ignore (for vaults whose links may point at notes not yet written)
+wikilinks = "resolve"   # resolve | ignore (for note collections whose links may point at notes not yet written)
 
 [portable_paths]
 allow_symlinks = false

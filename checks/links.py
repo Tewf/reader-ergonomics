@@ -20,7 +20,7 @@ EXACT = True
 INLINE_LINK = re.compile(r"\]\(<([^>]+)>\)|\]\(([^)\s]+)(?:\s+\"[^\"]*\")?\)")
 REFERENCE_DEFINITION = re.compile(r"^\s{0,3}\[[^\]]+\]:\s*<?([^\s>]+)>?", re.MULTILINE)
 WIKILINK = re.compile(r"!?\[\[([^\]|#]+)")
-URI_SCHEME = re.compile(r"^[A-Za-z][A-Za-z0-9+.-]*:")  # http:, mailto:, obsidian: ... are not files
+URI_SCHEME = re.compile(r"^[A-Za-z][A-Za-z0-9+.-]*:")  # http:, mailto: and app links are not files
 
 
 def check(root: Path, config: dict) -> list[Finding]:

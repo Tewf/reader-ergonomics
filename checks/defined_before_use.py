@@ -2,6 +2,7 @@
 
 A definition is marked the way the standard asks: the term in bold, followed on the same
 line by a definition cue (a colon, "is", "are", "means", "=", or an opening parenthesis).
+A term set in bold more than once in a file is a label (**Claim**, **Verdict**), not a definition.
 Any earlier plain use of the same term in the file's prose, outside headings, is reported.
 
 Heuristic: bold is also used for emphasis, and a term can be defined in another file.
@@ -30,7 +31,13 @@ def check(root: Path, config: dict) -> list[Finding]:
                 term = match.group(1).strip().lower()
                 if any(character.isalpha() for character in term):
                     defined_at.setdefault(term, number)
+        bold_count = {}
+        for _, line in body:
+            for bold in re.findall(r"\*\*([^*\n]+?)\*\*", line):
+                bold_count[bold.strip().lower()] = bold_count.get(bold.strip().lower(), 0) + 1
         for term, definition_line in defined_at.items():
+            if bold_count.get(term, 0) > 1:
+                continue
             pattern = re.compile(rf"(?<![\w*]){re.escape(term)}(?![\w*])", re.IGNORECASE)
             earlier = next((number for number, line in body if number < definition_line and pattern.search(line)), None)
             if earlier:

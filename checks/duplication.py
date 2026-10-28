@@ -1,8 +1,9 @@
 """Duplication: the same run of words held in two files means one fact kept in two places.
 
-Prose is normalised (lower case, words only, code removed) and cut into overlapping
+Prose is normalised (lower case, words only, code and link addresses removed) and cut into overlapping
 windows of `words` words. A window seen in two different files is a copy. One finding is
 reported per pair of files, at the first shared window, with the number of shared windows.
+Headings and table rows are skipped: they are the skeleton files of one kind share.
 A deliberate quotation is exempted by path in config.
 
 Exact for the copy; whether the copy is a fact or a quotation is judgment.
@@ -19,6 +20,7 @@ from check_api import MARKDOWN_SUFFIXES, Finding, files_in_scope, matches_any, p
 NAME = "duplication"
 EXACT = True
 WORD = re.compile(r"[^\W_]+(?:'[^\W_]+)?")
+LINK_TARGET = re.compile(r"\]\([^)]*\)|https?://\S+")  # addresses are not prose
 
 
 def check(root: Path, config: dict) -> list[Finding]:
@@ -31,9 +33,9 @@ def check(root: Path, config: dict) -> list[Finding]:
             continue
         words = []  # (word, line)
         for line_number, line in enumerate(prose_only((root / path).read_text(encoding="utf-8", errors="replace")).splitlines(), 1):
-            if line.lstrip().startswith("|"):
-                continue  # table rows repeat their column labels by design
-            words += [(word.lower(), line_number) for word in WORD.findall(line)]
+            if line.lstrip().startswith(("|", "#")):
+                continue  # table rows and headings are the skeleton every file of a kind shares
+            words += [(word.lower(), line_number) for word in WORD.findall(LINK_TARGET.sub("]", line))]
         seen_here = set()
         for start in range(len(words) - size + 1):
             window = tuple(word for word, _ in words[start:start + size])
