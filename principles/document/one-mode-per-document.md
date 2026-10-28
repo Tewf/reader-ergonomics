@@ -32,3 +32,5 @@ Practice agrees for a README. Every README guide read puts what it is, how to in
 file (Guo 2026; Litt 2026; GitHub 2026a). A README is an index of modes, not a breach. Critics of strict
 separation argue that mixed pages can serve a young project (Viktorin 2022; Hacker News 2024); that is opinion,
 untested.
+
+Both lines are convention: they describe what practice does, not what it does to readers.

@@ -14,6 +14,8 @@ somewhere else, read [standard.md](standard.md) instead; this file is about this
 - Cite in the text as `Author Year`. The full entry goes once into [evidence/bibliography.md](evidence/bibliography.md), with a DOI, an arXiv id or a stable URL.
 - Evidence against a principle goes into the topic's `against.md`, never deleted to make a principle look stronger.
 - A number read in a summary rather than in the paper is marked "(secondary)".
+- A limit or caveat added to a principle carries its own grade and its kind of source (study, thesis, standard,
+  company page, opinion), and the change obeys the principle it changes. Practice shows what is done, never what works.
 
 ## Before handing back
 

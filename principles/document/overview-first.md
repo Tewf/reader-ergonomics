@@ -25,7 +25,10 @@ The classic advance organizer has a small effect on immediate tests, d = 0.21 (L
 Mayer 1979 predicts it helps most on unfamiliar material. A network map did worse than a hierarchical one, most for readers with little prior knowledge, so a map should follow the domain's own hierarchy (Amadieu 2009). Stating
 what matters lowers learning of what was not named (Klauer 1984).
 
-Overview first is not importance first. The evidence above is for organizers, which announce the parts. Putting the
-most important fact first, as news does, is a different order, and its few direct tests favour narrative order or find
-no difference (Nildam 1998; Sternadori 2008, secondary). When the reader will resist the conclusion, as with bad
-news, explaining first does better (Jansen 2010, secondary).
+Overview first is not importance first: the evidence above is for organizers, which announce the parts. Putting the
+most important fact first, as news does, is a different order. Its few direct tests favour narrative order or find
+no difference (Nildam 1998, a master's thesis; Sternadori 2008, a doctoral thesis, secondary). That is supported
+with caveat, the tests being few and small.
+
+In Dutch bad-news letters, giving the explanation before the decision did
+better (Jansen 2010, secondary): one study in one culture, so a limit to keep in mind, not a rule.

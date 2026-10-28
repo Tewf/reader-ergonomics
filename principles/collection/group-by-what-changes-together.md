@@ -27,4 +27,4 @@ can diverge (Silva 2014).
 
 Where a tool finds files by a folder's name, its convention wins: Maven, Cargo, Rails and Go expect folders such as
 `src/`, `tests/` or `cmd/` (Maven 2026; Cargo 2026; Rails 2026; Go 2026). Those names group by type, yet they
-predict the content of every repository that uses the tool.
+predict the content of every repository that uses the tool. Convention: the tools' own documentation, no study.

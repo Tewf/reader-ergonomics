@@ -25,4 +25,5 @@ claim that dark mode improves reading is **not supported**.
 
 The 4.5:1 floor is a convention under revision: APCA makes the threshold depend on the size and weight of the text
 (APCA 2026), and WCAG 3 has not chosen a method (W3C 2026). It is also widely broken: 83.9% of the million home
-pages WebAIM tested fail it (WebAIM 2026).
+pages WebAIM tested fail it (WebAIM 2026, an automated scan: measured, descriptive). APCA is its author's proposal,
+not yet tested by others.
