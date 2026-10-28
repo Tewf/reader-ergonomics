@@ -29,6 +29,15 @@ would cost money exists but stays off until the maintainer turns it on.
 
 ## Kinds of finding
 
+```text
+ a finding
+  ├─ exact ─────▶ error     the run fails
+  ├─ heuristic ─▶ warning   fix it, or say why it is false
+  └─ open ──────▶ judgment  to a backend: none, flag
+                            (default), local model,
+                            or api (paid, off)
+```
+
 - **error:** certain. The run exits with status 1.
 - **warning:** a heuristic match. Read it; it may be wrong.
 - **judgment:** a question no program can answer exactly, such as "does this file's role fit in one sentence?". It goes to the backend.
@@ -47,12 +56,12 @@ A model's answer is recorded as advice next to its question; it never fails the 
 ## Use
 
 ```sh
-python3 checks/run.py .                       # this repository
-python3 checks/run.py path/to/other/repo      # any repository; its own checks/config.toml wins if present
-python3 checks/run.py . --only links,duplication
+python3 checks/run.py .                # this repository
+python3 checks/run.py path/to/repo     # another; its config wins
+python3 checks/run.py . --only links   # some checks only
 python3 checks/run.py . --online --only references
-python3 checks/run.py . --judge local         # after setting the two environment variables
-python3 -m unittest discover -s checks        # test the checks themselves
+python3 checks/run.py . --judge local  # needs the two variables
+python3 -m unittest discover -s checks # test the checks
 ```
 
 ## On every push

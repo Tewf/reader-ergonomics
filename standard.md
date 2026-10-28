@@ -5,6 +5,22 @@ The principles below are the best current guess for a reader nobody knows, as fa
 
 ## How to use it
 
+```text
+ who reads?
+  ├─ known ──▶ open their reader style
+  │                 │
+  └─ unknown ───────┤
+                    ▼
+              pick the shape
+                    ▼
+          write to the principles
+                    ▼
+          python3 checks/run.py .
+                    ├─▶ error     certain: fix it
+                    ├─▶ warning   fix it, or say why it is false
+                    └─▶ judgment  answer it in needs-judgment.md
+```
+
 1. **Name the reader.** If they are known, open their style in [reader-styles/](reader-styles/).
 2. **Pick the shape** of the document from [shapes/](shapes/).
 3. **Write to the principles** below; each file says what it asks, why, and where it stops.
@@ -24,6 +40,21 @@ Every principle says how strong its evidence is, and never claims more.
 - **not supported:** tested, and the effect was not found.
 
 ## Principles
+
+The principles act at four scales; the first three nest, the fourth is how all of them are shown.
+
+```text
+ ┌ collection: folders and files ─────────────────────────┐
+ │ what the reader navigates                              │
+ │ ┌ document: one file ──────────────────────────────┐   │
+ │ │ the order and depth the reader follows           │   │
+ │ │ ┌ sentence ──────────────────────────────────┐   │   │
+ │ │ │ what the reader holds in memory            │   │   │
+ │ │ └────────────────────────────────────────────┘   │   │
+ │ └──────────────────────────────────────────────────┘   │
+ └────────────────────────────────────────────────────────┘
+   page: how all three are shown (figures, signals, type)
+```
 
 <!-- principles:start -->
 

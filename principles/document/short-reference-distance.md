@@ -21,9 +21,18 @@ shorter than random reorderings in all 37 languages tested (Futrell et al. 2015)
 The order can be computed. Write the concepts as a graph, an edge u → v meaning v uses u, and an order π that puts u
 before v. The total distance is
 
-$$D(\pi) = \sum_{u \to v} \big(\pi(v) - \pi(u)\big) = \sum_x \pi(x)\,\big(\mathrm{in}(x) - \mathrm{out}(x)\big),$$
+$$D(\pi) = \sum_{u \to v} \big(\pi(v) - \pi(u)\big) = \sum_x \pi(x)\,\big(\mathrm{in}(x) - \mathrm{out}(x)\big).$$
 
-a weighted sum of positions under precedence: single-machine scheduling, solvable in polynomial time when the
+For example, with three prerequisite edges:
+
+```text
+ A ──▶ B ──▶ C     order     A→B  B→C  A→D   total
+ └──▶ D            A B C D    1    1    3      5
+                   A B D C    1    2    2      5
+                   A D B C    2    1    1      4  ← shortest
+```
+
+In general it is a weighted sum of positions under precedence: single-machine scheduling, solvable in polynomial time when the
 prerequisites form a forest (Lawler 1978, secondary). Without precedence it is Minimum Linear Arrangement, NP-complete
 in general (Garey et al. 1976) and polynomial on trees (Chung 1984).
 

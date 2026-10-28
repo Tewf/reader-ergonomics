@@ -20,6 +20,13 @@ Among 512 web targets, two levels of 16 by 32 were found fastest (36 s), 32 by 1
 slowest (58 s) (Larson 1998). Among 64 menu targets, two levels of eight beat both deeper and flatter menus (Miller 1981).
 Needless depth costs more than breadth.
 
+```text
+ time to find one of 512 targets (Larson 1998), one mark per 2 s
+ 16 × 32, two levels      ██████████████████          36 s
+ 32 × 16, two levels      ███████████████████████     46 s
+ 8 × 8 × 8, three levels  █████████████████████████████ 58 s
+```
+
 ## Limits
 
 The studies timed search for a named target through category labels. Developers mostly reach code by search, about

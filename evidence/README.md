@@ -5,6 +5,18 @@ One folder per topic, each a literature review in five steps, so that every prin
 
 ## The steps, the same in every topic
 
+```text
+ frame             the field's name for the problem
+   ▼
+ review            surveys, seminal work, forward citations
+   ▼   └─▶ against null results, disputes, failed replications
+ state of the art  who holds the record, measured how
+   ▼
+ position          known, unknown, what this repository adds
+   ▼
+ baseline          what the principles are compared against
+```
+
 | File | Step |
 |---|---|
 | `frame.md` | 1. the problem in one sentence, and what the field calls it: names, acronyms, synonyms |
