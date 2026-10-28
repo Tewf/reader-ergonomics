@@ -13,7 +13,7 @@ Every work cited anywhere in this repository, once. The text cites `Author Year`
 | Akhmadeeva 2016 | Akhmadeeva, Tukhvatullin, Veytsman (2016). Do we need justified text? TUGboat 37(2) | https://tug.org/TUGboat/tb37-2/tb116akhmadeeva.pdf |
 | Alemany-Puig 2022 | Alemany-Puig, Esteban, Ferrer-i-Cancho (2022). Minimum projective linearizations of trees in linear time. Information Processing Letters, 174, 106204. Code: Linear Arrangement Library. | https://doi.org/10.1016/j.ipl.2021.106204 , https://github.com/LAL-project/linear-arrangement-library |
 | Alemdag 2025 | Alemdag, Eichelmann, Narciss (2025). Learning from erroneous examples, meta-analysis. Review of Educational Research | https://doi.org/10.3102/00346543251390901 |
-| Alfieri 2013 | Alfieri, Nokes-Malach, Schunn (2013). Learning through case comparisons. Educational Psychologist | https://doi.org/10.1080/00461520.2013.775712 |
+| Alfieri 2013 | Alfieri, Nokes-Malach, Schunn (2013). Learning through case comparisons: a meta-analytic review. Educational Psychologist | https://doi.org/10.1080/00461520.2013.775712 |
 | Amadieu 2009 | Amadieu, van Gog, Paas, Tricot, Mariné (2009). Prior knowledge and concept-map structure. Learning and Instruction | https://doi.org/10.1016/j.learninstruc.2009.02.005 |
 | Anthropic 2026a | Anthropic (2026). Prompting best practices. Claude developer documentation | https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices |
 | Anthropic 2026b | Anthropic (2026). How Claude remembers your project. Anthropic documentation | https://code.claude.com/docs/en/memory |
@@ -206,7 +206,7 @@ Every work cited anywhere in this repository, once. The text cites `Author Year`
 | Knuth 1989 | Knuth, Larrabee, Roberts (1989). Mathematical Writing | https://www.phys.uconn.edu/~rozman/Courses/P2400_14S/downloads/knuth_mathematical_writing.pdf |
 | Ko 2006 | Ko, Myers, Coblenz, Aung (2006). An exploratory study of how developers seek, relate, and collect relevant information during software maintenance tasks. IEEE TSE | https://doi.org/10.1109/TSE.2006.116 |
 | Kobak 2025 | Kobak, González-Márquez, Horvát, Lause (2025). Delving into LLM-assisted writing in biomedical publications through excess vocabulary. Science Advances 11(27). | doi:10.1126/sciadv.adt3813 |
-| Kobayashi 2005 | Kobayashi (2005). What limits the encoding effect of note-taking? Contemporary Educational Psychology | https://doi.org/10.1016/j.cedpsych.2004.10.001 |
+| Kobayashi 2005 | Kobayashi (2005). What limits the encoding effect of note-taking? A meta-analytic examination. Contemporary Educational Psychology | https://doi.org/10.1016/j.cedpsych.2004.10.001 |
 | Kohler 2012 | Kohler, Fampa, Araujo (2012). Mixed-integer linear programming formulations for the software clustering problem. Computational Optimization and Applications | https://doi.org/10.1007/s10589-012-9512-9 |
 | Korf 1985 | Korf (1985). Depth-first iterative-deepening: an optimal admissible tree search. Artificial Intelligence 27(1), 97-109. | https://doi.org/10.1016/0004-3702%2885%2990084-0 |
 | Koru 2008 | Koru, El Emam, Zhang, Liu, Mathew (2008). Theory of relative defect proneness. Empirical Software Engineering | https://doi.org/10.1007/s10664-008-9080-x |
@@ -246,7 +246,7 @@ Every work cited anywhere in this repository, once. The text cites `Author Year`
 | Lohrey 2013b | Lohrey, Maneth, Mennicke (2013). XML compression via DAGs. ICDT | https://doi.org/10.1145/2448496.2448506 |
 | Lohrey 2015 | Lohrey (2015). Grammar-based tree compression. DLT | https://doi.org/10.1007/978-3-319-21500-6_3 |
 | Loibl 2017 | Loibl, Roll, Rummel (2017). Towards a Theory of When and How Problem Solving Followed by Instruction Supports Learning. Educational Psychology Review. | https://doi.org/10.1007/s10648-016-9379-x |
-| Luiten 1980 | Luiten, Ames, Ackerson (1980). Advance organizers, meta-analysis. AERJ. | https://doi.org/10.3102/00028312017002211 |
+| Luiten 1980 | Luiten, Ames, Ackerson (1980). A meta-analysis of the effects of advance organizers on learning and retention. American Educational Research Journal. | https://doi.org/10.3102/00028312017002211 |
 | Lulla 2026 | Lulla, Mohsenimofidi, Galster, Zhang, Baltes, Treude (2026). On the Impact of AGENTS.md Files on the Efficiency of AI Coding Agents. Preprint. | arXiv:2601.20404 |
 | MacCormack 2006 | MacCormack, Rusnak, Baldwin (2006). Exploring the structure of complex software designs. Management Science | https://doi.org/10.1287/mnsc.1060.0552 |
 | Madrid 2009 | Madrid, van Oostendorp, Puerta Melguizo (2009). The effects of the number of links and navigation support on cognitive load and learning with hypertext. Computers in Human Behavior | https://doi.org/10.1016/j.chb.2008.06.005 |
@@ -337,7 +337,7 @@ Every work cited anywhere in this repository, once. The text cites `Author Year`
 | Poesio 2004 | Poesio, Stevenson, Di Eugenio, Hitzeman (2004). Centering: A parametric theory and its instantiations. Computational Linguistics, 30(3), 309-363. | https://doi.org/10.1162/0891201041850911 |
 | Pollock 2002 | Pollock, Chandler, Sweller (2002). Assimilating complex information. Learning and Instruction | https://doi.org/10.1016/S0959-4752%2801%2900016-0 |
 | Ponce 2022 | Ponce, Mayer, Méndez (2022). Effects of learner-generated highlighting and instructor-provided highlighting on learning from text. Educational Psychology Review | https://doi.org/10.1007/s10648-021-09654-1 |
-| Ponce 2023 | Ponce, Mayer, Méndez (2023). Learner-generated and instructor-provided outlining, meta-analysis. Educational Research Review. | https://doi.org/10.1016/j.edurev.2023.100538 |
+| Ponce 2023 | Ponce, Mayer, Méndez (2023). Effects of learner-generated outlining and instructor-provided outlining on learning from text: a meta-analysis. Educational Research Review. | https://doi.org/10.1016/j.edurev.2023.100538 |
 | Ponce 2025 | Ponce, Mayer, Méndez (2025). Graphic organizers as aids to learning from text, meta-analysis. Educational Psychology Review. | https://doi.org/10.1007/s10648-025-10084-6 |
 | Potdar 2014 | Potdar, Shihab (2014). An exploratory study on self-admitted technical debt. ICSME | https://doi.org/10.1109/ICSME.2014.31 |
 | Praditwong 2011 | Praditwong, Harman, Yao (2011). Software module clustering as a multi-objective search problem. IEEE TSE | https://doi.org/10.1109/TSE.2010.26 |
@@ -410,7 +410,7 @@ Every work cited anywhere in this repository, once. The text cites `Author Year`
 | Tam 2024 | Tam, Wu, Tsai, Lin, Lee, Chen (2024). Let Me Speak Freely? A Study on the Impact of Format Restrictions on Performance of Large Language Models. EMNLP 2024. | arXiv:2408.02442 |
 | Tarr 1999 | Tarr, Ossher, Harrison, Sutton (1999). N degrees of separation: multi-dimensional separation of concerns. ICSE | https://doi.org/10.1145/302405.302457 |
 | Temperley 2018 | Temperley, Gildea (2018). Minimizing syntactic dependency lengths: Typological/cognitive universal? Annual Review of Linguistics, 4, 67-80. | https://doi.org/10.1146/annurev-linguistics-011817-045617 |
-| Tetzlaff 2025 | Tetzlaff, Simonsmeier, Peters, Brod (2025). Expertise reversal, meta-analysis. Learning and Instruction | https://doi.org/10.1016/j.learninstruc.2025.102142 |
+| Tetzlaff 2025 | Tetzlaff, Simonsmeier, Peters, Brod (2025). A cornerstone of adaptivity: a meta-analysis of the expertise reversal effect. Learning and Instruction | https://doi.org/10.1016/j.learninstruc.2025.102142 |
 | textstat 2026 | textstat contributors (2026). textstat, MIT licence. GitHub | https://github.com/textstat/textstat |
 | Thomas 2019 | Thomas, Hunt (2019). The Pragmatic Programmer, 20th anniversary edition. Addison-Wesley | https://pragprog.com/titles/tpp20/the-pragmatic-programmer-20th-anniversary-edition/ |
 | Tian 2022 | Tian, Zhang, Stol, Jiang, Liu (2022). What makes a good commit message? International Conference on Software Engineering | https://doi.org/10.1145/3510003.3510205 |
