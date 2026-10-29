@@ -1,6 +1,9 @@
 # 0002: The checks run in tiers, each as often as its cost allows
 
-**Status:** accepted, 2026-10-29, in v1.1.0.
+**Decision:** each tier of checks runs as often as its cost allows, and what no program can decide is written down
+for judgment.
+
+**Status:** accepted, 2026-10-29, in v1.1.0. **Shape:** [decision record](../shapes/decision-record.md).
 
 ## Context
 
@@ -33,3 +36,7 @@ them on every change, and a push waits for downloads; run them rarely, and a reg
 - **The program tier alone.** Free and fast, but meaning and sentence structure would never be checked.
 - **A paid model as the default judge.** Answers without a person, at a cost on every push, and a model would be
   judging text that a model may have written.
+
+## See also
+
+[Decisions](README.md); the checks and their tiers, [checks](../checks/README.md).

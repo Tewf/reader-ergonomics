@@ -1,6 +1,9 @@
 # 0001: The extensions depend on the standard, never the reverse
 
-**Status:** accepted, 2026-10-29, in v1.1.0.
+**Decision:** an extension depends on the standard and the standard on no extension; each genre has a repository
+of its own, by convention.
+
+**Status:** accepted, 2026-10-29, in v1.1.0. **Shape:** [decision record](../shapes/decision-record.md).
 
 ## Context
 
@@ -38,3 +41,7 @@ which said the standard never links to them.
   own so that the standard could be declared done. A branch cannot be released or pinned apart from the rest.
 - **The standard gathering the extensions' principles into its card.** Readers would see everything in one place,
   but the standard would depend on every extension, and a cycle would join the two levels.
+
+## See also
+
+[Decisions](README.md); the contract the extensions rely on, [extending.md](../extending.md).

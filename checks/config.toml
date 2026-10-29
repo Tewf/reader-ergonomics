@@ -53,7 +53,8 @@ exempt = ["evidence/bibliography.md", "standard.md", "llms.txt"]   # titles, and
 facets = ["collection", "document", "sentence", "page"]   # the principle groups, in the order the card shows them
 
 [shape_conformance]
-shapes = []   # e.g. { name = "note", files = ["notes/*.md"], required = ["In three points", "Check yourself"] }
+shapes = [{ name = "decision record", files = ["decisions/0*.md"], required = ["Context", "Decision", "Consequences", "See also"] }]
+# e.g. { name = "note", files = ["notes/*.md"], required = ["In three points", "Check yourself"] }
 
 [long_sentences]
 max_words = 35   # PROVISIONAL

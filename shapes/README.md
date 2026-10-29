@@ -13,6 +13,7 @@ the skeletal-notes effect at the scale of a collection
 | [readme-and-folder.md](readme-and-folder.md) | what a folder holds and how to use it, read by someone who arrived from a search |
 | [report.md](report.md) | a solved problem explained step by step, so the reader can solve the next one |
 | [commit.md](commit.md) | why a change was made, in the version history |
+| [decision-record.md](decision-record.md) | one choice that shapes more than one file, and why it was made |
 
 ## Choosing a shape
 

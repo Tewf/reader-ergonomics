@@ -101,6 +101,7 @@ Every work cited anywhere in this repository, once. The text cites `Author Year`
 | El Emam 2002 | El Emam, Benlarbi, Goel, Melo, Lounis, Rai (2002). The optimal class size for object-oriented software. IEEE TSE | https://doi.org/10.1109/TSE.2002.1000452 |
 | ESLint 2026a | ESLint (accessed 2026). max-lines rule. ESLint documentation | https://eslint.org/docs/latest/rules/max-lines |
 | ESLint 2026b | ESLint (accessed 2026). max-lines-per-function rule. ESLint documentation | https://eslint.org/docs/latest/rules/max-lines-per-function |
+| Falessi 2010 | Falessi, Babar, Cantone, Kruchten (2010). Applying empirical software engineering to software architecture: challenges and lessons learned. Empirical Software Engineering 15(3); reports the Falessi 2006 experiment | https://doi.org/10.1007/s10664-009-9121-0 |
 | Fang 2019 | Fang, Ren, Hu, Graesser (2019). Effectiveness of ALEKS, meta-analysis. Educational Psychology | https://doi.org/10.1080/01443410.2018.1495829 |
 | Fenton 1999 | Fenton, Neil (1999). A critique of software defect prediction models. IEEE TSE | https://doi.org/10.1109/32.815326 |
 | Ferrer-i-Cancho 2015 | Ferrer-i-Cancho, Gómez-Rodríguez (2015). Liberating language research from dogmas of the 20th century. Commentary on Futrell et al. 2015. | https://arxiv.org/abs/1509.03295 |
@@ -226,6 +227,7 @@ Every work cited anywhere in this repository, once. The text cites `Author Year`
 | Lawrance 2013 | Lawrance, Bogart, Burnett, Bellamy, Rector, Fleming (2013). How programmers debug, revisited: an information foraging theory perspective. IEEE TSE | https://doi.org/10.1109/TSE.2010.111 |
 | Lawrie 2006 | Lawrie, Morrell, Feild, Binkley (2006). What's in a name? A study of identifiers. ICPC | https://doi.org/10.1109/ICPC.2006.51 |
 | Lawrie 2007 | Lawrie, Morrell, Feild, Binkley (2007). Effective identifier names for comprehension and memory. Innovations in Systems and Software Engineering | https://doi.org/10.1007/s11334-007-0031-2 |
+| Lee 1997 | Lee (1997). Design rationale systems: understanding the issues. IEEE Expert. Read in a summary | https://doi.org/10.1109/64.592267 |
 | Lee 2018 | Lee (2018). Ten simple rules for documenting scientific software. PLOS Computational Biology | https://doi.org/10.1371/journal.pcbi.1006561 |
 | Lee 2026 | Lee, D'Antoni, Berg-Kirkpatrick (2026). The Format Tax. Preprint. | arXiv:2604.03616 |
 | Legge 2011 | Legge, Bigelow (2011). Does print size matter for reading? A review of findings from vision science and typography. Journal of Vision | https://doi.org/10.1167/11.5.8 |
@@ -411,6 +413,7 @@ Every work cited anywhere in this repository, once. The text cites `Author Year`
 | Syer 2015 | Syer, Nagappan, Adams, Hassan (2015, online 2014). Replicating and re-evaluating the theory of relative defect-proneness. IEEE TSE | https://doi.org/10.1109/TSE.2014.2361131 |
 | Szyfelbein 2026 | Szyfelbein, Dereniowski (2026). Hierarchical F-clustering: approximation and hardness of clustering into trees | https://arxiv.org/abs/2607.13217 |
 | Tam 2024 | Tam, Wu, Tsai, Lin, Lee, Chen (2024). Let Me Speak Freely? A Study on the Impact of Format Restrictions on Performance of Large Language Models. EMNLP 2024. | arXiv:2408.02442 |
+| Tang 2006 | Tang, Babar, Gorton, Han (2006). A survey of architecture design rationale. Journal of Systems and Software. Read in a summary | https://doi.org/10.1016/j.jss.2006.04.029 |
 | Tarr 1999 | Tarr, Ossher, Harrison, Sutton (1999). N degrees of separation: multi-dimensional separation of concerns. ICSE | https://doi.org/10.1145/302405.302457 |
 | Temperley 2018 | Temperley, Gildea (2018). Minimizing syntactic dependency lengths: Typological/cognitive universal? Annual Review of Linguistics, 4, 67-80. | https://doi.org/10.1146/annurev-linguistics-011817-045617 |
 | Tetzlaff 2025 | Tetzlaff, Simonsmeier, Peters, Brod (2025). A cornerstone of adaptivity: a meta-analysis of the expertise reversal effect. Learning and Instruction | https://doi.org/10.1016/j.learninstruc.2025.102142 |
