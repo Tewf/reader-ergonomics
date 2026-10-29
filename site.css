@@ -22,3 +22,12 @@ main.content li {
 main.content table {
   font-size: 1rem;
 }
+
+/* On a phone, a figure drawn in characters shrinks to show its 60 columns whole, down to 9 px, rather than hide
+   its right side behind a scrollbar (figure-width keeps figures within 60). A monospace character is about
+   0.6 em wide, so 60 columns take 36 em; on a 375 px screen that is 9 px, measured. Body text keeps its size. */
+@media (max-width: 600px) {
+  main.content pre {
+    font-size: clamp(9px, calc((100vw - 3.5rem) / 36), 1rem);
+  }
+}
