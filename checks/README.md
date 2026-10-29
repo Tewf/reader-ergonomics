@@ -123,3 +123,16 @@ markdownlint MD045 (alt text only), Vale's conditional rule (acronyms only) and 
 
 The rendered page: contrast and measure are checked on the stylesheet's declared values, not on the pixels. A browser
 accessibility checker measures the rendered page exactly.
+
+## What passes here without being exercised
+
+Some checks pass on this repository without being exercised: what they read does not exist here, or they are
+switched off. A clean run is no proof that they work; their tests in [test_checks.py](test_checks.py) are.
+
+| Check | Why it finds nothing here | Where it bites |
+|---|---|---|
+| `standard-pin`, `standard-links` | no workflow checks out the standard, since this is the standard | in each extension |
+| `bibliography-keys`, against the family | `family = []`: this standard reads no extension ([decision 0003](../decisions/0003-one-key-one-work-across-the-family.md)); a key held twice in one file is still checked | in each extension |
+| `provisional-tags` | a tag becomes a question after 90 days, and the history began on 2026-10-28 | from late January 2027 |
+| `references`, online | resolves links only with `--online` | in the weekly CI run |
+| `decision-records`, its cost question | `ask_costs = false` in config | when set to true |
