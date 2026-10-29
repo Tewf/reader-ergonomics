@@ -16,9 +16,12 @@ The principles below are the best current guess for a reader nobody knows, as fa
           write to the principles
                     ▼
           python3 checks/run.py .
-                    ├─▶ error     certain: fix it
-                    ├─▶ warning   fix it, or say why it is false
-                    └─▶ judgment  answer it in checks/judgments.toml
+                    ├─▶ error
+                    │     certain: fix it
+                    ├─▶ warning
+                    │     fix it, or say why it is false
+                    └─▶ judgment
+                          answer it in checks/judgments.toml
 ```
 
 1. **Name the reader.** If they are known, open their style in [reader-styles/](reader-styles/).

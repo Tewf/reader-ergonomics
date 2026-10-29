@@ -22,7 +22,8 @@ was slower (Larson 1998). Among 64 menu targets, two levels of eight beat both d
 Needless depth costs more than breadth.
 
 ```text
- time to find an item among 512 (Larson 1998), one mark per 2 s
+ time to find an item among 512 (Larson 1998)
+ one mark per 2 s
  16 × 32, two levels      ██████████████████          36 s
  32 × 16, two levels      ███████████████████████     46 s
  8 × 8 × 8, three levels  █████████████████████████████ 58 s

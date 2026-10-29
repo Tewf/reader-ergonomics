@@ -10,10 +10,16 @@ This page is the contract between the standard and its extensions. It says how a
 parts of this repository it can rely on when this one changes.
 
 ```text
- this standard (the common ground)        an extension (one genre)
- standard.md, principles/  ◀── links ───  standard.md, principles/   only where the genre differs
- checks/run.py             ◀── runs ────  checks/local/              its own checks, run beside these
- checks/config.toml        ◀── extends ─  checks/config.toml         only the values it changes
+ an extension (one genre)
+  ├─ standard.md, principles/
+  │    only where the genre differs
+  │    ── links ──▶ this standard's standard.md, principles/
+  ├─ checks/local/
+  │    its own checks, run beside the standard's
+  │    ── run by ──▶ this standard's checks/run.py
+  └─ checks/config.toml
+       only the values it changes
+       ── extends ──▶ this standard's checks/config.toml
 ```
 
 The arrows point one way. This standard depends on no extension: it never reads, runs or copies what an extension

@@ -8,13 +8,12 @@ and none costs money: the one paid backend exists but is off.
 
 ## Tiers, and how often they run
 
-```text
- tier       needs                            runs                    finds
- program    the Python standard library      every push              errors, warnings, questions
- meaning    sentence embeddings (fastembed)  every push, model cached questions
- syntax     a parser (spaCy)                 weekly, and on demand   warnings
- judgment   a person, or a model if given    every push: listed      answers
-```
+| Tier | Needs | Runs | Finds |
+|---|---|---|---|
+| program | the Python standard library | every push | errors, warnings, questions |
+| meaning | sentence embeddings (fastembed) | every push, model cached | questions |
+| syntax | a parser (spaCy) | weekly, and on demand | warnings |
+| judgment | a person, or a model if given | every push: listed | answers |
 
 | Folder | Holds |
 |---|---|

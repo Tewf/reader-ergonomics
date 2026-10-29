@@ -36,16 +36,14 @@ Definitions:
 - **Depth 3**: proofs, derivations, and every link that leaves the unit.
 - **Task set** of a unit: notions the unit's exercises or goals require, plus notions marked as must-know, plus their ancestors on the unit's map.
 
-```text
-1 subject map, once                     no link opened
-2 next unit whose prerequisites are done
-3 depth 1 for all notions               no link opened
-4 read exercise requirements, list the task set; try the first question 5 min (PROVISIONAL)
-5 depth 2 for the task set only, in map order; after each, explain it in two lines from memory
-6 check failed? depth 3 on that link only; then check again
-7 worked example, then paired exercise; stalled 10 min (PROVISIONAL): unfold one step
-8 unit done when a self-test passes unaided, and again a day later
-```
+1. Subject map, once; no link opened.
+2. The next unit whose prerequisites are done.
+3. Depth 1 for all notions; no link opened.
+4. Read the exercise requirements and list the task set; try the first question for 5 min (PROVISIONAL).
+5. Depth 2 for the task set only, in map order; after each, explain it in two lines from memory.
+6. A check failed? Depth 3 on that link only, then check again.
+7. A worked example, then a paired exercise; stalled for 10 min (PROVISIONAL), unfold one step.
+8. The unit is done when a self-test passes unaided, and again a day later.
 
 Stop rule, per notion:
 1. Depth 1 always.
