@@ -144,7 +144,8 @@ answers = "checks/judgments.toml"   # answers kept with the repository; an edit 
 timeout_seconds = 120
 
 [judgment_quotes]
-optional = []   # checks whose answers need not quote their file; every answer quotes it by default
+optional = ["co-change", "tree-shape"]   # questions about paths: a quote is checked when given, not required.
+# Requiring one would fail extensions whose path answers quote nothing, so it waits for a major version.
 
 [judgment.api]
 enabled = false    # PROVISIONAL: paid; stays off until the maintainer turns it on
