@@ -70,7 +70,7 @@ These parts are stable within a major version. An extension relies on them and o
 | Principle file | `principles/<group>/<name>.md`; a first line `# Title`; the lines `**Claim:**`, `**Grade:**`, `**Evidence:**`, `**Check:**` (check names in backticks) and `**Reader styles:**` |
 | Group | `principles/<group>/README.md`, whose first line is the group's heading |
 | Card | `standard.md` holds `<!-- principles:start -->` and `<!-- principles:end -->`; the table between them is built from the principle files |
-| Bibliography | `evidence/bibliography.md`, a table `Key | Citation | Link`; a key is `Surname Year`, with one letter after the year at most, and names one work across the repositories listed in `[bibliography_keys] family` (`bibliography-keys`) |
+| Bibliography | `evidence/bibliography.md`, a table `Key | Citation | Link`; a key is `Surname Year`, with one letter after the year at most, or for an organisation one title word instead (`Microsoft 2026 icons`), and names one work across the repositories listed in `[bibliography_keys] family` (`bibliography-keys`) |
 | Command | `python3 checks/run.py ROOT [--tiers ...] [--only ...] [--online] [--judge ...]`; it exits with 1 when any exact check fails, and with 2 when it could check nothing: ROOT is not a folder, the config is missing or invalid, or no file is in scope |
 | Config | `checks/config.toml` with `extends = "reader-ergonomics"` is merged onto this standard's config, table by table, and the extension's value wins; any other `extends` stops the run |
 | Local checks | each module in `checks/local/` defines `NAME` and `check(root, config)`, which returns `Finding` objects from `framework.check_api`; `TIER` is optional |
@@ -84,7 +84,8 @@ A bibliography key names one work across the family ([decision 0003](decisions/0
 
 - when two works share a key, this standard's key wins;
 - between extensions, the older use wins: the first commit on the default branch that adds the row;
-- the work that loses the key takes the next letter free in the family;
+- the work that loses the key takes the next letter free in the family, or, for an organisation, a title word
+  ([decision 0004](decisions/0004-an-organisation-key-may-carry-a-title-word.md));
 - the year in a key is the year of the version read, and an undated page takes the year it was read.
 
 A stylesheet listed in config that does not exist is a warning, so an extension that loads this standard's `site.css`

@@ -601,6 +601,12 @@ class TestBibliographyKeys(unittest.TestCase):
         self.assertEqual(self.found(family=["that"]), [
             "warning 4 'Gebru 2021' is 'Gebru 2018' in that (line 4, arxiv:1803.09010): one work, one key across the family"])
 
+    def test_title_words_tell_an_organisation_s_keys_apart(self) -> None:
+        self.bibliography("this", "Microsoft 2026 icons | Icons | https://example.org/icons",
+                          "Microsoft 2026 ADR | Records | https://example.org/adr",
+                          "Microsoft 2026 Icons | Icons again | https://example.org/icons-2")
+        self.assertEqual(self.found(), ["error 5 key 'Microsoft 2026 Icons' is also the key of line 3: a citation cannot say which it means"])
+
     def test_this_repository_in_its_own_family_is_skipped_and_a_missing_member_is_reported(self) -> None:
         self.bibliography("this", "Liu 2024 | Lost in the middle | https://doi.org/10.1162/tacl")
         self.assertEqual(self.found(family=["this", "gone"]), [
@@ -613,6 +619,22 @@ class TestCitationKeys(unittest.TestCase):
         keys = [match.group(1) for match in citations.CITATION.finditer(
             "ter Beek 2022, ten Cate 2014 and van der Meer 2019 agree; after 2022, nothing.")]
         self.assertEqual(keys, ["ter Beek", "ten Cate", "van der Meer"])
+
+    def test_an_organisation_s_title_word_joins_its_key_only_when_the_bibliography_holds_it(self) -> None:
+        from program import citations
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            (root / "evidence").mkdir()
+            (root / "evidence" / "bibliography.md").write_text(
+                "| Key | Citation | Link |\n|---|---|---|\n| Microsoft 2026 icons | Icons | https://example.org/icons |\n"
+                "| Microsoft 2026 ADR | Records | https://example.org/adr |\n| Google 2024 | Style | https://example.org/style |\n"
+                "| Unused 2020 word | Unused | https://example.org/unused |\n", encoding="utf-8")
+            (root / "evidence" / "note.md").write_text(
+                "# Note\n\nMicrosoft 2026 icons and Microsoft 2026 ADR differ. Google 2024 recommends a plain style. "
+                "Unused 2020 alone names no row.\n", encoding="utf-8")
+            found = sorted(finding.message for finding in citations.check(root, {"citations": {"files": ["evidence/"]}}))
+        self.assertEqual(found, ["'Unused 2020' has no entry in evidence/bibliography.md",
+                                 "entry 'unused2020word' is cited nowhere"])
 
 
 if __name__ == "__main__":

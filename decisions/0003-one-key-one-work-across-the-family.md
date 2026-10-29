@@ -3,7 +3,8 @@
 **Decision:** each repository compares its bibliography with the bibliographies its config names in
 `[bibliography_keys] family`; this standard names none, so the extensions read their siblings and it reads no one.
 
-**Status:** accepted, 2026-10-29, in v1.5.0. **Shape:** [decision record](../shapes/decision-record.md).
+**Status:** accepted, 2026-10-29, in v1.5.0; an organisation's key may carry a title word instead of the letter
+([0004](0004-an-organisation-key-may-carry-a-title-word.md)). **Shape:** [decision record](../shapes/decision-record.md).
 
 ## Context
 

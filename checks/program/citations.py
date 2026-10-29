@@ -6,6 +6,11 @@ years for one author (`Kester 2001, 2004`). It matches the
 bibliography entry keyed by the first surname and the year, compared without case, accents,
 spaces or punctuation. The bibliography is a markdown table whose first column is the key.
 
+An organisation that publishes many pages a year may key them by a title word after the year
+instead of a letter (`Microsoft 2026 icons`). The word after the last year joins the key only when
+the bibliography holds that longer key, so "Microsoft 2026 recommends" still cites `Microsoft 2026`
+([decision 0004](../../decisions/0004-an-organisation-key-may-carry-a-title-word.md)).
+
 An organisation as author ("Ad Hoc Working Group 1987") is found by trying the capitalised
 words just before the match; a name written in lower case ("eLife 2020") counts as a
 citation only when it matches an entry, and is never reported.
@@ -27,6 +32,7 @@ PARTICLE = r"(?:(?:[Vv]an|[Vv]on|[Dd]e|[Dd]er|[Dd]en|[Dd]u|[Dd]a|[Dd]i|[Dd]os|[D
 SURNAME = rf"{PARTICLE}*(?:[A-Z][a-z]{{0,3}}\.\s)?[A-ZÀ-Ý][\w'’-]+"
 YEAR = r"(?:1[89]|20)\d\d[a-z]?"
 LOWERCASE_NAME = re.compile(r"\b([a-z][a-z]*[A-Za-z]*)\s((?:1[89]|20)\d\d[a-z]?)\b")
+TITLE_WORD = re.compile(r"[ \t]+([A-Za-z0-9][A-Za-z0-9-]*)")  # "Microsoft 2026 icons"
 CITATION = re.compile(rf"\b({SURNAME})(?:\s+(?:et al\.|(?:&|and)\s+{SURNAME}(?:\s[A-ZÀ-Ý][\w'’-]+)?))?,?\s+({YEAR}(?:,\s{YEAR})*)\b")
 
 
@@ -56,12 +62,14 @@ def check(root: Path, config: dict) -> list[Finding]:
             if surname in never_surnames:
                 continue
             before = re.findall(r"[A-ZÀ-Ý][\w'’-]*", text[max(0, match.start() - 60):match.start()])[-4:]
-            for year in re.findall(YEAR, match.group(2)):  # "Kester 2001, 2004" cites two works
-                key = normalised(surname + year)
-                for words in range(1, len(before) + 1):  # an organisation: "Ad Hoc Working Group 1987"
-                    longer = normalised("".join(before[-words:]) + surname + year)
-                    if longer in keys:
-                        key = longer
+            title = TITLE_WORD.match(text, match.end())
+            years = re.findall(YEAR, match.group(2))
+            for year in years:  # "Kester 2001, 2004" cites two works
+                # an organisation: "Ad Hoc Working Group 1987", longest name first
+                stems = [normalised("".join(before[-words:]) + surname + year) for words in range(len(before), 0, -1)]
+                stems.append(normalised(surname + year))
+                titled = [stem + normalised(title.group(1)) for stem in stems] if title and year == years[-1] else []
+                key = next((candidate for candidate in titled + stems if candidate in keys), stems[-1])
                 cited.add(key)
                 if key not in keys and normalised(surname + year.rstrip("abcdefgh")) not in keys:
                     findings.append(Finding(NAME, path, line_of(text, match.start()),
