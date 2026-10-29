@@ -9,13 +9,13 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from meaning import document_mode, embeddings, paraphrase
+from meaning import document_mode, embeddings, name_content, paraphrase, section_cohesion
 from program import (co_change, cross_file_terms, defined_before_use, duplication, figure_captions, figure_width, figures_present, judgment_quotes, links,
                      logical_lines, long_sentences, name_matches_title, outline_depth, overview_first, paragraph_length,
                      portable_paths, principle_coverage, provisional_tags, readable_measure, references, shape_conformance,
                      standard_card, sufficient_contrast, tree_shape, type_buckets)
 import run
-from syntax import clause_nesting, dependency_length, parser
+from syntax import clause_nesting, dependency_length, parser, sentence_links
 
 CONFIG = {"scope": {"exclude": []}, "tree_shape": {"max_entries": 4, "min_entries": 2, "max_depth": 3},
           "duplication": {"words": 8}, "logical_lines": {"trigger": 3, "ceiling": 10}}
@@ -234,6 +234,20 @@ class TestMeaningTier(ScratchRepository):
         found = paraphrase.check(self.root, dict(CONFIG, paraphrase={"threshold": 0.8, "min_words": 10}))
         self.assertEqual([finding.path for finding in found], ["a/x.md"], found)
 
+    def test_name_content(self) -> None:
+        self.write("contrast-ratio.md", "# Contrast ratio\n\nThe contrast ratio between text and background, and how to measure it.\n")
+        self.write("travel-budget.md", "A proof that every planar graph can be coloured with four colours.\n")
+        found = [finding.path for finding in name_content.check(self.root, dict(CONFIG, name_content={"threshold": 0.3}))]
+        self.assertEqual(found, ["travel-budget.md"])
+
+    def test_section_cohesion(self) -> None:
+        body = " ".join(["The reader keeps the structure of the text in mind while reading each part of it."] * 3)
+        stray = " ".join(["Preheat the oven, butter the tin, and bake the sponge cake for twenty five minutes."] * 3)
+        self.write("a.md", f"# A\n\n## One\n\n{body}\n\n## Two\n\n{body}\n\n## Three\n\n{body}\n\n## Cake\n\n{stray}\n")
+        found = [finding.message for finding in section_cohesion.check(self.root, dict(CONFIG, section_cohesion={"min_words": 20, "threshold": 0.5}))]
+        self.assertEqual(len(found), 1, found)
+        self.assertIn("'Cake'", found[0])
+
     def test_document_mode_runs(self) -> None:
         self.write("a.md", "\n".join(f"Step {index}: do the next thing." for index in range(25)) + "\n")
         self.assertIsInstance(document_mode.check(self.root, CONFIG), list)
@@ -255,6 +269,12 @@ class TestSyntaxTier(ScratchRepository):
                    "paragraphe restent cognitives.\n")
         found = dependency_length.check(self.root, dict(CONFIG, dependency_length={"max_distance": 10}))
         self.assertEqual(found, [])
+
+    def test_sentence_links(self) -> None:
+        self.write("a.md", "The parser reads each sentence. The parser names the subject. Its verb follows. This order holds.\n\n"
+                   "Rain fell on Tuesday. Copper conducts heat. Owls hunt at night. Bread rises with yeast.\n")
+        found = sentence_links.check(self.root, dict(CONFIG, sentence_links={"max_unlinked": 0.5}))
+        self.assertEqual([finding.line for finding in found], [3], found)
 
     def test_clause_nesting(self) -> None:
         self.write("a.md", "The rat that the cat that the dog chased killed ate the malt.\n\nThe cat sat on the mat.\n")
