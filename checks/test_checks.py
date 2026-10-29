@@ -15,8 +15,8 @@ from figures import (figure_alt, figure_captions, figure_contrast, figure_source
 from program import (co_change, cross_file_terms, decision_records, defined_before_use, duplication, judgment_quotes,
                      links, logical_lines, long_sentences, name_matches_title, outline_depth, overview_first,
                      paragraph_length, portable_paths, principle_coverage, provisional_tags, readable_measure,
-                     references, shape_conformance, shape_example, standard_card, sufficient_contrast, tree_shape,
-                     type_buckets)
+                     references, shape_conformance, shape_example, standard_card, standard_pin, sufficient_contrast,
+                     tree_shape, type_buckets)
 import run
 
 CONFIG = {"scope": {"exclude": []}, "tree_shape": {"max_entries": 4, "min_entries": 2, "max_depth": 3},
@@ -611,6 +611,36 @@ class TestBibliographyKeys(unittest.TestCase):
         self.bibliography("this", "Liu 2024 | Lost in the middle | https://doi.org/10.1162/tacl")
         self.assertEqual(self.found(family=["this", "gone"]), [
             "warning 0 family member 'gone' has no evidence/bibliography.md beside this repository: its keys were not compared"])
+
+
+class TestStandardPin(ScratchRepository):
+    STEP = "      - uses: actions/checkout@v4\n        with:\n          repository: Tewf/reader-ergonomics\n{ref}          path: standard\n"
+
+    def workflow(self, name: str, *refs: str) -> None:
+        steps = "".join(self.STEP.format(ref=f"          ref: {ref}   # v1.0.0\n" if ref else "") for ref in refs)
+        self.write(f".github/workflows/{name}.yml", "jobs:\n  build:\n    steps:\n      - uses: actions/checkout@v4\n" + steps)
+
+    def found(self) -> list[str]:
+        return [f"{finding.path}:{finding.line} {finding.message}" for finding in standard_pin.check(self.root, {})]
+
+    def test_one_release_in_every_job_passes(self) -> None:
+        self.workflow("checks", "a" * 40, "a" * 40)
+        self.workflow("pages", "a" * 40)
+        self.assertEqual(self.found(), [])
+
+    def test_a_job_left_on_an_older_release_fails(self) -> None:
+        self.workflow("checks", "a" * 40, "a" * 40)
+        self.workflow("pages", "b" * 40)
+        self.assertEqual(self.found(), [".github/workflows/pages.yml:8 checks out Tewf/reader-ergonomics at bbbbbbb, and "
+                                        ".github/workflows/checks.yml:8 at aaaaaaa: one release for the whole repository, "
+                                        "so one bump moves every job"])
+
+    def test_a_checkout_without_a_ref_fails_and_other_repositories_are_not_read(self) -> None:
+        self.workflow("pages", "")
+        self.write(".github/workflows/other.yml", "jobs:\n  a:\n    steps:\n      - uses: actions/checkout@v4\n"
+                   "        with:\n          repository: Tewf/another\n          ref: main\n")
+        self.assertEqual(self.found(), [".github/workflows/pages.yml:7 checks out Tewf/reader-ergonomics with no ref, "
+                                        "so the latest commit: pin it to the release's commit"])
 
 
 class TestCitationKeys(unittest.TestCase):

@@ -170,6 +170,9 @@ not_surnames = ["WCAG", "Colon", "Classification", "Prolegomena", "Python", "Sin
 family = []         # the repositories that share this one's keys, as folders beside it; this standard names none
 shared_links = []   # links that more than one work carries on purpose, each with its reason in a comment
 
+[standard_pin]
+repository = "Tewf/reader-ergonomics"   # the standard, as its workflows' checkout steps name it
+
 [references]
 files = ["evidence/bibliography.md"]   # where references live; empty means every markdown file
 cache_days = 30

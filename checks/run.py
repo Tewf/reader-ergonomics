@@ -32,14 +32,14 @@ from program import (bibliography_keys, citations, co_change, cross_file_terms, 
                      duplication, judgment_quotes, links, logical_lines, long_sentences, name_matches_title,
                      outline_depth, overview_first, paragraph_length, portable_paths, principle_coverage,
                      provisional_tags, readable_measure, references, shape_conformance, shape_example, standard_card,
-                     sufficient_contrast, tree_shape, type_buckets)
+                     standard_pin, sufficient_contrast, tree_shape, type_buckets)
 from syntax import clause_nesting, dependency_length, sentence_links
 
 CHECKS = [portable_paths, tree_shape, type_buckets, links, logical_lines, outline_depth, overview_first,
           name_matches_title, duplication, defined_before_use, cross_file_terms, shape_conformance, long_sentences,
           paragraph_length, figures_present, figure_captions, figure_width, figure_source_inline, figure_alt, figure_source,
           figure_contrast, typed_figure, readable_measure, sufficient_contrast, citations,
-          bibliography_keys, standard_card, provisional_tags, co_change, principle_coverage, references, judgment_quotes,
+          bibliography_keys, standard_card, standard_pin, provisional_tags, co_change, principle_coverage, references, judgment_quotes,
           decision_records, shape_example,
           paraphrase, document_mode, name_content, section_cohesion,
           dependency_length, clause_nesting, sentence_links]

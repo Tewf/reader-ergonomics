@@ -102,7 +102,8 @@ moved, and a commit cannot. The tag is named in a comment beside the commit:
 ref: <the release's commit, all 40 characters>   # v1.0.0
 ```
 
-The extension moves to a new release deliberately, by changing that line.
+The extension moves to a new release deliberately, by changing that line. Every job that checks out the standard
+names the same commit: the checks, and the site that loads `site.css`. One bump then moves them all (`standard-pin`).
 
 ## Trust
 
