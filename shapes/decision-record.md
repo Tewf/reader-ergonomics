@@ -55,6 +55,9 @@ also.
 3. Consequences include the bad ones, and what must be done to keep the decision true.
 4. An accepted decision is not changed in place: a new record supersedes it, and the old one's status links forward.
    Its wording may be corrected.
+5. A record holds a choice that had alternatives. A change with none, such as a pinned release moved or a dependency
+   bumped, is an entry in the repository's `CHANGELOG.md`. It follows Keep a Changelog (Lacan 2019): newest first,
+   under a dated heading. The standard's own [CHANGELOG](../CHANGELOG.md) is an example.
 
 ## The principles it applies
 

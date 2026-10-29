@@ -28,7 +28,7 @@ from framework.config import load_config
 from meaning import document_mode, name_content, paraphrase, section_cohesion
 from figures import (figure_alt, figure_captions, figure_contrast, figure_source, figure_source_inline, figure_width,
                      figures_present, typed_figure)
-from program import (bibliography_keys, citations, co_change, cross_file_terms, decision_records, defined_before_use,
+from program import (bibliography_keys, changelog_pin, citations, co_change, cross_file_terms, decision_records, defined_before_use,
                      duplication, judgment_quotes, links, logical_lines, long_sentences, name_matches_title,
                      outline_depth, overview_first, paragraph_length, portable_paths, principle_coverage,
                      provisional_tags, readable_measure, references, shape_conformance, shape_example, standard_card,
@@ -39,7 +39,7 @@ CHECKS = [portable_paths, tree_shape, type_buckets, links, logical_lines, outlin
           name_matches_title, duplication, defined_before_use, cross_file_terms, shape_conformance, long_sentences,
           paragraph_length, figures_present, figure_captions, figure_width, figure_source_inline, figure_alt, figure_source,
           figure_contrast, typed_figure, readable_measure, sufficient_contrast, citations,
-          bibliography_keys, standard_card, standard_pin, standard_links, provisional_tags, co_change, principle_coverage, references, judgment_quotes,
+          bibliography_keys, standard_card, standard_pin, standard_links, changelog_pin, provisional_tags, co_change, principle_coverage, references, judgment_quotes,
           decision_records, shape_example,
           paraphrase, document_mode, name_content, section_cohesion,
           dependency_length, clause_nesting, sentence_links]

@@ -7,6 +7,7 @@ certain, a **warning** when it comes from a heuristic, and a **judgment** questi
 | Check | What it verifies | Guarantee |
 |---|---|---|
 | [bibliography_keys.py](bibliography_keys.py) | Bibliography keys: a key names one work, and a work carries one key, in the bibliography and across its family | Exact for a key held twice, in one file or across the family, when the rows' links name their works; one work at two addresses reads as two, so a clash is cleared by giving both rows one link. Heuristic for one work under two keys: a work cited by a DOI in one row and by its preprint in another is seen as one only when a row names both. |
+| [changelog_pin.py](changelog_pin.py) | Changelog pin: the newest pin line of an extension's changelog names the release its workflows check out | Exact for a pin line written as the form gives it. |
 | [citations.py](citations.py) | Citations: every work cited in the text has one entry in the bibliography, and every entry is cited | Heuristic: a capitalised word before a year can be a false citation ("Colon Classification 1933"); config lists words that never start one. |
 | [co_change.py](co_change.py) | Co-change: files that keep changing together should sit together | Coupling in history is evidence, not proof, so every finding is judgment. |
 | [cross_file_terms.py](cross_file_terms.py) | Short reference distance across files: a term defined in one file is linked where another uses it | Heuristic. |

@@ -12,7 +12,7 @@ from pathlib import Path
 
 from figures import (figure_alt, figure_captions, figure_contrast, figure_source, figure_source_inline, figure_width,
                      figures_present, typed_figure)
-from program import (co_change, cross_file_terms, decision_records, defined_before_use, duplication, judgment_quotes,
+from program import (changelog_pin, co_change, cross_file_terms, decision_records, defined_before_use, duplication, judgment_quotes,
                      links, logical_lines, long_sentences, name_matches_title, outline_depth, overview_first,
                      paragraph_length, portable_paths, principle_coverage, provisional_tags, readable_measure,
                      references, shape_conformance, shape_example, standard_card, standard_links, standard_pin,
@@ -675,6 +675,35 @@ class TestStandardLinks(ScratchRepository):
     def test_workflows_with_two_refs_leave_it_to_standard_pin(self) -> None:
         self.write(".github/workflows/pages.yml", self.WORKFLOW.format(pin="d" * 40))
         self.assertEqual(self.found(self.LINK.format(kind="blob", ref="master")), [])
+
+
+class TestChangelogPin(ScratchRepository):
+    PIN = "397a5553d2adbdd136bc3239bf304eb4ae62e2d2"
+    WORKFLOW = ("jobs:\n  checks:\n    steps:\n      - uses: actions/checkout@v4\n        with:\n"
+                "          repository: Tewf/reader-ergonomics\n          ref: {pin}   # v1.16.1\n")
+    ENTRY = "- Pinned reader-ergonomics v{new} (`{commit}`), from v1.13.0 (`7a76cc6`): what it carries.\n"
+
+    def found(self, changelog: str | None, pin: str = PIN) -> list[str]:
+        self.write(".github/workflows/checks.yml", self.WORKFLOW.format(pin=pin))
+        if changelog is not None:
+            self.write("CHANGELOG.md", "# Changelog\n\n## 2026-10-30\n\n### Changed\n\n" + changelog)
+        return [f"{finding.kind} {finding.message}" for finding in changelog_pin.check(self.root, {})]
+
+    def test_a_newest_line_naming_the_pin_passes(self) -> None:
+        self.assertEqual(self.found(self.ENTRY.format(new="1.16.1", commit="397a555")), [])
+
+    def test_a_newest_line_left_on_the_old_release_fails(self) -> None:
+        found = self.found(self.ENTRY.format(new="1.13.0", commit="7a76cc6"))
+        self.assertEqual(found, ["error the newest pin line names v1.13.0 (7a76cc6), but the workflows pin 397a555: "
+                                 "record the move above it"])
+
+    def test_no_changelog_or_no_pin_line_warns(self) -> None:
+        self.assertTrue(self.found(None)[0].startswith("warning the workflows pin Tewf/reader-ergonomics at 397a555"))
+        self.assertTrue(self.found("- Fixed a typo.\n")[0].startswith("warning no line names Tewf/reader-ergonomics"))
+
+    def test_the_standard_itself_finds_nothing(self) -> None:
+        self.write("CHANGELOG.md", "# Changelog\n")
+        self.assertEqual([finding for finding in changelog_pin.check(self.root, {})], [])
 
 
 class TestCitationKeys(unittest.TestCase):

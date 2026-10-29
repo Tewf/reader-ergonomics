@@ -218,6 +218,7 @@ Every work cited anywhere in this repository, once. The text cites `Author Year`
 | Kulik 1990 | Kulik, Kulik, Bangert-Drowns (1990). Effectiveness of mastery learning programs. Review of Educational Research | https://doi.org/10.3102/00346543060002265 |
 | Kumar 2025 | Kumar, Zhuang, Agarwal, Su, Co-Reyes, Singh, et al. (2025). Training Language Models to Self-Correct via Reinforcement Learning. ICLR 2025. | arXiv:2409.12917 |
 | Kuster 2018 | Kuster, van Weerdenburg, Gompel, Bosman (2018). Dyslexie font does not benefit reading in children with or without dyslexia. Annals of Dyslexia | https://doi.org/10.1007/s11881-017-0154-6 |
+| Lacan 2019 | Lacan (2019). Keep a Changelog, version 1.1.0 | https://keepachangelog.com/en/1.1.0/ |
 | Lakos 1996 | Lakos (1996). Large-Scale C++ Software Design. Addison-Wesley | https://www.informit.com/store/large-scale-c-plus-plus-software-design-9780201633627 |
 | Larkin 1987 | Larkin, Simon (1987). Why a diagram is (sometimes) worth ten thousand words. Cognitive Science | https://doi.org/10.1111/j.1551-6708.1987.tb00863.x |
 | Larson 1998 | Larson, Czerwinski (1998). Web page design: implications of memory, structure and scent for information retrieval. CHI | https://doi.org/10.1145/274644.274649 |

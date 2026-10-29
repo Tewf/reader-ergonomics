@@ -112,7 +112,24 @@ the release:
 - every job that checks out the standard names that commit: the checks, and the site that loads `site.css`
   (`standard-pin`);
 - every link from the text into the standard's repository names that commit, or the tag in that line's comment
-  (`standard-links`).
+  (`standard-links`);
+- the newest pin line of the extension's `CHANGELOG.md` names it too (`changelog-pin`).
+
+A move to a new release is not a decision record, since it had no alternative: it is a line in `CHANGELOG.md` at the
+extension's root, the form of Keep a Changelog, newest first. The line says the new release and its commit, the old
+one, and what the new one carries. Its heading is the extension's version and date; an extension with no versions
+uses the date alone:
+
+```markdown
+## 2026-10-29
+
+### Changed
+
+- Pinned reader-ergonomics v1.16.1 (`397a555`), from v1.13.0 (`7a76cc6`): each evidence review opens with what it
+  holds, and a claim is graded clause by clause.
+```
+
+What each release carries is in the standard's [CHANGELOG](CHANGELOG.md).
 
 To run a release's checks on a local copy, extract it inside the extension, in the `checks/out/` that git ignores,
 rather than beside the repositories, where each release would leave a folder behind:
