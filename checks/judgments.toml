@@ -355,7 +355,7 @@ answer = "Keep them apart: config holds `What the checks read`, and decisions/RE
 [[answer]]
 check = "co-change"
 path = "checks/test_checks.py"
-question = "changed together with decisions/0003-one-key-one-work-across-the-family.md in 4 commits (80% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+question = "changed together with decisions/0003-one-key-one-work-across-the-family.md in 5 commits (83% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
 file = "94be4f8a362d"
 answer = "No: it and `decisions/0003-one-key-one-work-across-the-family.md` changed together because the releases that added the key check and then extended its key form wrote the record and the tests in one commit each, not because they serve one purpose."
 
@@ -393,3 +393,17 @@ path = "extending.md"
 question = "reads about equally as how-to and reference: one mode per document?"
 file = "f8d16e87b1ba"
 answer = "Reference: `This page is the contract between the standard and its extensions`, read to look up what an extension may rely on. Its few steps, the pinned `ref:` line and the local run, are what that contract asks of an extension, kept beside the part they serve rather than in a separate how-to."
+
+[[answer]]
+check = "co-change"
+path = "checks/program/bibliography_keys.py"
+question = "changed together with checks/test_checks.py in 3 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+file = "c7a84bade94d"
+answer = "Keep them apart: `checks/test_checks.py` holds the tests of every program check, one class each, so each change to this check changes its class in the same commit. Splitting the tests by check would put thirty files beside one role."
+
+[[answer]]
+check = "co-change"
+path = "checks/program/bibliography_keys.py"
+question = "changed together with decisions/0003-one-key-one-work-across-the-family.md in 3 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+file = "c7a84bade94d"
+answer = "One links the other already: the docstring cites `decision 0003`, the rule this check enforces, and the record links the check in its See also. They change together because each change to the key rule changes both, but the record belongs with the other decisions."
