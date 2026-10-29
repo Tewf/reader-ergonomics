@@ -53,7 +53,7 @@ These parts are stable within a major version. An extension relies on them and o
 | Principle file | `principles/<group>/<name>.md`; a first line `# Title`; the lines `**Claim:**`, `**Grade:**`, `**Evidence:**`, `**Check:**` (check names in backticks) and `**Reader styles:**` |
 | Group | `principles/<group>/README.md`, whose first line is the group's heading |
 | Card | `standard.md` holds `<!-- principles:start -->` and `<!-- principles:end -->`; the table between them is built from the principle files |
-| Bibliography | `evidence/bibliography.md`, a table `Key | Citation | Link`; a key is `Surname Year`, with one letter after the year at most |
+| Bibliography | `evidence/bibliography.md`, a table `Key | Citation | Link`; a key is `Surname Year`, with one letter after the year at most, and names one work across the repositories listed in `[bibliography_keys] family` (`bibliography-keys`) |
 | Command | `python3 checks/run.py ROOT [--tiers ...] [--only ...] [--online] [--judge ...]`; it exits with 1 when any exact check fails, and with 2 when it could check nothing: ROOT is not a folder, the config is missing or invalid, or no file is in scope |
 | Config | `checks/config.toml` with `extends = "reader-ergonomics"` is merged onto this standard's config, table by table, and the extension's value wins; any other `extends` stops the run |
 | Local checks | each module in `checks/local/` defines `NAME` and `check(root, config)`, which returns `Finding` objects from `framework.check_api`; `TIER` is optional |
@@ -62,6 +62,10 @@ These parts are stable within a major version. An extension relies on them and o
 | Site | `site.css` at the root, which an extension's site may load |
 
 A local check counts for `principle-coverage`, so an extension's principle can name a check of its own.
+
+A bibliography key names one work across the family. When two works share a key, this standard's key wins; between
+extensions, the older use wins, and the other work takes the next letter free in the family
+([decision 0003](decisions/0003-one-key-one-work-across-the-family.md)).
 
 A stylesheet listed in config that does not exist is a warning, so an extension that loads this standard's `site.css`
 rather than one of its own sets `stylesheets = []` under `[readable_measure]` and `[sufficient_contrast]`.

@@ -17,7 +17,7 @@ and none costs money: the one paid backend exists but is off.
 
 | Folder | Holds |
 |---|---|
-| [program/](program/) | the checks that need no model: paths, folders, links, size, outline, copies, terms, shapes, sentences, figures, stylesheet, citations, history |
+| [program/](program/) | the checks that need no model: paths, folders, links, size, outline, copies, terms, shapes, sentences, figures, stylesheet, citations, bibliography keys, history |
 | [meaning/](meaning/) | the checks that compare meaning: paraphrased copies, page mode, name against content, section cohesion |
 | [syntax/](syntax/) | the checks that read a parse: [dependency length](../evidence/psycholinguistics/review.md), clause nesting, links between sentences |
 | [framework/](framework/) | what every check is built on: the interface, the prose units, the judgment backends |
@@ -72,9 +72,9 @@ and meaning tiers on every push and pull request. It runs the syntax tier and th
 
 ## What other tools already check
 
-Of the 31 checks, 11 have no counterpart among the tools searched (October 2026). None of those tools checks
+Of the 32 checks, 11 have no counterpart among the tools searched (October 2026). None of those tools checks
 overview first, terms defined across files, a missing figure, document mode, paraphrase, a name against its content,
-or a stylesheet's measure. 13 checks have a partial counterpart, a tool that checks a related but different thing, and
+or a stylesheet's measure. 14 checks have a partial counterpart, a tool that checks a related but different thing, and
 7 have a tool that does the same job. The table below names the closest tool for each, with how it differs.
 
 The program-tier checks stay on the standard library, so one
@@ -89,6 +89,7 @@ command runs them with nothing to install; a repository that already uses one of
 | `sufficient-contrast` | [axe-core](https://github.com/dequelabs/axe-core) | measures the rendered page (see below) |
 | `tree-shape`, for cycles | [import-linter](https://import-linter.readthedocs.io/en/stable/), for Python | cycles and layers per module; none of the tools searched counts the entries of a folder |
 | `portable-paths` | [pre-commit-hooks](https://github.com/pre-commit/pre-commit-hooks) | case conflicts, illegal Windows names and symlinks, as separate hooks |
+| `bibliography-keys` | [bibtex-tidy](https://github.com/FlamingTempura/bibtex-tidy) `--duplicates` | one BibTeX file, by DOI, key, abstract, or author and title; not across repositories |
 | `co-change` | [code-maat](https://github.com/adamtornhill/code-maat) | coupling per file from the history, not per folder |
 
 Partial matches not in the table: ESLint's max-lines (physical lines, not statements), ls-lint (names, not content),

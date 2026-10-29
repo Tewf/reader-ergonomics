@@ -140,6 +140,10 @@ files = ["evidence/", "principles/", "reader-styles/", "shapes/", "decisions/"]
 not_surnames = ["WCAG", "Colon", "Classification", "Prolegomena", "Python", "Since", "In", "From", "Until", "By", "After", "Before", "Around",
                 "CONSORT", "PRISMA", "Lancet", "NEJM", "BMJ", "JAMA", "On"]   # guideline and journal names before a year
 
+[bibliography_keys]
+family = []         # the repositories that share this one's keys, as folders beside it; this standard names none
+shared_links = []   # links that more than one work carries on purpose, each with its reason in a comment
+
 [references]
 files = ["evidence/bibliography.md"]   # where references live; empty means every markdown file
 cache_days = 30

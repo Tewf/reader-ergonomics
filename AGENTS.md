@@ -13,7 +13,7 @@ it lists as the interface without raising the major version.
 ## Rules for claims
 
 - Every principle carries a grade: **measured**, **supported with caveat**, **convention** or **not supported**. A grade moves only with a cited source.
-- Cite in the text as `Author Year`. The full entry goes once into [evidence/bibliography.md](evidence/bibliography.md), with a DOI, an arXiv id or a stable URL.
+- Cite in the text as `Author Year`. The full entry goes once into [evidence/bibliography.md](evidence/bibliography.md), with a DOI, an arXiv id or a stable URL. A key names one work, here and in every extension ([decision 0003](decisions/0003-one-key-one-work-across-the-family.md)).
 - Evidence against a principle goes into the topic's `against.md`, never deleted to make a principle look stronger.
 - A number read in a summary rather than in the paper is marked "(secondary)".
 - A limit or caveat added to a principle carries its own grade and its kind of source (study, thesis, standard,

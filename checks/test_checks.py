@@ -378,6 +378,50 @@ class TestContrast(ScratchRepository):
         self.assertEqual(found, ["error .note: color #777 on #fff is 4.48:1, under 4.5:1"])
 
 
+class TestBibliographyKeys(unittest.TestCase):
+    """A family of two repositories side by side: this one, checked, and its sibling."""
+
+    def setUp(self) -> None:
+        self.folder = tempfile.TemporaryDirectory()
+        self.family = Path(self.folder.name)
+
+    def tearDown(self) -> None:
+        self.folder.cleanup()
+
+    def bibliography(self, repository: str, *rows: str) -> None:
+        path = self.family / repository / "evidence" / "bibliography.md"
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text("| Key | Citation | Link |\n|---|---|---|\n" + "".join(f"| {row} |\n" for row in rows), encoding="utf-8")
+
+    def found(self, **settings) -> list[str]:
+        from program import bibliography_keys
+        return [f"{finding.kind} {finding.line} {finding.message}"
+                for finding in bibliography_keys.check(self.family / "this", {"bibliography_keys": settings})]
+
+    def test_a_key_held_twice_in_one_file_is_an_error(self) -> None:
+        self.bibliography("this", "Yang 2021 | Testing | https://doi.org/10.1037/a", "Yang 2021 | Passion | https://doi.org/10.3389/b")
+        self.assertEqual(self.found(), ["error 4 key 'Yang 2021' is also the key of line 3: a citation cannot say which it means"])
+
+    def test_one_work_under_two_keys_warns_unless_its_link_is_shared_on_purpose(self) -> None:
+        self.bibliography("this", "Minto 1987 | The book | https://www.barbaraminto.com/", "Minto 2026 | The site | https://barbaraminto.com")
+        self.assertEqual(self.found(), ["warning 4 'Minto 2026' and 'Minto 1987' (line 3) name one work, barbaraminto.com: give it one key"])
+        self.assertEqual(self.found(shared_links=["https://www.barbaraminto.com/"]), [])
+
+    def test_the_family_shares_one_set_of_keys(self) -> None:
+        self.bibliography("this", "Yang 2021 | Passion | https://doi.org/10.3389/b", "Hartley 2004a | Abstracts | https://pmc.example/PMC4/",
+                          "Chatlatanagulchai 2026 | Agent READMEs | arXiv:2511.12884", "Knuth 1989 | Writing | https://www.example.org/knuth.pdf")
+        self.bibliography("that", "Yang 2021 | Testing | https://doi.org/10.1037/A", "Hartley 2004 | Abstracts | https://pmc.example/PMC4",
+                          "Chatlatanagulchai 2026 | Agent READMEs | https://arxiv.org/abs/2511.12884v2", "Knuth 1989 | Writing | http://example.org/knuth.pdf")
+        self.assertEqual(self.found(family=["that"]), [
+            "warning 3 'Yang 2021' names another work in that (line 3, doi:10.1037/a): one key, one work across the family",
+            "warning 4 'Hartley 2004a' is 'Hartley 2004' in that (line 4, pmc.example/pmc4): one work, one key across the family"])
+
+    def test_this_repository_in_its_own_family_is_skipped_and_a_missing_member_is_reported(self) -> None:
+        self.bibliography("this", "Liu 2024 | Lost in the middle | https://doi.org/10.1162/tacl")
+        self.assertEqual(self.found(family=["this", "gone"]), [
+            "warning 0 family member 'gone' has no evidence/bibliography.md beside this repository: its keys were not compared"])
+
+
 class TestCitationKeys(unittest.TestCase):
     def test_a_surname_keeps_its_particle(self) -> None:
         from program import citations

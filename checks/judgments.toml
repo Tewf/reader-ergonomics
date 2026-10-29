@@ -209,7 +209,7 @@ answer = "Kept: the README's `Question:` line is the folder's one-line overview 
 check = "document-mode"
 path = "AGENTS.md"
 question = "reads about equally as reference and how-to: one mode per document?"
-file = "c1aad81c8c30"
+file = "dfa3a7d92a72"
 answer = "How-to: the steps a contributor follows, from `Before writing` to `Before handing back`. The rules it lists are part of the task, not a separate reference."
 
 [[answer]]
@@ -351,3 +351,17 @@ path = "evidence/reading-order/sources.md"
 question = "changed together with principles/document/overview-first.md in 3 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
 file = "2bd3b2ac2b6b"
 answer = "Yes, coupled with `principles/document/overview-first.md`: the scores of the sources a principle rests on, and the principle whose limits they set. They stay apart by design, evidence in evidence/ and claims in principles/, and the principle links to the review."
+
+[[answer]]
+check = "name-content"
+path = "decisions/0003-one-key-one-work-across-the-family.md"
+question = "the name '0003 work across family' and the opening are far apart in meaning (0.16): does the name predict the content?"
+file = "63758c3e55c6"
+answer = "Yes: the name is the title, `A key names one work across the family`, and the opening says how that rule is checked, through `[bibliography_keys] family`. The distance comes from the opening's words for the mechanism (config, bibliography), not from another subject."
+
+[[answer]]
+check = "co-change"
+path = "checks/config.toml"
+question = "changed together with decisions/README.md in 3 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+file = "15a1db8d068b"
+answer = "Keep them apart: config holds `What the checks read`, and decisions/README.md indexes why. Each of the three shared commits added a decision that sets a value here: the tiers (da2ef3a), the decision-record shape (d408349) and the `[bibliography_keys]` table with decision 0003, which names that table, so the record already links the fact."
