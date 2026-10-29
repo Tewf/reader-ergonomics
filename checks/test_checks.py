@@ -15,7 +15,8 @@ from figures import (figure_alt, figure_captions, figure_contrast, figure_source
 from program import (co_change, cross_file_terms, decision_records, defined_before_use, duplication, judgment_quotes,
                      links, logical_lines, long_sentences, name_matches_title, outline_depth, overview_first,
                      paragraph_length, portable_paths, principle_coverage, provisional_tags, readable_measure,
-                     references, shape_conformance, shape_example, standard_card, standard_pin, sufficient_contrast,
+                     references, shape_conformance, shape_example, standard_card, standard_links, standard_pin,
+                     sufficient_contrast,
                      tree_shape, type_buckets)
 import run
 
@@ -641,6 +642,38 @@ class TestStandardPin(ScratchRepository):
                    "        with:\n          repository: Tewf/another\n          ref: main\n")
         self.assertEqual(self.found(), [".github/workflows/pages.yml:7 checks out Tewf/reader-ergonomics with no ref, "
                                         "so the latest commit: pin it to the release's commit"])
+
+
+class TestStandardLinks(ScratchRepository):
+    PIN = "6980fa64583912922d6f5b5c01316749d654345f"
+    WORKFLOW = ("jobs:\n  checks:\n    steps:\n      - uses: actions/checkout@v4\n        with:\n"
+                "          repository: Tewf/reader-ergonomics\n          ref: {pin}   # v1.11.0\n")
+    LINK = "See [a rule](https://github.com/Tewf/reader-ergonomics/{kind}/{ref}/a.md).\n"
+
+    def setUp(self) -> None:
+        super().setUp()
+        self.write(".github/workflows/checks.yml", self.WORKFLOW.format(pin=self.PIN))
+
+    def found(self, text: str) -> list[str]:
+        self.write("page.md", text)
+        return [finding.message for finding in standard_links.check(self.root, {})]
+
+    def test_a_link_at_the_pinned_commit_or_its_tag_passes(self) -> None:
+        self.assertEqual(self.found(self.LINK.format(kind="blob", ref=self.PIN)), [])
+        self.assertEqual(self.found(self.LINK.format(kind="tree", ref="v1.11.0")), [])
+
+    def test_a_link_at_a_branch_another_commit_or_another_tag_fails(self) -> None:
+        for ref in ("master", "d48ffbe96aed32dd63e1974ee60f69472fe36932", "v1.4.1"):
+            found = self.found(self.LINK.format(kind="blob", ref=ref))
+            self.assertEqual(len(found), 1, ref)
+            self.assertIn(f"at {ref[:12]}, but the workflows pin 6980fa6", found[0])
+
+    def test_a_link_quoted_in_code_is_not_read(self) -> None:
+        self.assertEqual(self.found("Every `" + self.LINK.format(kind="blob", ref="master").strip()[4:-1] + "` moves.\n"), [])
+
+    def test_workflows_with_two_refs_leave_it_to_standard_pin(self) -> None:
+        self.write(".github/workflows/pages.yml", self.WORKFLOW.format(pin="d" * 40))
+        self.assertEqual(self.found(self.LINK.format(kind="blob", ref="master")), [])
 
 
 class TestCitationKeys(unittest.TestCase):

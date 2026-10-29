@@ -106,8 +106,13 @@ moved, and a commit cannot. The tag is named in a comment beside the commit:
 ref: <the release's commit, all 40 characters>   # v1.0.0
 ```
 
-The extension moves to a new release deliberately, by changing that line. Every job that checks out the standard
-names the same commit: the checks, and the site that loads `site.css`. One bump then moves them all (`standard-pin`).
+The extension moves to a new release deliberately, by changing that line. The same bump moves every other copy of
+the release:
+
+- every job that checks out the standard names that commit: the checks, and the site that loads `site.css`
+  (`standard-pin`);
+- every link from the text into the standard's repository names that commit, or the tag in that line's comment
+  (`standard-links`).
 
 To run a release's checks on a local copy, extract it inside the extension, in the `checks/out/` that git ignores,
 rather than beside the repositories, where each release would leave a folder behind:

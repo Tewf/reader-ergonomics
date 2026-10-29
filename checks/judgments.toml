@@ -341,8 +341,8 @@ answer = "Yes: the name is the title, `A key names one work across the family`, 
 [[answer]]
 check = "logical-lines"
 path = "checks/test_checks.py"
-question = "671 lines, past the ceiling of 500. Review it: split it only into pieces that change separately and each stay whole, or state why it stays one file."
-file = "f3d458bf23b9"
+question = "704 lines, past the ceiling of 500. Review it: split it only into pieces that change separately and each stay whole, or state why it stays one file."
+file = "6e0169529505"
 answer = "Stays one file: its one role is that `each check must find a violation planted in a scratch repository`, for the program tier. The framework and the other tiers already sit in test_framework.py and test_tiers.py; split by check, it would become thirty files of one class each."
 
 [[answer]]
@@ -356,7 +356,7 @@ answer = "Keep them apart: config holds `What the checks read`, and decisions/RE
 check = "co-change"
 path = "checks/test_checks.py"
 question = "changed together with decisions/0003-one-key-one-work-across-the-family.md in 4 commits (80% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
-file = "f3d458bf23b9"
+file = "6e0169529505"
 answer = "No: it and `decisions/0003-one-key-one-work-across-the-family.md` changed together because the releases that added the key check and then extended its key form wrote the record and the tests in one commit each, not because they serve one purpose."
 
 [[answer]]
@@ -391,5 +391,5 @@ answer = "Keep them apart: decisions/README.md is the index, `one record per dec
 check = "document-mode"
 path = "extending.md"
 question = "reads about equally as how-to and reference: one mode per document?"
-file = "a71c5222c000"
+file = "f8d16e87b1ba"
 answer = "Reference: `This page is the contract between the standard and its extensions`, read to look up what an extension may rely on. Its few steps, the pinned `ref:` line and the local run, are what that contract asks of an extension, kept beside the part they serve rather than in a separate how-to."
