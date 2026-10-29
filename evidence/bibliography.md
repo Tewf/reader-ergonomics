@@ -82,7 +82,7 @@ Every work cited anywhere in this repository, once. The text cites `Author Year`
 | Deque 2026 | Deque Systems (2026). axe-core (repository and color-contrast rule) | https://github.com/dequelabs/axe-core |
 | DeStefano 2007 | DeStefano, LeFevre (2007). Cognitive load in hypertext reading: a review. Computers in Human Behavior | https://doi.org/10.1016/j.chb.2005.08.012 |
 | Díaz 2002 | Díaz, Petit, Serna (2002). A survey of graph layout problems. ACM Computing Surveys, 34(3), 313-356. | https://doi.org/10.1145/568522.568523 |
-| Dickson 2005 | Dickson, Miller (2005). Effectiveness of crib sheets (index cards). Teaching of Psychology | https://doi.org/10.1207/s15328023top3204_4 |
+| Dickson 2005 | Dickson, Miller (2005). Authorized crib cards do not improve exam performance. Teaching of Psychology 32(4), 230-233 | https://doi.org/10.1207/s15328023top3204_6 |
 | Django 2026 | Django Software Foundation (accessed 2026). Writing documentation; What to read next. Django documentation | https://docs.djangoproject.com/en/stable/internals/contributing/writing-documentation/ |
 | Dobres 2017 | Dobres, Chahine, Reimer (2017). Effects of ambient illumination, contrast polarity, and letter size on text legibility under glance-like reading. Applied Ergonomics | https://doi.org/10.1016/j.apergo.2016.11.001 |
 | Dodds 2020 | Dodds (2020). AHA programming. Blog post, 2020-06-22 | https://kentcdodds.com/blog/aha-programming |
