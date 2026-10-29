@@ -187,6 +187,15 @@ class TestExtension(ScratchRepository):
         built = standard_card.expected(self.root)
         self.assertEqual(built["notes.md"], "It runs <!-- count:checks -->2<!-- /count --> checks; <!-- count:other -->3<!-- /count -->.\n")
 
+    def test_a_release_marker_holds_the_changelog_s_newest_release(self) -> None:
+        self.write("standard.md", "# Card\n")
+        self.write("CHANGELOG.md", "# Changelog\n\n## [2.1.0] - 2026-11-02\n\n## [2.0.0] - 2026-11-01\n")
+        self.write("README.md", "Version <!-- release:version -->1.0.0<!-- /release --> of "
+                   "<!-- release:date -->2026-01-01<!-- /release -->.\n")
+        built = standard_card.expected(self.root)
+        self.assertEqual(built["README.md"], "Version <!-- release:version -->2.1.0<!-- /release --> of "
+                         "<!-- release:date -->2026-11-02<!-- /release -->.\n")
+
     def test_a_card_without_principles_does_not_promise_them(self) -> None:
         self.write("standard.md", "# Papers\n\nHow to use the shapes.\n")
         self.write("shapes/README.md", "# Shapes\n\nSkeletons.\n")

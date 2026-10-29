@@ -8,8 +8,9 @@ The first two are built from the principle files (their title, claim and grade),
 written once, in its principle, and every index follows it. Each check tier's README lists its
 modules with the first line of their docstrings, so a check says what it does once, in its
 code. A count written `<!-- count:checks -->N<!-- /count -->` in any markdown file is the number
-of check modules, so a page that states it cannot drift. As a check, it fails when a committed
-index or count differs from what its sources give.
+of check modules, so a page that states it cannot drift; `<!-- release:version -->` and
+`<!-- release:date -->`, each closed by `<!-- /release -->`, hold the changelog's newest release.
+As a check, it fails when a committed index, count or release differs from what its sources give.
 
 Usage: python3 checks/program/standard_card.py [ROOT] [--write]
 Exact. Time O(size of the principle files), space O(number of principles).
@@ -30,6 +31,8 @@ EXACT = True
 START, END = "<!-- principles:start -->", "<!-- principles:end -->"
 CHECKS_START, CHECKS_END = "<!-- checks:start -->", "<!-- checks:end -->"
 COUNT = re.compile(r"(<!-- count:(\w+) -->)\d+(<!-- /count -->)")
+RELEASE = re.compile(r"(<!-- release:(version|date) -->)[^<]*(<!-- /release -->)")
+NEWEST = re.compile(r"^## \[(\d+\.\d+\.\d+)\] - (\d{4}-\d{2}-\d{2})\s*$", re.MULTILINE)
 SITE = "https://tewf.github.io/reader-ergonomics/"
 TITLE = "Reader ergonomics"
 DESCRIPTION = ("How to write notes, documents and files that cost the reader least, by what cognitive science, "
@@ -154,10 +157,19 @@ def counts(root: Path) -> dict[str, int]:
                           if re.search(r"^NAME = ", module.read_text(encoding="utf-8", errors="replace"), re.MULTILINE))}
 
 
-def counted(text: str, numbers: dict[str, int]) -> str:
-    """The text with each count marker it holds set to its number; a marker of an unknown count is left as it is."""
-    return COUNT.sub(lambda match: f"{match.group(1)}{numbers[match.group(2)]}{match.group(3)}"
+def release(root: Path) -> dict[str, str]:
+    """The changelog's newest release, as `version` and `date`; empty when its headings name no version."""
+    path = root / "CHANGELOG.md"
+    newest = NEWEST.search(path.read_text(encoding="utf-8", errors="replace")) if path.is_file() else None
+    return {"version": newest.group(1), "date": newest.group(2)} if newest else {}
+
+
+def counted(text: str, numbers: dict[str, int], newest: dict[str, str] | None = None) -> str:
+    """The text with each count and release marker set to its value; a marker with no value is left as it is."""
+    text = COUNT.sub(lambda match: f"{match.group(1)}{numbers[match.group(2)]}{match.group(3)}"
                      if match.group(2) in numbers else match.group(0), text)
+    return RELEASE.sub(lambda match: f"{match.group(1)}{newest[match.group(2)]}{match.group(3)}"
+                       if newest and match.group(2) in newest else match.group(0), text)
 
 
 def expected(root: Path, config: dict | None = None) -> dict[str, str]:
@@ -171,11 +183,11 @@ def expected(root: Path, config: dict | None = None) -> dict[str, str]:
         if CHECKS_START in text:
             outputs[readme.relative_to(root).as_posix()] = re.sub(re.escape(CHECKS_START) + ".*?" + re.escape(CHECKS_END),
                 lambda _: check_table(readme.parent), text, flags=re.DOTALL)
-    numbers = counts(root)
+    numbers, newest = counts(root), release(root)
     for path in (path for path in repository_paths(root) if path.endswith(".md")):
         text = outputs.get(path) or (root / path).read_text(encoding="utf-8", errors="replace")
-        if COUNT.search(text):
-            outputs[path] = counted(text, numbers)
+        if COUNT.search(text) or RELEASE.search(text):
+            outputs[path] = counted(text, numbers, newest)
     return outputs
 
 
