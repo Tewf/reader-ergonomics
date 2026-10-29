@@ -172,13 +172,6 @@ answer = "Kept: the README's `Question:` line is the folder's one-line overview 
 
 [[answer]]
 check = "document-mode"
-path = "AGENTS.md"
-question = "reads about equally as reference and how-to: one mode per document?"
-file = "280d3b5e6525"
-answer = "How-to: the steps a contributor follows, from `Before writing` to `Before handing back`. The rules it lists are part of the task, not a separate reference."
-
-[[answer]]
-check = "document-mode"
 path = "evidence/documentation/sources.md"
 question = "reads about equally as how-to and reference: one mode per document?"
 file = "6e236fc6a053"
@@ -292,15 +285,15 @@ answer = "Yes, coupled with `principles/document/overview-first.md`: the scores 
 [[answer]]
 check = "logical-lines"
 path = "checks/test_checks.py"
-question = "705 lines, past the ceiling of 500. Review it: split it only into pieces that change separately and each stay whole, or state why it stays one file."
-file = "94be4f8a362d"
+question = "734 lines, past the ceiling of 500. Review it: split it only into pieces that change separately and each stay whole, or state why it stays one file."
+file = "fa85f9cc9aeb"
 answer = "Stays one file: its one role is that `each check must find a violation planted in a scratch repository`, for the program tier. The framework and the other tiers already sit in test_framework.py and test_tiers.py; split by check, it would become thirty files of one class each."
 
 [[answer]]
 check = "co-change"
 path = "checks/test_checks.py"
 question = "changed together with decisions/0003-one-key-one-work-across-the-family.md in 5 commits (83% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
-file = "94be4f8a362d"
+file = "fa85f9cc9aeb"
 answer = "No: it and `decisions/0003-one-key-one-work-across-the-family.md` changed together because the releases that added the key check and then extended its key form wrote the record and the tests in one commit each, not because they serve one purpose."
 
 [[answer]]
@@ -314,7 +307,7 @@ answer = "No: it and `principles/sentence/even-information-density.md` changed t
 check = "document-mode"
 path = "extending.md"
 question = "reads about equally as how-to and reference: one mode per document?"
-file = "f8d16e87b1ba"
+file = "1280fe6f2cfc"
 answer = "Reference: `This page is the contract between the standard and its extensions`, read to look up what an extension may rely on. Its few steps, the pinned `ref:` line and the local run, are what that contract asks of an extension, kept beside the part they serve rather than in a separate how-to."
 
 [[answer]]
@@ -372,3 +365,10 @@ path = "evidence/psycholinguistics/review.md"
 question = "changed together with evidence/reading-order/review.md in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
 file = "396236f2c3fa"
 answer = "No: they changed together only in passes over every review at once (the multivocal merge, the audits, the opening sentences), not because they serve one purpose; each topic keeps its folder."
+
+[[answer]]
+check = "figures-present"
+path = "CHANGELOG.md"
+question = "a long text with no figure, table or diagram: is a relation, set, quantity or process described only in words?"
+file = "c8a02d9984be"
+answer = "No: it holds `Every release of the standard, newest first`, a list of dated entries read in order. The relations between releases are their order, which the list already shows."
