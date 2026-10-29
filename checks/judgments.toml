@@ -181,14 +181,14 @@ answer = "No: it and `principles/sentence/shallow-nesting.md` changed together o
 check = "co-change"
 path = "principles/document/overview-first.md"
 question = "changed together with principles/sentence/even-information-density.md in 3 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
-file = "ee8db9b34a32"
+file = "52ec4e9d3956"
 answer = "No: it and `principles/sentence/even-information-density.md` changed together only in passes over the whole standard (audits and amendments touching 10 to 18 principles at once), not because they serve one purpose; principles stay grouped by scale."
 
 [[answer]]
 check = "co-change"
 path = "principles/document/overview-first.md"
 question = "changed together with principles/sentence/shallow-nesting.md in 4 commits (80% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
-file = "ee8db9b34a32"
+file = "52ec4e9d3956"
 answer = "No: it and `principles/sentence/shallow-nesting.md` changed together only in passes over the whole standard (audits and amendments touching 10 to 18 principles at once), not because they serve one purpose; principles stay grouped by scale."
 
 [[answer]]
@@ -251,7 +251,7 @@ answer = "Reference: it `lists null results, controversies, costs of the proposa
 check = "document-mode"
 path = "evidence/reading-order/sources.md"
 question = "reads about equally as how-to and reference: one mode per document?"
-file = "95ab4e3b40f8"
+file = "2bd3b2ac2b6b"
 answer = "Reference: a table of scored sources, under `Grey sources, scored` and `Formal sources`, looked up, not followed."
 
 [[answer]]
@@ -337,3 +337,10 @@ path = "principles/page/readable-measure.md"
 question = "reads about equally as how-to and reference: one mode per document?"
 file = "3678ca89ce52"
 answer = "Reference: every principle file has the same shape, and its `What it asks` list states the rule; it is not a procedure."
+
+[[answer]]
+check = "co-change"
+path = "checks/README.md"
+question = "changed together with evidence/README.md in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+file = "5cb186fb6d2e"
+answer = "No: it and `evidence/README.md` changed together in passes over the whole repository (the audits, the figure redraw), not because they serve one purpose; each is its own folder's front page."

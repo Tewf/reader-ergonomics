@@ -33,7 +33,7 @@ should therefore follow the domain's own hierarchy. Stating what matters lowers 
 Overview first is not importance first: the evidence above is for organizers, which announce the parts. Putting the
 most important fact first, as news does, is a different order, and its two direct tests, both theses, disagree. In
 these tests, narrative order was better understood and recalled by Thai readers (Nildam 1998); importance order did
-marginally better on comprehension, with no difference in memory (Sternadori 2008). So these tests are too few to
+marginally better on comprehension (p = .08, 58 readers), with no difference in memory (Sternadori 2008). So these tests are too few to
 decide; the plain-language standard advises it as a convention, the most important message "commonly at the beginning"
 (ISO 2023, convention).
 
