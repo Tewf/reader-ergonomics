@@ -108,7 +108,8 @@ def llms_index(items: list[dict], root: Path, groups: list[tuple[str, str]] = FA
     optional = [("evidence/README.md", "Evidence", "one literature review per topic, with the evidence against"),
                 ("evidence/bibliography.md", "Bibliography", "every cited work, once"),
                 ("shapes/README.md", "Shapes", "skeletons for kinds of documents"),
-                ("checks/README.md", "Checks", "the programs that verify the standard")]
+                ("checks/README.md", "Checks", "the programs that verify the standard"),
+                ("decisions/README.md", "Decisions", "the choices this repository made, one record each")]
     lines += ["## Optional", ""] + [f"- [{label}]({url}{path}): {what}" for path, label, what in optional if (root / path).is_file()] + [""]
     return "\n".join(lines)
 
