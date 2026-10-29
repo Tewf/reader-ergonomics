@@ -133,7 +133,7 @@ exempt = ["evidence/bibliography.md"]
 [section_cohesion]
 min_words = 30
 threshold = 0.25   # PROVISIONAL
-exempt = []
+exempt = ["CHANGELOG.md"]   # one section per release, each on its own subject by design
 
 [dependency_length]
 max_distance = 12  # PROVISIONAL
