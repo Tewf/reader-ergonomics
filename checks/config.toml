@@ -79,6 +79,11 @@ measure_ch = [45, 75]
 min_font_px = 16
 min_line_height = 1.5
 
+[shape_example]
+files = ["shapes/*.md"]   # each shape links, or holds, a filled example of itself
+exempt = ["shapes/README.md"]
+example_headings = ["Worked example", "Example"]
+
 [decision_records]
 ask_costs = false   # rule 3 asks when no Consequences line is labelled "Bad"; a repository using the label turns it on
 

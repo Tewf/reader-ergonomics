@@ -12,7 +12,7 @@ from pathlib import Path
 
 from program import (co_change, cross_file_terms, decision_records, defined_before_use, duplication, figure_captions, figure_width, figures_present, judgment_quotes, links,
                      logical_lines, long_sentences, name_matches_title, outline_depth, overview_first, paragraph_length,
-                     portable_paths, principle_coverage, provisional_tags, readable_measure, references, shape_conformance,
+                     portable_paths, principle_coverage, provisional_tags, readable_measure, references, shape_conformance, shape_example,
                      standard_card, sufficient_contrast, tree_shape, type_buckets)
 import run
 
@@ -380,6 +380,46 @@ class TestDecisionRecords(unittest.TestCase):
     def test_no_decisions_folder_means_nothing_to_check(self) -> None:
         shutil.rmtree(self.root / "decisions")
         self.assertEqual(decision_records.check(self.root, self.config), [])
+
+
+class TestShapeExample(unittest.TestCase):
+    """Ported from the learning extension's check: a shape shows, or links, a filled example of itself."""
+
+    def found(self, files: dict[str, str]) -> list[str]:
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            for name, text in files.items():
+                (root / name).parent.mkdir(parents=True, exist_ok=True)
+                (root / name).write_text(text)
+            config = {"shape_example": {"files": ["shapes/*.md"], "exempt": ["shapes/examples/"]}}
+            return [finding.path for finding in shape_example.check(root, config)]
+
+    def test_an_example_linked_both_ways_passes(self) -> None:
+        self.assertEqual(self.found({"shapes/s.md": "# S\n\n[example](examples/e.md)\n",
+                                     "shapes/examples/e.md": "# E\n\n**Shape:** [s](../s.md)\n"}), [])
+
+    def test_a_skeleton_alone_warns(self) -> None:
+        self.assertEqual(self.found({"shapes/s.md": "# S\n\nA skeleton only.\n"}), ["shapes/s.md"])
+
+    def test_an_example_must_link_back(self) -> None:
+        self.assertEqual(self.found({"shapes/s.md": "# S\n\n[example](examples/e.md)\n",
+                                     "shapes/examples/e.md": "# E\n\nNo link back.\n"}), ["shapes/s.md"])
+
+    def test_a_citation_is_not_an_example(self) -> None:
+        self.assertEqual(self.found({"shapes/s.md": "# S\n\n[evidence](../evidence/r.md)\n",
+                                     "evidence/r.md": "# R\n\nSee the [shape](../shapes/s.md).\n"}), ["shapes/s.md"])
+
+    def test_an_html_example_counts_by_its_name(self) -> None:
+        self.assertEqual(self.found({"shapes/s.md": "# S\n\n[deck](example-s.html)\n", "shapes/example-s.html": "<html></html>"}), [])
+        self.assertEqual(self.found({"shapes/s.md": "# S\n\n[template](s.tex)\n", "shapes/s.tex": "% skeleton"}), ["shapes/s.md"])
+
+    def test_an_inline_example_passes(self) -> None:
+        self.assertEqual(self.found({"shapes/s.md": "# S\n\n## Worked example\n\nA filled one.\n"}), [])
+
+    def test_a_derived_shape_is_not_an_example(self) -> None:
+        self.assertEqual(self.found({"shapes/base.md": "# Base\n\n[derived](derived.md)\n",
+                                     "shapes/derived.md": "# Derived\n\nDerives from [base](base.md).\n\n## Worked example\n\nx\n"}),
+                         ["shapes/base.md"])
 
 
 class TestFigureWidth(ScratchRepository):
