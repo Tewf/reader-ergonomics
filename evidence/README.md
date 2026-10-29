@@ -5,24 +5,7 @@ traced through them to what was measured, by whom, and what speaks against it.
 
 ## The steps, the same in every topic
 
-```text
- frame
- │   the field's name for the problem
- ▼
- review
- │   surveys, seminal work, forward citations
- ├─▶ against
- │     null results, disputes, failed replications
- ▼
- state of the art
- │   who holds the record, measured how
- ▼
- position
- │   known, unknown, what this repository adds
- ▼
- baseline
-     what the principles are compared against
-```
+![The steps of a review: frame, review, state of the art, position and baseline, with the evidence against gathered beside the review.](review-steps.svg)
 
 | File | Step |
 |---|---|

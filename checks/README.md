@@ -36,14 +36,7 @@ principle to naming at least one registered check.
 
 ## Kinds of finding
 
-```text
- a finding
-  ├─ exact ─────▶ error     the run fails
-  ├─ heuristic ─▶ warning   fix it, or say why it is false
-  └─ open ──────▶ judgment  to a backend: none, flag
-                            (default), local model,
-                            or api (paid, off)
-```
+![An exact finding is an error that fails the run, a heuristic one a warning to fix or explain, and an open one a judgment sent to a backend.](kinds-of-finding.svg)
 
 | Backend | What happens | Cost |
 |---|---|---|

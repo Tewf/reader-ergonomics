@@ -25,12 +25,13 @@ $$D(\pi) = \sum_{u \to v} \big(\pi(v) - \pi(u)\big) = \sum_x \pi(x)\,\big(\mathr
 
 For example, with three prerequisite edges:
 
-```text
- A ──▶ B ──▶ C     order     A→B  B→C  A→D   total
- └──▶ D            A B C D    1    1    3      5
-                   A B D C    1    2    2      5
-                   A D B C    2    1    1      4  ← shortest
-```
+![A graph of prerequisites: B and D use A, and C uses B.](reference-graph.svg)
+
+| Order | A→B | B→C | A→D | Total |
+|---|---|---|---|---|
+| A B C D | 1 | 1 | 3 | 5 |
+| A B D C | 1 | 2 | 2 | 5 |
+| A D B C | 2 | 1 | 1 | 4, the shortest |
 
 In general it is a weighted sum of positions under precedence, that is single-machine scheduling. It is solvable in
 polynomial time when the prerequisites form a rooted forest, or more generally

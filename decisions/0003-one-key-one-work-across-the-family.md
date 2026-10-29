@@ -37,14 +37,7 @@
 
 Who compares with whom, and whose key wins a clash:
 
-```text
- reader-ergonomics        family = [], reads no one
-        ▲
-        │ compared against; its key wins
-        │
- an extension ──compared against──▶ each sibling
-                 the older use of a key wins
-```
+![An extension is compared against reader-ergonomics, whose key wins, and against each sibling, where the older use wins; reader-ergonomics reads no one.](key-rule.svg)
 
 ## Consequences
 

@@ -1,0 +1,12 @@
+digraph reference_graph {
+  graph [rankdir=LR, nodesep=0.4, ranksep=0.5, bgcolor="white", pad=0.2, fontname="Inter"];
+  node  [shape=box, style="rounded,filled", fontname="Inter", fontsize=13, margin="0.2,0.1", penwidth=1.5, fontcolor="#1F2328"];
+  edge  [fontname="Inter", fontsize=11, color="#3D434B", fontcolor="#55575F", penwidth=1.3, arrowsize=0.8];
+  A [label=<<b>A</b>>, fillcolor="#FFFFFF", color="#3D434B", shape=circle, style="filled", margin="0.05"];
+  B [label=<<b>B</b>>, fillcolor="#FFFFFF", color="#3D434B", shape=circle, style="filled", margin="0.05"];
+  C [label=<<b>C</b>>, fillcolor="#FFFFFF", color="#3D434B", shape=circle, style="filled", margin="0.05"];
+  D [label=<<b>D</b>>, fillcolor="#FFFFFF", color="#3D434B", shape=circle, style="filled", margin="0.05"];
+  A -> B;
+  B -> C;
+  A -> D;
+}

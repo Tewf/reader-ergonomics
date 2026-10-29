@@ -5,23 +5,31 @@ The principles below are the best current guess for a reader nobody knows, as fa
 
 ## How to use it
 
-```text
- who reads?
-  ├─ known ──▶ open their reader style
-  │                 │
-  └─ unknown ───────┤
-                    ▼
-              pick the shape
-                    ▼
-          write to the principles
-                    ▼
-          python3 checks/run.py .
-                    ├─▶ error
-                    │     certain: fix it
-                    ├─▶ warning
-                    │     fix it, or say why it is false
-                    └─▶ judgment
-                          answer it in checks/judgments.toml
+![Ask who reads and open their reader style if known; pick the shape; write to the principles; run the checks, whose three kinds of finding the steps below define.](standard-how-to-use.svg)
+
+```dot
+digraph how_to_use {
+  graph [rankdir=TB, nodesep=0.4, ranksep=0.5, bgcolor="white", pad=0.2, fontname="Inter"];
+  node  [shape=box, style="rounded,filled", fontname="Inter", fontsize=13, margin="0.2,0.1", penwidth=1.5, fontcolor="#1F2328"];
+  edge  [fontname="Inter", fontsize=11, color="#3D434B", fontcolor="#55575F", penwidth=1.3, arrowsize=0.8];
+  Q [label=<<b>who reads?</b>>, fillcolor="#FFFFFF", color="#3D434B", shape=diamond, style="filled", margin="0.05,0.05"];
+  STY [label=<<b>open their reader style</b>>, fillcolor="#E6F2EA", color="#2E7D4F"];
+  SH [label=<<b>pick the shape</b>>, fillcolor="#FFFFFF", color="#3D434B"];
+  PR [label=<<b>write to the principles</b>>, fillcolor="#FFFFFF", color="#3D434B"];
+  RUN [label=<<b>python3 checks/run.py .</b>>, fillcolor="#FFFFFF", color="#3D434B"];
+  Q -> STY [label=" known"];
+  Q -> SH [label=" unknown"];
+  STY -> SH;
+  SH -> PR;
+  PR -> RUN;
+  E [label=<<b>error</b><br/><font point-size="11" color="#55575F">certain: fix it</font>>, fillcolor="#FBEDE4", color="#B4541A"];
+  W [label=<<b>warning</b><br/><font point-size="11" color="#55575F">fix it, or say why it is false</font>>, fillcolor="#FBEDE4", color="#B4541A", style="rounded,filled,dashed"];
+  J [label=<<b>judgment</b><br/><font point-size="11" color="#55575F">answer it in checks/judgments.toml</font>>, fillcolor="#E8EEF8", color="#2F5DA8"];
+  RUN -> E;
+  RUN -> W;
+  RUN -> J;
+  {rank=same; E; W; J}
+}
 ```
 
 1. **Name the reader.** If they are known, open their style in [reader-styles/](reader-styles/).
@@ -46,17 +54,28 @@ Every principle says how strong its evidence is, and never claims more.
 
 The principles act at four scales; the first three nest, the fourth is how all of them are shown.
 
-```text
- ┌ collection: folders and files ─────────────────────────┐
- │ what the reader navigates                              │
- │ ┌ document: one file ──────────────────────────────┐   │
- │ │ the order and depth the reader follows           │   │
- │ │ ┌ sentence ──────────────────────────────────┐   │   │
- │ │ │ what the reader holds in memory            │   │   │
- │ │ └────────────────────────────────────────────┘   │   │
- │ └──────────────────────────────────────────────────┘   │
- └────────────────────────────────────────────────────────┘
-   page: how all three are shown (figures, signals, type)
+![Three nested scales: the collection holds documents, a document holds sentences; the page is how all three are shown.](standard-scales.svg)
+
+```dot
+digraph scales {
+  graph [rankdir=TB, nodesep=0.4, ranksep=0.5, bgcolor="white", pad=0.2, fontname="Inter", compound=true];
+  node  [shape=box, style="rounded,filled", fontname="Inter", fontsize=13, margin="0.2,0.1", penwidth=1.5, fontcolor="#1F2328"];
+  edge  [fontname="Inter", fontsize=11, color="#3D434B", fontcolor="#55575F", penwidth=1.3, arrowsize=0.8];
+  subgraph cluster_collection {
+    label=<<b>collection: folders and files</b><br/><font point-size="11" color="#55575F">what the reader navigates</font>>; labeljust=l;
+    style="rounded,filled"; fillcolor="#E8EEF8"; color="#2F5DA8"; fontname="Inter"; fontsize=13; margin=14;
+    subgraph cluster_document {
+      label=<<b>document: one file</b><br/><font point-size="11" color="#55575F">the order and depth the reader follows</font>>; labeljust=l;
+      style="rounded,filled"; fillcolor="#E6F2EA"; color="#2E7D4F"; fontname="Inter"; fontsize=13; margin=14;
+      subgraph cluster_sentence {
+        label=<<b>sentence</b>>; labeljust=l; style="rounded,filled"; fillcolor="#FBEDE4"; color="#B4541A"; fontname="Inter"; fontsize=13; margin=12;
+        S [shape=plaintext, style="", label=<<font point-size="11" color="#55575F">what the reader holds in memory</font>>];
+      }
+    }
+  }
+  PG [label=<<b>page</b><br/><font point-size="11" color="#55575F">how all three are shown: figures, signals, type</font>>, fillcolor="#FFFFFF", color="#3D434B", style="rounded,filled,dashed"];
+  S -> PG [ltail=cluster_collection, dir=back, style=dashed, color="#6A6D77", label=" shows all three"];
+}
 ```
 
 <!-- principles:start -->

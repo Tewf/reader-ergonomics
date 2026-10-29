@@ -9,18 +9,7 @@ and proofs), [reader-ergonomics-presentations](https://github.com/Tewf/reader-er
 This page is the contract between the standard and its extensions. It says how an extension is laid out, and which
 parts of this repository it can rely on when this one changes.
 
-```text
- an extension (one genre)
-  ├─ standard.md, principles/
-  │    only where the genre differs
-  │    ── links ──▶ this standard's standard.md, principles/
-  ├─ checks/local/
-  │    its own checks, run beside the standard's
-  │    ── run by ──▶ this standard's checks/run.py
-  └─ checks/config.toml
-       only the values it changes
-       ── extends ──▶ this standard's checks/config.toml
-```
+![An extension's principles link the standard's, its local checks are run by the standard's run.py, and its config extends the standard's.](extending-layout.svg)
 
 The arrows point one way. This standard depends on no extension: it never reads, runs or copies what an extension
 holds. It may list them, as this page does, since a link is a reference, not a dependency
