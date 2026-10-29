@@ -1,10 +1,8 @@
 cff-version: 1.2.0
-message: >-
-  If this repository helps you, you may cite it as below. It is an informal,
-  work-in-progress synthesis of published research, written with Claude, an AI
-  assistant by Anthropic. It is not an official standard, not peer-reviewed,
-  and not a new result.
-title: "reader-ergonomics (work in progress)"
+message: "If this repository helps you, you may cite it as below."
+title: "reader-ergonomics"
+version: "1.19.0"
+date-released: "2026-10-29"
 abstract: >-
   A synthesis of what cognitive science, psycholinguistics and software
   engineering report about writing notes, documents and files that are cheap
@@ -12,8 +10,10 @@ abstract: >-
   grade of evidence, many are untested conventions, and every topic lists the
   evidence against. The literature reviews were drafted with AI agents; every
   reference was resolved by script and claims were spot-checked, and a number
-  read only in a summary is marked as secondary. Use it as a reading list and
-  a starting point, not as an authority.
+  read only in a summary is marked as secondary. It is an informal synthesis
+  of published research, written with Claude, an AI assistant by Anthropic: not
+  an official standard, not peer-reviewed, and not a new result. Use it as a
+  reading list and a starting point, not as an authority.
 type: software
 authors:
   - name: "Tewf"
