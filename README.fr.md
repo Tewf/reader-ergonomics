@@ -29,6 +29,24 @@ et pour les modèles de langue qui écrivent.
 | quelqu'un qui écrit pour un lecteur connu | [reader-styles/](reader-styles/) : ce qui change pour un novice, un expert, un lecteur visuel, un modèle de langue |
 | quelqu'un qui étend le standard à un genre | [extending.md](extending.md) : la structure à reproduire, et les parties de ce dépôt sur lesquelles compter |
 
+## Prendre sa propre version
+
+Le standard est fait pour être copié et gardé. Pour en faire votre version :
+
+1. **Forkez ou copiez** ce dépôt, ou seulement `standard.md`, les formes que vous utilisez et `checks/`.
+2. **Nommez votre lecteur :** choisissez un style dans [reader-styles/](reader-styles/), ou écrivez-en un à partir du
+   [modèle](reader-styles/template.md).
+3. **Épinglez une version** par son commit, jamais une branche, pour qu'un changement ultérieur ici ne change pas ce
+   que vous avez pris. Chaque version, avec son commit et ce qu'elle change, est dans le [CHANGELOG](CHANGELOG.md) ;
+   un job de CI l'épingle comme le montre [extending.md](extending.md#versions).
+4. **Lancez les vérifications** sur votre texte, avec la commande ci-dessous.
+
+Un désaccord avec un principe a trois endroits où aller :
+
+- votre style de lecteur, comme une dérogation avec sa raison, s'il porte sur votre lecteur ;
+- une [extension](extending.md), s'il porte sur un genre ;
+- une issue ici, si les preuves sont fausses.
+
 ## Contenu
 
 | Dossier | Rôle |

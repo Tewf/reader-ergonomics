@@ -29,6 +29,24 @@ write.
 | writing for a known reader | [reader-styles/](reader-styles/): what changes for a novice, an expert, a visual reader, a language model |
 | building an extension for one genre | [extending.md](extending.md): the layout to mirror, and the parts of this repository it can rely on |
 
+## Take your own version
+
+The standard is meant to be copied and kept. To make a version yours:
+
+1. **Fork or copy** this repository, or only `standard.md`, the shapes you use and `checks/`.
+2. **Name your reader:** pick a style in [reader-styles/](reader-styles/), or write one from the
+   [template](reader-styles/template.md).
+3. **Pin a release** by its commit, never a branch, so a later change here cannot change what you took. Each release,
+   with its commit and what it changed, is in the [CHANGELOG](CHANGELOG.md); a CI job pins it as
+   [extending.md](extending.md#versions) shows.
+4. **Run the checks** on your text, as [below](#check-a-repository).
+
+A disagreement with a principle has three places to go:
+
+- your reader style, as an override with its reason, when it is about your reader;
+- an [extension](extending.md), when it is about a genre;
+- an issue here, when the evidence is wrong.
+
 ## What is here
 
 | Folder | Role |
