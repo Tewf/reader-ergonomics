@@ -97,7 +97,7 @@ The tools were searched on 2026-10-28, when 31 checks existed:
 - **a tool that does the same job**, for 7.
 
 Of the checks added since the search, `bibliography-keys` was compared and has a partial counterpart, and the others
-were not compared: 32 of the <!-- count:checks -->44<!-- /count --> checks registered today were compared. The table
+were not compared: 32 of the <!-- count:checks -->45<!-- /count --> checks registered today were compared. The table
 below names, for each check compared, the closest tool and how it differs.
 
 The program-tier checks stay on the standard library, so one

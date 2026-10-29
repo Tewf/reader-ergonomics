@@ -1,4 +1,4 @@
-"""The release checks' oracle: the copies of a pinned release, in workflows, links and changelog, must agree.
+"""The release checks' oracle: the copies of a pinned release, in workflows, links, changelog and citation, must agree.
 
 Run: python3 -m unittest discover checks
 """
@@ -6,7 +6,7 @@ from __future__ import annotations
 
 import unittest
 
-from program import changelog_pin, standard_links, standard_pin
+from program import changelog_pin, release_version, standard_links, standard_pin
 from test_checks import ScratchRepository
 
 
@@ -99,6 +99,28 @@ class TestChangelogPin(ScratchRepository):
     def test_the_standard_itself_finds_nothing(self) -> None:
         self.write("CHANGELOG.md", "# Changelog\n")
         self.assertEqual([finding for finding in changelog_pin.check(self.root, {})], [])
+
+
+class TestReleaseVersion(ScratchRepository):
+    CHANGELOG = "# Changelog\n\n## [1.19.0] - 2026-10-29\n\n### Added\n\n- A check.\n\n## [1.18.2] - 2026-10-28\n"
+
+    def found(self, citation: str, changelog: str = CHANGELOG) -> list[str]:
+        self.write("CHANGELOG.md", changelog)
+        self.write("CITATION.cff", "cff-version: 1.2.0\ntitle: \"x\"\n" + citation)
+        return [f"{finding.line} {finding.message}" for finding in release_version.check(self.root, {})]
+
+    def test_a_citation_naming_the_newest_release_passes(self) -> None:
+        self.assertEqual(self.found('version: "1.19.0"\ndate-released: "2026-10-29"\n'), [])
+        self.assertEqual(self.found("version: 1.19.0\ndate-released: 2026-10-29\n"), [])
+
+    def test_a_citation_left_on_the_last_release_fails_for_each_field(self) -> None:
+        self.assertEqual(self.found('version: "1.18.2"\ndate-released: "2026-10-28"\n'), [
+            "3 version is 1.18.2, but the changelog's newest release is 1.19.0: set both in the release commit",
+            "4 date-released is 2026-10-28, but the changelog's newest release is 2026-10-29: set both in the release commit"])
+
+    def test_dated_headings_or_no_version_field_are_not_compared(self) -> None:
+        self.assertEqual(self.found('version: "0.1.0"\n', changelog="# Changelog\n\n## 2026-10-29\n"), [])
+        self.assertEqual(self.found(""), [])
 
 
 if __name__ == "__main__":

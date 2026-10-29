@@ -4,7 +4,7 @@
 
 - **Grade:** supported with caveat.
 - **Evidence:** [file structure](../../evidence/file-structure/review.md), [against](../../evidence/file-structure/against.md) (one place per fact).
-- **Check:** `duplication` (exact, 20 identical words in two files), `links` (exact, a link that replaces a copy must resolve), `paraphrase` (meaning: the same fact in other words). The source folded under a drawn figure is kept equal to its file by `figure-source-inline`. In an extension, the release its workflows check out is kept one by `standard-pin`, and its links into the standard and its changelog follow that release by `standard-links` and `changelog-pin`.
+- **Check:** `duplication` (exact, 20 identical words in two files), `links` (exact, a link that replaces a copy must resolve), `paraphrase` (meaning: the same fact in other words). The source folded under a drawn figure is kept equal to its file by `figure-source-inline`. In an extension, the release its workflows check out is kept one by `standard-pin`, and its links into the standard and its changelog follow that release by `standard-links` and `changelog-pin`. A release's version, held by the changelog and the citation file, is kept one by `release-version`.
 - **Reader styles:** strengthened by [LLM reader](../../reader-styles/llm-reader.md).
 
 ## What it asks
