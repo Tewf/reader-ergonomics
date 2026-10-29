@@ -88,51 +88,9 @@ answer = "Yes, coupled with `principles/document/overview-first.md`: a principle
 
 [[answer]]
 check = "co-change"
-path = "principles/collection/group-by-what-changes-together.md"
-question = "changed together with principles/document/define-before-use.md in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
-file = "413084f1ff89"
-answer = "No: it and `principles/document/define-before-use.md` changed together only in passes over the whole standard (audits and amendments touching 10 to 18 principles at once), not because they serve one purpose; principles stay grouped by scale."
-
-[[answer]]
-check = "co-change"
-path = "principles/collection/group-by-what-changes-together.md"
-question = "changed together with principles/document/one-mode-per-document.md in 3 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
-file = "413084f1ff89"
-answer = "No: it and `principles/document/one-mode-per-document.md` changed together only in passes over the whole standard (audits and amendments touching 10 to 18 principles at once), not because they serve one purpose; principles stay grouped by scale."
-
-[[answer]]
-check = "co-change"
-path = "principles/collection/group-by-what-changes-together.md"
-question = "changed together with principles/document/overview-first.md in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
-file = "413084f1ff89"
-answer = "No: it and `principles/document/overview-first.md` changed together only in passes over the whole standard (audits and amendments touching 10 to 18 principles at once), not because they serve one purpose; principles stay grouped by scale."
-
-[[answer]]
-check = "co-change"
-path = "principles/collection/group-by-what-changes-together.md"
-question = "changed together with principles/page/sufficient-contrast.md in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
-file = "413084f1ff89"
-answer = "No: it and `principles/page/sufficient-contrast.md` changed together only in passes over the whole standard (audits and amendments touching 10 to 18 principles at once), not because they serve one purpose; principles stay grouped by scale."
-
-[[answer]]
-check = "co-change"
-path = "principles/collection/group-by-what-changes-together.md"
-question = "changed together with principles/sentence/even-information-density.md in 3 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
-file = "413084f1ff89"
-answer = "No: it and `principles/sentence/even-information-density.md` changed together only in passes over the whole standard (audits and amendments touching 10 to 18 principles at once), not because they serve one purpose; principles stay grouped by scale."
-
-[[answer]]
-check = "co-change"
-path = "principles/collection/group-by-what-changes-together.md"
-question = "changed together with principles/sentence/shallow-nesting.md in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
-file = "413084f1ff89"
-answer = "No: it and `principles/sentence/shallow-nesting.md` changed together only in passes over the whole standard (audits and amendments touching 10 to 18 principles at once), not because they serve one purpose; principles stay grouped by scale."
-
-[[answer]]
-check = "co-change"
 path = "principles/document/define-before-use.md"
 question = "changed together with principles/sentence/even-information-density.md in 3 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
-file = "f5c2b1120513"
+file = "e1c5a41bdbca"
 answer = "No: it and `principles/sentence/even-information-density.md` changed together only in passes over the whole standard (audits and amendments touching 10 to 18 principles at once), not because they serve one purpose; principles stay grouped by scale."
 
 [[answer]]
@@ -220,13 +178,6 @@ file = "e040cc384dba"
 answer = "Reference: a table of scored sources, under `Grey sources, scored` and `Formal sources`, looked up, not followed."
 
 [[answer]]
-check = "document-mode"
-path = "principles/document/define-before-use.md"
-question = "reads about equally as how-to and reference: one mode per document?"
-file = "f5c2b1120513"
-answer = "Reference: every principle file has the same shape, and its `What it asks` list states the rule; it is not a procedure."
-
-[[answer]]
 check = "section-cohesion"
 path = "evidence/file-structure/state-of-the-art.md"
 question = "section 'Lower bounds' is far from every other section (0.21): a second role?"
@@ -248,13 +199,6 @@ file = "f4df340b9764"
 answer = "No: `Polarity` is one of the themes the case against covers (`fonts and folk rules, line length, polarity, layout`); its sources differ from the others', hence the distance."
 
 [[answer]]
-check = "section-cohesion"
-path = "principles/sentence/short-dependencies.md"
-question = "section 'What it asks' is far from every other section (0.19): a second role?"
-file = "356f9281a05d"
-answer = "No: `What it asks` is one of the three sections every principle file has; in a file this short the embedding separates any section from the others."
-
-[[answer]]
 check = "co-change"
 path = "checks/program/sufficient_contrast.py"
 question = "changed together with checks/test_checks.py in 3 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
@@ -267,13 +211,6 @@ path = "checks/program/references.py"
 question = "changed together with checks/test_checks.py in 3 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
 file = "4286fab9bbce"
 answer = "Yes, coupled with `checks/test_checks.py`: a check and its tests. The tests stay in files at the root of checks/ by design, so one command runs the whole suite; the coupling is the one a test is meant to have."
-
-[[answer]]
-check = "document-mode"
-path = "principles/page/readable-measure.md"
-question = "reads about equally as how-to and reference: one mode per document?"
-file = "3678ca89ce52"
-answer = "Reference: every principle file has the same shape, and its `What it asks` list states the rule; it is not a procedure."
 
 [[answer]]
 check = "co-change"
@@ -300,7 +237,7 @@ answer = "No: it and `decisions/0003-one-key-one-work-across-the-family.md` chan
 check = "co-change"
 path = "principles/page/sufficient-contrast.md"
 question = "changed together with principles/sentence/even-information-density.md in 3 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
-file = "61f94c475b15"
+file = "fb9e15e989ca"
 answer = "No: it and `principles/sentence/even-information-density.md` changed together only in passes over the whole standard (audits, the figure work, check lines added to many principles at once), not because they serve one purpose; principles stay grouped by scale."
 
 [[answer]]
@@ -372,3 +309,45 @@ path = "CHANGELOG.md"
 question = "a long text with no figure, table or diagram: is a relation, set, quantity or process described only in words?"
 file = "c8a02d9984be"
 answer = "No: it holds `Every release of the standard, newest first`, a list of dated entries read in order. The relations between releases are their order, which the list already shows."
+
+[[answer]]
+check = "co-change"
+path = "principles/collection/group-by-what-changes-together.md"
+question = "changed together with principles/document/define-before-use.md in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+file = "aebbd0d0747e"
+answer = "No: these principles changed together only in passes over the whole standard (the audits, the multivocal merge, the grades re-read clause by clause), not because they serve one purpose; principles stay grouped by scale."
+
+[[answer]]
+check = "co-change"
+path = "principles/collection/group-by-what-changes-together.md"
+question = "changed together with principles/document/one-mode-per-document.md in 3 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+file = "aebbd0d0747e"
+answer = "No: these principles changed together only in passes over the whole standard (the audits, the multivocal merge, the grades re-read clause by clause), not because they serve one purpose; principles stay grouped by scale."
+
+[[answer]]
+check = "co-change"
+path = "principles/collection/group-by-what-changes-together.md"
+question = "changed together with principles/document/overview-first.md in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+file = "aebbd0d0747e"
+answer = "No: these principles changed together only in passes over the whole standard (the audits, the multivocal merge, the grades re-read clause by clause), not because they serve one purpose; principles stay grouped by scale."
+
+[[answer]]
+check = "co-change"
+path = "principles/collection/group-by-what-changes-together.md"
+question = "changed together with principles/page/sufficient-contrast.md in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+file = "aebbd0d0747e"
+answer = "No: these principles changed together only in passes over the whole standard (the audits, the multivocal merge, the grades re-read clause by clause), not because they serve one purpose; principles stay grouped by scale."
+
+[[answer]]
+check = "co-change"
+path = "principles/collection/group-by-what-changes-together.md"
+question = "changed together with principles/sentence/even-information-density.md in 3 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+file = "aebbd0d0747e"
+answer = "No: these principles changed together only in passes over the whole standard (the audits, the multivocal merge, the grades re-read clause by clause), not because they serve one purpose; principles stay grouped by scale."
+
+[[answer]]
+check = "co-change"
+path = "principles/collection/group-by-what-changes-together.md"
+question = "changed together with principles/sentence/shallow-nesting.md in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+file = "aebbd0d0747e"
+answer = "No: these principles changed together only in passes over the whole standard (the audits, the multivocal merge, the grades re-read clause by clause), not because they serve one purpose; principles stay grouped by scale."
