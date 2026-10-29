@@ -413,7 +413,7 @@ Every work cited anywhere in this repository, once. The text cites `Author Year`
 | Syer 2015 | Syer, Nagappan, Adams, Hassan (2015, online 2014). Replicating and re-evaluating the theory of relative defect-proneness. IEEE TSE | https://doi.org/10.1109/TSE.2014.2361131 |
 | Szyfelbein 2026 | Szyfelbein, Dereniowski (2026). Hierarchical F-clustering: approximation and hardness of clustering into trees | https://arxiv.org/abs/2607.13217 |
 | Tam 2024 | Tam, Wu, Tsai, Lin, Lee, Chen (2024). Let Me Speak Freely? A Study on the Impact of Format Restrictions on Performance of Large Language Models. EMNLP 2024. | arXiv:2408.02442 |
-| Tang 2006 | Tang, Babar, Gorton, Han (2006). A survey of architecture design rationale. Journal of Systems and Software. Read in a summary | https://doi.org/10.1016/j.jss.2006.04.029 |
+| Tang 2006 | Tang, Babar, Gorton, Han (2006). A survey of architecture design rationale. Journal of Systems and Software 79(12). Read in full | https://doi.org/10.1016/j.jss.2006.04.029 |
 | Tarr 1999 | Tarr, Ossher, Harrison, Sutton (1999). N degrees of separation: multi-dimensional separation of concerns. ICSE | https://doi.org/10.1145/302405.302457 |
 | Temperley 2018 | Temperley, Gildea (2018). Minimizing syntactic dependency lengths: Typological/cognitive universal? Annual Review of Linguistics, 4, 67-80. | https://doi.org/10.1146/annurev-linguistics-011817-045617 |
 | Tetzlaff 2025 | Tetzlaff, Simonsmeier, Peters, Brod (2025). A cornerstone of adaptivity: a meta-analysis of the expertise reversal effect. Learning and Instruction | https://doi.org/10.1016/j.learninstruc.2025.102142 |

@@ -37,8 +37,9 @@ MADR 2024 adds the options a decision rejected; a record may add such a section 
 - **Why keep the rationale at all:** in one laboratory experiment, recorded rationale made later decisions more
   effective when the requirements changed, with no gain in speed (Falessi 2010, measured: 50 master students, one
   system).
-- **Why keep it to a page:** the cost of capture is the barrier named longest for recording rationale (Lee 1997, an
-  argument; Tang 2006, a survey of 81 practitioners; both read in summaries).
+- **Why keep it to a page:** a lack of time or budget is the reason practitioners give most for not documenting
+  rationale. In a survey of 81, 60.5% gave it, before a lack of standards (42%) and of tools (29.6%) (Tang 2006,
+  measured). Lee 1997 argued that rationale systems failed on the cost of capture (an argument, read in a summary).
 - **What is not known:** whether a record helps a later maintainer find out why has not been tested on maintainers.
 
 ## The rules
