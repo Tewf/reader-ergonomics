@@ -10,10 +10,13 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from program import (co_change, cross_file_terms, decision_records, defined_before_use, duplication, figure_captions, figure_source_inline, figure_width, figures_present, judgment_quotes, links,
-                     logical_lines, long_sentences, name_matches_title, outline_depth, overview_first, paragraph_length,
-                     portable_paths, principle_coverage, provisional_tags, readable_measure, references, shape_conformance, shape_example,
-                     standard_card, sufficient_contrast, tree_shape, type_buckets)
+from figures import (figure_alt, figure_captions, figure_contrast, figure_source, figure_source_inline, figure_width,
+                     figures_present, typed_figure)
+from program import (co_change, cross_file_terms, decision_records, defined_before_use, duplication, judgment_quotes,
+                     links, logical_lines, long_sentences, name_matches_title, outline_depth, overview_first,
+                     paragraph_length, portable_paths, principle_coverage, provisional_tags, readable_measure,
+                     references, shape_conformance, shape_example, standard_card, sufficient_contrast, tree_shape,
+                     type_buckets)
 import run
 
 CONFIG = {"scope": {"exclude": []}, "tree_shape": {"max_entries": 4, "min_entries": 2, "max_depth": 3},
@@ -448,6 +451,61 @@ class TestFigureSourceInline(ScratchRepository):
         self.write("photo.svg", "<svg/>\n")
         self.write("b.md", "# B\n\n![a photograph](photo.svg)\n")
         self.assertEqual(figure_source_inline.check(self.root, CONFIG), [])
+
+
+class TestFigureChecks(unittest.TestCase):
+    """Ported from the presentations extension's figure checks, with their own planted cases."""
+    TYPED = "Intro.\n\n```text\n a ──▶ b\n```\n"
+    SETTINGS = {"typed_figure": {"exempt": ["*AGENTS.md", "*CLAUDE.md"]}}
+
+    def run_on(self, module, files: dict[str, str]):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            for name, text in files.items():
+                (root / name).parent.mkdir(parents=True, exist_ok=True)
+                (root / name).write_text(text, encoding="utf-8")
+            return module.check(root, {**CONFIG, **self.SETTINGS})
+
+    def test_typed_figure_flags_box_drawing_in_a_page(self) -> None:
+        found = self.run_on(typed_figure, {"README.md": self.TYPED})
+        self.assertEqual([(f.check, f.line, f.kind) for f in found], [("typed-figure", 3, "warning")])
+
+    def test_typed_figure_spares_exempt_files_and_code(self) -> None:
+        code = "```python\nprint('a ──▶ b')\n```\n"
+        self.assertEqual(self.run_on(typed_figure, {"AGENTS.md": self.TYPED, "notes/AGENTS.md": self.TYPED, "x.md": code}), [])
+
+    def test_figure_alt_flags_a_file_name_and_a_kind(self) -> None:
+        page = "![flow.svg](flow.svg)\n\n![Diagram](levels.svg)\n\n![flow](figures/flow.svg)\n"
+        self.assertEqual([f.line for f in self.run_on(figure_alt, {"a.md": page})], [1, 3, 5])
+
+    def test_figure_alt_accepts_a_sentence_and_leaves_empty_alt_to_figure_captions(self) -> None:
+        page = "![Three levels, each depending on the one below.](where.svg)\n\n![](x.svg)\n"
+        self.assertEqual(self.run_on(figure_alt, {"a.md": page}), [])
+
+    def test_figure_source_checks_the_stamp_against_the_dot(self) -> None:
+        import hashlib
+        dot = "digraph g { a -> b }\n"
+        good = f"<?xml version='1.0'?>\n<!-- source-sha256: {hashlib.sha256(dot.encode()).hexdigest()} -->\n<svg></svg>"
+        self.assertEqual(self.run_on(figure_source, {"f.dot": dot, "f.svg": good}), [])
+        stale = self.run_on(figure_source, {"f.dot": dot + "// edited\n", "f.svg": good})
+        unstamped = self.run_on(figure_source, {"f.dot": dot, "f.svg": "<svg></svg>"})
+        self.assertEqual([len(stale), len(unstamped)], [1, 1])
+        self.assertEqual(self.run_on(figure_source, {"lone.svg": "<svg></svg>"}), [])
+
+    def test_figure_contrast_flags_faint_and_alpha_strokes(self) -> None:
+        svg = ('<svg><style>.box { fill: #FFFFFF; stroke: #10101459; }\n'
+               '@media (prefers-color-scheme: dark) { .box { fill: #1A1A20; stroke: #333333; } }</style>'
+               '<path stroke="#dddddd" fill="none"/><text fill="#eeeeee">x</text></svg>')
+        messages = [f.message for f in self.run_on(figure_contrast, {"f.svg": svg})]
+        self.assertEqual(len(messages), 4, messages)  # alpha; dark stroke against page and fill; faint path
+        self.assertTrue(any("alpha" in m for m in messages))
+
+    def test_figure_contrast_accepts_the_family_palette(self) -> None:
+        svg = ('<svg><style>.box { fill: #FFFFFF; stroke: #6A6D77; }\n'
+               '@media (prefers-color-scheme: dark) { .box { fill: #1A1A20; stroke: #9A9CA4; } }</style>'
+               '<path stroke="#2e7d4f" fill="#e6f2ea"/><polygon stroke="transparent" fill="white"/>'
+               '<polygon fill="#3d434b" stroke="#3d434b"/></svg>')  # an arrowhead: a solid shape
+        self.assertEqual(self.run_on(figure_contrast, {"f.svg": svg}), [])
 
 
 class TestFigureWidth(ScratchRepository):

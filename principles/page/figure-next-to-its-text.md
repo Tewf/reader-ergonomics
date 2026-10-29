@@ -4,7 +4,8 @@
 
 - **Grade:** measured.
 - **Evidence:** [learning science](../../evidence/learning-science/review.md) (strand 5), [typography and layout](../../evidence/typography-and-layout/review.md) (strand 6).
-- **Check:** `figure-captions`: every image has alt text, and every drawn figure has words right beside it.
+- **Check:** `figure-captions`: every image has alt text, and every drawn figure has words right beside it. The alt
+  text says what the figure shows, never its file name or a word for its kind (`figure-alt`, exact).
 - **Reader styles:** none override it.
 
 ## What it asks

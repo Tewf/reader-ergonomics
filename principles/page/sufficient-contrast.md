@@ -7,6 +7,7 @@
 - **Check:** `sufficient-contrast`, on the site's stylesheet with its variables resolved in every theme. It is exact
   for a text colour declared with its background, and warns for one that inherits it, measured on the page and on the
   surfaces a repository names.
+  The lines of a drawn figure reach 3:1 against the page and their fill (`figure-contrast`, exact; WCAG 1.4.11).
 - **Reader styles:** none override it.
 
 ## What it asks

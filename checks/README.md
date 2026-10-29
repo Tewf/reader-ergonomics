@@ -20,6 +20,7 @@ and none costs money: the one paid backend exists but is off.
 | Folder | Holds |
 |---|---|
 | [program/](program/) | the checks that need no model: paths, folders, links, size, outline, copies, terms, shapes, sentences, figures, stylesheet, citations, bibliography keys, history |
+| [figures/](figures/) | the program-tier checks that read figures: drawn or typed, described, in step with their Graphviz source, readable on a phone |
 | [meaning/](meaning/) | the checks that compare meaning: paraphrased copies, page mode, name against content, section cohesion |
 | [syntax/](syntax/) | the checks that read a parse: [dependency length](../evidence/psycholinguistics/review.md), clause nesting, links between sentences |
 | [framework/](framework/) | what every check is built on: the interface, the prose units, the judgment backends |
