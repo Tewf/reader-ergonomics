@@ -27,6 +27,7 @@ and none costs money: the one paid backend exists but is off.
 | [config.toml](config.toml) | every threshold, tagged PROVISIONAL where it is a convention, and the default tiers |
 | [test_checks.py](test_checks.py) | the checks' own oracle: a planted violation per check |
 | [test_framework.py](test_framework.py) | the runner, the config, the judgment step, and each way a run can fail |
+| [test_tiers.py](test_tiers.py) | the meaning and syntax tiers' planted cases, skipped when their library is missing |
 | [test_properties.py](test_properties.py) | properties every input must keep, tried on generated inputs from a seeded source |
 
 What a check's findings can be trusted for, and what it costs, is said once, in its docstring. Each tier's README shows
