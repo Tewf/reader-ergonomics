@@ -440,7 +440,7 @@ Every work cited anywhere in this repository, once. The text cites `Author Year`
 | Viktorin 2022 | Viktorin and others (2022). Adopting the Diataxis framework for Python documentation. Python discussion forum | https://discuss.python.org/t/adopting-the-diataxis-framework-for-python-documentation/15072 |
 | Volpini 2026 | Volpini, Raad, Gamba, Riccitelli (2026). Structured Linked Data as a Memory Layer for Agent-Orchestrated Retrieval. Preprint. | arXiv:2603.10700 |
 | W3C 2023a | W3C (2023). Web Content Accessibility Guidelines 2.2, W3C Recommendation | https://www.w3.org/TR/WCAG22/ |
-| W3C 2023b | W3C (2023). Understanding 1.4.3 Contrast (Minimum); Understanding 1.4.8 Visual Presentation | https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html |
+| W3C 2023b | W3C (2023). Understanding 1.4.3 Contrast (Minimum) | https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html |
 | W3C 2026 | W3C (2026). WCAG 3.0, W3C Working Draft of 10 September 2026 | https://www.w3.org/TR/wcag-3.0/ |
 | Wang 2023 | Wang (2023). Accordions on desktop: when and how to use. Nielsen Norman Group | https://www.nngroup.com/articles/accordions-on-desktop/ |
 | WebAIM 2026 | WebAIM (2026). The WebAIM Million: accessibility analysis of the top 1,000,000 home pages | https://webaim.org/projects/million/ |
