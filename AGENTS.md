@@ -28,7 +28,8 @@ python3 checks/run.py . --online --only references   # resolve every reference (
 ```
 
 - Fix every `error`. Read every `warning`.
-- Answer the questions in `checks/out/needs-judgment.md`. A model does not review its own text in place of the checks.
+- Answer the questions in `checks/out/needs-judgment.md`, and keep each answer in `checks/judgments.toml`. A model does
+  not review its own text in place of the checks.
 - The paid judgment backend stays off (`[judgment.api] enabled = false`) unless the maintainer turns it on.
 
 ## House conventions (this repository, not the standard)

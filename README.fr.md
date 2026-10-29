@@ -50,7 +50,8 @@ python3 reader-ergonomics/checks/run.py chemin/vers/votre/depot
 ```
 
 Seule la bibliothèque standard de Python est nécessaire. Les constats exacts font échouer l'exécution ; les questions
-qu'un programme ne peut pas trancher sont écrites dans `checks/out/needs-judgment.md`. Voir [checks/](checks/).
+qu'un programme ne peut pas trancher sont écrites dans `checks/out/needs-judgment.md`, et leurs réponses sont gardées
+dans `checks/judgments.toml`. Voir [checks/](checks/).
 
 ## Langue
 

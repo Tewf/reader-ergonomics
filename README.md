@@ -50,7 +50,8 @@ python3 reader-ergonomics/checks/run.py path/to/your/repo
 ```
 
 Only the Python standard library is needed. Exact findings fail the run; questions a program cannot answer are
-written to `checks/out/needs-judgment.md`. See [checks/](checks/).
+written to `checks/out/needs-judgment.md`, and their answers are kept in `checks/judgments.toml`. See
+[checks/](checks/).
 
 ## Contributing
 

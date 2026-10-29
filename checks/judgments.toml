@@ -209,7 +209,7 @@ answer = "Kept: the README's question is the folder's one-line overview of the p
 check = "document-mode"
 path = "AGENTS.md"
 question = "reads about equally as reference and how-to: one mode per document?"
-file = "f27406c8719d"
+file = "efa59e587802"
 answer = "How-to: the steps a contributor follows. The rules it lists are part of the task, not a separate reference."
 
 [[answer]]
@@ -316,3 +316,10 @@ path = "principles/sentence/short-dependencies.md"
 question = "section 'What it asks' is far from every other section (0.19): a second role?"
 file = "356f9281a05d"
 answer = "No: 'What it asks' is one of the three sections every principle file has; in a file this short the embedding separates any section from the others."
+
+[[answer]]
+check = "co-change"
+path = "checks/program/sufficient_contrast.py"
+question = "changed together with checks/test_checks.py in 3 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+file = "7252c1f3f1b3"
+answer = "Yes, coupled: a check and its tests. The tests stay in two files at the root of checks/ by design, so one command runs the whole suite; the coupling is the one a test is meant to have."
