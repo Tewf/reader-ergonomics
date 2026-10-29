@@ -293,6 +293,29 @@ class TestJudgmentAnswers(ScratchRepository):
         self.assertIn("0 answered in checks/judgments.toml, 1 written", judgment.dispatch(self.root, question, "flag", {}))
 
 
+class TestContrast(ScratchRepository):
+    def found(self, css: str, **settings) -> list[str]:
+        self.write("site.css", css)
+        config = dict(CONFIG, sufficient_contrast={"stylesheets": ["site.css"], **settings})
+        return [f"{finding.kind} {finding.message}" for finding in sufficient_contrast.check(self.root, config)]
+
+    def test_a_variable_is_read_from_its_theme(self) -> None:
+        found = self.found(":root { --fg: #777; --paper: #fff; }\n.card { color: var(--fg); background: var(--paper); }\n"
+                           "@media (prefers-color-scheme: dark) { :root { --paper: #111; --fg: #000; } }\n")
+        self.assertEqual(len(found), 2, found)
+        self.assertIn("error .card: color #777 on #fff is 4.48:1, under 4.5:1", found)
+        self.assertTrue(any("theme @media (prefers-color-scheme: dark) :root" in line for line in found), found)
+
+    def test_inherited_text_is_measured_on_the_page_and_named_surfaces(self) -> None:
+        css = ("html, body { background: #131520; }\n.muted { color: #6B6B80; }\n"
+               ".slide-light { background: #F9F5F0; color: #1B1B2F; }\n.title { color: #E8652D; }\n"
+               "@keyframes glow { from { color: #fff; } to { color: #000; } }\n")
+        page_only = self.found(css)
+        self.assertEqual(page_only, ["warning #6b6b80 (.muted) on html, body (#131520) is 3.50:1, under 4.5:1, if it sits there"])
+        with_surface = self.found(css, surfaces=[".slide-light"])
+        self.assertIn("warning #e8652d (.title) on .slide-light (#f9f5f0) is 3.06:1, under 4.5:1, if it sits there", with_surface)
+
+
 class TestCitationKeys(unittest.TestCase):
     def test_a_surname_keeps_its_particle(self) -> None:
         from program import citations

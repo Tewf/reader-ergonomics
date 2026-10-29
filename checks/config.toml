@@ -78,6 +78,7 @@ min_line_height = 1.5
 [sufficient_contrast]
 stylesheets = ["site.css"]
 min_ratio = 4.5
+surfaces = []   # selectors that paint a surface text may sit on (a slide, a card); the page is always measured
 
 [paraphrase]
 min_words = 15

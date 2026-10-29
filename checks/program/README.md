@@ -27,7 +27,7 @@ certain, a **warning** when it comes from a heuristic, and a **judgment** questi
 | [references.py](references.py) | References: every DOI, arXiv id, GitHub repository and web link cited resolves |
 | [shape_conformance.py](shape_conformance.py) | Shape conformance: a document declared to be of a shape holds the parts that shape requires |
 | [standard_card.py](standard_card.py) | The repository's generated indexes: the principle table in standard.md, llms.txt, and the check tables |
-| [sufficient_contrast.py](sufficient_contrast.py) | Sufficient contrast: text and background colours declared together reach a WCAG ratio of 4.5:1 |
+| [sufficient_contrast.py](sufficient_contrast.py) | Sufficient contrast: every text colour reaches a WCAG ratio of 4.5:1 on the background it sits on |
 | [tree_shape.py](tree_shape.py) | Tree shape: folders stay browsable, and dependencies between folders never form a cycle |
 | [type_buckets.py](type_buckets.py) | Type buckets: no folder is named for a kind of file instead of what its files serve |
 <!-- checks:end -->

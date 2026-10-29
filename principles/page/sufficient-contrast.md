@@ -4,7 +4,9 @@
 
 - **Grade:** measured for polarity; the 4.5:1 floor is a convention (a standard).
 - **Evidence:** [typography and layout](../../evidence/typography-and-layout/review.md) (strand 4), [baseline](../../evidence/typography-and-layout/baseline.md), [terms](../../evidence/typography-and-layout/frame.md).
-- **Check:** `sufficient-contrast` (exact, on the site's stylesheet): every text colour declared with its background reaches 4.5:1.
+- **Check:** `sufficient-contrast`, on the site's stylesheet with its variables resolved in every theme. It is exact
+  for a text colour declared with its background, and warns for one that inherits it, measured on the page and on the
+  surfaces a repository names.
 - **Reader styles:** none override it.
 
 ## What it asks
