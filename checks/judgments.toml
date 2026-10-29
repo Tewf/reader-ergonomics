@@ -279,7 +279,7 @@ answer = "No: `Upper bounds (what has been achieved) are kept apart from lower b
 check = "section-cohesion"
 path = "evidence/multivocal-protocol.md"
 question = "section 'What was not recorded' is far from every other section (0.06): a second role?"
-file = "eb0015eaa818"
+file = "8f7380a5ee4a"
 answer = "No: `What was not recorded` names the protocol's departures from its own method (`one scorer per topic`), which belong to the protocol."
 
 [[answer]]
@@ -344,3 +344,10 @@ path = "checks/README.md"
 question = "changed together with evidence/README.md in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
 file = "5cb186fb6d2e"
 answer = "No: it and `evidence/README.md` changed together in passes over the whole repository (the audits, the figure redraw), not because they serve one purpose; each is its own folder's front page."
+
+[[answer]]
+check = "co-change"
+path = "evidence/reading-order/sources.md"
+question = "changed together with principles/document/overview-first.md in 3 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+file = "2bd3b2ac2b6b"
+answer = "Yes, coupled with `principles/document/overview-first.md`: the scores of the sources a principle rests on, and the principle whose limits they set. They stay apart by design, evidence in evidence/ and claims in principles/, and the principle links to the review."
