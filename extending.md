@@ -63,9 +63,12 @@ These parts are stable within a major version. An extension relies on them and o
 
 A local check counts for `principle-coverage`, so an extension's principle can name a check of its own.
 
-A bibliography key names one work across the family. When two works share a key, this standard's key wins; between
-extensions, the older use wins, and the other work takes the next letter free in the family
-([decision 0003](decisions/0003-one-key-one-work-across-the-family.md)).
+A bibliography key names one work across the family ([decision 0003](decisions/0003-one-key-one-work-across-the-family.md)):
+
+- when two works share a key, this standard's key wins;
+- between extensions, the older use wins: the first commit on the default branch that adds the row;
+- the work that loses the key takes the next letter free in the family;
+- the year in a key is the year of the version read, and an undated page takes the year it was read.
 
 A stylesheet listed in config that does not exist is a warning, so an extension that loads this standard's `site.css`
 rather than one of its own sets `stylesheets = []` under `[readable_measure]` and `[sufficient_contrast]`.

@@ -20,7 +20,8 @@
 - **One check, `bibliography-keys`, in the program tier.** A key held twice in one file is an error. One work under
   two keys, a key another repository gives another work, and a work it gives another key are warnings, reported at
   the row in this repository's bibliography.
-- **A work is named by its link:** the DOI, else the arXiv id without its version, else the address.
+- **A work is named by its link:** the DOI, else the arXiv id without its version, else the address. A DOI or
+  arXiv id the citation also names, a preprint beside its journal version, is the same work.
 - **The family is named in config**, as folders beside the repository, read at the same bibliography path. Each
   extension lists the others and this standard; this standard lists none. A clash between the standard and an
   extension is reported by the extension.
@@ -29,8 +30,10 @@
 - **In CI, an extension checks out the family's default branches beside its own**, by the names in its config.
   A member that is not found is a warning, so a comparison is never passed over unread.
 - **This standard's key wins.** An extension that holds one of its keys for another work renames its own. Between
-  extensions, the older use keeps the key. The other work takes the next letter free in the family. This order is
-  the one that can be checked looking down only: each extension against this standard and its siblings.
+  extensions, the older use keeps the key: the first commit on the default branch that adds its row. The other work
+  takes the next letter free in the family. This order is the one that can be checked looking down only: each
+  extension against this standard and its siblings.
+- **The year in a key is the year of the version read**; a page with no date takes the year it was read.
 
 Who compares with whom, and whose key wins a clash:
 

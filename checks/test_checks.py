@@ -436,6 +436,14 @@ class TestBibliographyKeys(unittest.TestCase):
             "warning 3 'Yang 2021' names another work in that (line 3, doi:10.1037/a): one key, one work across the family",
             "warning 4 'Hartley 2004a' is 'Hartley 2004' in that (line 4, pmc.example/pmc4): one work, one key across the family"])
 
+    def test_a_preprint_named_in_the_citation_is_the_same_work(self) -> None:
+        self.bibliography("this", "Liang 2024 | Model cards. Nature Machine Intelligence; preprint arXiv:2402.05160 | https://doi.org/10.1038/s42256",
+                          "Gebru 2021 | Datasheets; preprint arXiv:1803.09010 | https://doi.org/10.1145/3458723")
+        self.bibliography("that", "Liang 2024 | Model cards, preprint | https://arxiv.org/abs/2402.05160v2",
+                          "Gebru 2018 | Datasheets, preprint | https://arxiv.org/abs/1803.09010")
+        self.assertEqual(self.found(family=["that"]), [
+            "warning 4 'Gebru 2021' is 'Gebru 2018' in that (line 4, arxiv:1803.09010): one work, one key across the family"])
+
     def test_this_repository_in_its_own_family_is_skipped_and_a_missing_member_is_reported(self) -> None:
         self.bibliography("this", "Liu 2024 | Lost in the middle | https://doi.org/10.1162/tacl")
         self.assertEqual(self.found(family=["this", "gone"]), [
