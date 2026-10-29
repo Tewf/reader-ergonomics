@@ -23,6 +23,7 @@ write.
 | a writer, or a model about to write | [standard.md](standard.md): one page, every principle with its grade, and how to check your text |
 | a reader who wants the reasons | [evidence/](evidence/): one literature review per topic, with the case against each principle |
 | writing for a known reader | [reader-styles/](reader-styles/): what changes for a novice, an expert, a visual reader, a language model |
+| building an extension for one genre | [extending.md](extending.md): the layout to mirror, and the parts of this repository it can rely on |
 
 ## What is here
 

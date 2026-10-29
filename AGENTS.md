@@ -2,6 +2,8 @@
 
 For anyone changing this repository, person or language model. To apply the standard
 somewhere else, read [standard.md](standard.md) instead; this file is about this repository only.
+To extend it to one genre in a repository of its own, read [extending.md](extending.md), and change nothing
+it lists as the interface without raising the major version.
 
 ## Before writing
 

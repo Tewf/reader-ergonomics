@@ -23,6 +23,7 @@ et pour les modèles de langue qui écrivent.
 | quelqu'un qui écrit, ou un modèle sur le point d'écrire | [standard.md](standard.md) : une page, chaque principe avec son niveau de preuve, et comment vérifier son texte |
 | un lecteur qui veut les raisons | [evidence/](evidence/) : une revue de littérature par thème, avec les arguments contre chaque principe |
 | quelqu'un qui écrit pour un lecteur connu | [reader-styles/](reader-styles/) : ce qui change pour un novice, un expert, un lecteur visuel, un modèle de langue |
+| quelqu'un qui étend le standard à un genre | [extending.md](extending.md) : la structure à reproduire, et les parties de ce dépôt sur lesquelles compter |
 
 ## Contenu
 

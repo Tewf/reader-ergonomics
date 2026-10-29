@@ -8,6 +8,7 @@ Each page's markdown source is served at the same path with a .md extension.
 
 - [Standard](https://tewf.github.io/reader-ergonomics/standard.md): the one-page card to follow, with every principle and its grade
 - [Contributing](https://tewf.github.io/reader-ergonomics/AGENTS.md): rules for changing this repository
+- [Extending](https://tewf.github.io/reader-ergonomics/extending.md): what an extension of this standard can rely on
 
 ## Collection: files and folders
 
