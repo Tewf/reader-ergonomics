@@ -24,8 +24,9 @@ which said the standard never links to them.
 - **A boundary that keeps moving is in the wrong place.** Suppose three releases in a row each force a change in the
   same extension, beyond moving its pin. Then the shared part moves into the standard, or the two repositories merge.
 - **One repository per genre is a convention.** It follows the maintainer's rule that a project attacks one problem.
-  Over 142 studies, organisation and structure mirrored each other in most firm studies but not in open
-  collaborative projects (Colfer 2016, abstract read). No measured result says that splitting by genre helps here.
+  In a review of 142 studies, organisation mirrored structure fully in 70% of the descriptive
+  industry and firm studies and partly in 22%. In open collaborative projects, mostly software, 56% of the descriptive
+  studies did not support it (Colfer 2016). No measured result says that splitting by genre helps here.
 
 ## Consequences
 

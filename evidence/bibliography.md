@@ -67,7 +67,7 @@ Every work cited anywhere in this repository, once. The text cites `Author Year`
 | Clark 1991 | Clark, Paivio (1991). Dual coding theory and education. Educational Psychology Review | https://doi.org/10.1007/BF01320076 |
 | Cleveland 1984 | Cleveland, McGill (1984). Graphical perception. Journal of the American Statistical Association | https://doi.org/10.1080/01621459.1984.10478080 |
 | Cohen-Addad 2019 | Cohen-Addad, Kanade, Mallmann-Trenn, Mathieu (2019). Hierarchical clustering: objective functions and algorithms. JACM | https://doi.org/10.1145/3321386 |
-| Colfer 2016 | Colfer, Baldwin (2016). The mirroring hypothesis: theory, evidence, and exceptions. Industrial and Corporate Change. Abstract read | https://doi.org/10.1093/icc/dtw027 |
+| Colfer 2016 | Colfer, Baldwin (2016). The mirroring hypothesis: theory, evidence, and exceptions. Industrial and Corporate Change 25(5), 709-738. Open access; abstract and introduction read | https://doi.org/10.1093/icc/dtw027 |
 | Conklin 1987 | Conklin (1987). Hypertext: an introduction and survey. IEEE Computer | https://doi.org/10.1109/MC.1987.1663693 |
 | Costa 2022 | Costa, Miranda, Melo (2022). Four-component instructional design (4C/ID) model: a meta-analysis. Learning Environments Research | https://doi.org/10.1007/s10984-021-09373-y |
 | Cox 2021 | Cox (2021). Issue 117, golang-standards/project-layout. GitHub, opened 2021-04-09 | https://github.com/golang-standards/project-layout/issues/117 |
