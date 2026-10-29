@@ -38,6 +38,26 @@ principle to naming at least one registered check.
 
 ![An exact finding is an error that fails the run, a heuristic one a warning to fix or explain, and an open one a judgment sent to a backend.](kinds-of-finding.svg)
 
+<details>
+<summary>Graphviz source</summary>
+
+```dot
+digraph findings {
+  graph [rankdir=LR, nodesep=0.4, ranksep=0.5, bgcolor="white", pad=0.2, fontname="Inter"];
+  node  [shape=box, style="rounded,filled", fontname="Inter", fontsize=13, margin="0.2,0.1", penwidth=1.5, fontcolor="#1F2328"];
+  edge  [fontname="Inter", fontsize=11, color="#3D434B", fontcolor="#55575F", penwidth=1.3, arrowsize=0.8];
+  F [label=<<b>a finding</b>>, fillcolor="#FFFFFF", color="#3D434B"];
+  E [label=<<b>error</b><br/><font point-size="11" color="#55575F">the run fails</font>>, fillcolor="#FBEDE4", color="#B4541A"];
+  W [label=<<b>warning</b><br/><font point-size="11" color="#55575F">fix it, or say why it is false</font>>, fillcolor="#FBEDE4", color="#B4541A", style="rounded,filled,dashed"];
+  J [label=<<b>judgment</b><br/><font point-size="11" color="#55575F">to a backend: none, flag (default),</font><br/><font point-size="11" color="#55575F">local model, or api (paid, off)</font>>, fillcolor="#E8EEF8", color="#2F5DA8"];
+  F -> E [label=" exact"];
+  F -> W [label=" heuristic"];
+  F -> J [label=" open"];
+}
+```
+
+</details>
+
 | Backend | What happens | Cost |
 |---|---|---|
 | `none` | questions dropped | free |

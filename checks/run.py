@@ -27,7 +27,7 @@ from framework.check_api import repository_paths
 from framework.config import load_config
 from meaning import document_mode, name_content, paraphrase, section_cohesion
 from program import (bibliography_keys, citations, co_change, cross_file_terms, decision_records, defined_before_use, duplication, figure_captions,
-                     figure_width, figures_present, judgment_quotes, links, logical_lines, long_sentences, name_matches_title, outline_depth,
+                     figure_source_inline, figure_width, figures_present, judgment_quotes, links, logical_lines, long_sentences, name_matches_title, outline_depth,
                      overview_first, paragraph_length, portable_paths, principle_coverage, provisional_tags,
                      readable_measure, references, shape_conformance, shape_example, standard_card, sufficient_contrast, tree_shape,
                      type_buckets)
@@ -35,7 +35,7 @@ from syntax import clause_nesting, dependency_length, sentence_links
 
 CHECKS = [portable_paths, tree_shape, type_buckets, links, logical_lines, outline_depth, overview_first,
           name_matches_title, duplication, defined_before_use, cross_file_terms, shape_conformance, long_sentences,
-          paragraph_length, figures_present, figure_captions, figure_width, readable_measure, sufficient_contrast, citations,
+          paragraph_length, figures_present, figure_captions, figure_width, figure_source_inline, readable_measure, sufficient_contrast, citations,
           bibliography_keys, standard_card, provisional_tags, co_change, principle_coverage, references, judgment_quotes,
           decision_records, shape_example,
           paraphrase, document_mode, name_content, section_cohesion,

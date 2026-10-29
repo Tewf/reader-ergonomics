@@ -7,6 +7,9 @@ The principles below are the best current guess for a reader nobody knows, as fa
 
 ![Ask who reads and open their reader style if known; pick the shape; write to the principles; run the checks, whose three kinds of finding the steps below define.](standard-how-to-use.svg)
 
+<details>
+<summary>Graphviz source</summary>
+
 ```dot
 digraph how_to_use {
   graph [rankdir=TB, nodesep=0.4, ranksep=0.5, bgcolor="white", pad=0.2, fontname="Inter"];
@@ -32,6 +35,8 @@ digraph how_to_use {
 }
 ```
 
+</details>
+
 1. **Name the reader.** If they are known, open their style in [reader-styles/](reader-styles/).
 2. **Pick the shape** of the document from [shapes/](shapes/).
 3. **Write to the principles** below; each file says what it asks, why, and where it stops.
@@ -56,6 +61,9 @@ The principles act at four scales; the first three nest, the fourth is how all o
 
 ![Three nested scales: the collection holds documents, a document holds sentences; the page is how all three are shown.](standard-scales.svg)
 
+<details>
+<summary>Graphviz source</summary>
+
 ```dot
 digraph scales {
   graph [rankdir=TB, nodesep=0.4, ranksep=0.5, bgcolor="white", pad=0.2, fontname="Inter", compound=true];
@@ -77,6 +85,8 @@ digraph scales {
   S -> PG [ltail=cluster_collection, dir=back, style=dashed, color="#6A6D77", label=" shows all three"];
 }
 ```
+
+</details>
 
 <!-- principles:start -->
 

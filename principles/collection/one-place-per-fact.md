@@ -4,7 +4,7 @@
 
 - **Grade:** supported with caveat.
 - **Evidence:** [file structure](../../evidence/file-structure/review.md), [against](../../evidence/file-structure/against.md) (one place per fact).
-- **Check:** `duplication` (exact, 20 identical words in two files), `links` (exact, a link that replaces a copy must resolve), `paraphrase` (meaning: the same fact in other words).
+- **Check:** `duplication` (exact, 20 identical words in two files), `links` (exact, a link that replaces a copy must resolve), `paraphrase` (meaning: the same fact in other words). The source folded under a drawn figure is kept equal to its file by `figure-source-inline`.
 - **Reader styles:** strengthened by [LLM reader](../../reader-styles/llm-reader.md).
 
 ## What it asks

@@ -39,6 +39,25 @@ Who compares with whom, and whose key wins a clash:
 
 ![An extension is compared against reader-ergonomics, whose key wins, and against each sibling, where the older use wins; reader-ergonomics reads no one.](key-rule.svg)
 
+<details>
+<summary>Graphviz source</summary>
+
+```dot
+digraph key_rule {
+  graph [rankdir=BT, nodesep=0.4, ranksep=0.5, bgcolor="white", pad=0.2, fontname="Inter"];
+  node  [shape=box, style="rounded,filled", fontname="Inter", fontsize=13, margin="0.2,0.1", penwidth=1.5, fontcolor="#1F2328"];
+  edge  [fontname="Inter", fontsize=11, color="#3D434B", fontcolor="#55575F", penwidth=1.3, arrowsize=0.8];
+  RE [label=<<b>reader-ergonomics</b><br/><font point-size="11" color="#55575F">family = [], reads no one</font>>, fillcolor="#E8EEF8", color="#2F5DA8"];
+  X [label=<<b>an extension</b>>, fillcolor="#E6F2EA", color="#2E7D4F"];
+  SIB [label=<<b>each sibling extension</b>>, fillcolor="#E6F2EA", color="#2E7D4F", style="rounded,filled,dashed"];
+  X -> RE [label=" compared against;\l its key wins\l"];
+  X -> SIB [style=dashed, color="#6A6D77", label=" compared against; the older\l use of a key wins\l"];
+  {rank=same; X; SIB}
+}
+```
+
+</details>
+
 ## Consequences
 
 - A clash with this standard surfaces in an extension, at its next push, and the extension renames.

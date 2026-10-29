@@ -10,7 +10,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from program import (co_change, cross_file_terms, decision_records, defined_before_use, duplication, figure_captions, figure_width, figures_present, judgment_quotes, links,
+from program import (co_change, cross_file_terms, decision_records, defined_before_use, duplication, figure_captions, figure_source_inline, figure_width, figures_present, judgment_quotes, links,
                      logical_lines, long_sentences, name_matches_title, outline_depth, overview_first, paragraph_length,
                      portable_paths, principle_coverage, provisional_tags, readable_measure, references, shape_conformance, shape_example,
                      standard_card, sufficient_contrast, tree_shape, type_buckets)
@@ -420,6 +420,34 @@ class TestShapeExample(unittest.TestCase):
         self.assertEqual(self.found({"shapes/base.md": "# Base\n\n[derived](derived.md)\n",
                                      "shapes/derived.md": "# Derived\n\nDerives from [base](base.md).\n\n## Worked example\n\nx\n"}),
                          ["shapes/base.md"])
+
+
+class TestFigureSourceInline(ScratchRepository):
+    DOT = "digraph g { a -> b; }\n"
+
+    def page(self, under: str) -> list[str]:
+        self.write("fig.dot", self.DOT)
+        self.write("fig.svg", "<svg/>\n")
+        self.write("a.md", "# A\n\n![a goes to b](fig.svg)\n" + under)
+        return [f"{finding.kind} {finding.message}" for finding in figure_source_inline.check(self.root, CONFIG)]
+
+    def test_a_folded_copy_equal_to_its_file_passes(self) -> None:
+        self.assertEqual(self.page("\n<details>\n<summary>Graphviz source</summary>\n\n```dot\n" + self.DOT + "```\n\n</details>\n"), [])
+
+    def test_a_copy_that_drifted_is_an_error(self) -> None:
+        found = self.page("\n<details>\n<summary>Graphviz source</summary>\n\n```dot\ndigraph g { a -> c; }\n```\n\n</details>\n")
+        self.assertEqual(len(found), 1)
+        self.assertTrue(found[0].startswith("error the source folded under fig.svg differs"), found)
+
+    def test_a_figure_with_no_folded_source_warns(self) -> None:
+        found = self.page("\nText.\n")
+        self.assertEqual(len(found), 1)
+        self.assertTrue(found[0].startswith("warning fig.svg has no folded source"), found)
+
+    def test_an_image_with_no_dot_beside_it_is_not_checked(self) -> None:
+        self.write("photo.svg", "<svg/>\n")
+        self.write("b.md", "# B\n\n![a photograph](photo.svg)\n")
+        self.assertEqual(figure_source_inline.check(self.root, CONFIG), [])
 
 
 class TestFigureWidth(ScratchRepository):

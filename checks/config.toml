@@ -87,6 +87,9 @@ example_headings = ["Worked example", "Example"]
 [decision_records]
 ask_costs = false   # rule 3 asks when no Consequences line is labelled "Bad"; a repository using the label turns it on
 
+[figure_source_inline]
+exempt = []
+
 [figure_width]
 max_columns = 60   # PROVISIONAL: no study gives a figure width; the narrow end of the readable measure
 exempt = []

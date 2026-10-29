@@ -139,7 +139,7 @@ answer = "No: it and `principles/sentence/shallow-nesting.md` changed together o
 check = "co-change"
 path = "principles/collection/one-place-per-fact.md"
 question = "changed together with principles/page/sufficient-contrast.md in 3 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
-file = "689d0351a6c3"
+file = "33738276ebc4"
 answer = "No: it and `principles/page/sufficient-contrast.md` changed together only in passes over the whole standard (audits and amendments touching 10 to 18 principles at once), not because they serve one purpose; principles stay grouped by scale."
 
 [[answer]]
@@ -349,19 +349,19 @@ answer = "Yes, coupled with `principles/document/overview-first.md`: the scores 
 check = "name-content"
 path = "decisions/0003-one-key-one-work-across-the-family.md"
 question = "the name '0003 work across family' and the opening are far apart in meaning (0.19): does the name predict the content?"
-file = "33822c434c98"
+file = "36658fa30aec"
 answer = "Yes: the name is the title, `A key names one work across the family`, and the opening says how that rule is checked, through `[bibliography_keys] family`. The distance comes from the opening's words for the mechanism (config, bibliography), not from another subject."
 
 [[answer]]
 check = "co-change"
 path = "checks/config.toml"
 question = "changed together with decisions/README.md in 3 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
-file = "b927c70b00fa"
+file = "959a7764ff67"
 answer = "Keep them apart: config holds `What the checks read`, and decisions/README.md indexes why. Each of the three shared commits added a decision that sets a value here: the tiers (da2ef3a), the decision-record shape (d408349) and the `[bibliography_keys]` table with decision 0003, which names that table, so the record already links the fact."
 
 [[answer]]
 check = "logical-lines"
 path = "checks/test_checks.py"
-question = "533 lines, past the ceiling of 500. Review it: split it only into pieces that change separately and each stay whole, or state why it stays one file."
-file = "c0c64fdb32c0"
+question = "561 lines, past the ceiling of 500. Review it: split it only into pieces that change separately and each stay whole, or state why it stays one file."
+file = "3f4e192e3ada"
 answer = "Stays one file: its one role is that `each check must find a violation planted in a scratch repository`, for the program tier. The framework and the other tiers already sit in test_framework.py and test_tiers.py; split by check, it would become thirty files of one class each."

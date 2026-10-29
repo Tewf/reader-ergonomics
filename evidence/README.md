@@ -7,6 +7,31 @@ traced through them to what was measured, by whom, and what speaks against it.
 
 ![The steps of a review: frame, review, state of the art, position and baseline, with the evidence against gathered beside the review.](review-steps.svg)
 
+<details>
+<summary>Graphviz source</summary>
+
+```dot
+digraph evidence_steps {
+  graph [rankdir=TB, nodesep=0.4, ranksep=0.5, bgcolor="white", pad=0.2, fontname="Inter"];
+  node  [shape=box, style="rounded,filled", fontname="Inter", fontsize=13, margin="0.2,0.1", penwidth=1.5, fontcolor="#1F2328"];
+  edge  [fontname="Inter", fontsize=11, color="#3D434B", fontcolor="#55575F", penwidth=1.3, arrowsize=0.8];
+  FR [label=<<b>frame</b><br/><font point-size="11" color="#55575F">the field's name for the problem</font>>, fillcolor="#FFFFFF", color="#3D434B"];
+  RV [label=<<b>review</b><br/><font point-size="11" color="#55575F">surveys, seminal work, forward citations</font>>, fillcolor="#FFFFFF", color="#3D434B"];
+  SA [label=<<b>state of the art</b><br/><font point-size="11" color="#55575F">who holds the record, measured how</font>>, fillcolor="#FFFFFF", color="#3D434B"];
+  PO [label=<<b>position</b><br/><font point-size="11" color="#55575F">known, unknown, what this repository adds</font>>, fillcolor="#FFFFFF", color="#3D434B"];
+  BL [label=<<b>baseline</b><br/><font point-size="11" color="#55575F">what the principles are compared against</font>>, fillcolor="#FFFFFF", color="#3D434B"];
+  AG [label=<<b>against</b><br/><font point-size="11" color="#55575F">null results, disputes, failed replications</font>>, fillcolor="#FFFFFF", color="#3D434B", style="rounded,filled,dashed"];
+  FR -> RV;
+  RV -> SA;
+  SA -> PO;
+  PO -> BL;
+  RV -> AG [style=dashed, color="#6A6D77", label=" also"];
+  {rank=same; SA; AG}
+}
+```
+
+</details>
+
 | File | Step |
 |---|---|
 | `frame.md` | 1. the problem in one sentence, and what the field calls it: names, acronyms, synonyms |
