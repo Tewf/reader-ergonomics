@@ -5,7 +5,7 @@ source where the figure is, on GitHub as on the site, without searching the repo
 `X.dot` beside it is followed by a folded block, `<details>`, holding the source in a fenced `dot` block. The copy is
 a second place for one fact, so it must equal the file it copies: a copy that differs is an error, and a figure with
 no folded source is a warning. An image with no `.dot` beside it (a photograph, a chart from data) is not checked.
-Mohamed's rule for the family's figures, 2026-10-29.
+The author's rule for the family's figures, 2026-10-29.
 
 Exact for the comparison; whether a figure needs its source shown is the rule's, not the reader's. Time O(text).
 """

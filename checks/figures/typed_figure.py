@@ -2,9 +2,8 @@
 
 A fenced block marked `text` (or `txt`, `plaintext`), or with no language, that holds box-drawing characters
 (U+2500 to U+257F) or block arrows is a figure typed in characters. In a page read on GitHub or a site it is drawn
-from a Graphviz `.dot` source instead, with the SVG embedded and its source folded under it (Mohamed's
-figure rule, 2026-10-29). Files read
-in a terminal or by a model keep their typed figures: they are listed under `exempt` in config.
+from a Graphviz `.dot` source instead, with the SVG embedded and its source folded under it (the author's
+figure rule, 2026-10-29). Files read in a terminal or by a model keep their typed figures: they are listed under `exempt` in config.
 
 Exact for what counts as a typed figure; the rule is a convention, so a warning. Time O(text).
 """
