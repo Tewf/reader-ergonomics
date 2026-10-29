@@ -9,6 +9,8 @@
   folders; a strongly connected component of more than one folder fails. A link between
   documents is a reference, not a dependency, and may cycle.
 
+A file under a path in `[scope] exclude` is not read by any of the four.
+
 Exact for breadth, depth and static imports; dynamic imports are invisible.
 Time O(paths + imports) with Tarjan's algorithm, space O(paths + imports).
 """
@@ -131,7 +133,8 @@ def check(root: Path, config: dict) -> list[Finding]:
     for path in paths:
         if path.count("/") > settings.get("max_depth", 4) and not matches_any(path, excluded):
             findings.append(Finding(NAME, path, 0, f"{path.count('/')} folders deep", "warning"))
-    known = {path for path in repository_paths(root) if path.endswith(".py")}
+    scope = config.get("scope", {}).get("exclude", [])
+    known = {path for path in repository_paths(root) if path.endswith(".py") and not matches_any(path, scope)}
     folder_graph = defaultdict(set)
     for path in known:
         source = (root / path).read_text(encoding="utf-8", errors="replace")

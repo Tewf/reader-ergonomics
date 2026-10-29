@@ -157,6 +157,20 @@ class TestPlantedViolations(ScratchRepository):
         found = self.messages(type_buckets)
         self.assertEqual(len(found), 1, found)
 
+    def test_tree_shape_skips_an_import_cycle_out_of_scope(self) -> None:
+        self.write("courses/a/one.py", "from courses.b import two\n")
+        self.write("courses/b/two.py", "from courses.a import one\n")
+        found = [finding.message for finding in tree_shape.check(self.root, {"scope": {"exclude": []}})]
+        self.assertTrue(any("import cycle" in message for message in found), found)
+        found = [finding.message for finding in tree_shape.check(self.root, {"scope": {"exclude": ["courses/"]}})]
+        self.assertFalse(any("import cycle" in message for message in found), found)
+
+    def test_type_buckets_skips_a_folder_out_of_scope(self) -> None:
+        self.write("docs/a.md")
+        self.write("courses/week-1/assets/figure.png")
+        found = type_buckets.check(self.root, {"scope": {"exclude": ["courses/"]}})
+        self.assertEqual([finding.path for finding in found], ["docs"])
+
     def test_name_matches_title(self) -> None:
         self.write("guides/folder-depth.md", "# Folder depth\n\nText.\n")
         self.write("guides/contrast-ratio.md", "# Something else entirely\n\nText.\n")
