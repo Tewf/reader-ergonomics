@@ -52,7 +52,7 @@ These parts are stable within a major version. An extension relies on them and o
 | Config | `checks/config.toml` with `extends = "reader-ergonomics"` is merged onto this standard's config, table by table, and the extension's value wins; any other `extends` stops the run |
 | Local checks | each module in `checks/local/` defines `NAME` and `check(root, config)`, which returns `Finding` objects from `framework.check_api`; `TIER` is optional |
 | Indexes | `python3 checks/program/standard_card.py ROOT --write` builds the card's table and `llms.txt`, taking the site, title and description from the extension's `_quarto.yml` and the groups from `[standard_card] facets` |
-| Judgment answers | `checks/judgments.toml`, optional: `[[answer]]` entries with `check`, `path`, `question`, `file` (the fingerprint of the file when answered) and `answer`; an edit to the file reopens its questions |
+| Judgment answers | `checks/judgments.toml`, optional: `[[answer]]` entries with `check`, `path`, `question`, `file` (the fingerprint of the file when answered) and `answer`; an edit to the file reopens its questions, and each answer quotes its file in backticks or double quotes (`judgment-quotes`) |
 | Site | `site.css` at the root, which an extension's site may load |
 
 A local check counts for `principle-coverage`, so an extension's principle can name a check of its own.

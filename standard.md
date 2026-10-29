@@ -27,7 +27,7 @@ The principles below are the best current guess for a reader nobody knows, as fa
 4. **Check:** `python3 checks/run.py .` (or the path to this repository's `checks/run.py`, followed by the folder to check).
    - Fix every **error**: it is certain.
    - Fix every **warning**, or say in one line why it is a false match: warnings come from heuristics.
-   - Answer the **judgment** questions in `checks/out/needs-judgment.md`, written only when there are questions, for whoever is at work; none is a normal result for a short text. An answer goes in `checks/judgments.toml`, committed with the text, and holds until its file changes. The open questions come ready to fill in, in `checks/out/judgments-to-answer.toml`.
+   - Answer the **judgment** questions in `checks/out/needs-judgment.md`, written only when there are questions, for whoever is at work; none is a normal result for a short text. An answer goes in `checks/judgments.toml`, committed with the text, and holds until its file changes. It quotes, in backticks, what in the file its reason rests on; `judgment-quotes` fails an answer whose quotes the file does not hold. The open questions come ready to fill in, in `checks/out/judgments-to-answer.toml`.
    - A program verifies what a program can; judgment answers the rest; nobody reviews their own text in place of the checks.
 
 ## Grades

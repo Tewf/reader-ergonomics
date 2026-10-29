@@ -13,6 +13,7 @@ certain, a **warning** when it comes from a heuristic, and a **judgment** questi
 | [duplication.py](duplication.py) | Duplication: the same run of words held in two files means one fact kept in two places | Exact for the copy; whether the copy is a fact or a quotation is judgment. |
 | [figure_captions.py](figure_captions.py) | Figure next to its text: every image says what it shows, and every drawn figure has words beside it | Exact for alt text; heuristic for the words beside a figure. |
 | [figures_present.py](figures_present.py) | Figures present: a long document with no figure, table or diagram is asked whether a relation went undrawn | The count is exact; whether a figure is needed is judgment. |
+| [judgment_quotes.py](judgment_quotes.py) | Judgment quotes: every answer in the answers file quotes the file it answers for, and every quote is really there | Exact for the presence of each quote; whether the quote supports the answer is judgment. |
 | [links.py](links.py) | Links: every relative link in a markdown file resolves to a file or folder that exists | Exact for file links. |
 | [logical_lines.py](logical_lines.py) | File size: a trigger on logical lines and a ceiling on physical lines, each asking a question | The sentence count is a heuristic (abbreviations split badly). |
 | [long_sentences.py](long_sentences.py) | Long sentences: a sentence past `max_words` words is the cheap sign of packed information | Heuristic. |

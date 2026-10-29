@@ -10,7 +10,7 @@ import unittest
 from pathlib import Path
 
 from meaning import document_mode, embeddings, paraphrase
-from program import (co_change, cross_file_terms, defined_before_use, duplication, figure_captions, figures_present, links,
+from program import (co_change, cross_file_terms, defined_before_use, duplication, figure_captions, figures_present, judgment_quotes, links,
                      logical_lines, long_sentences, name_matches_title, outline_depth, overview_first, paragraph_length,
                      portable_paths, principle_coverage, provisional_tags, readable_measure, references, shape_conformance,
                      standard_card, sufficient_contrast, tree_shape, type_buckets)
@@ -291,6 +291,59 @@ class TestJudgmentAnswers(ScratchRepository):
         self.assertFalse((self.root / "checks" / "out" / "needs-judgment.md").exists())
         self.write("long.md", "second version\n")
         self.assertIn("0 answered in checks/judgments.toml, 1 written", judgment.dispatch(self.root, question, "flag", {}))
+
+
+class TestJudgmentQuotes(ScratchRepository):
+    """An answer quotes its own file, and only its own file (ported from two extensions' checks)."""
+
+    def setUp(self) -> None:
+        super().setUp()
+        self.write("a.md", "# Against\n\n## Null results for the typed format\n\nText.\n")
+        self.write("b.md", "# Frame\n\n## What the field calls it\n\nText.\n")
+        self.write("notes/one.md", "x\n")
+
+    def entry(self, check: str, path: str, answer: str, file: str | None = None) -> str:
+        from framework.judgment import fingerprint
+        import json
+        stamp = fingerprint(self.root, path) if file is None else file
+        return (f'[[answer]]\ncheck = "{check}"\npath = "{path}"\nquestion = "q"\nfile = "{stamp}"\n'
+                f"answer = {json.dumps(answer)}\n")
+
+    def found(self, *entries: str, **settings) -> list[str]:
+        self.write("checks/judgments.toml", "\n".join(entries))
+        return [finding.message for finding in judgment_quotes.check(self.root, dict(CONFIG, judgment_quotes=settings))]
+
+    def test_a_quote_from_its_own_file_passes_whatever_its_case_and_spacing(self) -> None:
+        self.assertEqual(self.found(self.entry("document-mode", "a.md", "Reference: under `null  RESULTS for the typed format`."),
+                                    self.entry("document-mode", "b.md", 'Explanation: "What the field calls it".')), [])
+
+    def test_a_reason_copied_from_another_file_fails(self) -> None:
+        self.assertEqual(self.found(self.entry("document-mode", "a.md", "Reference: under `What the field calls it`.")),
+                         ["the answer for a.md (document-mode) quotes `What the field calls it`, which is not in that file"])
+
+    def test_an_answer_with_no_quote_fails_unless_its_check_is_optional(self) -> None:
+        answer = self.entry("logical-lines", "b.md", "One role. It stays whole.")
+        self.assertTrue(self.found(answer)[0].startswith("the answer for b.md (logical-lines) quotes nothing"))
+        self.assertEqual(self.found(answer, optional=["logical-lines"]), [])
+
+    def test_a_path_question_may_quote_an_entry_or_the_other_file(self) -> None:
+        self.assertEqual(self.found(self.entry("tree-shape", "notes", "It stays: `one.md` is its only entry."),
+                                    self.entry("co-change", "a.md", "No: `b.md` changed with it in one pass.")), [])
+        self.assertEqual(len(self.found(self.entry("tree-shape", "notes", "It stays: `two.md`."))), 1)
+
+    def test_a_stale_or_missing_answer_is_left_to_the_judgment_step(self) -> None:
+        self.assertEqual(self.found(self.entry("document-mode", "a.md", "Reference: `anything`.", file="000000000000"),
+                                    self.entry("document-mode", "gone.md", "Reference: `anything`.", file="")), [])
+
+    def test_a_line_the_file_does_not_have_fails(self) -> None:
+        found = self.found(self.entry("logical-lines", "a.md", "One role, `Text`, from line 5 to line 9."))
+        self.assertEqual(found, ["the answer for a.md (logical-lines) cites line 9; the file has 5"])
+
+    def test_no_answers_file_or_a_broken_one(self) -> None:
+        self.assertEqual(judgment_quotes.check(self.root, CONFIG), [])
+        self.write("checks/judgments.toml", "[[answer]\nbroken")
+        found = [finding.message for finding in judgment_quotes.check(self.root, CONFIG)]
+        self.assertTrue(found and found[0].startswith("the answers file cannot be read as TOML"), found)
 
 
 class TestGuarantees(unittest.TestCase):

@@ -7,326 +7,326 @@ check = "logical-lines"
 path = "evidence/file-structure/against.md"
 question = "99 logical lines, past the trigger of 80. State this file's role in one sentence. If the sentence needs 'and', split the file; if not, it may stay."
 file = "12dc25f5846e"
-answer = "One role: the evidence against this topic's claims, claim by claim. It stays whole."
+answer = "One role: the evidence against `nine file and folder conventions`, theme by theme. It stays whole."
 
 [[answer]]
 check = "logical-lines"
 path = "evidence/file-structure/sources.md"
 question = "115 logical lines, past the trigger of 80. State this file's role in one sentence. If the sentence needs 'and', split the file; if not, it may stay."
 file = "533fcda24e43"
-answer = "One role: the scored table of this topic's grey sources. It stays whole."
+answer = "One role: the scored table of this topic's sources, under `Grey sources, scored` and `Formal sources`. It stays whole."
 
 [[answer]]
 check = "logical-lines"
 path = "evidence/learning-science/sources.md"
 question = "86 logical lines, past the trigger of 80. State this file's role in one sentence. If the sentence needs 'and', split the file; if not, it may stay."
 file = "d8642b13c584"
-answer = "One role: the scored table of this topic's grey sources. It stays whole."
+answer = "One role: the scored table of this topic's sources, under `Grey sources, scored` and `Formal sources`. It stays whole."
 
 [[answer]]
 check = "logical-lines"
 path = "evidence/psycholinguistics/review.md"
 question = "85 logical lines, past the trigger of 80. State this file's role in one sentence. If the sentence needs 'and', split the file; if not, it may stay."
 file = "b7fdb4510e92"
-answer = "One role: the reading log of this topic's literature, strand by strand. It stays whole."
+answer = "One role: the reading log of this topic's literature, from `Surveys read first` through five strands to `5. Text tree`. It stays whole."
 
 [[answer]]
 check = "logical-lines"
 path = "evidence/psycholinguistics/sources.md"
 question = "91 logical lines, past the trigger of 80. State this file's role in one sentence. If the sentence needs 'and', split the file; if not, it may stay."
 file = "d3492ec5fb5f"
-answer = "One role: the scored table of this topic's grey sources. It stays whole."
+answer = "One role: the scored table of this topic's sources, under `Grey sources, scored` and `Formal sources`. It stays whole."
 
 [[answer]]
 check = "figures-present"
 path = "evidence/documentation/review.md"
 question = "a long text with no figure, table or diagram: is a relation, set, quantity or process described only in words?"
 file = "77f44596e9a1"
-answer = "No: the file is a reading log, one line per source with its finding; the comparisons between sources are tabled in state-of-the-art.md."
+answer = "No: the file is a reading log, `Surveys first, then the standards`, one line per source with its finding; the comparisons between sources are tabled in `state-of-the-art.md`."
 
 [[answer]]
 check = "figures-present"
 path = "evidence/file-structure/review.md"
 question = "a long text with no figure, table or diagram: is a relation, set, quantity or process described only in words?"
 file = "c5e7de22f610"
-answer = "No: the file is a reading log, one line per source with its finding; the comparisons between sources are tabled in state-of-the-art.md."
+answer = "No: the file is a reading log, `Surveys first, then the seminal work`, one line per source with its finding; the comparisons between sources are tabled in `state-of-the-art.md`."
 
 [[answer]]
 check = "figures-present"
 path = "evidence/learning-science/review.md"
 question = "a long text with no figure, table or diagram: is a relation, set, quantity or process described only in words?"
 file = "8a33e122ed10"
-answer = "No: the file is a reading log, one line per source with its finding; the comparisons between sources are tabled in state-of-the-art.md."
+answer = "No: the file is a reading log, `Grouped by strand`, one line per source with its finding; the comparisons between sources are tabled in `state-of-the-art.md`."
 
 [[answer]]
 check = "figures-present"
 path = "evidence/psycholinguistics/against.md"
 question = "a long text with no figure, table or diagram: is a relation, set, quantity or process described only in words?"
 file = "39b75e544008"
-answer = "No: the file lists the evidence against each claim; it holds no relation, set or quantity left undrawn."
+answer = "No: each of its five parts lists the objections to one claim, one line each (`Source of disagreement 1` and the next two, for instance); a list per claim already shows that structure."
 
 [[answer]]
 check = "figures-present"
 path = "evidence/psycholinguistics/review.md"
 question = "a long text with no figure, table or diagram: is a relation, set, quantity or process described only in words?"
 file = "b7fdb4510e92"
-answer = "No: the file is a reading log, one line per source with its finding; the comparisons between sources are tabled in state-of-the-art.md."
+answer = "No: the file is a reading log, `Order inside each strand: definitions, seminal work, forward citations`; the comparisons between sources are tabled in `state-of-the-art.md`."
 
 [[answer]]
 check = "figures-present"
 path = "evidence/typography-and-layout/review.md"
 question = "a long text with no figure, table or diagram: is a relation, set, quantity or process described only in words?"
 file = "2e76b194ba86"
-answer = "No: the file is a reading log, one line per source with its finding; the comparisons between sources are tabled in state-of-the-art.md."
+answer = "No: the file is a reading log, `Grouped by strand`, one line per source with its finding; the comparisons between sources are tabled in `state-of-the-art.md`."
 
 [[answer]]
 check = "co-change"
 path = "evidence/learning-science/review.md"
 question = "changed together with evidence/reading-order/review.md in 3 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
 file = "8a33e122ed10"
-answer = "No: both reviews were corrected in the same audit passes; they answer different questions and meet only through the bibliography."
+answer = "No: it and `evidence/reading-order/review.md` were corrected in the same audit passes; they answer different questions and meet only through the bibliography."
 
 [[answer]]
 check = "co-change"
 path = "evidence/reading-order/against.md"
 question = "changed together with principles/document/overview-first.md in 3 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
 file = "f4859575a047"
-answer = "Yes, they are coupled: a principle and its case against. They stay apart by design, claims in principles/ and evidence in evidence/, and the principle links to the file."
+answer = "Yes, coupled with `principles/document/overview-first.md`: a principle and its case against. They stay apart by design, claims in principles/ and evidence in evidence/, and the principle links to the file."
 
 [[answer]]
 check = "co-change"
 path = "principles/collection/group-by-what-changes-together.md"
 question = "changed together with principles/document/define-before-use.md in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
 file = "413084f1ff89"
-answer = "No: they changed together only in passes over the whole standard (audits and amendments touching 10 to 18 principles at once), not because they serve one purpose; principles stay grouped by scale."
+answer = "No: it and `principles/document/define-before-use.md` changed together only in passes over the whole standard (audits and amendments touching 10 to 18 principles at once), not because they serve one purpose; principles stay grouped by scale."
 
 [[answer]]
 check = "co-change"
 path = "principles/collection/group-by-what-changes-together.md"
 question = "changed together with principles/document/one-mode-per-document.md in 3 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
 file = "413084f1ff89"
-answer = "No: they changed together only in passes over the whole standard (audits and amendments touching 10 to 18 principles at once), not because they serve one purpose; principles stay grouped by scale."
+answer = "No: it and `principles/document/one-mode-per-document.md` changed together only in passes over the whole standard (audits and amendments touching 10 to 18 principles at once), not because they serve one purpose; principles stay grouped by scale."
 
 [[answer]]
 check = "co-change"
 path = "principles/collection/group-by-what-changes-together.md"
 question = "changed together with principles/document/overview-first.md in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
 file = "413084f1ff89"
-answer = "No: they changed together only in passes over the whole standard (audits and amendments touching 10 to 18 principles at once), not because they serve one purpose; principles stay grouped by scale."
+answer = "No: it and `principles/document/overview-first.md` changed together only in passes over the whole standard (audits and amendments touching 10 to 18 principles at once), not because they serve one purpose; principles stay grouped by scale."
 
 [[answer]]
 check = "co-change"
 path = "principles/collection/group-by-what-changes-together.md"
 question = "changed together with principles/page/sufficient-contrast.md in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
 file = "413084f1ff89"
-answer = "No: they changed together only in passes over the whole standard (audits and amendments touching 10 to 18 principles at once), not because they serve one purpose; principles stay grouped by scale."
+answer = "No: it and `principles/page/sufficient-contrast.md` changed together only in passes over the whole standard (audits and amendments touching 10 to 18 principles at once), not because they serve one purpose; principles stay grouped by scale."
 
 [[answer]]
 check = "co-change"
 path = "principles/collection/group-by-what-changes-together.md"
 question = "changed together with principles/sentence/even-information-density.md in 3 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
 file = "413084f1ff89"
-answer = "No: they changed together only in passes over the whole standard (audits and amendments touching 10 to 18 principles at once), not because they serve one purpose; principles stay grouped by scale."
+answer = "No: it and `principles/sentence/even-information-density.md` changed together only in passes over the whole standard (audits and amendments touching 10 to 18 principles at once), not because they serve one purpose; principles stay grouped by scale."
 
 [[answer]]
 check = "co-change"
 path = "principles/collection/group-by-what-changes-together.md"
 question = "changed together with principles/sentence/shallow-nesting.md in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
 file = "413084f1ff89"
-answer = "No: they changed together only in passes over the whole standard (audits and amendments touching 10 to 18 principles at once), not because they serve one purpose; principles stay grouped by scale."
+answer = "No: it and `principles/sentence/shallow-nesting.md` changed together only in passes over the whole standard (audits and amendments touching 10 to 18 principles at once), not because they serve one purpose; principles stay grouped by scale."
 
 [[answer]]
 check = "co-change"
 path = "principles/collection/one-place-per-fact.md"
 question = "changed together with principles/page/sufficient-contrast.md in 3 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
 file = "689d0351a6c3"
-answer = "No: they changed together only in passes over the whole standard (audits and amendments touching 10 to 18 principles at once), not because they serve one purpose; principles stay grouped by scale."
+answer = "No: it and `principles/page/sufficient-contrast.md` changed together only in passes over the whole standard (audits and amendments touching 10 to 18 principles at once), not because they serve one purpose; principles stay grouped by scale."
 
 [[answer]]
 check = "co-change"
 path = "principles/document/define-before-use.md"
 question = "changed together with principles/sentence/even-information-density.md in 3 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
 file = "f5c2b1120513"
-answer = "No: they changed together only in passes over the whole standard (audits and amendments touching 10 to 18 principles at once), not because they serve one purpose; principles stay grouped by scale."
+answer = "No: it and `principles/sentence/even-information-density.md` changed together only in passes over the whole standard (audits and amendments touching 10 to 18 principles at once), not because they serve one purpose; principles stay grouped by scale."
 
 [[answer]]
 check = "co-change"
 path = "principles/document/define-before-use.md"
 question = "changed together with principles/sentence/shallow-nesting.md in 4 commits (80% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
 file = "f5c2b1120513"
-answer = "No: they changed together only in passes over the whole standard (audits and amendments touching 10 to 18 principles at once), not because they serve one purpose; principles stay grouped by scale."
+answer = "No: it and `principles/sentence/shallow-nesting.md` changed together only in passes over the whole standard (audits and amendments touching 10 to 18 principles at once), not because they serve one purpose; principles stay grouped by scale."
 
 [[answer]]
 check = "co-change"
 path = "principles/document/one-mode-per-document.md"
 question = "changed together with principles/page/sufficient-contrast.md in 3 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
 file = "73b4da503963"
-answer = "No: they changed together only in passes over the whole standard (audits and amendments touching 10 to 18 principles at once), not because they serve one purpose; principles stay grouped by scale."
+answer = "No: it and `principles/page/sufficient-contrast.md` changed together only in passes over the whole standard (audits and amendments touching 10 to 18 principles at once), not because they serve one purpose; principles stay grouped by scale."
 
 [[answer]]
 check = "co-change"
 path = "principles/document/one-mode-per-document.md"
 question = "changed together with principles/sentence/even-information-density.md in 3 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
 file = "73b4da503963"
-answer = "No: they changed together only in passes over the whole standard (audits and amendments touching 10 to 18 principles at once), not because they serve one purpose; principles stay grouped by scale."
+answer = "No: it and `principles/sentence/even-information-density.md` changed together only in passes over the whole standard (audits and amendments touching 10 to 18 principles at once), not because they serve one purpose; principles stay grouped by scale."
 
 [[answer]]
 check = "co-change"
 path = "principles/document/one-mode-per-document.md"
 question = "changed together with principles/sentence/shallow-nesting.md in 3 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
 file = "73b4da503963"
-answer = "No: they changed together only in passes over the whole standard (audits and amendments touching 10 to 18 principles at once), not because they serve one purpose; principles stay grouped by scale."
+answer = "No: it and `principles/sentence/shallow-nesting.md` changed together only in passes over the whole standard (audits and amendments touching 10 to 18 principles at once), not because they serve one purpose; principles stay grouped by scale."
 
 [[answer]]
 check = "co-change"
 path = "principles/document/overview-first.md"
 question = "changed together with principles/sentence/even-information-density.md in 3 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
 file = "ee8db9b34a32"
-answer = "No: they changed together only in passes over the whole standard (audits and amendments touching 10 to 18 principles at once), not because they serve one purpose; principles stay grouped by scale."
+answer = "No: it and `principles/sentence/even-information-density.md` changed together only in passes over the whole standard (audits and amendments touching 10 to 18 principles at once), not because they serve one purpose; principles stay grouped by scale."
 
 [[answer]]
 check = "co-change"
 path = "principles/document/overview-first.md"
 question = "changed together with principles/sentence/shallow-nesting.md in 4 commits (80% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
 file = "ee8db9b34a32"
-answer = "No: they changed together only in passes over the whole standard (audits and amendments touching 10 to 18 principles at once), not because they serve one purpose; principles stay grouped by scale."
+answer = "No: it and `principles/sentence/shallow-nesting.md` changed together only in passes over the whole standard (audits and amendments touching 10 to 18 principles at once), not because they serve one purpose; principles stay grouped by scale."
 
 [[answer]]
 check = "co-change"
 path = "principles/page/sufficient-contrast.md"
 question = "changed together with principles/sentence/even-information-density.md in 3 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
 file = "152eda997df2"
-answer = "No: they changed together only in passes over the whole standard (audits and amendments touching 10 to 18 principles at once), not because they serve one purpose; principles stay grouped by scale."
+answer = "No: it and `principles/sentence/even-information-density.md` changed together only in passes over the whole standard (audits and amendments touching 10 to 18 principles at once), not because they serve one purpose; principles stay grouped by scale."
 
 [[answer]]
 check = "paraphrase"
 path = "evidence/documentation/README.md"
 question = "says nearly what evidence/documentation/frame.md (line 5) says, similarity 0.91: one fact in two places?"
 file = "9b639ac725a2"
-answer = "Kept: the README's question is the folder's one-line overview of the problem frame.md states in full, the reminder the standard allows where a reader enters."
+answer = "Kept: the README's `Question:` line is the folder's one-line overview of the problem `frame.md` states in full, the reminder the standard allows where a reader enters."
 
 [[answer]]
 check = "document-mode"
 path = "AGENTS.md"
 question = "reads about equally as reference and how-to: one mode per document?"
-file = "efa59e587802"
-answer = "How-to: the steps a contributor follows. The rules it lists are part of the task, not a separate reference."
+file = "c1aad81c8c30"
+answer = "How-to: the steps a contributor follows, from `Before writing` to `Before handing back`. The rules it lists are part of the task, not a separate reference."
 
 [[answer]]
 check = "document-mode"
 path = "evidence/documentation/sources.md"
 question = "reads about equally as how-to and reference: one mode per document?"
 file = "6e236fc6a053"
-answer = "Reference: a table of scored sources, looked up, not followed."
+answer = "Reference: a table of scored sources, under `Grey sources, scored` and `Formal sources`, looked up, not followed."
 
 [[answer]]
 check = "document-mode"
 path = "evidence/file-structure/against.md"
 question = "reads about equally as explanation and reference: one mode per document?"
 file = "12dc25f5846e"
-answer = "Explanation: why each claim may be wrong, with its sources; the lists only index it."
+answer = "Explanation: each theme sets out the claim, the evidence against it, and `then a verdict`; it argues rather than lists."
 
 [[answer]]
 check = "document-mode"
 path = "evidence/file-structure/sources.md"
 question = "reads about equally as reference and how-to: one mode per document?"
 file = "533fcda24e43"
-answer = "Reference: a table of scored sources, looked up, not followed."
+answer = "Reference: a table of scored sources, under `Grey sources, scored` and `Formal sources`, looked up, not followed."
 
 [[answer]]
 check = "document-mode"
 path = "evidence/psycholinguistics/sources.md"
 question = "reads about equally as how-to and reference: one mode per document?"
 file = "d3492ec5fb5f"
-answer = "Reference: a table of scored sources, looked up, not followed."
+answer = "Reference: a table of scored sources, under `Grey sources, scored` and `Formal sources`, looked up, not followed."
 
 [[answer]]
 check = "document-mode"
 path = "evidence/reading-order/against.md"
 question = "reads about equally as reference and explanation: one mode per document?"
 file = "f4859575a047"
-answer = "Explanation: why each claim may be wrong, with its sources; the lists only index it."
+answer = "Reference: it `lists null results, controversies, costs of the proposal`, by kind, for the principles that link to it to look up."
 
 [[answer]]
 check = "document-mode"
 path = "evidence/reading-order/sources.md"
 question = "reads about equally as how-to and reference: one mode per document?"
 file = "95ab4e3b40f8"
-answer = "Reference: a table of scored sources, looked up, not followed."
+answer = "Reference: a table of scored sources, under `Grey sources, scored` and `Formal sources`, looked up, not followed."
 
 [[answer]]
 check = "document-mode"
 path = "evidence/typography-and-layout/sources.md"
 question = "reads about equally as how-to and reference: one mode per document?"
 file = "e040cc384dba"
-answer = "Reference: a table of scored sources, looked up, not followed."
+answer = "Reference: a table of scored sources, under `Grey sources, scored` and `Formal sources`, looked up, not followed."
 
 [[answer]]
 check = "document-mode"
 path = "principles/document/define-before-use.md"
 question = "reads about equally as how-to and reference: one mode per document?"
 file = "f5c2b1120513"
-answer = "Reference: every principle file has the same shape, and its 'What it asks' list states the rule; it is not a procedure."
+answer = "Reference: every principle file has the same shape, and its `What it asks` list states the rule; it is not a procedure."
 
 [[answer]]
 check = "section-cohesion"
 path = "evidence/file-structure/state-of-the-art.md"
 question = "section 'Lower bounds' is far from every other section (0.21): a second role?"
 file = "042036541d9e"
-answer = "No: a state of the art keeps upper and lower bounds apart on purpose; both belong here."
+answer = "No: `Upper bounds (what has been achieved) are kept apart from lower bounds` on purpose; both belong to the state of the art."
 
 [[answer]]
 check = "section-cohesion"
 path = "evidence/multivocal-protocol.md"
 question = "section 'What was not recorded' is far from every other section (0.06): a second role?"
 file = "eb0015eaa818"
-answer = "No: the protocol's departures from its own method belong to the protocol."
+answer = "No: `What was not recorded` names the protocol's departures from its own method (`one scorer per topic`), which belong to the protocol."
 
 [[answer]]
 check = "section-cohesion"
 path = "evidence/typography-and-layout/against.md"
 question = "section 'Polarity' is far from every other section (0.23): a second role?"
 file = "f4df340b9764"
-answer = "No: polarity is one of the claims the case against covers; its sources differ from the others', hence the distance."
+answer = "No: `Polarity` is one of the themes the case against covers (`fonts and folk rules, line length, polarity, layout`); its sources differ from the others', hence the distance."
 
 [[answer]]
 check = "section-cohesion"
 path = "principles/page/signal-the-structure.md"
 question = "section 'What it asks' is far from every other section (0.25): a second role?"
 file = "732065728319"
-answer = "No: 'What it asks' is one of the three sections every principle file has; in a file this short the embedding separates any section from the others."
+answer = "No: `What it asks` is one of the three sections every principle file has; in a file this short the embedding separates any section from the others."
 
 [[answer]]
 check = "section-cohesion"
 path = "principles/page/signal-the-structure.md"
 question = "section 'Why' is far from every other section (0.25): a second role?"
 file = "732065728319"
-answer = "No: 'Why' is one of the three sections every principle file has; in a file this short the embedding separates any section from the others."
+answer = "No: `Why` is one of the three sections every principle file has; in a file this short the embedding separates any section from the others."
 
 [[answer]]
 check = "section-cohesion"
 path = "principles/page/signal-the-structure.md"
 question = "section 'Limits' is far from every other section (0.25): a second role?"
 file = "732065728319"
-answer = "No: 'Limits' is one of the three sections every principle file has; in a file this short the embedding separates any section from the others."
+answer = "No: `Limits` is one of the three sections every principle file has; in a file this short the embedding separates any section from the others."
 
 [[answer]]
 check = "section-cohesion"
 path = "principles/sentence/short-dependencies.md"
 question = "section 'What it asks' is far from every other section (0.19): a second role?"
 file = "356f9281a05d"
-answer = "No: 'What it asks' is one of the three sections every principle file has; in a file this short the embedding separates any section from the others."
+answer = "No: `What it asks` is one of the three sections every principle file has; in a file this short the embedding separates any section from the others."
 
 [[answer]]
 check = "co-change"
 path = "checks/program/sufficient_contrast.py"
 question = "changed together with checks/test_checks.py in 3 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
 file = "7252c1f3f1b3"
-answer = "Yes, coupled: a check and its tests. The tests stay in two files at the root of checks/ by design, so one command runs the whole suite; the coupling is the one a test is meant to have."
+answer = "Yes, coupled with `checks/test_checks.py`: a check and its tests. The tests stay in files at the root of checks/ by design, so one command runs the whole suite; the coupling is the one a test is meant to have."
 
 [[answer]]
 check = "co-change"
 path = "checks/program/references.py"
 question = "changed together with checks/test_checks.py in 3 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
 file = "4286fab9bbce"
-answer = "Yes, coupled: a check and its tests. The tests stay in two files at the root of checks/ by design, so one command runs the whole suite; the coupling is the one a test is meant to have."
+answer = "Yes, coupled with `checks/test_checks.py`: a check and its tests. The tests stay in files at the root of checks/ by design, so one command runs the whole suite; the coupling is the one a test is meant to have."

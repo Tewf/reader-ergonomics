@@ -143,5 +143,8 @@ backend = "flag"   # none | flag | local | api
 answers = "checks/judgments.toml"   # answers kept with the repository; an edit to a file reopens its questions
 timeout_seconds = 120
 
+[judgment_quotes]
+optional = []   # checks whose answers need not quote their file; every answer quotes it by default
+
 [judgment.api]
 enabled = false    # PROVISIONAL: paid; stays off until the maintainer turns it on

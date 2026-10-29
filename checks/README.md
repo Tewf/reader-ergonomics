@@ -51,8 +51,9 @@ principle to naming at least one registered check.
 
 A model's answer is recorded as advice next to its question; it never fails the run. An answer that settles a question
 goes in `checks/judgments.toml`, committed with the repository, with the fingerprint of the file it concerns: the
-question stays answered until that file changes. Open questions are also written as entries to fill in, in
-`checks/out/judgments-to-answer.toml`.
+question stays answered until that file changes. Open questions are also written as entries to fill in, in `checks/out/judgments-to-answer.toml`. An answer quotes what
+its reason rests on, and `judgment-quotes` checks that each quote is in the answered file: a reason copied from another
+file's answer then fails.
 
 ## Use
 
