@@ -32,7 +32,7 @@ Twenty criteria (Garousi 2019, Table 7), each scored 1, 0.5 or 0, in eight group
   It may still be quoted for what it says itself (a guide's own rule, a tool's own method); it may not support a
   claim about readers or about the world.
 - **A low score sometimes means "not read":** a book or a paywalled page scores 0 on every part not seen, so a score can measure the scorer's access
-  rather than the source. Of the 42 sources below 10, 11 carry such a note. Such a source is marked "(secondary)" or "(not read)".
+  rather than the source. Of the 41 sources below 10, 9 were not read at all and 9 only in part. Such a source is marked "(secondary)" or "(not read)".
 - **A part of a source that was not seen scores 0** on its criteria.
 - **Formal sources** (peer-reviewed papers) are not scored this way; they carry their evidence grade.
 - **One scorer per topic**, an agent, with no second rater: the scores are a first pass, not an agreement.

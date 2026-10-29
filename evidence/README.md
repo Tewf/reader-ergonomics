@@ -85,7 +85,7 @@ The grey sources were then scored on the method's quality criteria ([protocol](m
 | principles whose one-line claim changed | 0 (one widening, on practice alone, was reverted by the audit) |
 | principles whose limits, numbers or evidence changed | 18 |
 | grey sources scored on the protocol's 20 criteria | 125 |
-| scored below 10, so examples only, never support | 42, of which 11 partly because the source could not be read |
+| scored below 10, so examples only, never support | 41, of which 9 were not read at all and 9 only in part (an abstract, a record, a summary page) |
 
 - **No practice source raised a grade.** Practice shows what is done; an outcome it reports is its owner's claim.
 - **Overview first is not importance first.** Putting the main fact first, as news does, has no tested support: two
