@@ -4,6 +4,19 @@ Every release of the standard, newest first, in the form of [Keep a Changelog](h
 (Lacan 2019). Versions follow `MAJOR.MINOR.PATCH` as [extending.md](extending.md) defines them. The commit to pin
 a release by is the one its tag points to: `git rev-list -n 1 v1.16.1`, or the repository's tags page.
 
+## [1.19.1] - 2026-10-29
+
+### Changed
+
+- The front page's status no longer says "a work in progress". It says what that meant: the version and its date,
+  that one maintainer read and graded the evidence and nobody else reviewed it, the three claim audits, and where
+  corrections go. Both languages.
+
+### Added
+
+- Release markers, `<!-- release:version -->` and `<!-- release:date -->`, which `standard-card` fills from this
+  changelog, so a page that states the current version cannot drift.
+
 ## [1.19.0] - 2026-10-29
 
 ### Added
