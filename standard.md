@@ -48,7 +48,8 @@ digraph how_to_use {
 
 ## Grades
 
-Every principle says how strong its evidence is, and never claims more.
+Every principle says how strong its evidence is, and never claims more. When the clauses of a claim rest on
+evidence of different strength, the grade names each clause with its own grade.
 
 - **measured:** controlled studies or meta-analyses found the effect.
 - **supported with caveat:** evidence exists, with a limit the principle states.
@@ -111,7 +112,7 @@ digraph scales {
 | [Define before use](principles/document/define-before-use.md) | every term and symbol is defined at or before its first use, premises come in the order they are needed, and each thing keeps one name. | supported with caveat |
 | [One mode per document](principles/document/one-mode-per-document.md) | each document serves one mode of reading (learning by doing, doing a task, looking something up, or understanding why) and says which. | convention, untested; widely adopted |
 | [Overview first](principles/document/overview-first.md) | a document opens with what it is about and how it is organised (its parts, in a few lines or a simple map) before any detail. | measured |
-| [Retrieval prompts](principles/document/retrieval-prompts.md) | a document meant to be learned ends each part with a few questions the reader answers from memory, with the answers folded, and is reread after a gap. | measured |
+| [Retrieval prompts](principles/document/retrieval-prompts.md) | a document meant to be learned ends each part with a few questions the reader answers from memory, with the answers folded, and is reread after a gap. | measured for questions answered from memory and for spaced rereading; folding the answers supported with caveat, inferred from the testing effect and not tested as a layout |
 | [Shallow outline](principles/document/shallow-outline.md) | what matters most sits at the top of a document's hierarchy, and the outline stays shallow: at most three levels of headings. | measured for recall of top-level ideas; the three-level limit is a convention |
 | [Short reference distance](principles/document/short-reference-distance.md) | each concept sits close to the places that use it, and the order of a document is chosen so that prerequisites come first and the total distance between definitions and uses is small. | supported with caveat: locality is measured in sentences and applied to documents by analogy |
 | [Worked examples with subgoals](principles/document/worked-examples-with-subgoals.md) | a method is taught by a solved example whose steps are named by what they achieve, then faded: the next examples leave more steps to the reader. | measured, for novices; reversed for experts |
@@ -122,7 +123,7 @@ digraph scales {
 |---|---|---|
 | [Even information density](principles/sentence/even-information-density.md) | a text says no more than the reader needs, and spreads what it says: no sentence packs several new ideas, and a dense term arrives after its context. | supported with caveat for judged quality; **not supported** as a way to read faster |
 | [Given before new](principles/sentence/given-before-new.md) | a sentence starts from what the reader already has (the topic, or what the previous sentence ended on) and ends on what is new. | supported with caveat |
-| [Shallow nesting](principles/sentence/shallow-nesting.md) | a sentence puts at most one clause inside another; with two nested clauses, readers already misread. | measured |
+| [Shallow nesting](principles/sentence/shallow-nesting.md) | a sentence puts at most one clause inside another; with two nested clauses, readers already misread. | measured in English, where readers misread at two nested clauses; not found in German, so the limit of one is a convention there |
 | [Short dependencies](principles/sentence/short-dependencies.md) | words that depend on each other stay close: a subject near its verb, a modifier next to what it modifies, a pronoun near what it refers to. | measured in controlled sentences; supported with caveat in natural reading |
 
 ### Page: figures, layout and type
@@ -132,7 +133,7 @@ digraph scales {
 | [Draw relations](principles/page/draw-relations.md) | a relation, a set, a quantity or a process is shown as a figure placed with the words that explain it, not as words alone. | measured |
 | [Figure next to its text](principles/page/figure-next-to-its-text.md) | the words that explain a figure, a formula or a block of code sit beside or inside it: not on another page, not below the fold. | measured |
 | [Readable measure](principles/page/readable-measure.md) | body text has a line length of about 45 to 75 characters, a size in the fluent range, and line spacing of at least 1.5. | supported with caveat |
-| [Signal the structure](principles/page/signal-the-structure.md) | the structure of a text is visible before it is read: headings that name their content, lists for parallel items, tables for comparisons, bold for the defined term. | measured |
+| [Signal the structure](principles/page/signal-the-structure.md) | the structure of a text is visible before it is read: headings that name their content, lists for parallel items, tables for comparisons, bold for the defined term. | measured for signals (headings, labels, cues); tables for comparisons supported with caveat, from cognitive fit; lists for parallel items and bold for the defined term are conventions |
 | [Sufficient contrast](principles/page/sufficient-contrast.md) | text has a contrast ratio of at least 4.5:1 against its background, dark text on a light ground by default, with a dark theme offered and never forced. | measured for polarity; the 4.5:1 floor is a convention (a standard) |
 
 <!-- principles:end -->

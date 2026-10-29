@@ -2,7 +2,8 @@
 
 **Claim:** a sentence puts at most one clause inside another; with two nested clauses, readers already misread.
 
-- **Grade:** measured.
+- **Grade:** measured in English, where readers misread at two nested clauses; not found in German, so the limit
+  of one is a convention there.
 - **Evidence:** [psycholinguistics](../../evidence/psycholinguistics/review.md) (strand 3), [against](../../evidence/psycholinguistics/against.md).
 - **Check:** `clause-nesting` (syntax, weekly): no sentence puts a clause in the middle of a clause that is itself in the
   middle of another; a clause at the end does not count.
