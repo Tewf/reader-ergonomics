@@ -39,8 +39,9 @@ FACETS = [("collection", "Collection: files and folders"), ("document", "Documen
 
 
 def field(text: str, label: str) -> str:
-    match = re.search(rf"^(?:- )?\*\*{label}:\*\*\s*(.+)$", text, re.MULTILINE)
-    return match.group(1).strip() if match else ""
+    """A field's value, with the indented lines it wraps onto joined to it."""
+    match = re.search(rf"^(?:- )?\*\*{label}:\*\*[ \t]*(.+(?:\n[ \t]+\S.*)*)", text, re.MULTILINE)
+    return " ".join(match.group(1).split()) if match else ""
 
 
 def facets(root: Path, config: dict | None) -> list[tuple[str, str]]:

@@ -169,12 +169,13 @@ class TestExtension(ScratchRepository):
         self.write("standard.md", f"# Talks\n\n{standard_card.START}\n{standard_card.END}\n")
         self.write("principles/talk/README.md", "# Talk: a paced medium\n\nWhat changes when a speaker sets the pace.\n")
         self.write("principles/talk/key-terms.md", "# Key terms on screen\n\n**Claim:** show key terms, not the sentences said.\n\n"
-                   "- **Grade:** measured.\n")
+                   "- **Grade:** measured for terms;\n  convention for the rest.\n")
         built = standard_card.expected(self.root, {"standard_card": {"facets": ["talk"]}})
         self.assertTrue(built["llms.txt"].startswith("# Talks\n\n> How to give a talk."))
         self.assertIn("(https://example.org/talks/principles/talk/key-terms.md)", built["llms.txt"])
         self.assertNotIn("Reader styles", built["llms.txt"])  # this extension has none
         self.assertIn("### Talk: a paced medium", built["standard.md"])
+        self.assertIn("| measured for terms; convention for the rest |", built["standard.md"])  # a wrapped grade is read whole
 
     def test_a_count_marker_holds_the_number_of_checks(self) -> None:
         self.write("standard.md", "# Card\n")
