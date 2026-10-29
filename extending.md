@@ -55,7 +55,15 @@ A local check counts for `principle-coverage`, so an extension's principle can n
 ## Versions
 
 Releases are tagged `vMAJOR.MINOR.PATCH`. A change that breaks any part of the interface raises the major number.
-An extension's CI checks out a tagged release, not the latest commit, and moves to a new one deliberately.
+
+An extension's CI checks out a release by its commit. It never checks out the tag or the latest commit: a tag can be
+moved, and a commit cannot. The tag is named in a comment beside the commit:
+
+```yaml
+ref: <the release's commit, all 40 characters>   # v1.0.0
+```
+
+The extension moves to a new release deliberately, by changing that line.
 
 ## Trust
 
