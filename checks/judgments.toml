@@ -365,3 +365,10 @@ path = "checks/config.toml"
 question = "changed together with decisions/README.md in 3 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
 file = "15a1db8d068b"
 answer = "Keep them apart: config holds `What the checks read`, and decisions/README.md indexes why. Each of the three shared commits added a decision that sets a value here: the tiers (da2ef3a), the decision-record shape (d408349) and the `[bibliography_keys]` table with decision 0003, which names that table, so the record already links the fact."
+
+[[answer]]
+check = "co-change"
+path = "checks/config.toml"
+question = "changed together with decisions/README.md in 3 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+file = "960e5570969e"
+answer = "No: it and `decisions/README.md` changed together because each new kind of record touched both (the citation scope, the shape declaration, the new check's table), not because they serve one purpose; config holds every check's settings."

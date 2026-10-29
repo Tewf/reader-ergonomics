@@ -3,6 +3,7 @@ and nothing in a clean one. Run: python3 -m unittest discover checks
 """
 from __future__ import annotations
 
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -10,7 +11,7 @@ import unittest
 from pathlib import Path
 
 from meaning import document_mode, embeddings, name_content, paraphrase, section_cohesion
-from program import (co_change, cross_file_terms, defined_before_use, duplication, figure_captions, figure_width, figures_present, judgment_quotes, links,
+from program import (co_change, cross_file_terms, decision_records, defined_before_use, duplication, figure_captions, figure_width, figures_present, judgment_quotes, links,
                      logical_lines, long_sentences, name_matches_title, outline_depth, overview_first, paragraph_length,
                      portable_paths, principle_coverage, provisional_tags, readable_measure, references, shape_conformance,
                      standard_card, sufficient_contrast, tree_shape, type_buckets)
@@ -349,6 +350,102 @@ class TestJudgmentQuotes(ScratchRepository):
         self.write("checks/judgments.toml", "[[answer]\nbroken")
         found = [finding.message for finding in judgment_quotes.check(self.root, CONFIG)]
         self.assertTrue(found and found[0].startswith("the answers file cannot be read as TOML"), found)
+
+
+DECISION_RECORD = ("# 0001: Pin the links\n\n**Decision:** Links name the commit.\n\n"
+               "**Status:** accepted, 2026-10-29. **Shape:** [decision record](../shapes/decision-record.md).\n")
+
+
+class TestDecisionRecords(unittest.TestCase):
+    def setUp(self) -> None:
+        self.root = Path(tempfile.mkdtemp())
+        self.config = {}
+        (self.root / "decisions").mkdir()
+        self.index("0001-pin-the-links.md", "0002-move-the-pin.md")
+
+    def tearDown(self) -> None:
+        shutil.rmtree(self.root)
+
+    def index(self, *names: str) -> None:
+        rows = "".join(f"| [{name[:4]}]({name}) |\n" for name in names)
+        (self.root / "decisions" / "README.md").write_text(f"# Decisions\n\n{rows}", encoding="utf-8")
+
+    def found(self, name: str, text: str, kind: str = "") -> list[str]:
+        (self.root / "decisions" / name).write_text(text, encoding="utf-8")
+        return [finding.message for finding in decision_records.check(self.root, self.config) if not kind or finding.kind == kind]
+
+    def test_a_complete_record_passes(self) -> None:
+        self.assertEqual(self.found("0001-pin-the-links.md", DECISION_RECORD), [])
+
+    def test_the_readme_is_not_a_record(self) -> None:
+        self.assertEqual(self.found("README.md", "# Decisions\n"), [])
+
+    def test_a_title_with_another_number_fails(self) -> None:
+        found = self.found("0001-pin-the-links.md", DECISION_RECORD.replace("# 0001:", "# 0002:"))
+        self.assertEqual(len(found), 1)
+        self.assertIn("'# 0001: '", found[0])
+
+    def test_a_gap_in_the_numbers_fails(self) -> None:
+        found = self.found("0002-move-the-pin.md", DECISION_RECORD.replace("# 0001:", "# 0002:"))
+        self.assertEqual(len(found), 1)
+        self.assertIn("0001 was due", found[0])
+
+    def test_a_record_the_readme_does_not_link_fails(self) -> None:
+        self.index("0002-move-the-pin.md")
+        found = self.found("0001-pin-the-links.md", DECISION_RECORD)
+        self.assertEqual(found, ["the README does not link 0001-pin-the-links.md"])
+
+    def test_a_folder_without_a_readme_fails(self) -> None:
+        (self.root / "decisions" / "README.md").unlink()
+        found = self.found("0001-pin-the-links.md", DECISION_RECORD)
+        self.assertEqual(len(found), 1)
+        self.assertIn("needs a README", found[0])
+
+    def test_a_decision_not_first_fails(self) -> None:
+        text = DECISION_RECORD.replace("**Decision:** Links name the commit.\n\n", "Some context first.\n\n**Decision:** Links name the commit.\n\n")
+        found = self.found("0001-pin-the-links.md", text)
+        self.assertEqual(len(found), 1)
+        self.assertIn("rule 2", found[0])
+
+    def test_a_status_without_its_word_or_date_fails_twice(self) -> None:
+        found = self.found("0001-pin-the-links.md", DECISION_RECORD.replace("accepted, 2026-10-29.", "in force."))
+        self.assertEqual(len(found), 2)
+
+    def test_a_superseded_record_without_its_successor_fails(self) -> None:
+        found = self.found("0001-pin-the-links.md", DECISION_RECORD.replace("accepted, 2026-10-29.", "superseded, 2026-10-29."))
+        self.assertEqual(len(found), 1)
+        self.assertIn("rule 4", found[0])
+
+    def test_a_status_linking_a_missing_record_fails(self) -> None:
+        text = DECISION_RECORD.replace("accepted, 2026-10-29.", "superseded by [0002](0002-move-the-pin.md), 2026-10-29.")
+        found = self.found("0001-pin-the-links.md", text)
+        self.assertEqual(found, ["the status links 0002-move-the-pin.md, which is not in decisions/"])
+
+    def test_consequences_without_a_bad_line_ask_a_question(self) -> None:
+        text = DECISION_RECORD + "\n## Consequences\n\n- Good: the links hold.\n\n## See also\n"
+        self.assertEqual(self.found("0001-pin-the-links.md", text), [])  # off by default
+        self.config = {"decision_records": {"ask_costs": True}}
+        self.assertEqual(self.found("0001-pin-the-links.md", text, "error"), [])
+        asked = self.found("0001-pin-the-links.md", text, "judgment")
+        self.assertEqual(len(asked), 1)
+        self.assertIn("rule 3", asked[0])
+
+    def test_consequences_with_a_bad_line_ask_nothing(self) -> None:
+        text = DECISION_RECORD + "\n## Consequences\n\n- Good: the links hold.\n- Bad: long addresses.\n\n## See also\n"
+        self.assertEqual(self.found("0001-pin-the-links.md", text), [])
+
+    def test_a_record_without_its_shape_line_fails(self) -> None:
+        found = self.found("0001-pin-the-links.md", DECISION_RECORD.replace(" **Shape:** [decision record](../shapes/decision-record.md).", ""))
+        self.assertEqual(len(found), 1)
+        self.assertIn("names its shape", found[0])
+
+    def test_a_record_without_decision_or_status_fails_twice(self) -> None:
+        text = DECISION_RECORD.replace("**Decision:**", "Decision:").replace("**Status:**", "Status:")
+        self.assertEqual(len(self.found("0001-pin-the-links.md", text)), 2)
+
+    def test_no_decisions_folder_means_nothing_to_check(self) -> None:
+        shutil.rmtree(self.root / "decisions")
+        self.assertEqual(decision_records.check(self.root, self.config), [])
 
 
 class TestFigureWidth(ScratchRepository):

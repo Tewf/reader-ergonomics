@@ -10,6 +10,7 @@ certain, a **warning** when it comes from a heuristic, and a **judgment** questi
 | [citations.py](citations.py) | Citations: every work cited in the text has one entry in the bibliography, and every entry is cited | Heuristic: a capitalised word before a year can be a false citation ("Colon Classification 1933"); config lists words that never start one. |
 | [co_change.py](co_change.py) | Co-change: files that keep changing together should sit together | Coupling in history is evidence, not proof, so every finding is judgment. |
 | [cross_file_terms.py](cross_file_terms.py) | Short reference distance across files: a term defined in one file is linked where another uses it | Heuristic. |
+| [decision_records.py](decision_records.py) | Decision records: every record in decisions/ follows the four rules of the decision-record shape | Exact, except rule 3. |
 | [defined_before_use.py](defined_before_use.py) | Define before use: a term is not used in a file before the line that defines it | Heuristic: bold is also used for emphasis, and a term can be defined in another file. |
 | [duplication.py](duplication.py) | Duplication: the same run of words held in two files means one fact kept in two places | Exact for the copy; whether the copy is a fact or a quotation is judgment. |
 | [figure_captions.py](figure_captions.py) | Figure next to its text: every image says what it shows, and every drawn figure has words beside it | Exact for alt text; heuristic for the words beside a figure. |

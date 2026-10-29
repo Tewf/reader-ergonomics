@@ -79,6 +79,9 @@ measure_ch = [45, 75]
 min_font_px = 16
 min_line_height = 1.5
 
+[decision_records]
+ask_costs = false   # rule 3 asks when no Consequences line is labelled "Bad"; a repository using the label turns it on
+
 [figure_width]
 max_columns = 60   # PROVISIONAL: no study gives a figure width; the narrow end of the readable measure
 exempt = []
