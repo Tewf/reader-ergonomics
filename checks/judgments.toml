@@ -220,13 +220,6 @@ file = "2bd3b2ac2b6b"
 answer = "Yes, coupled with `principles/document/overview-first.md`: the scores of the sources a principle rests on, and the principle whose limits they set. They stay apart by design, evidence in evidence/ and claims in principles/, and the principle links to the review."
 
 [[answer]]
-check = "logical-lines"
-path = "checks/test_checks.py"
-question = "734 lines, past the ceiling of 500. Review it: split it only into pieces that change separately and each stay whole, or state why it stays one file."
-file = "fa85f9cc9aeb"
-answer = "Stays one file: its one role is that `each check must find a violation planted in a scratch repository`, for the program tier. The framework and the other tiers already sit in test_framework.py and test_tiers.py; split by check, it would become thirty files of one class each."
-
-[[answer]]
 check = "co-change"
 path = "checks/test_checks.py"
 question = "changed together with decisions/0003-one-key-one-work-across-the-family.md in 5 commits (83% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
@@ -351,3 +344,10 @@ path = "principles/document/define-before-use.md"
 question = "changed together with principles/page/readable-measure.md in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
 file = "e1c5a41bdbca"
 answer = "No: these principles changed together only in passes over the whole standard (the audits, the multivocal merge, the grades re-read clause by clause), not because they serve one purpose; principles stay grouped by scale."
+
+[[answer]]
+check = "document-mode"
+path = "README.md"
+question = "reads about equally as how-to and explanation: one mode per document?"
+file = "567ed30f6f90"
+answer = "A front page, read to choose where to go: `Where to start` sends each reader to the document for their mode. Its two short how-to sections, `Take your own version` and `Check a repository`, are the first steps behind those doors and link on to the pages that hold the rest."
