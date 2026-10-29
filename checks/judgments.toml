@@ -341,8 +341,8 @@ answer = "Yes: the name is the title, `A key names one work across the family`, 
 [[answer]]
 check = "logical-lines"
 path = "checks/test_checks.py"
-question = "704 lines, past the ceiling of 500. Review it: split it only into pieces that change separately and each stay whole, or state why it stays one file."
-file = "6e0169529505"
+question = "705 lines, past the ceiling of 500. Review it: split it only into pieces that change separately and each stay whole, or state why it stays one file."
+file = "94be4f8a362d"
 answer = "Stays one file: its one role is that `each check must find a violation planted in a scratch repository`, for the program tier. The framework and the other tiers already sit in test_framework.py and test_tiers.py; split by check, it would become thirty files of one class each."
 
 [[answer]]
@@ -356,14 +356,14 @@ answer = "Keep them apart: config holds `What the checks read`, and decisions/RE
 check = "co-change"
 path = "checks/test_checks.py"
 question = "changed together with decisions/0003-one-key-one-work-across-the-family.md in 4 commits (80% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
-file = "6e0169529505"
+file = "94be4f8a362d"
 answer = "No: it and `decisions/0003-one-key-one-work-across-the-family.md` changed together because the releases that added the key check and then extended its key form wrote the record and the tests in one commit each, not because they serve one purpose."
 
 [[answer]]
 check = "co-change"
 path = "decisions/0003-one-key-one-work-across-the-family.md"
 question = "changed together with extending.md in 4 commits (80% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
-file = "3607919314b7"
+file = "5ba7721b8fdc"
 answer = "Yes, coupled with `extending.md`: the record of the key rule and the contract that states it. They stay apart by design, the contract at the root and the records in decisions/, and the contract links the record."
 
 [[answer]]
@@ -384,7 +384,7 @@ answer = "No: it and `principles/sentence/even-information-density.md` changed t
 check = "co-change"
 path = "decisions/README.md"
 question = "changed together with extending.md in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
-file = "bbb8c62b083e"
+file = "19f3bfce737e"
 answer = "Keep them apart: decisions/README.md is the index, `one record per decision that shapes more than one file`, and extending.md is the contract. They changed together because decisions 0003 and 0004 each changed the contract and were added to the index in the same commit; extending.md links each record, so the fact lives in the record."
 
 [[answer]]

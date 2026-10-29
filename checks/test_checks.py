@@ -591,7 +591,8 @@ class TestBibliographyKeys(unittest.TestCase):
         self.bibliography("that", "Yang 2021 | Testing | https://doi.org/10.1037/A", "Hartley 2004 | Abstracts | https://pmc.example/PMC4",
                           "Chatlatanagulchai 2026 | Agent READMEs | https://arxiv.org/abs/2511.12884v2", "Knuth 1989 | Writing | http://example.org/knuth.pdf")
         self.assertEqual(self.found(family=["that"]), [
-            "warning 3 'Yang 2021' names another work in that (line 3, doi:10.1037/a): one key, one work across the family",
+            "error 3 'Yang 2021' names another work in that (line 3, doi:10.1037/a): one key, one work across the family; "
+            "if the two rows are one work, give them one link",
             "warning 4 'Hartley 2004a' is 'Hartley 2004' in that (line 4, pmc.example/pmc4): one work, one key across the family"])
 
     def test_a_preprint_named_in_the_citation_is_the_same_work(self) -> None:

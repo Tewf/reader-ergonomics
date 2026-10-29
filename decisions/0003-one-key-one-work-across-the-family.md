@@ -4,7 +4,8 @@
 `[bibliography_keys] family`; this standard names none, so the extensions read their siblings and it reads no one.
 
 **Status:** accepted, 2026-10-29, in v1.5.0; an organisation's key may carry a title word instead of the letter
-([0004](0004-an-organisation-key-may-carry-a-title-word.md)). **Shape:** [decision record](../shapes/decision-record.md).
+([0004](0004-an-organisation-key-may-carry-a-title-word.md)); a key another repository gives another work is an
+error ([0005](0005-a-key-clash-in-the-family-is-an-error.md)). **Shape:** [decision record](../shapes/decision-record.md).
 
 ## Context
 

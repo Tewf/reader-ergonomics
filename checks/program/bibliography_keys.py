@@ -9,13 +9,16 @@ In the file, a key held twice is an error: a citation cannot say which row it me
 warning. `family` in config names the repositories that share one set of keys with this one, as folders beside it;
 each is read at the same bibliography path. This standard names none, so it never reads an extension
 ([decision 0003](../../decisions/0003-one-key-one-work-across-the-family.md)). Against the family, a key that another
-repository gives another work, or a work it gives another key, is a warning reported at the row in this
-repository's bibliography; a pair between two other repositories is theirs to report. A family member that is not
+repository gives another work is an error, as a key held twice in one file is
+([decision 0005](../../decisions/0005-a-key-clash-in-the-family-is-an-error.md)); a work it gives another key is a
+warning. Both are reported at the row in this repository's bibliography; a pair between two other repositories is
+theirs to report. A family member that is not
 found is a warning, so a comparison is never passed over unread. `shared_links` lists the links that more than one
 work carries on purpose: two editions on their author's page, a book and its author's site.
 
-Exact for a key held twice in one file. Heuristic otherwise: one work at two addresses reads as two works, and a
-work cited by a DOI in one row and by its preprint in another is seen as one only when a row names both.
+Exact for a key held twice, in one file or across the family, when the rows' links name their works; one work at
+two addresses reads as two, so a clash is cleared by giving both rows one link. Heuristic for one work under two keys:
+a work cited by a DOI in one row and by its preprint in another is seen as one only when a row names both.
 Time O(rows of the family), space O(rows of the family).
 """
 from __future__ import annotations
@@ -96,7 +99,8 @@ def check(root: Path, config: dict) -> list[Finding]:
             for theirs, line in keys.get(normalised(key), []):
                 if named and theirs and not set(named) & set(theirs):
                     findings.append(Finding(NAME, bibliography, number, f"'{key}' names another work in {name} "
-                                            f"(line {line}, {theirs[0]}): one key, one work across the family", "warning"))
+                                            f"(line {line}, {theirs[0]}): one key, one work across the family; if the two "
+                                            "rows are one work, give them one link"))
             reported = set()
             for identity in (identity for identity in named if identity not in shared):
                 for theirs, line in works.get(identity, []):
