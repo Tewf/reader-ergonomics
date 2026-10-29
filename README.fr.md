@@ -53,7 +53,7 @@ Un désaccord avec un principe a trois endroits où aller :
 |---|---|
 | [principles/](principles/) | la meilleure hypothèse actuelle pour tout lecteur, un fichier par principe, rangé par échelle : collection, document, phrase, page |
 | [reader-styles/](reader-styles/) | les ajustements pour un lecteur connu, car ce qui marche le mieux dépend de qui lit |
-| [shapes/](shapes/) | des squelettes fixes par type de document : note, README de dossier, rapport, message de commit |
+| [shapes/](shapes/) | des squelettes fixes par type de document : note, README de dossier, rapport, message de commit, fiche de décision |
 | [evidence/](evidence/) | les revues derrière les principes, et une [bibliographie](evidence/bibliography.md) commune |
 | [checks/](checks/) | des programmes qui vérifient ce qu'un programme peut vérifier ; des questions pour le jugement sinon |
 | [decisions/](decisions/) | pourquoi le dépôt est construit ainsi : une fiche par décision, avec les options écartées |

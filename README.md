@@ -53,7 +53,7 @@ A disagreement with a principle has three places to go:
 |---|---|
 | [principles/](principles/) | the best current guess for any reader, one file per principle, grouped by scale: collection, document, sentence, page |
 | [reader-styles/](reader-styles/) | the overrides for a known reader, because what works best depends on who reads |
-| [shapes/](shapes/) | fixed skeletons for kinds of documents: note, folder README, report, commit message |
+| [shapes/](shapes/) | fixed skeletons for kinds of documents: note, folder README, report, commit message, decision record |
 | [evidence/](evidence/) | the reviews behind the principles, and one shared [bibliography](evidence/bibliography.md) |
 | [checks/](checks/) | programs that verify what a program can verify; questions for judgment otherwise |
 | [decisions/](decisions/) | why the repository is built as it is: one record per decision, with the options it rejected |
