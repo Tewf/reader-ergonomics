@@ -31,6 +31,40 @@ by search.
                             omit the section while there are none
 ```
 
+## Worked example
+
+A note written to this shape, from the evidence behind [worked examples with
+subgoals](../principles/document/worked-examples-with-subgoals.md):
+
+```markdown
+# Expertise reversal
+
+> A help that teaches a novice slows down a reader who no longer needs it.
+
+## In three points
+1. Worked examples and full explanations help novices learn a method.
+2. The same help costs an experienced reader, who must process what they already know.
+3. So the help is set by the reader's level, and faded as the level rises.
+
+## Terms
+- **expertise reversal**: a help that benefits low-knowledge learners loses its benefit, or turns harmful, for
+  high-knowledge ones.
+
+## The idea
+In a meta-analysis, novices gained from more assistance (d = +0.51) and advanced learners from less (d = -0.43)
+(Tetzlaff 2025). An earlier review named the effect (Kalyuga 2003).
+
+## Check yourself
+1. Why does a full worked example slow an expert down?
+<details><summary>Answer</summary>The expert must read and hold steps they already know.</details>
+
+## Open
+- How to tell a reader's level before they start reading.
+
+## Links
+- Worked examples with subgoals; the reader styles for a novice and an expert.
+```
+
 ## The principles it applies
 
 | Part | Principle |

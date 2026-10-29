@@ -22,13 +22,18 @@ One or two sentences: the role of this folder, and who uses it.
 ```sh
 the command a reader would actually run
 ```
-```text
+```console
 the output it actually produced, pasted, never invented
 ```
 
 ## See also
 The parent folder, and where the depth lives.
 ````
+
+## Worked example
+
+[checks/syntax/](../checks/syntax/README.md) follows this shape: what the folder is for in one
+sentence, its contents, a command with the output it really printed, and where to go next.
 
 ## Rules for the folder itself
 

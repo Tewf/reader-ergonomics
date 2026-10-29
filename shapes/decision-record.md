@@ -42,6 +42,12 @@ MADR 2024 adds the options a decision rejected; a record may add such a section 
   measured). Lee 1997 argued that rationale systems failed on the cost of capture (an argument, read in a summary).
 - **What is not known:** whether a record helps a later maintainer find out why has not been tested on maintainers.
 
+## Worked example
+
+[Decision 0001](../decisions/0001-extensions-depend-one-way.md) follows this shape: the decision in one
+sentence under its title, its status and shape, then Context, Decision, Consequences, the options it rejected and See
+also.
+
 ## The rules
 
 1. One decision per record, numbered in order, in a `decisions/` folder whose README lists them.

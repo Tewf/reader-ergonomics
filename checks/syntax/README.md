@@ -3,8 +3,12 @@
 Checks that measure sentences on a dependency parse: spaCy with its small English model, on CPU. Their findings are
 warnings: exact given the parse, but the parse is a model.
 
+**Shape:** [folder and its README](../../shapes/readme-and-folder.md).
+
 They run weekly and on demand, not on every push. Install spaCy and its
 model with `pip install -r checks/syntax/requirements.txt`; without it the tier is skipped with a notice.
+
+## Contents
 
 <!-- checks:start -->
 | File | Role | Guarantee |
@@ -15,3 +19,25 @@ model with `pip install -r checks/syntax/requirements.txt`; without it the tier 
 | [sentence_links.py](sentence_links.py) | Given before new: each sentence of a paragraph picks up something the one before it gave | Heuristic, on top of a parse. |
 | [sentences_of.py](sentences_of.py) | The parsed paragraphs of the files in scope, shared by the syntax checks. Time O(words) |  |
 <!-- checks:end -->
+
+## Example
+
+```sh
+python3 checks/run.py . --tiers syntax --judge none
+```
+```console
+judgment: 0 question(s), 0 answered in checks/judgments.toml, backend none
+0 error(s), 0 warning(s); tiers run: syntax
+```
+
+Without spaCy, the same command says so rather than passing in silence:
+
+```console
+notice   tier 'syntax' skipped: its library is not installed (see checks/README.md)
+0 error(s), 0 warning(s); tiers run: none; skipped: syntax
+```
+
+## See also
+
+The other tiers, in [checks](../README.md); the principles these checks serve, in the
+[sentence](../../principles/sentence/README.md) group.

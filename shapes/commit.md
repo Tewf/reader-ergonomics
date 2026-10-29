@@ -19,6 +19,24 @@ surprise the next reader: a measured number, a trap avoided,
 something deliberately left undone.
 ```
 
+## Worked example
+
+A commit from this repository's history:
+
+```gitcommit
+Shrink a text figure to fit a phone instead of cutting it off
+
+At 60 columns a figure fits the desktop column, but a phone shows
+about 32 at the body's size: on a 375 px screen the card's flow
+needed 606 px and had 324, so half the relation sat behind a
+scrollbar. Under 600 px, a figure's type now scales to show its 60
+columns, down to 9 px, where the same flow needs 328 px. Body text
+keeps its size. Measured in a browser at 375 by 812.
+```
+
+The subject says what changed, in 61 characters. The body gives the state that made it necessary (the measured
+overflow), what it buys (the whole figure), what it does not change (body text), and how it was verified.
+
 ## Rules
 
 - The subject is capitalised and has no full stop.
