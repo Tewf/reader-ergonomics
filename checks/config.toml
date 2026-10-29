@@ -10,7 +10,7 @@ exclude = ["LICENSE", "LICENSES/", "checks/out/"]
 [logical_lines]
 trigger = 80    # PROVISIONAL: past it, state the file's role in one sentence; not a limit
 ceiling = 500   # PROVISIONAL: physical lines; past it, a review, never an automatic split
-exempt_from_trigger = ["evidence/bibliography.md"]   # a data table, one row per work
+exempt_from_trigger = ["evidence/bibliography.md", "CHANGELOG.md"]   # a data table, one row per work; a list, one entry per release
 exempt_from_ceiling = ["evidence/bibliography.md", "checks/judgments.toml"]   # data files, one record per row or
 # answer, are exempt; append-only logs are not. An answer about the answers file would change it and reopen itself.
 ignore_line_prefixes = []                            # footer lines a site adds to every page
@@ -68,7 +68,7 @@ exempt = ["evidence/bibliography.md"]
 
 [figures_present]
 min_statements = 40   # PROVISIONAL
-exempt = ["evidence/bibliography.md"]
+exempt = ["evidence/bibliography.md", "CHANGELOG.md"]   # a table of works; a list of releases, whose order is its only relation
 
 [figure_captions]
 exempt = []

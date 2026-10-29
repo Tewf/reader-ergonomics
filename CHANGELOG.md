@@ -10,6 +10,8 @@ a release by is the one its tag points to: `git rev-list -n 1 v1.16.1`, or the r
 
 - The extending page lists the sixth extension, reader-ergonomics-blueprint. Its bibliography shares no key with
   another work across the seven repositories.
+- The changelog is exempt from the size trigger and the figure question, like the bibliography: it is a list, one
+  entry per release.
 
 ## [1.18.1] - 2026-10-29
 
