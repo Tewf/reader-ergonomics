@@ -307,34 +307,13 @@ answer = "No: they changed together only in passes over every review at once (th
 check = "figures-present"
 path = "CHANGELOG.md"
 question = "a long text with no figure, table or diagram: is a relation, set, quantity or process described only in words?"
-file = "c8a02d9984be"
+file = "2f7e260f83ff"
 answer = "No: it holds `Every release of the standard, newest first`, a list of dated entries read in order. The relations between releases are their order, which the list already shows."
 
 [[answer]]
 check = "co-change"
 path = "principles/collection/group-by-what-changes-together.md"
-question = "changed together with principles/document/define-before-use.md in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
-file = "aebbd0d0747e"
-answer = "No: these principles changed together only in passes over the whole standard (the audits, the multivocal merge, the grades re-read clause by clause), not because they serve one purpose; principles stay grouped by scale."
-
-[[answer]]
-check = "co-change"
-path = "principles/collection/group-by-what-changes-together.md"
 question = "changed together with principles/document/one-mode-per-document.md in 3 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
-file = "aebbd0d0747e"
-answer = "No: these principles changed together only in passes over the whole standard (the audits, the multivocal merge, the grades re-read clause by clause), not because they serve one purpose; principles stay grouped by scale."
-
-[[answer]]
-check = "co-change"
-path = "principles/collection/group-by-what-changes-together.md"
-question = "changed together with principles/document/overview-first.md in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
-file = "aebbd0d0747e"
-answer = "No: these principles changed together only in passes over the whole standard (the audits, the multivocal merge, the grades re-read clause by clause), not because they serve one purpose; principles stay grouped by scale."
-
-[[answer]]
-check = "co-change"
-path = "principles/collection/group-by-what-changes-together.md"
-question = "changed together with principles/page/sufficient-contrast.md in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
 file = "aebbd0d0747e"
 answer = "No: these principles changed together only in passes over the whole standard (the audits, the multivocal merge, the grades re-read clause by clause), not because they serve one purpose; principles stay grouped by scale."
 
@@ -348,6 +327,41 @@ answer = "No: these principles changed together only in passes over the whole st
 [[answer]]
 check = "co-change"
 path = "principles/collection/group-by-what-changes-together.md"
-question = "changed together with principles/sentence/shallow-nesting.md in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+question = "changed together with principles/document/define-before-use.md in 4 commits (80% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
 file = "aebbd0d0747e"
+answer = "No: these principles changed together only in passes over the whole standard (the audits, the multivocal merge, the grades re-read clause by clause), not because they serve one purpose; principles stay grouped by scale."
+
+[[answer]]
+check = "co-change"
+path = "principles/collection/group-by-what-changes-together.md"
+question = "changed together with principles/page/readable-measure.md in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+file = "aebbd0d0747e"
+answer = "No: these principles changed together only in passes over the whole standard (the audits, the multivocal merge, the grades re-read clause by clause), not because they serve one purpose; principles stay grouped by scale."
+
+[[answer]]
+check = "co-change"
+path = "principles/collection/group-by-what-changes-together.md"
+question = "changed together with principles/page/sufficient-contrast.md in 4 commits (80% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+file = "aebbd0d0747e"
+answer = "No: these principles changed together only in passes over the whole standard (the audits, the multivocal merge, the grades re-read clause by clause), not because they serve one purpose; principles stay grouped by scale."
+
+[[answer]]
+check = "co-change"
+path = "principles/collection/tunables-in-config.md"
+question = "changed together with principles/document/define-before-use.md in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+file = "1830a092f9ac"
+answer = "No: these principles changed together only in passes over the whole standard (the audits, the multivocal merge, the grades re-read clause by clause), not because they serve one purpose; principles stay grouped by scale."
+
+[[answer]]
+check = "co-change"
+path = "principles/collection/tunables-in-config.md"
+question = "changed together with principles/page/sufficient-contrast.md in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+file = "1830a092f9ac"
+answer = "No: these principles changed together only in passes over the whole standard (the audits, the multivocal merge, the grades re-read clause by clause), not because they serve one purpose; principles stay grouped by scale."
+
+[[answer]]
+check = "co-change"
+path = "principles/document/define-before-use.md"
+question = "changed together with principles/page/readable-measure.md in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+file = "e1c5a41bdbca"
 answer = "No: these principles changed together only in passes over the whole standard (the audits, the multivocal merge, the grades re-read clause by clause), not because they serve one purpose; principles stay grouped by scale."
