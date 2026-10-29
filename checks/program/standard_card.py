@@ -113,13 +113,29 @@ def llms_index(items: list[dict], root: Path, groups: list[tuple[str, str]] = FA
     return "\n".join(lines)
 
 
+def guarantee(docstring: str) -> str:
+    """What a check's findings can be trusted for: the words before `Time O(` in its cost paragraph."""
+    for paragraph in docstring.split("\n\n"):
+        if "Time O(" in paragraph:
+            lines = [line for line in paragraph.splitlines() if not line.startswith("Usage")]
+            return " ".join(" ".join(lines).split("Time O(")[0].split())
+    return ""
+
+
 def check_table(folder: Path) -> str:
-    header = "| Check | What it verifies |" if folder.name == "program" else "| File | Role |"
-    rows = []
+    entries = []
     for module in sorted(folder.glob("*.py")):
-        purpose = (ast.get_docstring(ast.parse(module.read_text(encoding="utf-8"))) or "").split("\n")[0].rstrip(".")
-        rows.append(f"| [{module.name}]({module.name}) | {purpose} |")
-    return "\n".join([CHECKS_START, header, "|---|---|", *rows, CHECKS_END])
+        tree = ast.parse(module.read_text(encoding="utf-8"))
+        docstring = ast.get_docstring(tree) or ""
+        is_check = any(isinstance(node, ast.Assign) and any(getattr(target, "id", "") == "NAME" for target in node.targets)
+                       for node in tree.body)
+        entries.append((module.name, docstring.split("\n")[0].rstrip("."), guarantee(docstring) if is_check else ""))
+    header = "| Check | What it verifies |" if folder.name == "program" else "| File | Role |"
+    if not any(promise for _, _, promise in entries):  # a folder of helpers has no guarantee to show
+        return "\n".join([CHECKS_START, header, "|---|---|", *(f"| [{name}]({name}) | {role} |" for name, role, _ in entries),
+                          CHECKS_END])
+    rows = [f"| [{name}]({name}) | {role} | {promise} |" for name, role, promise in entries]
+    return "\n".join([CHECKS_START, header + " Guarantee |", "|---|---|---|", *rows, CHECKS_END])
 
 
 def expected(root: Path, config: dict | None = None) -> dict[str, str]:

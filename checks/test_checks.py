@@ -293,6 +293,15 @@ class TestJudgmentAnswers(ScratchRepository):
         self.assertIn("0 answered in checks/judgments.toml, 1 written", judgment.dispatch(self.root, question, "flag", {}))
 
 
+class TestGuarantees(unittest.TestCase):
+    def test_every_check_states_what_it_guarantees_and_its_cost(self) -> None:
+        import ast
+        for module in run.CHECKS:
+            docstring = ast.get_docstring(ast.parse(Path(module.__file__).read_text(encoding="utf-8"))) or ""
+            self.assertIn("Time O(", docstring, module.NAME)
+            self.assertTrue(standard_card.guarantee(docstring), module.NAME)
+
+
 class TestFailurePaths(ScratchRepository):
     """Each way a run can go wrong is reported, never passed over: most severe failures come from error paths."""
 

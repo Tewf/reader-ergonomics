@@ -26,7 +26,8 @@ and none costs money: the one paid backend exists but is off.
 | [config.toml](config.toml) | every threshold, tagged PROVISIONAL where it is a convention, and the default tiers |
 | [test_checks.py](test_checks.py) | the checks' own oracle: a planted violation per check |
 
-Which principle each check serves is said once, on the principle's **Check:** line; `principle-coverage` holds every
+What a check's findings can be trusted for, and what it costs, is said once, in its docstring. Each tier's README shows
+it in the Guarantee column, and a test fails when a check does not say. Which principle each check serves is said once, on the principle's **Check:** line; `principle-coverage` holds every
 principle to naming at least one registered check.
 
 ## Kinds of finding
