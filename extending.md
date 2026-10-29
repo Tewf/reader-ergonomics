@@ -18,8 +18,8 @@ The arrows point one way. This standard never links to, or depends on, an extens
 
 ## The layout an extension mirrors
 
-An extension is read by people on its site and by language models through `llms.txt` and `AGENTS.md`, as this
-repository is, so it keeps the same parts, each with the same role:
+People read an extension on its site, and language models read it through `llms.txt` and `AGENTS.md`, as they
+read this repository. So an extension keeps the same parts, each with the same role:
 
 | Part | Role in an extension |
 |---|---|
