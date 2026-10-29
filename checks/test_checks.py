@@ -293,6 +293,73 @@ class TestJudgmentAnswers(ScratchRepository):
         self.assertIn("0 answered in checks/judgments.toml, 1 written", judgment.dispatch(self.root, question, "flag", {}))
 
 
+class TestFailurePaths(ScratchRepository):
+    """Each way a run can go wrong is reported, never passed over: most severe failures come from error paths."""
+
+    def test_an_unreachable_reference_is_reported_and_not_cached(self) -> None:
+        import json
+        import urllib.error
+        self.write("refs.md", "https://down.example/a\n")
+
+        def refuse(url, method="GET", timeout=20):
+            raise urllib.error.URLError("unreachable")
+        original, references.fetch = references.fetch, refuse
+        try:
+            found = [f"{finding.kind} {finding.message}" for finding in references.check(self.root, {**CONFIG, "online": True})]
+        finally:
+            references.fetch = original
+        self.assertEqual(found, ["error link https://down.example/a: URLError"])
+        cache = json.loads((self.root / "checks" / "out" / "references-cache.json").read_text())
+        self.assertEqual(cache, {})
+
+    def test_a_missing_judgment_backend_falls_back_to_flag(self) -> None:
+        import os
+        from unittest import mock
+        from framework import judgment
+        from framework.check_api import Finding
+        self.write("a.md")
+        question = [Finding("logical-lines", "a.md", 0, "state its role", "judgment")]
+        with mock.patch.dict(os.environ, {}, clear=True):
+            self.assertIn("fell back to flag", judgment.dispatch(self.root, question, "local", {}))
+            self.assertIn("paid and is off", judgment.dispatch(self.root, question, "api", {}))
+        self.assertTrue((self.root / "checks" / "out" / "needs-judgment.md").exists())
+
+    def test_an_unreachable_model_leaves_the_question_open(self) -> None:
+        import os
+        from unittest import mock
+        from framework import judgment
+        from framework.check_api import Finding
+        self.write("a.md")
+        question = [Finding("logical-lines", "a.md", 0, "state its role", "judgment")]
+        address = {"READER_ERGONOMICS_LOCAL_URL": "http://127.0.0.1:9", "READER_ERGONOMICS_LOCAL_MODEL": "none"}
+        with mock.patch.dict(os.environ, address, clear=True):
+            judgment.dispatch(self.root, question, "local", {"timeout_seconds": 2})
+        self.assertIn("(no answer: URLError)", (self.root / "checks" / "out" / "needs-judgment.md").read_text())
+
+    def test_a_missing_config_or_an_unknown_parent_fails_loudly(self) -> None:
+        with self.assertRaises(FileNotFoundError):
+            run.load_config(self.root, self.root / "checks" / "nowhere.toml")
+        self.write("checks/config.toml", 'extends = "reader-ergonomic"\n')
+        with self.assertRaises(ValueError):
+            run.load_config(self.root)
+
+    def test_a_missing_stylesheet_is_reported(self) -> None:
+        config = dict(CONFIG, readable_measure={"stylesheets": ["gone.css"]}, sufficient_contrast={"stylesheets": ["gone.css"]})
+        for module in (readable_measure, sufficient_contrast):
+            found = [f"{finding.kind} {finding.message}" for finding in module.check(self.root, config)]
+            self.assertEqual(found, ["warning a stylesheet listed in config does not exist, so it was not measured"], module.NAME)
+
+    def test_a_run_that_reads_nothing_fails(self) -> None:
+        import sys
+        script = Path(__file__).with_name("run.py")
+        empty = subprocess.run([sys.executable, str(script), str(self.root)], capture_output=True, text=True)
+        self.assertEqual(empty.returncode, 2)
+        self.assertIn("nothing was checked", empty.stdout)
+        absent = subprocess.run([sys.executable, str(script), str(self.root / "absent")], capture_output=True, text=True)
+        self.assertEqual(absent.returncode, 2)
+        self.assertIn("is not a folder", absent.stderr)
+
+
 class TestContrast(ScratchRepository):
     def found(self, css: str, **settings) -> list[str]:
         self.write("site.css", css)

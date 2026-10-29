@@ -118,6 +118,7 @@ def check(root: Path, config: dict) -> list[Finding]:
     for name in settings.get("stylesheets", []):
         path = root / name
         if not path.is_file():
+            report(name, "a stylesheet listed in config does not exist, so it was not measured", "warning")
             continue
         parsed = rules(path.read_text(encoding="utf-8"))
         for label, theme_context, variables in themes(parsed):

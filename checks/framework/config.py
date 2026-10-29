@@ -10,11 +10,16 @@ STANDARD = Path(__file__).resolve().parents[1] / "config.toml"
 def load_config(root: Path, explicit: Path | None = None) -> dict:
     """The repository's config, else the standard's; a config that extends the standard is merged onto it."""
     standard = STANDARD
+    if explicit is not None and not explicit.is_file():
+        raise FileNotFoundError(f"the config {explicit} does not exist")  # never fall back silently to another config
     path = explicit or root / "checks" / "config.toml"
     if not path.exists():
         path = standard
     config = tomllib.loads(path.read_text(encoding="utf-8"))
-    if config.pop("extends", None) == "reader-ergonomics" and path != standard:
+    extends = config.pop("extends", None)
+    if extends not in (None, "reader-ergonomics"):
+        raise ValueError(f"{path} extends {extends!r}; only 'reader-ergonomics' can be extended")
+    if extends and path != standard:
         config = merged(tomllib.loads(standard.read_text(encoding="utf-8")), config)
     return config
 

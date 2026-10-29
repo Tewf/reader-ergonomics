@@ -19,9 +19,11 @@ from __future__ import annotations
 import argparse
 import importlib.util
 import sys
+import tomllib
 from pathlib import Path
 
 from framework import judgment
+from framework.check_api import repository_paths
 from framework.config import load_config
 from meaning import document_mode, name_content, paraphrase, section_cohesion
 from program import (citations, co_change, cross_file_terms, defined_before_use, duplication, figure_captions,
@@ -50,7 +52,15 @@ def main() -> int:
     arguments = parser.parse_args()
 
     root = Path(arguments.root).resolve()
-    config = load_config(root, Path(arguments.config) if arguments.config else None)
+    if not root.is_dir():
+        parser.error(f"{root} is not a folder")
+    try:
+        config = load_config(root, Path(arguments.config) if arguments.config else None)
+    except (OSError, ValueError, tomllib.TOMLDecodeError) as error:
+        parser.error(str(error))
+    if not repository_paths(root):
+        print(f"error    run                  no file in scope under {root}: nothing was checked (is the folder git-ignored?)")
+        return 2
     checks = CHECKS + local_checks(root)
     config["online"] = arguments.online
     config["registered_checks"] = [module.NAME for module in checks]

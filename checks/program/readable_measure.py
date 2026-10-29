@@ -26,6 +26,8 @@ def check(root: Path, config: dict) -> list[Finding]:
     for name in settings.get("stylesheets", []):
         path = root / name
         if not path.is_file():
+            findings.append(Finding(NAME, name, 0, "a stylesheet listed in config does not exist, so it was not measured",
+                                    "warning"))
             continue
         css = re.sub(r"/\*.*?\*/", "", path.read_text(encoding="utf-8"), flags=re.S)
         for selector, body in RULE.findall(css):
