@@ -57,6 +57,10 @@ Seule la bibliothèque standard de Python est nécessaire. Les constats exacts f
 qu'un programme ne peut pas trancher sont écrites dans `checks/out/needs-judgment.md`, et leurs réponses sont gardées
 dans `checks/judgments.toml`. Voir [checks/](checks/).
 
+## Contribuer
+
+[AGENTS.md](AGENTS.md) donne les règles pour modifier ce dépôt, pour les personnes comme pour les modèles.
+
 ## Langue
 
 Le contenu est en anglais ; seules les deux pages d'accueil sont bilingues.
