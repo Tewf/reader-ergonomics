@@ -88,10 +88,14 @@ def table(items: list[dict], groups: list[tuple[str, str]] = FACETS) -> str:
 def llms_index(items: list[dict], root: Path, groups: list[tuple[str, str]] = FACETS) -> str:
     about = site(root)
     url = about["url"]
+    if (root / "principles").is_dir():
+        card = "with every principle and its grade"
+    else:  # an extension that adds shapes only has no principle to list
+        card = "how to use this standard" + (" and its shapes" if (root / "shapes" / "README.md").is_file() else "")
     lines = [f"# {about['title']}", "", f"> {about['description']}",
              "", "Each page's markdown source is served at the same path with a .md extension.", "",
              "## Standard", "",
-             f"- [Standard]({url}standard.md): the one-page card to follow, with every principle and its grade",
+             f"- [Standard]({url}standard.md): the one-page card to follow, {card}",
              f"- [Contributing]({url}AGENTS.md): rules for changing this repository"]
     if (root / "extending.md").is_file():
         lines.append(f"- [Extending]({url}extending.md): what an extension of this standard can rely on")

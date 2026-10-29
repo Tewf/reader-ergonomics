@@ -176,6 +176,14 @@ class TestExtension(ScratchRepository):
         self.assertNotIn("Reader styles", built["llms.txt"])  # this extension has none
         self.assertIn("### Talk: a paced medium", built["standard.md"])
 
+    def test_a_card_without_principles_does_not_promise_them(self) -> None:
+        self.write("standard.md", "# Papers\n\nHow to use the shapes.\n")
+        self.write("shapes/README.md", "# Shapes\n\nSkeletons.\n")
+        built = standard_card.expected(self.root)
+        self.assertIn("standard.md): the one-page card to follow, how to use this standard and its shapes\n", built["llms.txt"])
+        self.write("principles/talk/key-terms.md", "# Key terms on screen\n")
+        self.assertIn("with every principle and its grade", standard_card.expected(self.root)["llms.txt"])
+
 
 if __name__ == "__main__":
     unittest.main()
