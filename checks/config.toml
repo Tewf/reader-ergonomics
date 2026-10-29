@@ -11,7 +11,8 @@ exclude = ["LICENSE", "LICENSES/", "checks/out/"]
 trigger = 80    # PROVISIONAL: past it, state the file's role in one sentence; not a limit
 ceiling = 500   # PROVISIONAL: physical lines; past it, a review, never an automatic split
 exempt_from_trigger = ["evidence/bibliography.md"]   # a data table, one row per work
-exempt_from_ceiling = ["evidence/bibliography.md"]   # data tables are exempt; append-only logs are not
+exempt_from_ceiling = ["evidence/bibliography.md", "checks/judgments.toml"]   # data files, one record per row or
+# answer, are exempt; append-only logs are not. An answer about the answers file would change it and reopen itself.
 ignore_line_prefixes = []                            # footer lines a site adds to every page
 
 [links]

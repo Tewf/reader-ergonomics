@@ -122,6 +122,14 @@ class TestFailurePaths(ScratchRepository):
         self.assertIn("is not a folder", absent.stderr)
 
 
+class TestStandardConfig(unittest.TestCase):
+    def test_the_answers_file_never_asks_about_itself(self) -> None:
+        import tomllib
+        config = tomllib.loads((Path(run.__file__).with_name("config.toml")).read_text(encoding="utf-8"))
+        self.assertIn("checks/judgments.toml", config["co_change"]["exempt"])
+        self.assertIn("checks/judgments.toml", config["logical_lines"]["exempt_from_ceiling"])
+
+
 class TestSummary(unittest.TestCase):
     def test_a_skipped_tier_is_not_listed_as_run(self) -> None:
         self.assertEqual(run.summary(0, 1, {"program"}, {"meaning"}),
