@@ -1,5 +1,8 @@
 # Against
 
+The evidence against this topic's claims, by theme: fonts and folk rules, line length, polarity, layout, the limits
+of the evidence, and practice that contradicts a principle.
+
 ## Dyslexia fonts and folk rules
 
 - Dyslexia-specific fonts: null effects in Rello 2013, Wery 2017 and Kuster 2018 (n = 170).
@@ -22,6 +25,9 @@
 - Tufte's data-ink rule (Tufte 1983): intuition; Bateman 2010 found embellishment harmless for accuracy.
 - F-pattern: a description of scanning on cluttered pages, not a law for structured text.
 - Chunking advice rests on Miller 1956 and anecdote.
+- Information mapping, a structured-writing method behind much chunking advice, was tested by its author. The test
+  found no significant difference from the same content written as prose (20 and 21 students, adjusted means 19.56
+  and 17.65, t = 1.17, 38 df; Horn 1969).
 - Syntax highlighting: no comprehension effect (Hannebauer 2018).
 - Collapsed sections: reduce clutter but hide content (Wang 2023).
 

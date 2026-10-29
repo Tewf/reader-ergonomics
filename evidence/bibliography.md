@@ -165,7 +165,7 @@ Every work cited anywhere in this repository, once. The text cites `Author Year`
 | Hogemo 2021 | Hogemo, Bergougnoux, Brandes, Paul, Telle (2021). On Dasgupta's hierarchical clustering objective and its relation to other graph parameters | https://arxiv.org/abs/2105.12093 |
 | Hong 2025 | Hong, Troynikov, Huber (2025). Context Rot: How Increasing Input Tokens Impacts LLM Performance. Chroma technical report, 14 July 2025. | https://www.trychroma.com/research/context-rot |
 | Hoover 2023 | Hoover, Sonderegger, Piantadosi, O'Donnell (2023). The plausibility of sampling as an algorithmic theory of sentence processing. Open Mind, 7. | https://doi.org/10.1162/opmi_a_00086 |
-| Horn 1969 | Structured writing (Horn, Information Mapping). Overview | https://en.wikipedia.org/wiki/Structured_writing |
+| Horn 1969 | Horn, Nicol, Kleinman, Grace (1969). Information Mapping for Learning and Reference. ESD-TR-69-296, Electronic Systems Division, Air Force Systems Command. Read in the archived scan | https://doi.org/10.21236/AD0699201 |
 | Howard 2024 | Howard (2024). The /llms.txt file. Proposal, 3 September 2024. | https://llmstxt.org/ |
 | Hsieh 2024a | Hsieh, Sun, Kriman, Acharya, Rekesh, Jia, Zhang, Ginsburg (2024). RULER: What's the Real Context Size of Your Long-Context Language Models? COLM 2024. | arXiv:2404.06654 |
 | Hsieh 2024b | Hsieh, Chuang, Li, Wang, Le, Kumar, Glass, Ratner, Lee, Krishna, Pfister (2024). Found in the Middle: Calibrating Positional Attention Bias Improves Long Context Utilization. Findings of ACL 2024. | arXiv:2406.16008 |

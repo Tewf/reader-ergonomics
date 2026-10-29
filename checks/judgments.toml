@@ -279,7 +279,7 @@ answer = "Reference: a table of scored sources, looked up, not followed."
 check = "document-mode"
 path = "evidence/typography-and-layout/sources.md"
 question = "reads about equally as how-to and reference: one mode per document?"
-file = "56fd4da416bd"
+file = "e040cc384dba"
 answer = "Reference: a table of scored sources, looked up, not followed."
 
 [[answer]]
@@ -300,14 +300,14 @@ answer = "No: a state of the art keeps upper and lower bounds apart on purpose; 
 check = "section-cohesion"
 path = "evidence/multivocal-protocol.md"
 question = "section 'What was not recorded' is far from every other section (0.06): a second role?"
-file = "4cf9237f246e"
+file = "eb0015eaa818"
 answer = "No: the protocol's departures from its own method belong to the protocol."
 
 [[answer]]
 check = "section-cohesion"
 path = "evidence/typography-and-layout/against.md"
 question = "section 'Polarity' is far from every other section (0.23): a second role?"
-file = "8fb89cc31419"
+file = "f4df340b9764"
 answer = "No: polarity is one of the claims the case against covers; its sources differ from the others', hence the distance."
 
 [[answer]]
