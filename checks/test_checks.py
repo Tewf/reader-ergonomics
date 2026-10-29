@@ -321,6 +321,23 @@ class TestFailurePaths(ScratchRepository):
         cache = json.loads((self.root / "checks" / "out" / "references-cache.json").read_text())
         self.assertEqual(cache, {})
 
+    def test_a_server_that_does_not_answer_in_time_is_a_warning(self) -> None:
+        import socket
+        import urllib.error
+        self.write("refs.md", "https://slow.example/a and https://slower.example/b\n")
+
+        def wait(url, method="GET", timeout=20):
+            if "slower" in url:
+                raise urllib.error.URLError(socket.timeout("timed out"))
+            raise TimeoutError("timed out")
+        original, references.fetch = references.fetch, wait
+        try:
+            found = sorted(f"{finding.kind} {finding.message}" for finding in references.check(self.root, {**CONFIG, "online": True}))
+        finally:
+            references.fetch = original
+        self.assertEqual(found, ["warning link https://slow.example/a: no answer in time; open it by hand",
+                                 "warning link https://slower.example/b: no answer in time; open it by hand"])
+
     def test_a_missing_judgment_backend_falls_back_to_flag(self) -> None:
         import os
         from unittest import mock

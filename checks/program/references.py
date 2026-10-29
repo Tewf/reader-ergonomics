@@ -5,10 +5,11 @@ needs no network. Online (`--online`), each one is resolved against doi.org, the
 API, GitHub and the link itself. Successes are cached in `checks/out/` for `cache_days`,
 so a rerun costs nothing. Resolving shows that a reference exists, not that it supports
 the claim it is cited for; that remains judgment. A server that refuses the checker (HTTP 401,
-403 or 429: a wall against robots or a rate limit) proves nothing about the reference, so it is
-a warning to open by hand, never an error.
+403 or 429: a wall against robots or a rate limit) proves nothing about the reference, and
+neither does a server that does not answer in time; both are warnings to open by hand, never
+errors. A reference that cannot be reached at all (no such host, connection refused) is an error.
 
-Exact offline. Online depends on remote servers (a timeout is reported, never hidden).
+Exact offline. Online depends on remote servers (a timeout is reported as a warning, never hidden).
 Time O(references) requests, space O(references).
 """
 from __future__ import annotations
@@ -61,8 +62,9 @@ def resolve(kind: str, identifier: str) -> str | None:
         return None
     except urllib.error.HTTPError as error:
         return f"HTTP {error.code}"
-    except Exception as error:  # a timeout fails this reference, not the run
-        return error.__class__.__name__
+    except Exception as error:  # an unreachable server fails this reference, not the run
+        cause = getattr(error, "reason", error)
+        return "timeout" if isinstance(error, TimeoutError) or isinstance(cause, TimeoutError) else error.__class__.__name__
 
 
 def cited(text: str) -> set[tuple[str, str]]:
@@ -93,6 +95,8 @@ def check(root: Path, config: dict) -> list[Finding]:
             if reason in REFUSED:
                 findings.append(Finding(NAME, path, 0, f"{kind} {identifier}: {reason}, the server refused the checker; "
                                         "open it by hand", "warning"))
+            elif reason == "timeout":
+                findings.append(Finding(NAME, path, 0, f"{kind} {identifier}: no answer in time; open it by hand", "warning"))
             elif reason:
                 findings.append(Finding(NAME, path, 0, f"{kind} {identifier}: {reason}"))
             else:

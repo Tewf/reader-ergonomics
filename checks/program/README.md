@@ -24,7 +24,7 @@ certain, a **warning** when it comes from a heuristic, and a **judgment** questi
 | [principle_coverage.py](principle_coverage.py) | Principle coverage: every principle names at least one check that exists, so CI tests every rule | Exact. |
 | [provisional_tags.py](provisional_tags.py) | PROVISIONAL tags: a value marked as a guess is measured, or kept knowingly, before it ages | Exact for the date. |
 | [readable_measure.py](readable_measure.py) | Readable measure: the site's stylesheet sets body text inside the measured ranges | Exact for the declared values; the rendered line still depends on the face. |
-| [references.py](references.py) | References: every DOI, arXiv id, GitHub repository and web link cited resolves | Exact offline. Online depends on remote servers (a timeout is reported, never hidden). |
+| [references.py](references.py) | References: every DOI, arXiv id, GitHub repository and web link cited resolves | Exact offline. Online depends on remote servers (a timeout is reported as a warning, never hidden). |
 | [shape_conformance.py](shape_conformance.py) | Shape conformance: a document declared to be of a shape holds the parts that shape requires | Exact. |
 | [standard_card.py](standard_card.py) | The repository's generated indexes: the principle table in standard.md, llms.txt, and the check tables | Exact. |
 | [sufficient_contrast.py](sufficient_contrast.py) | Sufficient contrast: every text colour reaches a WCAG ratio of 4.5:1 on the background it sits on | Exact for colours declared in the same rule; heuristic for inherited backgrounds. A colour is read as hex, or as `white` or `black`; any other form is skipped. The rendered page is not measured. |
