@@ -1,4 +1,6 @@
-# Review
+# Review: reading order
+
+This page lists, with what it found, each source on the order and depth in which a document is read. Its six strands run from overview before detail to practice.
 
 Levels: **MA** meta-analysis · **RCT** randomised experiments · **S** single study · **R** review without pooling · **T** theory or model with no controlled test.
 

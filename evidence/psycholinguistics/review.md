@@ -1,4 +1,6 @@
-# Review
+# Review: psycholinguistics
+
+This page lists each source on density, depth and locality in sentences, with what it found. It opens with the surveys read first; its eight strands then run from information rate to practice.
 
 Order inside each strand: definitions, seminal work, forward citations.
 

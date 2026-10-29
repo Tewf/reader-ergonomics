@@ -1,4 +1,6 @@
-# Review: surveys, seminal work, forward citations
+# Review: LLM readers
+
+This page lists each source on how language models read a prompt, with what it found. It first says how the search ran; its six strands then run from position in the context to practice.
 
 Terms are defined in `frame.md`; numbers live in `state-of-the-art.md`.
 

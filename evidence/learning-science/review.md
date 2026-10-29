@@ -1,4 +1,6 @@
-# Review
+# Review: learning science
+
+This page lists each source on what makes notes and documents learned, with what it found. Its eight strands run from surveys of the field to practice.
 
 Grouped by strand. Surveys first, then the seminal work, then later syntheses.
 

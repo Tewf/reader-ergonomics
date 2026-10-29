@@ -26,8 +26,8 @@ answer = "One role: the scored table of this topic's sources, under `Grey source
 [[answer]]
 check = "logical-lines"
 path = "evidence/psycholinguistics/review.md"
-question = "85 logical lines, past the trigger of 80. State this file's role in one sentence. If the sentence needs 'and', split the file; if not, it may stay."
-file = "b7fdb4510e92"
+question = "87 logical lines, past the trigger of 80. State this file's role in one sentence. If the sentence needs 'and', split the file; if not, it may stay."
+file = "396236f2c3fa"
 answer = "One role: the reading log of this topic's literature, from `Surveys read first` through five strands to `5. Text tree`. It stays whole."
 
 [[answer]]
@@ -41,21 +41,21 @@ answer = "One role: the scored table of this topic's sources, under `Grey source
 check = "figures-present"
 path = "evidence/documentation/review.md"
 question = "a long text with no figure, table or diagram: is a relation, set, quantity or process described only in words?"
-file = "77f44596e9a1"
+file = "3be242fa982c"
 answer = "No: the file is a reading log, `Surveys first, then the standards`, one line per source with its finding; the comparisons between sources are tabled in `state-of-the-art.md`."
 
 [[answer]]
 check = "figures-present"
 path = "evidence/file-structure/review.md"
 question = "a long text with no figure, table or diagram: is a relation, set, quantity or process described only in words?"
-file = "c5e7de22f610"
+file = "34dd140fed35"
 answer = "No: the file is a reading log, `Surveys first, then the seminal work`, one line per source with its finding; the comparisons between sources are tabled in `state-of-the-art.md`."
 
 [[answer]]
 check = "figures-present"
 path = "evidence/learning-science/review.md"
 question = "a long text with no figure, table or diagram: is a relation, set, quantity or process described only in words?"
-file = "8a33e122ed10"
+file = "377e2360dc92"
 answer = "No: the file is a reading log, `Grouped by strand`, one line per source with its finding; the comparisons between sources are tabled in `state-of-the-art.md`."
 
 [[answer]]
@@ -69,21 +69,21 @@ answer = "No: each of its five parts lists the objections to one claim, one line
 check = "figures-present"
 path = "evidence/psycholinguistics/review.md"
 question = "a long text with no figure, table or diagram: is a relation, set, quantity or process described only in words?"
-file = "b7fdb4510e92"
+file = "396236f2c3fa"
 answer = "No: the file is a reading log, `Order inside each strand: definitions, seminal work, forward citations`; the comparisons between sources are tabled in `state-of-the-art.md`."
 
 [[answer]]
 check = "figures-present"
 path = "evidence/typography-and-layout/review.md"
 question = "a long text with no figure, table or diagram: is a relation, set, quantity or process described only in words?"
-file = "2e76b194ba86"
+file = "5b8828957cc0"
 answer = "No: the file is a reading log, `Grouped by strand`, one line per source with its finding; the comparisons between sources are tabled in `state-of-the-art.md`."
 
 [[answer]]
 check = "co-change"
 path = "evidence/learning-science/review.md"
 question = "changed together with evidence/reading-order/review.md in 3 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
-file = "8a33e122ed10"
+file = "377e2360dc92"
 answer = "No: it and `evidence/reading-order/review.md` were corrected in the same audit passes; they answer different questions and meet only through the bibliography."
 
 [[answer]]
@@ -407,3 +407,24 @@ path = "checks/program/bibliography_keys.py"
 question = "changed together with decisions/0003-one-key-one-work-across-the-family.md in 3 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
 file = "c7a84bade94d"
 answer = "One links the other already: the docstring cites `decision 0003`, the rule this check enforces, and the record links the check in its See also. They change together because each change to the key rule changes both, but the record belongs with the other decisions."
+
+[[answer]]
+check = "logical-lines"
+path = "evidence/file-structure/review.md"
+question = "81 logical lines, past the trigger of 80. State this file's role in one sentence. If the sentence needs 'and', split the file; if not, it may stay."
+file = "34dd140fed35"
+answer = "One role: `This page lists each source on cutting files and arranging folders, with what it found`. The 'and' is the topic's own name, files and folders being one structure, so the file stays whole; it is one line past the trigger."
+
+[[answer]]
+check = "document-mode"
+path = "evidence/psycholinguistics/review.md"
+question = "reads about equally as reference and how-to: one mode per document?"
+file = "396236f2c3fa"
+answer = "Reference: `This page lists each source on density, depth and locality in sentences`, and a reader looks a source up from a principle's link. It teaches no task; its order notes say how the strands are read, not what to do."
+
+[[answer]]
+check = "document-mode"
+path = "evidence/typography-and-layout/review.md"
+question = "reads about equally as how-to and reference: one mode per document?"
+file = "5b8828957cc0"
+answer = "Reference: `This page lists each source on type and layout on a screen`, one line per source, looked up from a principle's link. No task is taught; the numbers it reports are findings, not steps."

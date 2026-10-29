@@ -1,4 +1,6 @@
-# Review, strand by strand
+# Review: file structure
+
+This page lists each source on cutting files and arranging folders, with what it found. Its eight strands run from modularity to practice.
 
 Surveys first, then the seminal work, then forward citations.
 

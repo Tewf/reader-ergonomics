@@ -1,4 +1,6 @@
-# Review
+# Review: typography and layout
+
+This page lists each source on type and layout on a screen, with what it found. Its nine strands run from line length to practice.
 
 Grouped by strand. Surveys first, then primary studies and standards.
 

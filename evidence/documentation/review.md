@@ -1,4 +1,6 @@
-# Review
+# Review: documentation
+
+This page lists each source on how a repository's pages and its code comments are written, with what it found. Its four strands run from surveys to practice.
 
 Surveys first, then the standards, then the empirical studies.
 
