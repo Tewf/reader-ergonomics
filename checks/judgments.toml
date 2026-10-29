@@ -241,13 +241,6 @@ file = "fb9e15e989ca"
 answer = "No: it and `principles/sentence/even-information-density.md` changed together only in passes over the whole standard (audits, the figure work, check lines added to many principles at once), not because they serve one purpose; principles stay grouped by scale."
 
 [[answer]]
-check = "document-mode"
-path = "extending.md"
-question = "reads about equally as how-to and reference: one mode per document?"
-file = "1280fe6f2cfc"
-answer = "Reference: `This page is the contract between the standard and its extensions`, read to look up what an extension may rely on. Its few steps, the pinned `ref:` line and the local run, are what that contract asks of an extension, kept beside the part they serve rather than in a separate how-to."
-
-[[answer]]
 check = "co-change"
 path = "checks/program/bibliography_keys.py"
 question = "changed together with checks/test_checks.py in 3 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
@@ -302,13 +295,6 @@ path = "evidence/psycholinguistics/review.md"
 question = "changed together with evidence/reading-order/review.md in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
 file = "396236f2c3fa"
 answer = "No: they changed together only in passes over every review at once (the multivocal merge, the audits, the opening sentences), not because they serve one purpose; each topic keeps its folder."
-
-[[answer]]
-check = "figures-present"
-path = "CHANGELOG.md"
-question = "a long text with no figure, table or diagram: is a relation, set, quantity or process described only in words?"
-file = "2f7e260f83ff"
-answer = "No: it holds `Every release of the standard, newest first`, a list of dated entries read in order. The relations between releases are their order, which the list already shows."
 
 [[answer]]
 check = "co-change"
