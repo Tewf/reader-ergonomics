@@ -6,8 +6,8 @@ measured with the WCAG 2.2 formula against a background (`background`, `backgrou
 fallback only when no theme declares it. A theme is the variables of `:root` or `html`, alone
 or with the variables a block redefines over them: a dark scheme, a `[data-theme]` selector.
 
-- A text colour and a background declared in the same rule are measured in every theme; a
-  pair under the ratio is an error.
+- A text colour and a background set for the same selector, in one rule or in several, are
+  measured in every theme; a pair under the ratio is an error.
 - A text colour declared alone inherits its background from a parent the stylesheet cannot
   name. It is measured against the page (the background of `html`, `body` or `:root`) and
   against each surface named in config (`surfaces`: the selectors that paint a slide, a card, a
@@ -68,6 +68,20 @@ def rules(css: str) -> list[tuple[tuple[str, ...], str, list[tuple[str, str]]]]:
     return found
 
 
+def by_selector(parsed):
+    """The rules merged per selector: a colour and a background set in two rules for one selector meet.
+
+    A list of selectors counts for each of them, and a later value of a property replaces an earlier one.
+    """
+    merged: dict[tuple[tuple[str, ...], str], dict[str, str]] = {}
+    for context, selector, declarations in parsed:
+        for part in (part.strip() for part in re.split(r",(?![^()]*\))", selector)):
+            target = merged.setdefault((context, part), {})
+            for prop, value in declarations:
+                target[prop] = value
+    return [(context, part, list(values.items())) for (context, part), values in merged.items()]
+
+
 def themes(parsed) -> list[tuple[str, tuple[str, ...], dict[str, str]]]:
     """(label, at-rules it applies under, variables) of the base theme and of every block that redefines it."""
     base, overrides = {}, {}
@@ -120,7 +134,7 @@ def check(root: Path, config: dict) -> list[Finding]:
         if not path.is_file():
             report(name, "a stylesheet listed in config does not exist, so it was not measured", "warning")
             continue
-        parsed = rules(path.read_text(encoding="utf-8"))
+        parsed = by_selector(rules(path.read_text(encoding="utf-8")))
         for label, theme_context, variables in themes(parsed):
             where = f" (theme {label})" if label else ""
             alone, grounds = [], []

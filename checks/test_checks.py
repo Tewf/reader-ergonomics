@@ -387,9 +387,13 @@ class TestContrast(ScratchRepository):
                ".slide-light { background: #F9F5F0; color: #1B1B2F; }\n.title { color: #E8652D; }\n"
                "@keyframes glow { from { color: #fff; } to { color: #000; } }\n")
         page_only = self.found(css)
-        self.assertEqual(page_only, ["warning #6b6b80 (.muted) on html, body (#131520) is 3.50:1, under 4.5:1, if it sits there"])
+        self.assertEqual(page_only, ["warning #6b6b80 (.muted) on html or body (#131520) is 3.50:1, under 4.5:1, if it sits there"])
         with_surface = self.found(css, surfaces=[".slide-light"])
         self.assertIn("warning #e8652d (.title) on .slide-light (#f9f5f0) is 3.06:1, under 4.5:1, if it sits there", with_surface)
+
+    def test_a_colour_and_a_background_set_in_two_rules_meet(self) -> None:
+        found = self.found(".note { color: #777; }\n.note, .aside { background: #fff; }\n:is(.a, .b) { color: #000; }\n")
+        self.assertEqual(found, ["error .note: color #777 on #fff is 4.48:1, under 4.5:1"])
 
 
 class TestCitationKeys(unittest.TestCase):
