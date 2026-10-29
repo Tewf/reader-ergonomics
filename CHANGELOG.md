@@ -4,6 +4,14 @@ Every release of the standard, newest first, in the form of [Keep a Changelog](h
 (Lacan 2019). Versions follow `MAJOR.MINOR.PATCH` as [extending.md](extending.md) defines them. The commit to pin
 a release by is the one its tag points to: `git rev-list -n 1 v1.16.1`, or the repository's tags page.
 
+## [1.19.2] - 2026-10-29
+
+### Fixed
+
+- The check `type-buckets` reported folders under a path in `[scope] exclude`; it now reads only the files in scope.
+- The import-cycle part of `tree-shape` read Python files under an excluded path, and could fail on a cycle there.
+- The changelog is exempt from the section-cohesion question too: each of its sections is one release.
+
 ## [1.19.1] - 2026-10-29
 
 ### Changed

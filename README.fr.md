@@ -4,7 +4,7 @@ Comment écrire des notes, des documents et des fichiers qui coûtent le moins p
 les sciences cognitives, la psycholinguistique et le génie logiciel ont mesuré. Pour les personnes qui écrivent,
 et pour les modèles de langue qui écrivent.
 
-> **État :** version <!-- release:version -->1.19.1<!-- /release -->, publiée le <!-- release:date -->2026-10-29<!-- /release -->.
+> **État :** version <!-- release:version -->1.19.2<!-- /release -->, publiée le <!-- release:date -->2026-10-29<!-- /release -->.
 >
 > - **Relu :** par personne d'autre que son mainteneur, qui a lu et noté les preuves avec des agents d'IA. Ce n'est
 >   ni un standard officiel, ni une étude relue par des pairs, ni un résultat nouveau, ni une prétention à l'état de

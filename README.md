@@ -4,7 +4,7 @@ What cognitive science, psycholinguistics and software engineering have measured
 and files so that they cost the reader as little as possible. For people who write, and for language models that
 write.
 
-> **Status:** version <!-- release:version -->1.19.1<!-- /release -->, released <!-- release:date -->2026-10-29<!-- /release -->.
+> **Status:** version <!-- release:version -->1.19.2<!-- /release -->, released <!-- release:date -->2026-10-29<!-- /release -->.
 >
 > - **Reviewed:** by no one but its maintainer, who read and graded the evidence with AI agents. It is not an
 >   official standard, not a peer-reviewed study, not a new result, and not a claim to the state of the art.

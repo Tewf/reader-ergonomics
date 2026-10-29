@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: "If this repository helps you, you may cite it as below."
 title: "reader-ergonomics"
-version: "1.19.1"
+version: "1.19.2"
 date-released: "2026-10-29"
 abstract: >-
   A synthesis of what cognitive science, psycholinguistics and software
