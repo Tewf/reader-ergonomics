@@ -355,8 +355,8 @@ answer = "Yes, coupled with `principles/document/overview-first.md`: the scores 
 [[answer]]
 check = "name-content"
 path = "decisions/0003-one-key-one-work-across-the-family.md"
-question = "the name '0003 work across family' and the opening are far apart in meaning (0.16): does the name predict the content?"
-file = "63758c3e55c6"
+question = "the name '0003 work across family' and the opening are far apart in meaning (0.19): does the name predict the content?"
+file = "daa6d4f5488b"
 answer = "Yes: the name is the title, `A key names one work across the family`, and the opening says how that rule is checked, through `[bibliography_keys] family`. The distance comes from the opening's words for the mechanism (config, bibliography), not from another subject."
 
 [[answer]]

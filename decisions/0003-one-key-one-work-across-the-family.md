@@ -3,7 +3,7 @@
 **Decision:** each repository compares its bibliography with the bibliographies its config names in
 `[bibliography_keys] family`; this standard names none, so the extensions read their siblings and it reads no one.
 
-**Status:** accepted, 2026-10-29. **Shape:** [decision record](../shapes/decision-record.md).
+**Status:** accepted, 2026-10-29, in v1.5.0. **Shape:** [decision record](../shapes/decision-record.md).
 
 ## Context
 
