@@ -229,8 +229,8 @@ answer = "Kept: the README's question is the folder's one-line overview of the p
 [[answer]]
 check = "document-mode"
 path = "AGENTS.md"
-question = "reads about equally as how-to and reference: one mode per document?"
-file = "30d07b11f10a"
+question = "reads about equally as reference and how-to: one mode per document?"
+file = "f27406c8719d"
 answer = "How-to: the steps a contributor follows. The rules it lists are part of the task, not a separate reference."
 
 [[answer]]
