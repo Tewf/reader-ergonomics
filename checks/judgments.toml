@@ -145,13 +145,6 @@ answer = "No: they changed together only in passes over the whole standard (audi
 [[answer]]
 check = "co-change"
 path = "principles/document/define-before-use.md"
-question = "changed together with principles/page/sufficient-contrast.md in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
-file = "f5c2b1120513"
-answer = "No: they changed together only in passes over the whole standard (audits and amendments touching 10 to 18 principles at once), not because they serve one purpose; principles stay grouped by scale."
-
-[[answer]]
-check = "co-change"
-path = "principles/document/define-before-use.md"
 question = "changed together with principles/sentence/even-information-density.md in 3 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
 file = "f5c2b1120513"
 answer = "No: they changed together only in passes over the whole standard (audits and amendments touching 10 to 18 principles at once), not because they serve one purpose; principles stay grouped by scale."
@@ -187,13 +180,6 @@ answer = "No: they changed together only in passes over the whole standard (audi
 [[answer]]
 check = "co-change"
 path = "principles/document/overview-first.md"
-question = "changed together with principles/page/sufficient-contrast.md in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
-file = "ee8db9b34a32"
-answer = "No: they changed together only in passes over the whole standard (audits and amendments touching 10 to 18 principles at once), not because they serve one purpose; principles stay grouped by scale."
-
-[[answer]]
-check = "co-change"
-path = "principles/document/overview-first.md"
 question = "changed together with principles/sentence/even-information-density.md in 3 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
 file = "ee8db9b34a32"
 answer = "No: they changed together only in passes over the whole standard (audits and amendments touching 10 to 18 principles at once), not because they serve one purpose; principles stay grouped by scale."
@@ -209,13 +195,6 @@ answer = "No: they changed together only in passes over the whole standard (audi
 check = "co-change"
 path = "principles/page/sufficient-contrast.md"
 question = "changed together with principles/sentence/even-information-density.md in 3 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
-file = "152eda997df2"
-answer = "No: they changed together only in passes over the whole standard (audits and amendments touching 10 to 18 principles at once), not because they serve one purpose; principles stay grouped by scale."
-
-[[answer]]
-check = "co-change"
-path = "principles/page/sufficient-contrast.md"
-question = "changed together with principles/sentence/shallow-nesting.md in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
 file = "152eda997df2"
 answer = "No: they changed together only in passes over the whole standard (audits and amendments touching 10 to 18 principles at once), not because they serve one purpose; principles stay grouped by scale."
 
