@@ -32,6 +32,8 @@ website:
         href: checks/index.qmd
       - text: Extending
         href: extending.md
+      - text: Decisions
+        href: decisions/index.qmd
     right:
       - text: Français
         href: README.fr.md

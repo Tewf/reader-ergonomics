@@ -34,6 +34,7 @@ write.
 | [shapes/](shapes/) | fixed skeletons for kinds of documents: note, folder README, report, commit message |
 | [evidence/](evidence/) | the reviews behind the principles, and one shared [bibliography](evidence/bibliography.md) |
 | [checks/](checks/) | programs that verify what a program can verify; questions for judgment otherwise |
+| [decisions/](decisions/) | why the repository is built as it is: one record per decision, with the options it rejected |
 
 ## Why grades
 

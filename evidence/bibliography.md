@@ -67,6 +67,7 @@ Every work cited anywhere in this repository, once. The text cites `Author Year`
 | Clark 1991 | Clark, Paivio (1991). Dual coding theory and education. Educational Psychology Review | https://doi.org/10.1007/BF01320076 |
 | Cleveland 1984 | Cleveland, McGill (1984). Graphical perception. Journal of the American Statistical Association | https://doi.org/10.1080/01621459.1984.10478080 |
 | Cohen-Addad 2019 | Cohen-Addad, Kanade, Mallmann-Trenn, Mathieu (2019). Hierarchical clustering: objective functions and algorithms. JACM | https://doi.org/10.1145/3321386 |
+| Colfer 2016 | Colfer, Baldwin (2016). The mirroring hypothesis: theory, evidence, and exceptions. Industrial and Corporate Change. Abstract read | https://doi.org/10.1093/icc/dtw027 |
 | Conklin 1987 | Conklin (1987). Hypertext: an introduction and survey. IEEE Computer | https://doi.org/10.1109/MC.1987.1663693 |
 | Costa 2022 | Costa, Miranda, Melo (2022). Four-component instructional design (4C/ID) model: a meta-analysis. Learning Environments Research | https://doi.org/10.1007/s10984-021-09373-y |
 | Cox 2021 | Cox (2021). Issue 117, golang-standards/project-layout. GitHub, opened 2021-04-09 | https://github.com/golang-standards/project-layout/issues/117 |
@@ -249,6 +250,7 @@ Every work cited anywhere in this repository, once. The text cites `Author Year`
 | Luiten 1980 | Luiten, Ames, Ackerson (1980). A meta-analysis of the effects of advance organizers on learning and retention. American Educational Research Journal. | https://doi.org/10.3102/00028312017002211 |
 | Lulla 2026 | Lulla, Mohsenimofidi, Galster, Zhang, Baltes, Treude (2026). On the Impact of AGENTS.md Files on the Efficiency of AI Coding Agents. Preprint. | arXiv:2601.20404 |
 | MacCormack 2006 | MacCormack, Rusnak, Baldwin (2006). Exploring the structure of complex software designs. Management Science | https://doi.org/10.1287/mnsc.1060.0552 |
+| MADR 2024 | MADR (2024). Markdown Architectural Decision Records, version 4.0.0 (2024-09-17). Project page | https://adr.github.io/madr/ |
 | Madrid 2009 | Madrid, van Oostendorp, Puerta Melguizo (2009). The effects of the number of links and navigation support on cognitive load and learning with hypertext. Computers in Human Behavior | https://doi.org/10.1016/j.chb.2008.06.005 |
 | Malashenko 2023 | Malashenko et al. (2023). A digital model of full-cycle training based on the Zettelkasten and interval repetition system. Emerging Science Journal | https://www.ijournalse.org/index.php/ESJ/article/view/1614 |
 | Mancoridis 1998 | Mancoridis, Mitchell, Rorres, Chen, Gansner (1998). Using automatic clustering to produce high-level system organizations of source code. IWPC | https://doi.org/10.1109/WPC.1998.693283 |
@@ -311,6 +313,7 @@ Every work cited anywhere in this repository, once. The text cites `Author Year`
 | Nildam 1998 | Nildam (1998). News writing style and readers' perception. Master's thesis, Chulalongkorn University | https://digital.car.chula.ac.th/chulaetd/22123 |
 | NN/g 2016 | Nielsen Norman Group. Mobile content is twice as difficult | https://www.nngroup.com/articles/mobile-content-is-twice-as-difficult-2011 |
 | Noetel 2022 | Noetel et al. (2022). Multimedia design for learning: an overview of reviews with meta-meta-analysis. Review of Educational Research | https://doi.org/10.3102/00346543211052329 |
+| Nygard 2011 | Nygard (2011-11-15). Documenting architecture decisions. Cognitect blog | https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions |
 | Oh 2023 | Oh, Schuler (2023). Why does surprisal from larger transformer-based language models provide a poorer fit to human reading times? TACL, 11, 336-350. | https://doi.org/10.1162/tacl_a_00548 |
 | Olausson 2024 | Olausson, Inala, Wang, Gao, Solar-Lezama (2024). Is Self-Repair a Silver Bullet for Code Generation? ICLR 2024. | arXiv:2306.09896 |
 | OpenAI 2025 | OpenAI (2025). GPT-4.1 Prompting Guide. OpenAI Cookbook | https://developers.openai.com/cookbook/examples/gpt4-1_prompting_guide |

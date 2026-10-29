@@ -16,7 +16,9 @@ parts of this repository it can rely on when this one changes.
  checks/config.toml        ◀── extends ─  checks/config.toml         only the values it changes
 ```
 
-The arrows point one way. This standard never links to, or depends on, an extension.
+The arrows point one way. This standard depends on no extension: it never reads, runs or copies what an extension
+holds. It may list them, as this page does, since a link is a reference, not a dependency
+([decision 0001](decisions/0001-extensions-depend-one-way.md)).
 
 ## The layout an extension mirrors
 

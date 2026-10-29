@@ -128,7 +128,7 @@ exempt = []
 
 [citations]
 bibliography = "evidence/bibliography.md"
-files = ["evidence/", "principles/", "reader-styles/", "shapes/"]
+files = ["evidence/", "principles/", "reader-styles/", "shapes/", "decisions/"]
 not_surnames = ["WCAG", "Colon", "Classification", "Prolegomena", "Python", "Since", "In", "From", "Until", "By", "After", "Before", "Around",
                 "CONSORT", "PRISMA", "Lancet", "NEJM", "BMJ", "JAMA", "On"]   # guideline and journal names before a year
 

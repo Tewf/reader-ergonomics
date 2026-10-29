@@ -34,6 +34,7 @@ et pour les modèles de langue qui écrivent.
 | [shapes/](shapes/) | des squelettes fixes par type de document : note, README de dossier, rapport, message de commit |
 | [evidence/](evidence/) | les revues derrière les principes, et une [bibliographie](evidence/bibliography.md) commune |
 | [checks/](checks/) | des programmes qui vérifient ce qu'un programme peut vérifier ; des questions pour le jugement sinon |
+| [decisions/](decisions/) | pourquoi le dépôt est construit ainsi : une fiche par décision, avec les options écartées |
 
 ## Pourquoi des niveaux de preuve
 
