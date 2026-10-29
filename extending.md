@@ -1,10 +1,14 @@
 # Extending this standard
 
 An **extension** is a repository that applies this standard to one genre (research papers, talks, writing about
-software) and adds only what that genre changes. Three exist:
-[reader-ergonomics-academic](https://github.com/Tewf/reader-ergonomics-academic) (reports, papers, mathematical articles
-and proofs), [reader-ergonomics-presentations](https://github.com/Tewf/reader-ergonomics-presentations) (talks) and
-[reader-ergonomics-software-design](https://github.com/Tewf/reader-ergonomics-software-design) (writing about software).
+software) and adds only what that genre changes. Five exist:
+
+- [reader-ergonomics-academic](https://github.com/Tewf/reader-ergonomics-academic): reports, papers, mathematical
+  articles and proofs;
+- [reader-ergonomics-presentations](https://github.com/Tewf/reader-ergonomics-presentations): talks;
+- [reader-ergonomics-software-design](https://github.com/Tewf/reader-ergonomics-software-design): writing about software;
+- [reader-ergonomics-topic](https://github.com/Tewf/reader-ergonomics-topic): documentation as a tree of typed topics;
+- [reader-ergonomics-learning](https://github.com/Tewf/reader-ergonomics-learning): material meant to be learned.
 
 This page is the contract between the standard and its extensions. It says how an extension is laid out, and which
 parts of this repository it can rely on when this one changes.

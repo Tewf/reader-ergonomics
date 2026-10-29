@@ -386,3 +386,10 @@ path = "decisions/README.md"
 question = "changed together with extending.md in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
 file = "bbb8c62b083e"
 answer = "Keep them apart: decisions/README.md is the index, `one record per decision that shapes more than one file`, and extending.md is the contract. They changed together because decisions 0003 and 0004 each changed the contract and were added to the index in the same commit; extending.md links each record, so the fact lives in the record."
+
+[[answer]]
+check = "document-mode"
+path = "extending.md"
+question = "reads about equally as how-to and reference: one mode per document?"
+file = "a71c5222c000"
+answer = "Reference: `This page is the contract between the standard and its extensions`, read to look up what an extension may rely on. Its few steps, the pinned `ref:` line and the local run, are what that contract asks of an extension, kept beside the part they serve rather than in a separate how-to."
