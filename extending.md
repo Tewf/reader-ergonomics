@@ -105,6 +105,17 @@ ref: <the release's commit, all 40 characters>   # v1.0.0
 The extension moves to a new release deliberately, by changing that line. Every job that checks out the standard
 names the same commit: the checks, and the site that loads `site.css`. One bump then moves them all (`standard-pin`).
 
+To run a release's checks on a local copy, extract it inside the extension, in the `checks/out/` that git ignores,
+rather than beside the repositories, where each release would leave a folder behind:
+
+```sh
+rm -rf checks/out/standard && mkdir -p checks/out/standard
+git -C ../reader-ergonomics archive <the release's commit> | tar -x -C checks/out/standard
+python3 checks/out/standard/checks/run.py .
+```
+
+The checks skip what git ignores, so the extracted standard is not checked as part of the extension.
+
 ## Trust
 
 `run.py` runs the code in the checked repository's `checks/local/`. Run it only on repositories you trust; in CI, an
