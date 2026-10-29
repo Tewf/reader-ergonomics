@@ -223,7 +223,7 @@ answer = "Yes, coupled with `principles/document/overview-first.md`: the scores 
 check = "co-change"
 path = "checks/test_checks.py"
 question = "changed together with decisions/0003-one-key-one-work-across-the-family.md in 5 commits (83% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
-file = "a27ff35fb19b"
+file = "a8f677695c0a"
 answer = "Keep them apart: they changed together while the key checks' tests lived in `checks/test_checks.py`. Those tests now sit in `checks/test_keys.py`, so the pair has no reason left to change together."
 
 [[answer]]
@@ -349,5 +349,5 @@ answer = "No: these principles changed together only in passes over the whole st
 check = "document-mode"
 path = "README.md"
 question = "reads about equally as how-to and explanation: one mode per document?"
-file = "567ed30f6f90"
+file = "d9f70ab7f9a2"
 answer = "A front page, read to choose where to go: `Where to start` sends each reader to the document for their mode. Its two short how-to sections, `Take your own version` and `Check a repository`, are the first steps behind those doors and link on to the pages that hold the rest."
