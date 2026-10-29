@@ -12,7 +12,7 @@ it lists as the interface without raising the major version.
 
 ## Rules for claims
 
-- Every principle carries a grade: **measured**, **supported with caveat**, **convention** or **not supported**. A grade moves only with a cited source.
+- Every principle carries a grade: **measured**, **supported with caveat**, **convention** or **not supported**. A grade moves only with a cited source. A claim whose clauses rest on evidence of different strength grades each clause ([decision 0006](decisions/0006-a-claim-is-graded-clause-by-clause.md)).
 - Cite in the text as `Author Year`. The full entry goes once into [evidence/bibliography.md](evidence/bibliography.md), with a DOI, an arXiv id or a stable URL. A key names one work, here and in every extension ([decision 0003](decisions/0003-one-key-one-work-across-the-family.md)); an organisation's second work of a year may take a title word instead of a letter, `Microsoft 2026 icons` ([decision 0004](decisions/0004-an-organisation-key-may-carry-a-title-word.md)).
 - Evidence against a principle goes into the topic's `against.md`, never deleted to make a principle look stronger.
 - A number read in a summary rather than in the paper is marked "(secondary)".
