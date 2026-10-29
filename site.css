@@ -31,3 +31,10 @@ main.content table {
     font-size: clamp(9px, calc((100vw - 3.5rem) / 36), 1rem);
   }
 }
+
+/* A path or command in running text may break anywhere rather than push the page wider than its screen: inline
+   code otherwise keeps white-space: pre, and on a 375 px phone one long path widened the card to 456 px. */
+main.content :not(pre) > code {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
