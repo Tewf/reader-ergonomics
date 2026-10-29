@@ -4,7 +4,9 @@
 
 - **Grade:** supported with caveat.
 - **Evidence:** [typography and layout](../../evidence/typography-and-layout/review.md) (strands 1 to 3), [baseline](../../evidence/typography-and-layout/baseline.md).
-- **Check:** `readable-measure` (exact, on the site's stylesheet): a measure of 45 to 75 characters, body text of 16 px or more, line height of 1.5 or more.
+- **Check:** `readable-measure` (exact, on the site's stylesheet): a measure of 45 to 75 characters, body text of 16 px
+  or more, line height of 1.5 or more. `figure-width` (a warning): a figure drawn in characters stays within 60
+  columns, so it fits where its text fits.
 - **Reader styles:** none override it; letter spacing may be raised for readers with dyslexia.
 
 ## What it asks

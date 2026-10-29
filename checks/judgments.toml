@@ -330,3 +330,10 @@ path = "checks/program/references.py"
 question = "changed together with checks/test_checks.py in 3 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
 file = "4286fab9bbce"
 answer = "Yes, coupled with `checks/test_checks.py`: a check and its tests. The tests stay in files at the root of checks/ by design, so one command runs the whole suite; the coupling is the one a test is meant to have."
+
+[[answer]]
+check = "document-mode"
+path = "principles/page/readable-measure.md"
+question = "reads about equally as how-to and reference: one mode per document?"
+file = "3678ca89ce52"
+answer = "Reference: every principle file has the same shape, and its `What it asks` list states the rule; it is not a procedure."

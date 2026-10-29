@@ -79,6 +79,10 @@ measure_ch = [45, 75]
 min_font_px = 16
 min_line_height = 1.5
 
+[figure_width]
+max_columns = 60   # PROVISIONAL: no study gives a figure width; the narrow end of the readable measure
+exempt = []
+
 [sufficient_contrast]
 stylesheets = ["site.css"]
 min_ratio = 4.5

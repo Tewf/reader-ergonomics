@@ -10,7 +10,7 @@ import unittest
 from pathlib import Path
 
 from meaning import document_mode, embeddings, paraphrase
-from program import (co_change, cross_file_terms, defined_before_use, duplication, figure_captions, figures_present, judgment_quotes, links,
+from program import (co_change, cross_file_terms, defined_before_use, duplication, figure_captions, figure_width, figures_present, judgment_quotes, links,
                      logical_lines, long_sentences, name_matches_title, outline_depth, overview_first, paragraph_length,
                      portable_paths, principle_coverage, provisional_tags, readable_measure, references, shape_conformance,
                      standard_card, sufficient_contrast, tree_shape, type_buckets)
@@ -329,6 +329,26 @@ class TestJudgmentQuotes(ScratchRepository):
         self.write("checks/judgments.toml", "[[answer]\nbroken")
         found = [finding.message for finding in judgment_quotes.check(self.root, CONFIG)]
         self.assertTrue(found and found[0].startswith("the answers file cannot be read as TOML"), found)
+
+
+class TestFigureWidth(ScratchRepository):
+    def found(self, text: str) -> list[str]:
+        self.write("a.md", "# A page\n\n" + text)
+        return [finding.message for finding in figure_width.check(self.root, CONFIG)]
+
+    def test_a_text_figure_wider_than_the_column_warns(self) -> None:
+        self.assertEqual(len(self.found("```text\nnode " + "x" * 70 + "\n```\n")), 1)
+        self.assertEqual(len(self.found("```\n" + "y" * 61 + "\n```\n")), 1)
+
+    def test_descriptions_under_their_nodes_pass(self) -> None:
+        self.assertEqual(self.found("```text\ntree\n ├─ a node\n │    its description, on the line below\n └─ another\n```\n"), [])
+
+    def test_code_with_a_language_is_left_alone(self) -> None:
+        self.assertEqual(self.found("```python\nx = " + "1 + " * 30 + "1\n```\n"), [])
+
+    def test_a_wide_character_counts_twice(self) -> None:
+        self.assertEqual(figure_width.columns("名前" + "a" * 3), 7)
+        self.assertEqual(len(self.found("```text\n" + "名" * 31 + "\n```\n")), 1)
 
 
 class TestContrast(ScratchRepository):
