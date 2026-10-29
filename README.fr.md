@@ -16,7 +16,7 @@ et pour les modèles de langue qui écrivent.
 
 [Read in English](README.md)
 
-## Trois portes
+## Par où commencer
 
 | Vous êtes | Commencez par |
 |---|---|

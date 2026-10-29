@@ -89,10 +89,16 @@ and meaning tiers on every push and pull request. It runs the syntax tier and th
 
 ## What other tools already check
 
-Of the 32 checks, 11 have no counterpart among the tools searched (October 2026). None of those tools checks
-overview first, terms defined across files, a missing figure, document mode, paraphrase, a name against its content,
-or a stylesheet's measure. 14 checks have a partial counterpart, a tool that checks a related but different thing, and
-7 have a tool that does the same job. The table below names the closest tool for each, with how it differs.
+The tools were searched on 2026-10-28, when 31 checks existed:
+
+- **no counterpart**, for 11: none of the tools found checks overview first, terms defined across files, a missing
+  figure, document mode, paraphrase, a name against its content, or a stylesheet's measure;
+- **a partial counterpart**, a tool that checks a related but different thing, for 13;
+- **a tool that does the same job**, for 7.
+
+Of the checks added since the search, `bibliography-keys` was compared and has a partial counterpart, and the others
+were not compared: 32 of the <!-- count:checks -->43<!-- /count --> checks registered today were compared. The table
+below names, for each check compared, the closest tool and how it differs.
 
 The program-tier checks stay on the standard library, so one
 command runs them with nothing to install; a repository that already uses one of these tools can keep it.

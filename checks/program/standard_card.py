@@ -7,7 +7,9 @@ indexes (see extending.md); without them, the values are this repository's own.
 The first two are built from the principle files (their title, claim and grade), so a grade is
 written once, in its principle, and every index follows it. Each check tier's README lists its
 modules with the first line of their docstrings, so a check says what it does once, in its
-code. As a check, it fails when a committed index differs from what its sources give.
+code. A count written `<!-- count:checks -->N<!-- /count -->` in any markdown file is the number
+of check modules, so a page that states it cannot drift. As a check, it fails when a committed
+index or count differs from what its sources give.
 
 Usage: python3 checks/program/standard_card.py [ROOT] [--write]
 Exact. Time O(size of the principle files), space O(number of principles).
@@ -21,12 +23,13 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))  # run alone, it still finds framework/
 from framework.config import load_config
-from framework.check_api import Finding
+from framework.check_api import Finding, repository_paths
 
 NAME = "standard-card"
 EXACT = True
 START, END = "<!-- principles:start -->", "<!-- principles:end -->"
 CHECKS_START, CHECKS_END = "<!-- checks:start -->", "<!-- checks:end -->"
+COUNT = re.compile(r"(<!-- count:(\w+) -->)\d+(<!-- /count -->)")
 SITE = "https://tewf.github.io/reader-ergonomics/"
 TITLE = "Reader ergonomics"
 DESCRIPTION = ("How to write notes, documents and files that cost the reader least, by what cognitive science, "
@@ -143,6 +146,19 @@ def check_table(folder: Path) -> str:
     return "\n".join([CHECKS_START, header + " Guarantee |", "|---|---|---|", *rows, CHECKS_END])
 
 
+def counts(root: Path) -> dict[str, int]:
+    """The numbers a page may state by a count marker: `checks`, the modules under checks/ that define a NAME."""
+    modules = [module for module in (root / "checks").glob("*/*.py") if module.parent.name != "framework"]
+    return {"checks": sum(1 for module in modules
+                          if re.search(r"^NAME = ", module.read_text(encoding="utf-8", errors="replace"), re.MULTILINE))}
+
+
+def counted(text: str, numbers: dict[str, int]) -> str:
+    """The text with each count marker it holds set to its number; a marker of an unknown count is left as it is."""
+    return COUNT.sub(lambda match: f"{match.group(1)}{numbers[match.group(2)]}{match.group(3)}"
+                     if match.group(2) in numbers else match.group(0), text)
+
+
 def expected(root: Path, config: dict | None = None) -> dict[str, str]:
     groups = facets(root, config)
     items = principles(root, groups)
@@ -154,6 +170,11 @@ def expected(root: Path, config: dict | None = None) -> dict[str, str]:
         if CHECKS_START in text:
             outputs[readme.relative_to(root).as_posix()] = re.sub(re.escape(CHECKS_START) + ".*?" + re.escape(CHECKS_END),
                 lambda _: check_table(readme.parent), text, flags=re.DOTALL)
+    numbers = counts(root)
+    for path in (path for path in repository_paths(root) if path.endswith(".md")):
+        text = outputs.get(path) or (root / path).read_text(encoding="utf-8", errors="replace")
+        if COUNT.search(text):
+            outputs[path] = counted(text, numbers)
     return outputs
 
 

@@ -176,6 +176,16 @@ class TestExtension(ScratchRepository):
         self.assertNotIn("Reader styles", built["llms.txt"])  # this extension has none
         self.assertIn("### Talk: a paced medium", built["standard.md"])
 
+    def test_a_count_marker_holds_the_number_of_checks(self) -> None:
+        self.write("standard.md", "# Card\n")
+        self.write("checks/program/a.py", 'NAME = "a"\n')
+        self.write("checks/figures/b.py", 'NAME = "b"\n')
+        self.write("checks/framework/c.py", 'NAME = "not a check"\n')
+        self.write("checks/program/_helper.py", "x = 1\n")
+        self.write("notes.md", "It runs <!-- count:checks -->7<!-- /count --> checks; <!-- count:other -->3<!-- /count -->.\n")
+        built = standard_card.expected(self.root)
+        self.assertEqual(built["notes.md"], "It runs <!-- count:checks -->2<!-- /count --> checks; <!-- count:other -->3<!-- /count -->.\n")
+
     def test_a_card_without_principles_does_not_promise_them(self) -> None:
         self.write("standard.md", "# Papers\n\nHow to use the shapes.\n")
         self.write("shapes/README.md", "# Shapes\n\nSkeletons.\n")

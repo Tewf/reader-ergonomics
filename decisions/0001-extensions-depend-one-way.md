@@ -7,8 +7,8 @@ of its own, by convention.
 
 ## Context
 
-The standard is general; three extensions apply it to one genre each: academic writing, presentations and writing
-about software ([extending.md](../extending.md)). Each extension reads the standard's principles, runs its checks and
+The standard is general; when this was decided, three extensions applied it to one genre each (academic writing,
+presentations and writing about software), and [extending.md](../extending.md) lists those that exist now. Each extension reads the standard's principles, runs its checks and
 extends its config. Two questions about these extensions had no written answer: which way the dependencies may run,
 and when a genre deserves a repository of its own. Version 1.0.1 even listed the extensions on the contract page,
 which said the standard never links to them.

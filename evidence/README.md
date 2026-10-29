@@ -106,8 +106,8 @@ The grey sources were then scored on the method's quality criteria ([protocol](m
 - **Overview first is not importance first.** Putting the main fact first, as news does, has no tested support: two
   theses disagree, and the plain-language standard advises it as a convention.
 - **Practice sets numbers without studies:** sentence lengths, line lengths up to 90 characters, file-length limits.
-- **11 of the 31 checks have no counterpart** among the tools searched, and 7 have one that does the same job; see
-  [checks](../checks/README.md).
+- **11 of the 31 checks that existed when the tools were searched had no counterpart**, and 7 had one that does the
+  same job; see [checks](../checks/README.md).
 
 ## Method
 

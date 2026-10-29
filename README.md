@@ -16,7 +16,7 @@ write.
 
 [Lire en français](README.fr.md). The content is in English; only this page has a French version.
 
-## Three doors
+## Where to start
 
 | You are | Start at |
 |---|---|
