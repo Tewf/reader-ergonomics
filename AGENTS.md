@@ -38,6 +38,7 @@ python3 checks/run.py . --online --only references   # resolve every reference (
 - No em dash or en dash in prose; use a comma, a colon, parentheses, or a hyphen for ranges.
 - A new folder gets a `README.md` and a one-line `index.qmd` that includes it (copy any existing `index.qmd`), because the site generator skips files named README.
 - Commit messages follow [shapes/commit.md](shapes/commit.md).
+- A release adds its entry at the top of [CHANGELOG.md](CHANGELOG.md) before it is tagged.
 
 ## The site
 
