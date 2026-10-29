@@ -4,6 +4,20 @@ Every release of the standard, newest first, in the form of [Keep a Changelog](h
 (Lacan 2019). Versions follow `MAJOR.MINOR.PATCH` as [extending.md](extending.md) defines them. The commit to pin
 a release by is the one its tag points to: `git rev-list -n 1 v1.16.1`, or the repository's tags page.
 
+## [1.17.0] - 2026-10-29
+
+### Added
+
+- This changelog, of every release since 1.0.0.
+- The check `changelog-pin`: an extension's newest changelog pin line names the release its workflows check out.
+- On the front page, how a reader takes their own version: fork or copy, name the reader, pin a release, run the
+  checks; and where a disagreement goes.
+
+### Changed
+
+- A pin move or a dependency bump is a changelog entry, not a decision record; the decision-record shape says so,
+  and extending.md gives the entry's form.
+
 ## [1.16.1] - 2026-10-29
 
 ### Fixed
