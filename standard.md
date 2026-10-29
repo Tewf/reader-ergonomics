@@ -95,21 +95,21 @@ digraph scales {
 
 | Principle | Claim | Grade |
 |---|---|---|
-| [Browsable folders](principles/collection/browsable-folders.md) | a collection is shallow and broad: two levels rather than three, and folders a reader can scan, of at least 3 and at most about 32 entries. | supported with caveat; the evidence is from menus and web pages, applied to folders by analogy |
+| [Browsable folders](principles/collection/browsable-folders.md) | a collection is shallow and broad: two levels rather than three, and folders a reader can scan, of at least 3 and at most about 32 entries. | supported with caveat for two levels rather than three and up to about 32 entries; the evidence is from menus and web pages, applied to folders by analogy. The floor of 3 entries is a convention, argued from the cost of depth |
 | [Dependencies without cycles](principles/collection/dependencies-without-cycles.md) | code dependencies between folders never form a cycle, so every folder sits on a level above everything it uses. | convention, argued from design practice |
-| [Group by what changes together](principles/collection/group-by-what-changes-together.md) | a folder holds what serves one purpose and changes together, not files of one type; other ways of grouping are carried by links and indexes. | supported with caveat |
-| [Names predict content](principles/collection/names-predict-content.md) | a reader can predict what a file, folder or heading holds from its name before opening it, and each thing has one name throughout. | supported with caveat |
+| [Group by what changes together](principles/collection/group-by-what-changes-together.md) | a folder holds what serves one purpose and changes together, not files of one type; other ways of grouping are carried by links and indexes. | supported with caveat for grouping what changes together; that it beats grouping by type is untested, with no controlled comparison; indexes for the other groupings are a convention, from library science |
+| [Names predict content](principles/collection/names-predict-content.md) | a reader can predict what a file, folder or heading holds from its name before opening it, and each thing has one name throughout. | supported with caveat for names that predict content; one name per thing argued from theory for people and supported with caveat for language models |
 | [One place per fact](principles/collection/one-place-per-fact.md) | each piece of knowledge that must change together lives in one file; every other place links to it. | supported with caveat |
 | [One role per file](principles/collection/one-role-per-file.md) | a file holds one role: what it does fits one sentence, and its parts change for the same reasons. | convention, untested |
 | [Portable paths](principles/collection/portable-paths.md) | every path in a repository can be checked out on any common filesystem. | convention (a platform specification) |
 | [Size is a prompt](principles/collection/size-is-a-prompt.md) | past a length, a file is asked to state its role; size alone never decides a split. | convention, untested. The belief that smaller files have fewer defects is **not supported** |
-| [Tunables in config](principles/collection/tunables-in-config.md) | a value someone will set (a quota, a threshold, a price) lives in a configuration file, read at run time, and a value nobody has measured yet is tagged PROVISIONAL. | convention, supported with caveat |
+| [Tunables in config](principles/collection/tunables-in-config.md) | a value someone will set (a quota, a threshold, a price) lives in a configuration file, read at run time, and a value nobody has measured yet is tagged PROVISIONAL. | supported with caveat for one place for a value that will change, from information hiding; the PROVISIONAL tag is a convention: tagged shortcuts are measured as common and often left, not as helpful |
 
 ### Document: order and depth
 
 | Principle | Claim | Grade |
 |---|---|---|
-| [Define before use](principles/document/define-before-use.md) | every term and symbol is defined at or before its first use, premises come in the order they are needed, and each thing keeps one name. | supported with caveat |
+| [Define before use](principles/document/define-before-use.md) | every term and symbol is defined at or before its first use, premises come in the order they are needed, and each thing keeps one name. | supported with caveat for a definition before its use. Premises in the order they are needed: measured for language models, argued from theory for people. One name per thing: argued from theory for people, supported with caveat for language models |
 | [One mode per document](principles/document/one-mode-per-document.md) | each document serves one mode of reading (learning by doing, doing a task, looking something up, or understanding why) and says which. | convention, untested; widely adopted |
 | [Overview first](principles/document/overview-first.md) | a document opens with what it is about and how it is organised (its parts, in a few lines or a simple map) before any detail. | measured |
 | [Retrieval prompts](principles/document/retrieval-prompts.md) | a document meant to be learned ends each part with a few questions the reader answers from memory, with the answers folded, and is reread after a gap. | measured for questions answered from memory and for spaced rereading; folding the answers supported with caveat, inferred from the testing effect and not tested as a layout |
@@ -124,17 +124,17 @@ digraph scales {
 | [Even information density](principles/sentence/even-information-density.md) | a text says no more than the reader needs, and spreads what it says: no sentence packs several new ideas, and a dense term arrives after its context. | supported with caveat for judged quality; **not supported** as a way to read faster |
 | [Given before new](principles/sentence/given-before-new.md) | a sentence starts from what the reader already has (the topic, or what the previous sentence ended on) and ends on what is new. | supported with caveat |
 | [Shallow nesting](principles/sentence/shallow-nesting.md) | a sentence puts at most one clause inside another; with two nested clauses, readers already misread. | measured in English, where readers misread at two nested clauses; not found in German, so the limit of one is a convention there |
-| [Short dependencies](principles/sentence/short-dependencies.md) | words that depend on each other stay close: a subject near its verb, a modifier next to what it modifies, a pronoun near what it refers to. | measured in controlled sentences; supported with caveat in natural reading |
+| [Short dependencies](principles/sentence/short-dependencies.md) | words that depend on each other stay close: a subject near its verb, a modifier next to what it modifies, a pronoun near what it refers to. | measured in controlled sentences; supported with caveat in natural reading; a pronoun near what it refers to is applied by extension |
 
 ### Page: figures, layout and type
 
 | Principle | Claim | Grade |
 |---|---|---|
 | [Draw relations](principles/page/draw-relations.md) | a relation, a set, a quantity or a process is shown as a figure placed with the words that explain it, not as words alone. | measured |
-| [Figure next to its text](principles/page/figure-next-to-its-text.md) | the words that explain a figure, a formula or a block of code sit beside or inside it: not on another page, not below the fold. | measured |
-| [Readable measure](principles/page/readable-measure.md) | body text has a line length of about 45 to 75 characters, a size in the fluent range, and line spacing of at least 1.5. | supported with caveat |
+| [Figure next to its text](principles/page/figure-next-to-its-text.md) | the words that explain a figure, a formula or a block of code sit beside or inside it: not on another page, not below the fold. | measured for figures and formulae, in learning material for novices; for code, applied by analogy |
+| [Readable measure](principles/page/readable-measure.md) | body text has a line length of about 45 to 75 characters, a size in the fluent range, and line spacing of at least 1.5. | measured for a size in the fluent range. A line of 45 to 75 characters: supported with caveat, best for understanding and preference but not for speed. Line spacing of at least 1.5: a convention |
 | [Signal the structure](principles/page/signal-the-structure.md) | the structure of a text is visible before it is read: headings that name their content, lists for parallel items, tables for comparisons, bold for the defined term. | measured for signals (headings, labels, cues); tables for comparisons supported with caveat, from cognitive fit; lists for parallel items and bold for the defined term are conventions |
-| [Sufficient contrast](principles/page/sufficient-contrast.md) | text has a contrast ratio of at least 4.5:1 against its background, dark text on a light ground by default, with a dark theme offered and never forced. | measured for polarity; the 4.5:1 floor is a convention (a standard) |
+| [Sufficient contrast](principles/page/sufficient-contrast.md) | text has a contrast ratio of at least 4.5:1 against its background, dark text on a light ground by default, with a dark theme offered and never forced. | measured for dark text on a light ground; the 4.5:1 floor is a convention (a standard), and so is an offered dark theme |
 
 <!-- principles:end -->
 

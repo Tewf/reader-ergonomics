@@ -2,7 +2,8 @@
 
 **Claim:** body text has a line length of about 45 to 75 characters, a size in the fluent range, and line spacing of at least 1.5.
 
-- **Grade:** supported with caveat.
+- **Grade:** measured for a size in the fluent range. A line of 45 to 75 characters: supported with
+  caveat, best for understanding and preference but not for speed. Line spacing of at least 1.5: a convention.
 - **Evidence:** [typography and layout](../../evidence/typography-and-layout/review.md) (strands 1 to 3), [baseline](../../evidence/typography-and-layout/baseline.md).
 - **Check:** `readable-measure` (exact, on the site's stylesheet): a measure of 45 to 75 characters, body text of 16 px
   or more, line height of 1.5 or more. `figure-width` (a warning): a figure drawn in characters stays within 60
@@ -30,4 +31,5 @@ does help dyslexic children read accurately (Zorzi 2012).
 
 The upper bound is contested in practice: WCAG's AAA criterion allows 80 characters, 40 in CJK (W3C 2023a), and the
 US Web Design System 90, with 66 as its target (USWDS 2026). Neither page cites a study: both are convention, and
-the data above split speed from understanding (Dyson 2004).
+the data above split speed from understanding (Dyson 2004). Line spacing of 1.5 comes from practice guides as well
+(USWDS 2026, convention); mid-range spacing made no difference to comprehension in one sample (Rello 2016).

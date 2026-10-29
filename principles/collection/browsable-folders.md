@@ -2,7 +2,9 @@
 
 **Claim:** a collection is shallow and broad: two levels rather than three, and folders a reader can scan, of at least 3 and at most about 32 entries.
 
-- **Grade:** supported with caveat; the evidence is from menus and web pages, applied to folders by analogy.
+- **Grade:** supported with caveat for two levels rather than three and up to about 32 entries; the
+  evidence is from menus and web pages, applied to folders by analogy. The floor of 3 entries is a convention, argued
+  from the cost of depth.
 - **Evidence:** [file structure](../../evidence/file-structure/review.md), [against](../../evidence/file-structure/against.md) (navigation).
 - **Check:** `tree-shape` (exact): too many entries fails, too few asks a question, too deep warns.
 - **Reader styles:** none override it.
@@ -33,4 +35,5 @@ Needless depth costs more than breadth.
 
 The studies timed search for a named target through category labels. Developers mostly reach code by search, about
 twelve queries a day (Sadowski 2015), and spend about a third of their time navigating (Ko 2006). An optimum of 8 to 16
-items per level, often quoted, is not what these studies found.
+items per level, often quoted, is not what these studies found. The floor of 3 is not measured: a folder of one or
+two entries adds a level for little, and these studies show that a level costs, but none tested a level so small.

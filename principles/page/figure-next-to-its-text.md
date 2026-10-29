@@ -2,7 +2,8 @@
 
 **Claim:** the words that explain a figure, a formula or a block of code sit beside or inside it: not on another page, not below the fold.
 
-- **Grade:** measured.
+- **Grade:** measured for figures and formulae, in learning material for novices; for code,
+  applied by analogy.
 - **Evidence:** [learning science](../../evidence/learning-science/review.md) (strand 5), [typography and layout](../../evidence/typography-and-layout/review.md) (strand 6).
 - **Check:** `figure-captions`: every image has alt text, and every drawn figure has words right beside it. The alt
   text says what the figure shows, never its file name or a word for its kind (`figure-alt`, exact).
@@ -22,4 +23,5 @@ the other (split attention; Ayres 2014).
 
 ## Limits
 
-The effect is measured on learning material; for reference material read by experts it is untested.
+The effect is measured on learning material; for reference material read by experts it is untested. The studies
+placed words by diagrams, formulae and worked examples; none placed them by code, so code is included by analogy.

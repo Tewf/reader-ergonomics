@@ -2,7 +2,8 @@
 
 **Claim:** text has a contrast ratio of at least 4.5:1 against its background, dark text on a light ground by default, with a dark theme offered and never forced.
 
-- **Grade:** measured for polarity; the 4.5:1 floor is a convention (a standard).
+- **Grade:** measured for dark text on a light ground; the 4.5:1 floor is a convention (a standard),
+  and so is an offered dark theme.
 - **Evidence:** [typography and layout](../../evidence/typography-and-layout/review.md) (strand 4), [baseline](../../evidence/typography-and-layout/baseline.md), [terms](../../evidence/typography-and-layout/frame.md).
 - **Check:** `sufficient-contrast`, on the site's stylesheet with its variables resolved in every theme. It is exact
   for a text colour declared with its background, and warns for one that inherits it, measured on the page and on the
@@ -25,6 +26,9 @@ shrank (Piepenbrock 2014).
 
 By day the polarities did not differ. In a dark room (about 0 lux), white text on black was less legible (Dobres
 2017, measured: 34 adults, single Italian words read at a glance). The claim that dark mode improves reading is **not supported**.
+
+A dark theme is still offered, as a reader's choice and not for legibility. That is a convention, which no study
+here tests.
 
 The 4.5:1 floor is a convention under revision. APCA makes the threshold depend on the size of the text, and on
 its weight in principle (APCA 2026); WCAG 3 has not chosen a method (W3C 2026). It is also widely broken: on 83.9% of the million home

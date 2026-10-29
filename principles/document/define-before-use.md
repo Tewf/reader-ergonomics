@@ -2,7 +2,9 @@
 
 **Claim:** every term and symbol is defined at or before its first use, premises come in the order they are needed, and each thing keeps one name.
 
-- **Grade:** supported with caveat.
+- **Grade:** supported with caveat for a definition before its use. Premises in the order they are
+  needed: measured for language models, argued from theory for people. One name per thing: argued from theory for
+  people, supported with caveat for language models.
 - **Evidence:** [psycholinguistics](../../evidence/psycholinguistics/review.md) (strand 4), [learning science](../../evidence/learning-science/review.md) (strand 3), [LLM readers](../../evidence/llm-readers/).
 - **Check:** `defined-before-use` (heuristic): a bold term with a definition cue, used earlier in the same file.
 - **Reader styles:** strengthened by [novice](../../reader-styles/novice.md), [visual-relational](../../reader-styles/visual-relational.md) and [LLM reader](../../reader-styles/llm-reader.md); relaxed by [expert](../../reader-styles/expert.md).
@@ -23,6 +25,9 @@
   (Mayer 2002).
 - Language models reason better when premises come in the order they are used (see
   [LLM readers](../../evidence/llm-readers/)).
+- One name per thing keeps the shared argument that model links by: a second name leaves the reader to infer that
+  the two match (Kintsch 1978, a model, untested for names). Retrieval in language models leans on literal overlap,
+  which a synonym breaks (Modarressi 2025).
 
 ## Limits
 

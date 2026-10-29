@@ -31,8 +31,8 @@ clause with its own grade, and the claim keeps every clause.
 
 - A reader sees, on the card, which part of a principle is measured and which is practice.
 - The grade column grows longer, and a card read in a narrow window wraps it.
-- The other principles have not been re-read clause by clause; until they are, a one-word grade there is a claim the
-  review did not test.
+- The other principles were re-read clause by clause in v1.18.0: nine gained grades by clause, and the rest kept
+  one grade, since their clauses share their evidence.
 - An extension that repeats one of these grades should repeat its clauses too, at its next pin.
 
 ## Considered options

@@ -2,7 +2,9 @@
 
 **Claim:** a folder holds what serves one purpose and changes together, not files of one type; other ways of grouping are carried by links and indexes.
 
-- **Grade:** supported with caveat.
+- **Grade:** supported with caveat for grouping what changes together; that it beats grouping by
+  type is untested, with no controlled comparison; indexes for the other groupings are a convention, from library
+  science.
 - **Evidence:** [file structure](../../evidence/file-structure/review.md), [against](../../evidence/file-structure/against.md) (group folders by purpose).
 - **Check:** `co-change` (judgment): files that keep changing together but sit in different folders; `type-buckets` (exact): no folder named for a kind of file.
 - **Reader styles:** none override it.
