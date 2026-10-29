@@ -4,6 +4,13 @@ Every release of the standard, newest first, in the form of [Keep a Changelog](h
 (Lacan 2019). Versions follow `MAJOR.MINOR.PATCH` as [extending.md](extending.md) defines them. The commit to pin
 a release by is the one its tag points to: `git rev-list -n 1 v1.16.1`, or the repository's tags page.
 
+## [1.18.2] - 2026-10-29
+
+### Fixed
+
+- The extending page lists the sixth extension, reader-ergonomics-blueprint. Its bibliography shares no key with
+  another work across the seven repositories.
+
 ## [1.18.1] - 2026-10-29
 
 ### Fixed
