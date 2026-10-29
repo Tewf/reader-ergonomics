@@ -4,19 +4,18 @@ What cognitive science, psycholinguistics and software engineering have measured
 and files so that they cost the reader as little as possible. For people who write, and for language models that
 write.
 
-> **Status:** a work in progress, shared as it is, in the hope that it helps whoever needs it. It is an informal
-> reading of published research: not an official standard, not a peer-reviewed study, not a new result, and not a
-> claim to the state of the art. Each principle says how strong its evidence is, and many are conventions nobody
-> has tested.
+> **Status:** version <!-- release:version -->1.19.1<!-- /release -->, released <!-- release:date -->2026-10-29<!-- /release -->.
+>
+> - **Reviewed:** by no one but its maintainer, who read and graded the evidence with AI agents. It is not an
+>   official standard, not a peer-reviewed study, not a new result, and not a claim to the state of the art.
+> - **Checked:** by three [audits](evidence/README.md#audit) of claims against their primary sources, each by
+>   agents that had not written the lines they checked; every wrong line is listed with its correction.
+> - **Graded:** each principle says how strong its evidence is, and many are conventions nobody has tested.
+> - **Corrections:** welcome as issues.
 >
 > **How it was made:** with Claude, an AI assistant by Anthropic, under the maintainer's direction. AI agents
 > drafted the literature reviews; every reference was resolved by script and claims were spot-checked, but not
-> every source was read in full, and a number read only in a summary is marked "(secondary)". Corrections are
-> welcome as issues.
->
-> **How it was checked:** three [audits](evidence/README.md#audit) checked claims against their primary sources,
-> each by agents that had not written the lines they checked. Their verdicts, the wrong lines included, are listed
-> with what was corrected.
+> every source was read in full, and a number read only in a summary is marked "(secondary)".
 
 [Lire en français](README.fr.md). The content is in English; only this page has a French version.
 

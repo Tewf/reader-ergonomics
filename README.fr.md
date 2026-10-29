@@ -4,19 +4,21 @@ Comment écrire des notes, des documents et des fichiers qui coûtent le moins p
 les sciences cognitives, la psycholinguistique et le génie logiciel ont mesuré. Pour les personnes qui écrivent,
 et pour les modèles de langue qui écrivent.
 
-> **État :** un travail en cours, partagé tel quel, dans l'espoir qu'il serve à qui en a besoin. C'est une lecture
-> informelle de la recherche publiée : ni un standard officiel, ni une étude relue par des pairs, ni un résultat
-> nouveau, ni une prétention à l'état de l'art. Chaque principe dit la force de ses preuves, et beaucoup sont des
-> conventions que personne n'a testées.
+> **État :** version <!-- release:version -->1.19.1<!-- /release -->, publiée le <!-- release:date -->2026-10-29<!-- /release -->.
+>
+> - **Relu :** par personne d'autre que son mainteneur, qui a lu et noté les preuves avec des agents d'IA. Ce n'est
+>   ni un standard officiel, ni une étude relue par des pairs, ni un résultat nouveau, ni une prétention à l'état de
+>   l'art.
+> - **Vérifié :** par trois [audits](evidence/README.md#audit) des affirmations face à leurs sources primaires,
+>   chacun par des agents qui n'avaient pas écrit les lignes vérifiées ; chaque ligne fausse est listée avec sa
+>   correction.
+> - **Noté :** chaque principe dit la force de ses preuves, et beaucoup sont des conventions que personne n'a testées.
+> - **Corrections :** bienvenues sous forme d'issues.
 >
 > **Comment il a été fait :** avec Claude, un assistant d'IA d'Anthropic, sous la direction du mainteneur. Des
 > agents d'IA ont rédigé les revues de littérature ; chaque référence a été résolue par un script et les
 > affirmations ont été vérifiées par sondage, mais toutes les sources n'ont pas été lues en entier, et un chiffre
-> lu seulement dans un résumé est marqué « (secondary) ». Les corrections sont les bienvenues sous forme d'issues.
->
-> **Comment il a été vérifié :** trois [audits](evidence/README.md#audit) ont confronté les affirmations à leurs
-> sources primaires, chacun par des agents qui n'avaient pas écrit les lignes vérifiées. Leurs verdicts, lignes
-> fausses comprises, sont listés avec ce qui a été corrigé.
+> lu seulement dans un résumé est marqué « (secondary) ».
 
 [Read in English](README.md)
 
