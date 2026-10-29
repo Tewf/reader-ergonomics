@@ -23,7 +23,7 @@ from framework.check_api import MARKDOWN_SUFFIXES, Finding, files_in_scope, line
 
 NAME = "citations"
 EXACT = False
-PARTICLE = r"(?:(?:[Vv]an|[Vv]on|[Dd]e|[Dd]er|[Dd]en|[Dd]u|[Dd]a|[Dd]i|[Dd]os|[Dd]as|[Ee]l|[Ll]e|[Ll]a)\s)"
+PARTICLE = r"(?:(?:[Vv]an|[Vv]on|[Dd]e|[Dd]er|[Dd]en|[Dd]u|[Dd]a|[Dd]i|[Dd]os|[Dd]as|[Ee]l|[Ll]e|[Ll]a|[Tt]er|[Tt]en)\s)"
 SURNAME = rf"{PARTICLE}*(?:[A-Z][a-z]{{0,3}}\.\s)?[A-ZÀ-Ý][\w'’-]+"
 YEAR = r"(?:1[89]|20)\d\d[a-z]?"
 LOWERCASE_NAME = re.compile(r"\b([a-z][a-z]*[A-Za-z]*)\s((?:1[89]|20)\d\d[a-z]?)\b")

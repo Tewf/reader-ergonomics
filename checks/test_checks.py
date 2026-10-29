@@ -293,6 +293,14 @@ class TestJudgmentAnswers(ScratchRepository):
         self.assertIn("0 answered in checks/judgments.toml, 1 written", judgment.dispatch(self.root, question, "flag", {}))
 
 
+class TestCitationKeys(unittest.TestCase):
+    def test_a_surname_keeps_its_particle(self) -> None:
+        from program import citations
+        keys = [match.group(1) for match in citations.CITATION.finditer(
+            "ter Beek 2022, ten Cate 2014 and van der Meer 2019 agree; after 2022, nothing.")]
+        self.assertEqual(keys, ["ter Beek", "ten Cate", "van der Meer"])
+
+
 class TestParserInput(unittest.TestCase):
     def test_the_parser_reads_what_the_reader_reads(self) -> None:
         from syntax import sentences_of
