@@ -1,7 +1,9 @@
 # Checks
 
 The checks are the standard's oracle. Every principle names at least one check that tests it, and CI fails if one
-names none. Each check keeps one order: a program verifies what
+names none.
+
+Each check keeps one order: a program verifies what
 a program can verify exactly, for free; a model works only where meaning is at stake; judgment takes what no model
 should settle. Every check runs in polynomial time and space,
 and none costs money: the one paid backend exists but is off.

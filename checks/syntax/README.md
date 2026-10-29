@@ -1,7 +1,9 @@
 # Syntax tier
 
-Checks that measure sentences on a dependency parse: spaCy with its small English model, on CPU. They run weekly and on
-demand, not on every push; findings are warnings: exact given the parse, but the parse is a model. Install spaCy and its
+Checks that measure sentences on a dependency parse: spaCy with its small English model, on CPU. Their findings are
+warnings: exact given the parse, but the parse is a model.
+
+They run weekly and on demand, not on every push. Install spaCy and its
 model with `pip install -r checks/syntax/requirements.txt`; without it the tier is skipped with a notice.
 
 <!-- checks:start -->

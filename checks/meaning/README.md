@@ -1,8 +1,9 @@
 # Meaning tier
 
 Checks that compare meaning with sentence embeddings: fastembed's ONNX build of all-MiniLM-L6-v2, on CPU, with no torch.
-They run on every push; the model is cached between runs. Every finding is a judgment question, because a model's
-similarity is evidence, not proof. Install with `pip install -r checks/meaning/requirements.txt`; without it the tier is
+Every finding is a judgment question, because a model's similarity is evidence, not proof.
+
+They run on every push; the model is cached between runs. Install with `pip install -r checks/meaning/requirements.txt`; without it the tier is
 skipped with a notice.
 
 <!-- checks:start -->
