@@ -4,14 +4,20 @@ Every release of the standard, newest first, in the form of [Keep a Changelog](h
 (Lacan 2019). Versions follow `MAJOR.MINOR.PATCH` as [extending.md](extending.md) defines them. The commit to pin
 a release by is the one its tag points to: `git rev-list -n 1 v1.16.1`, or the repository's tags page.
 
+## [1.18.1] - 2026-10-29
+
+### Fixed
+
+- The 1.18.0 entry of this changelog splits a sentence past the length limit.
+
 ## [1.18.0] - 2026-10-29
 
 ### Changed
 
-- Nine more principles grade their claims clause by clause, after every claim was re-read against its evidence:
-  browsable folders, group by what changes together, names predict content, tunables in config, define before use,
-  figure next to its text, readable measure, sufficient contrast and short dependencies. Each weaker clause now says
-  what it rests on: practice, analogy or theory.
+- Nine more principles grade their claims clause by clause, after every claim was re-read against its evidence.
+  They are browsable folders, group by what changes together, names predict content, tunables in config, define
+  before use, figure next to its text, readable measure, sufficient contrast and short dependencies. Each weaker
+  clause now says what it rests on: practice, analogy or theory.
 
 ## [1.17.0] - 2026-10-29
 
