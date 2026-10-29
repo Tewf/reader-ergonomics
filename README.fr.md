@@ -13,6 +13,10 @@ et pour les modèles de langue qui écrivent.
 > agents d'IA ont rédigé les revues de littérature ; chaque référence a été résolue par un script et les
 > affirmations ont été vérifiées par sondage, mais toutes les sources n'ont pas été lues en entier, et un chiffre
 > lu seulement dans un résumé est marqué « (secondary) ». Les corrections sont les bienvenues sous forme d'issues.
+>
+> **Comment il a été vérifié :** trois [audits](evidence/README.md#audit) ont confronté les affirmations à leurs
+> sources primaires, chacun par des agents qui n'avaient pas écrit les lignes vérifiées. Leurs verdicts, lignes
+> fausses comprises, sont listés avec ce qui a été corrigé.
 
 [Read in English](README.md)
 

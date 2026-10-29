@@ -13,6 +13,10 @@ write.
 > drafted the literature reviews; every reference was resolved by script and claims were spot-checked, but not
 > every source was read in full, and a number read only in a summary is marked "(secondary)". Corrections are
 > welcome as issues.
+>
+> **How it was checked:** three [audits](evidence/README.md#audit) checked claims against their primary sources,
+> each by agents that had not written the lines they checked. Their verdicts, the wrong lines included, are listed
+> with what was corrected.
 
 [Lire en français](README.fr.md). The content is in English; only this page has a French version.
 
