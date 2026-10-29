@@ -4,6 +4,17 @@ Every release of the standard, newest first, in the form of [Keep a Changelog](h
 (Lacan 2019). Versions follow `MAJOR.MINOR.PATCH` as [extending.md](extending.md) defines them. The commit to pin
 a release by is the one its tag points to: `git rev-list -n 1 v1.16.1`, or the repository's tags page.
 
+## [1.19.0] - 2026-10-29
+
+### Added
+
+- The check `release-version`: the citation file's version and release date equal the changelog's newest release.
+
+### Changed
+
+- The citation file's title is "reader-ergonomics", without "work in progress", and it gives the version and date.
+  That the work is informal and not peer-reviewed now stands in its abstract.
+
 ## [1.18.2] - 2026-10-29
 
 ### Fixed
