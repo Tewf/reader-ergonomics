@@ -7,6 +7,7 @@ judgment backends. Nothing here checks anything; every tier imports it, and it i
 | File | Role |
 |---|---|
 | [check_api.py](check_api.py) | The interface every check shares: the files in scope, and the finding a check returns |
+| [config.py](config.py) | The config a check run reads: the repository's own, else the standard's; an extension's is merged onto it |
 | [judgment.py](judgment.py) | Judgment: the questions a program cannot answer exactly, sent to the backend chosen in config |
 | [prose.py](prose.py) | The units the reading checks count: the blocks of a markdown file, and the sentences of a paragraph |
 <!-- checks:end -->

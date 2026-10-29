@@ -47,6 +47,9 @@ max_files = 5   # PROVISIONAL: past it, a term is shared vocabulary
 ignore_terms = ["materials", "upper bound", "lower bound"]   # bold list labels, not defined terms
 exempt = ["evidence/bibliography.md", "standard.md", "llms.txt"]   # titles, and copies built from the principles
 
+[standard_card]
+facets = ["collection", "document", "sentence", "page"]   # the principle groups, in the order the card shows them
+
 [shape_conformance]
 shapes = []   # e.g. { name = "note", files = ["notes/*.md"], required = ["In three points", "Check yourself"] }
 

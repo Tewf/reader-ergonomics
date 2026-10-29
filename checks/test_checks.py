@@ -4,6 +4,7 @@ and nothing in a clean one. Run: python3 -m unittest discover checks
 from __future__ import annotations
 
 import subprocess
+import sys
 import tempfile
 import unittest
 from pathlib import Path
@@ -12,7 +13,7 @@ from meaning import document_mode, embeddings, paraphrase
 from program import (co_change, cross_file_terms, defined_before_use, duplication, figure_captions, figures_present, links,
                      logical_lines, long_sentences, name_matches_title, outline_depth, overview_first, paragraph_length,
                      portable_paths, principle_coverage, provisional_tags, readable_measure, references, shape_conformance,
-                     sufficient_contrast, tree_shape, type_buckets)
+                     standard_card, sufficient_contrast, tree_shape, type_buckets)
 import run
 from syntax import clause_nesting, dependency_length, parser
 
@@ -304,6 +305,46 @@ class TestSummary(unittest.TestCase):
         self.assertEqual(run.summary(0, 1, {"program"}, {"meaning"}),
                          "0 error(s), 1 warning(s); tiers run: program; skipped: meaning")
         self.assertEqual(run.summary(2, 0, {"program", "syntax"}, set()), "2 error(s), 0 warning(s); tiers run: program, syntax")
+
+
+class TestExtension(ScratchRepository):
+    """An extension of the standard: its config extends the standard's, its own checks run, its card is its own."""
+
+    def test_config_extends_the_standard(self) -> None:
+        self.write("checks/config.toml", 'extends = "reader-ergonomics"\n\n[logical_lines]\ntrigger = 5\n')
+        config = run.load_config(self.root)
+        self.assertEqual(config["logical_lines"]["trigger"], 5)
+        self.assertIn("ceiling", config["logical_lines"])  # kept from the standard's table
+        self.assertIn("citations", config)                 # a table the extension did not name
+        self.assertNotIn("extends", config)
+
+    def test_config_without_extends_replaces(self) -> None:
+        self.write("checks/config.toml", "[logical_lines]\ntrigger = 5\n")
+        self.assertNotIn("citations", run.load_config(self.root))
+
+    def test_local_checks_run_and_register(self) -> None:
+        self.write("checks/local/demo.py", "from framework.check_api import Finding\nNAME = 'demo-local'\n"
+                   "def check(root, config):\n    return [Finding(NAME, 'a.md', 1, 'planted')]\n")
+        self.write("a.md", "# A\n\nOne line.\n")
+        names = [module.NAME for module in run.local_checks(self.root)]
+        self.assertEqual(names, ["demo-local"])
+        result = subprocess.run([sys.executable, str(Path(run.__file__)), str(self.root), "--only", "demo-local"],
+                                capture_output=True, text=True)
+        self.assertEqual(result.returncode, 1)
+        self.assertIn("demo-local", result.stdout)
+
+    def test_card_is_the_extension_s_own(self) -> None:
+        self.write("_quarto.yml", 'website:\n  title: "Talks"\n  site-url: "https://example.org/talks/"\n'
+                   '  description: "How to give a talk."\n')
+        self.write("standard.md", f"# Talks\n\n{standard_card.START}\n{standard_card.END}\n")
+        self.write("principles/talk/README.md", "# Talk: a paced medium\n\nWhat changes when a speaker sets the pace.\n")
+        self.write("principles/talk/key-terms.md", "# Key terms on screen\n\n**Claim:** show key terms, not the sentences said.\n\n"
+                   "- **Grade:** measured.\n")
+        built = standard_card.expected(self.root, {"standard_card": {"facets": ["talk"]}})
+        self.assertTrue(built["llms.txt"].startswith("# Talks\n\n> How to give a talk."))
+        self.assertIn("(https://example.org/talks/principles/talk/key-terms.md)", built["llms.txt"])
+        self.assertNotIn("Reader styles", built["llms.txt"])  # this extension has none
+        self.assertIn("### Talk: a paced medium", built["standard.md"])
 
 
 if __name__ == "__main__":

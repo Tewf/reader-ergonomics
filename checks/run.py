@@ -5,6 +5,11 @@ Usage: python3 checks/run.py [ROOT] [--config FILE] [--tiers program,meaning,syn
 ROOT defaults to the current folder. The config is ROOT/checks/config.toml when it exists,
 else the one next to this file. Exit status 1 when any exact check fails, else 0.
 
+An extension of the standard can add to it (the contract is extending.md): a config with
+`extends = "reader-ergonomics"` is merged onto the standard's, table by table, and the modules in
+ROOT/checks/local/ run beside the standard's checks. Those modules are code from the checked
+repository: run this only on repositories you trust.
+
 Three tiers, cheapest first: `program` needs only the Python standard library (3.11 or later);
 `meaning` needs fastembed and `syntax` needs spaCy with en_core_web_sm. A tier whose library is
 missing is skipped with a notice, never failed. The default tiers are in config.
@@ -12,11 +17,12 @@ missing is skipped with a notice, never failed. The default tiers are in config.
 from __future__ import annotations
 
 import argparse
+import importlib.util
 import sys
-import tomllib
 from pathlib import Path
 
 from framework import judgment
+from framework.config import load_config
 from meaning import document_mode, name_content, paraphrase, section_cohesion
 from program import (citations, co_change, cross_file_terms, defined_before_use, duplication, figure_captions,
                      figures_present, links, logical_lines, long_sentences, name_matches_title, outline_depth,
@@ -44,17 +50,15 @@ def main() -> int:
     arguments = parser.parse_args()
 
     root = Path(arguments.root).resolve()
-    config_path = Path(arguments.config) if arguments.config else root / "checks" / "config.toml"
-    if not config_path.exists():
-        config_path = Path(__file__).with_name("config.toml")
-    config = tomllib.loads(config_path.read_text(encoding="utf-8"))
+    config = load_config(root, Path(arguments.config) if arguments.config else None)
+    checks = CHECKS + local_checks(root)
     config["online"] = arguments.online
-    config["registered_checks"] = [module.NAME for module in CHECKS]
+    config["registered_checks"] = [module.NAME for module in checks]
     tiers = set((arguments.tiers or ",".join(config.get("run", {}).get("tiers", ["program"]))).split(","))
     selected = set(arguments.only.split(",")) if arguments.only else None
 
     findings, ran, skipped = [], set(), set()
-    for module in CHECKS:
+    for module in checks:
         tier = getattr(module, "TIER", "program")
         if tier not in tiers or (selected is not None and module.NAME not in selected):
             continue
@@ -74,6 +78,21 @@ def main() -> int:
     print(judgment.dispatch(root, findings, arguments.judge or settings.get("backend", "flag"), settings))
     print(summary(len(errors), len(warnings), ran, skipped))
     return 1 if errors else 0
+
+
+def local_checks(root: Path) -> list:
+    """The modules in ROOT/checks/local/: each has a NAME and check(root, config), like the standard's own."""
+    folder = root / "checks" / "local"
+    if not folder.is_dir() or folder.resolve() == Path(__file__).resolve().with_name("local"):
+        return []
+    modules = []
+    for path in sorted(folder.glob("*.py")):
+        spec = importlib.util.spec_from_file_location(f"local_{path.stem}", path)
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        if hasattr(module, "NAME") and callable(getattr(module, "check", None)):
+            modules.append(module)
+    return modules
 
 
 def summary(errors: int, warnings: int, ran: set[str], skipped: set[str]) -> str:
