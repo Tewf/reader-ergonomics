@@ -323,3 +323,10 @@ path = "checks/program/sufficient_contrast.py"
 question = "changed together with checks/test_checks.py in 3 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
 file = "7252c1f3f1b3"
 answer = "Yes, coupled: a check and its tests. The tests stay in two files at the root of checks/ by design, so one command runs the whole suite; the coupling is the one a test is meant to have."
+
+[[answer]]
+check = "co-change"
+path = "checks/program/references.py"
+question = "changed together with checks/test_checks.py in 3 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+file = "4286fab9bbce"
+answer = "Yes, coupled: a check and its tests. The tests stay in two files at the root of checks/ by design, so one command runs the whole suite; the coupling is the one a test is meant to have."

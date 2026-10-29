@@ -30,7 +30,9 @@ exempt = []
 max_files = 20     # PROVISIONAL: a commit touching more is a rename or a format pass
 min_together = 3   # PROVISIONAL
 min_share = 0.75   # PROVISIONAL: of the commits of the rarer file
-exempt = ["standard.md", "llms.txt", "evidence/bibliography.md"]   # built from, or shared by, many files
+exempt = ["standard.md", "llms.txt", "evidence/bibliography.md", "checks/*/README.md", "checks/judgments.toml"]
+# built from, or shared by, many files (the tier READMEs are built from the checks); answering a question about
+# the answers file would reopen it
 
 [type_buckets]
 names = ["docs", "doc", "assets", "misc", "utils", "util", "stuff", "other", "files", "helpers"]
