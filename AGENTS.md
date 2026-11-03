@@ -32,6 +32,13 @@ python3 checks/run.py . --online --only references   # resolve every reference (
   not review its own text in place of the checks.
 - The paid judgment backend stays off (`[judgment.api] enabled = false`) unless the maintainer turns it on.
 
+## Generated files
+
+`python3 checks/program/standard_card.py . --write` rebuilds `llms.txt`, the principle table and the counts. In
+`llms.txt`, a line that is exactly `<!-- hand -->` starts the part kept by hand: that line and everything after it
+survive a rebuild, so a proof page, a design document or an experiments folder stays listed. Put the links to such
+pages below it, never above.
+
 ## House conventions (this repository, not the standard)
 
 - English throughout; the two READMEs are kept in English and French, in step.

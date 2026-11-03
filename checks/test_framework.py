@@ -204,6 +204,23 @@ class TestExtension(ScratchRepository):
         self.write("principles/talk/key-terms.md", "# Key terms on screen\n")
         self.assertIn("with every principle and its grade", standard_card.expected(self.root)["llms.txt"])
 
+    def test_hand_written_lines_of_llms_txt_survive_a_rebuild(self) -> None:
+        self.write("standard.md", "# Card\n")
+        self.write("principles/talk/key-terms.md", "# Key terms\n\n**Claim:** c.\n\n- **Grade:** measured.\n")
+        generated = standard_card.expected(self.root)["llms.txt"]
+        self.assertNotIn(standard_card.HAND, generated)  # no marker, wholly generated
+        hand = f"{standard_card.HAND}\n## Experiments\n\n- [Run 1](https://example.org/x): kept\n"
+        self.write("llms.txt", "stale generated part\n\n" + hand)
+        rebuilt = standard_card.expected(self.root)["llms.txt"]
+        self.assertEqual(rebuilt, generated + "\n" + hand)
+        self.write("llms.txt", rebuilt)
+        self.assertEqual(standard_card.expected(self.root)["llms.txt"], rebuilt)  # stable
+        self.assertEqual(standard_card.check(self.root, {}), [])
+        self.write("llms.txt", rebuilt.replace("kept", "edited"))  # an edit below the marker is not drift
+        self.assertEqual(standard_card.check(self.root, {}), [])
+        self.write("llms.txt", rebuilt.replace("# Reader ergonomics", "# Other"))
+        self.assertEqual(len(standard_card.check(self.root, {})), 1)  # above the marker it is
+
 
 if __name__ == "__main__":
     unittest.main()

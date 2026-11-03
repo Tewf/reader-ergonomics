@@ -4,6 +4,10 @@ The site, title and description come from the checked repository's _quarto.yml, 
 groups from its config ([standard_card] facets), so an extension of the standard gets its own
 indexes (see extending.md); without them, the values are this repository's own.
 
+llms.txt keeps what a person adds by hand: everything from a line that is exactly `<!-- hand -->` to the end of the
+file is left untouched and follows the generated part after a blank line, so a page the principle files cannot
+give (a proof, a design document, an experiments folder) stays listed. Without that line, the file is wholly generated.
+
 The first two are built from the principle files (their title, claim and grade), so a grade is
 written once, in its principle, and every index follows it. Each check tier's README lists its
 modules with the first line of their docstrings, so a check says what it does once, in its
@@ -31,6 +35,7 @@ EXACT = True
 START, END = "<!-- principles:start -->", "<!-- principles:end -->"
 CHECKS_START, CHECKS_END = "<!-- checks:start -->", "<!-- checks:end -->"
 COUNT = re.compile(r"(<!-- count:(\w+) -->)\d+(<!-- /count -->)")
+HAND = "<!-- hand -->"
 RELEASE = re.compile(r"(<!-- release:(version|date) -->)[^<]*(<!-- /release -->)")
 NEWEST = re.compile(r"^## \[(\d+\.\d+\.\d+)\] - (\d{4}-\d{2}-\d{2})\s*$", re.MULTILINE)
 SITE = "https://tewf.github.io/reader-ergonomics/"
@@ -125,6 +130,15 @@ def llms_index(items: list[dict], root: Path, groups: list[tuple[str, str]] = FA
     return "\n".join(lines)
 
 
+def hand_written(current: str) -> str:
+    """The marker line and all after it in the committed llms.txt, or "" when it holds no such line."""
+    lines = current.splitlines(keepends=True)
+    for number, line in enumerate(lines):
+        if line.strip() == HAND:
+            return "".join(lines[number:])
+    return ""
+
+
 def guarantee(docstring: str) -> str:
     """What a check's findings can be trusted for: the words before `Time O(` in its cost paragraph."""
     for paragraph in docstring.split("\n\n"):
@@ -177,7 +191,9 @@ def expected(root: Path, config: dict | None = None) -> dict[str, str]:
     items = principles(root, groups)
     card = (root / "standard.md").read_text(encoding="utf-8")
     built = re.sub(re.escape(START) + ".*?" + re.escape(END), lambda _: table(items, groups), card, flags=re.DOTALL)
-    outputs = {"standard.md": built, "llms.txt": llms_index(items, root, groups)}
+    current = (root / "llms.txt").read_text(encoding="utf-8") if (root / "llms.txt").is_file() else ""
+    hand = hand_written(current)
+    outputs = {"standard.md": built, "llms.txt": llms_index(items, root, groups) + ("\n" + hand if hand else "")}
     for readme in sorted((root / "checks").glob("*/README.md")):
         text = readme.read_text(encoding="utf-8")
         if CHECKS_START in text:
