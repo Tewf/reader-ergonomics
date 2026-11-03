@@ -349,5 +349,5 @@ answer = "No: these principles changed together only in passes over the whole st
 check = "document-mode"
 path = "README.md"
 question = "reads about equally as how-to and explanation: one mode per document?"
-file = "f63f48b603c6"
+file = "d106213f830b"
 answer = "A front page, read to choose where to go: `Where to start` sends each reader to the document for their mode. Its two short how-to sections, `Take your own version` and `Check a repository`, are the first steps behind those doors and link on to the pages that hold the rest."

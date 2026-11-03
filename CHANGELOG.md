@@ -4,6 +4,15 @@ Every release of the standard, newest first, in the form of [Keep a Changelog](h
 (Lacan 2019). Versions follow `MAJOR.MINOR.PATCH` as [extending.md](extending.md) defines them. The commit to pin
 a release by is the one its tag points to: `git rev-list -n 1 v1.16.1`, or the repository's tags page.
 
+## [1.21.0] - 2026-11-04
+
+### Changed
+
+- The check `duplication` skips, in a file that declares a shape, every line found verbatim in that shape's Skeleton
+  block. A repository with many instances of one shape no longer exempts the skeleton by hand.
+- The shape is read from disk: a relative link, a github.com link to this repository, or a sibling checkout beside it.
+  Nothing is fetched over the network. When the shape cannot be read, the file is counted as before.
+
 ## [1.20.0] - 2026-11-03
 
 ### Added
