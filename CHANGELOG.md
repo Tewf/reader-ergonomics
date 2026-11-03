@@ -4,6 +4,15 @@ Every release of the standard, newest first, in the form of [Keep a Changelog](h
 (Lacan 2019). Versions follow `MAJOR.MINOR.PATCH` as [extending.md](extending.md) defines them. The commit to pin
 a release by is the one its tag points to: `git rev-list -n 1 v1.16.1`, or the repository's tags page.
 
+## [1.20.0] - 2026-11-03
+
+### Added
+
+- The option `--out FILE` of `checks/run.py`: it writes one line per finding, `kind check path:line message`, then a
+  summary line and `exit N`, replacing the file of the last run. Standard output is unchanged.
+- The card builder keeps what is written by hand in `llms.txt`: a line `<!-- hand -->` and all after it survive a
+  rebuild, so pages the principle files cannot give stay listed.
+
 ## [1.19.2] - 2026-10-29
 
 ### Fixed

@@ -77,12 +77,17 @@ file's answer then fails.
 ```sh
 python3 checks/run.py .                    # tiers from config
 python3 checks/run.py . --tiers program    # no model at all
+python3 checks/run.py . --out verdicts.txt # also write one line per finding, then summary and exit status
 python3 checks/run.py path/to/repo         # another; its config wins
 python3 checks/run.py . --online --only references
 python3 -m unittest discover -s checks     # test the checks
 pip install -r checks/meaning/requirements.txt   # the meaning tier
 pip install -r checks/syntax/requirements.txt    # the syntax tier
 ```
+
+`--out FILE` writes `kind check path:line message` per finding (errors, warnings, and the judgment questions still
+open), then `summary errors=N warnings=N judgments=N seconds=S tiers=...` and `exit N`, replacing the last run's file.
+Standard output is unchanged.
 
 A tier whose library is missing is skipped with a notice, never failed. `.github/workflows/checks.yml` runs the program
 and meaning tiers on every push and pull request. It runs the syntax tier and the online references once a week.

@@ -222,5 +222,51 @@ class TestExtension(ScratchRepository):
         self.assertEqual(len(standard_card.check(self.root, {})), 1)  # above the marker it is
 
 
+class TestVerdictsFile(ScratchRepository):
+    """`--out FILE`: one line per finding, a summary line, the exit status."""
+
+    def run_out(self, *extra: str) -> tuple[subprocess.CompletedProcess, list[str]]:
+        target = self.root / "verdicts.txt"
+        result = subprocess.run([sys.executable, str(Path(run.__file__)), str(self.root), "--tiers", "program",
+                                 "--only", "links", "--out", str(target), *extra],
+                                capture_output=True, text=True)
+        return result, (target.read_text(encoding="utf-8").splitlines() if target.is_file() else [])
+
+    def test_a_failing_run_lists_its_findings_then_summary_and_status(self) -> None:
+        self.write("a.md", "# A\n\nSee [gone](missing.md).\n")
+        result, lines = self.run_out()
+        self.assertEqual(result.returncode, 1)
+        self.assertTrue(lines[0].startswith("error links a.md:3 "), lines)
+        self.assertRegex(lines[-2], r"^summary errors=1 warnings=0 judgments=0 seconds=\d+\.\d tiers=program$")
+        self.assertEqual(lines[-1], "exit 1")
+        self.assertIn("error    links", result.stdout)  # standard output is unchanged
+
+    def test_a_clean_run_has_only_the_summary_and_a_zero_status(self) -> None:
+        self.write("a.md", "# A\n\nOne line.\n")
+        result, lines = self.run_out()
+        self.assertEqual(result.returncode, 0)
+        self.assertEqual(len(lines), 2)
+        self.assertTrue(lines[0].startswith("summary errors=0 "))
+        self.assertEqual(lines[1], "exit 0")
+
+    def test_the_file_of_the_last_run_is_replaced(self) -> None:
+        self.write("a.md", "# A\n\nSee [gone](missing.md).\n")
+        self.run_out()
+        self.write("a.md", "# A\n\nOne line.\n")
+        _, lines = self.run_out()
+        self.assertEqual(lines[-1], "exit 0")
+        self.assertEqual(len(lines), 2)
+
+    def test_an_open_question_is_listed(self) -> None:
+        from framework.check_api import Finding
+        self.write("long.md", "first\n")
+        question = Finding("logical-lines", "long.md", 0, "state this file's role", "judgment")
+        target = self.root / "v.txt"
+        run.write_verdicts(target, [question], 0, {"program"}, 0.0)
+        lines = target.read_text(encoding="utf-8").splitlines()
+        self.assertEqual(lines[0], "judgment logical-lines long.md state this file's role")
+        self.assertIn("judgments=1", lines[1])
+
+
 if __name__ == "__main__":
     unittest.main()

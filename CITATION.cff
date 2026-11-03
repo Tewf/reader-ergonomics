@@ -1,8 +1,8 @@
 cff-version: 1.2.0
 message: "If this repository helps you, you may cite it as below."
 title: "reader-ergonomics"
-version: "1.19.2"
-date-released: "2026-10-29"
+version: "1.20.0"
+date-released: "2026-11-03"
 abstract: >-
   A synthesis of what cognitive science, psycholinguistics and software
   engineering report about writing notes, documents and files that are cheap
