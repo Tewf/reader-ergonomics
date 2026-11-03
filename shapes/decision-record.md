@@ -22,6 +22,8 @@ such as a table of the options that lost; it keeps these.
 ## See also             the folder that lists the records, and the work the choice concerns
 ```
 
+The title `# NNNN: ` and the labels `**Decision:**`, `**Status:**` and `**Shape:**` are written in this exact form in every language, because the check reads them.
+
 MADR 2024 adds the options a decision rejected; a record may add such a section after Decision.
 
 ## Where each part comes from
