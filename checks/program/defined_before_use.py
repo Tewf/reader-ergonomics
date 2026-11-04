@@ -13,7 +13,7 @@ from __future__ import annotations
 import re
 from pathlib import Path
 
-from framework.check_api import MARKDOWN_SUFFIXES, Finding, files_in_scope, prose_only
+from framework.check_api import MARKDOWN_SUFFIXES, Finding, files_in_scope, reading_text
 
 NAME = "defined-before-use"
 EXACT = False
@@ -23,7 +23,7 @@ DEFINITION = re.compile(r"\*\*([^*\n]{3,40}?)\*\*\s*(?::|\(|=|\bis\b|\bare\b|\bm
 def check(root: Path, config: dict) -> list[Finding]:
     findings = []
     for path in files_in_scope(root, config, MARKDOWN_SUFFIXES):
-        lines = prose_only((root / path).read_text(encoding="utf-8", errors="replace")).splitlines()
+        lines = reading_text((root / path).read_text(encoding="utf-8", errors="replace")).splitlines()
         body = [(number, line) for number, line in enumerate(lines, 1) if not line.lstrip().startswith("#")]
         defined_at = {}
         for number, line in body:

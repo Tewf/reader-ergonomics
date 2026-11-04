@@ -13,7 +13,7 @@ from __future__ import annotations
 import re
 from pathlib import Path
 
-from framework.check_api import MARKDOWN_SUFFIXES, Finding, files_in_scope, line_of, matches_any, prose_only
+from framework.check_api import MARKDOWN_SUFFIXES, Finding, files_in_scope, line_of, matches_any, reading_text
 from program.defined_before_use import DEFINITION
 
 NAME = "cross-file-terms"
@@ -24,7 +24,7 @@ LINK = re.compile(r"\]\(([^)#\s]+)")
 def check(root: Path, config: dict) -> list[Finding]:
     settings = config.get("cross_file_terms", {})
     min_length, exempt = settings.get("min_length", 6), settings.get("exempt", [])
-    texts = {path: prose_only((root / path).read_text(encoding="utf-8", errors="replace"))
+    texts = {path: reading_text((root / path).read_text(encoding="utf-8", errors="replace"))
              for path in files_in_scope(root, config, MARKDOWN_SUFFIXES) if not matches_any(path, exempt)}
     defined_in = {}
     for path, text in texts.items():

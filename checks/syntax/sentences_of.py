@@ -8,7 +8,7 @@ from __future__ import annotations
 import re
 from pathlib import Path
 
-from framework.check_api import MARKDOWN_SUFFIXES, files_in_scope, matches_any, prose_only
+from framework.check_api import MARKDOWN_SUFFIXES, files_in_scope, matches_any, reading_text
 from framework.prose import blocks
 from syntax import parser
 
@@ -31,7 +31,7 @@ def parsed_paragraphs(root: Path, config: dict, exempt: list[str]):
     for path in files_in_scope(root, config, MARKDOWN_SUFFIXES):
         if matches_any(path, exempt) or TRANSLATION.search(path):
             continue
-        for block in blocks(prose_only((root / path).read_text(encoding="utf-8", errors="replace"))):
+        for block in blocks(reading_text((root / path).read_text(encoding="utf-8", errors="replace"))):
             if block.kind == "paragraph":
                 units.append((path, block.line, as_read(block.text)))
     return [(path, line, document) for (path, line, _), document in zip(units, parser.parse([text for _, _, text in units]))]

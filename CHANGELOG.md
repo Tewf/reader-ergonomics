@@ -4,6 +4,15 @@ Every release of the standard, newest first, in the form of [Keep a Changelog](h
 (Lacan 2019). Versions follow `MAJOR.MINOR.PATCH` as [extending.md](extending.md) defines them. The commit to pin
 a release by is the one its tag points to: `git rev-list -n 1 v1.16.1`, or the repository's tags page.
 
+## [1.21.1] - 2026-11-04
+
+### Fixed
+
+- The checks `defined-before-use`, `cross-file-terms`, `long-sentences` and the syntax tier skip a file's YAML front
+  matter. It is metadata, not prose, and a description line was reported as a term used before its definition.
+  One function in the shared reader blanks the block and keeps the line count, so line numbers stay true. A `---`
+  later in a file is a thematic break, not front matter. Files without front matter read as before.
+
 ## [1.21.0] - 2026-11-04
 
 ### Changed

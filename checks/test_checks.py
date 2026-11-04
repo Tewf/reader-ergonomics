@@ -106,6 +106,36 @@ class TestPlantedViolations(ScratchRepository):
         self.assertEqual(len(found), 1, found)
         self.assertIn("line 5", found[0])
 
+    def test_front_matter_is_not_prose(self) -> None:
+        from framework.check_api import reading_text, without_front_matter
+        body = "# Surprisal\n\nSurprisal rises here.\n\n**Surprisal** is the negative log probability.\n"
+        front = "---\ndescription: Surprisal in one line.\n---\n"
+        long_line = "description: " + " ".join(["word"] * 40) + ".\n"
+        # without front matter: unchanged, byte for byte
+        self.assertEqual(without_front_matter(body), body)
+        self.assertEqual(reading_text(body), body)
+        # with front matter: blanked, same line count
+        blanked = without_front_matter(front + body)
+        self.assertEqual(blanked, "\n\n\n" + body)
+        self.assertEqual(blanked.count("\n"), (front + body).count("\n"))
+        # a thematic break later in the body is not front matter
+        later = body + "\n---\n\nMiddle line.\n\n---\n\nEnd.\n"
+        self.assertEqual(without_front_matter(later), later)
+        # an opening line that never closes is left alone
+        self.assertEqual(without_front_matter("---\ntitle: x\n"), "---\ntitle: x\n")
+        # defined-before-use: a use inside the front matter is not a use, line numbers stay true
+        self.write("a.md", front + body)
+        found = self.messages(defined_before_use)
+        self.assertEqual(len(found), 1, found)
+        self.assertIn("definition on line 8", found[0])
+        # long-sentences: a long front-matter line is not a sentence
+        self.write("b.md", "---\n" + long_line + "---\n# Title\n\nShort.\n")
+        self.assertEqual(self.messages(long_sentences), [])
+        # cross-file-terms: a use in front matter is not flagged
+        self.write("glossary/terms.md", "**Surprisal** is how unexpected a word is.\n")
+        self.write("notes/meta.md", "---\ndescription: Surprisal.\n---\nPlain text.\n")
+        self.assertEqual([m for m in self.messages(cross_file_terms) if "notes/meta.md" in m], [])
+
     def test_logical_lines(self) -> None:
         text = "---\ntitle: x\n---\n# Heading\n\nOne. Two. Three\nwraps on.\n\n- four\n| five |\n|---|\n```\nsix\n```\n"
         self.assertEqual(logical_lines.logical_line_count(text), 6)

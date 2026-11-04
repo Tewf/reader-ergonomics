@@ -65,5 +65,25 @@ def prose_only(text: str) -> str:
     return INLINE_CODE.sub(lambda match: " " * len(match.group(0)), text)
 
 
+def without_front_matter(text: str) -> str:
+    """The text with a leading YAML front matter block blanked; line numbers are preserved.
+
+    The block runs from a first line `---` to the next line `---`. A `---` later in the body is a
+    thematic break, and a first `---` that never closes is left alone. Time O(text).
+    """
+    lines = text.split("\n")
+    if lines[0].rstrip() != "---":
+        return text
+    end = next((index for index in range(1, len(lines)) if lines[index].rstrip() == "---"), None)
+    if end is None:
+        return text
+    return "\n".join([""] * (end + 1) + lines[end + 1:])
+
+
+def reading_text(text: str) -> str:
+    """The prose a sentence-reading check sees: no front matter, no code; line numbers are preserved."""
+    return prose_only(without_front_matter(text))
+
+
 def line_of(text: str, offset: int) -> int:
     return text.count("\n", 0, offset) + 1
