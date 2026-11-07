@@ -351,3 +351,24 @@ path = "README.md"
 question = "reads about equally as how-to and explanation: one mode per document?"
 file = "d106213f830b"
 answer = "A front page, read to choose where to go: `Where to start` sends each reader to the document for their mode. Its two short how-to sections, `Take your own version` and `Check a repository`, are the first steps behind those doors and link on to the pages that hold the rest."
+
+[[answer]]
+check = "logical-lines"
+path = "checks/test_checks.py"
+question = "513 lines, past the ceiling of 500. Review it: split it only into pieces that change separately and each stay whole, or state why it stays one file."
+file = "d43d0664f1ab"
+answer = "One file: it is the one oracle of the program tier, run as `python3 -m unittest discover checks`, and every test shares `ScratchRepository`; a test per check module would scatter the fixture. It passed 500 with `test_maths_is_not_prose`, one test per behaviour, not a second role."
+
+[[answer]]
+check = "co-change"
+path = "checks/syntax/sentences_of.py"
+question = "changed together with checks/test_checks.py in 3 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+file = "d8f3efac96fd"
+answer = "No: a change to what the checks read as prose (`reading_text`) is tested in the one test file, which is why they move together; the syntax tier keeps its folder, the tests theirs."
+
+[[answer]]
+check = "co-change"
+path = "checks/test_checks.py"
+question = "changed together with decisions/0003-one-key-one-work-across-the-family.md in 5 commits (83% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+file = "d43d0664f1ab"
+answer = "No: the decision names the check `bibliography-keys` whose tests live here; a record is read for why, a test for what holds, and the two are linked by the check's name, not by a folder."

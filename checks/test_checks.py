@@ -236,6 +236,20 @@ class TestPlantedViolations(ScratchRepository):
         found = self.messages(long_sentences)
         self.assertEqual(len(found), 1, found)
 
+    def test_maths_is_not_prose(self) -> None:
+        formula = "$$" + " + ".join(["x_{%d}" % i for i in range(40)]) + " = 0$$"
+        self.write("a.md", "A short claim holds. " + formula + "\n\nAlso $" + " ".join(["y"] * 40) + "$ inline.\n")
+        self.assertEqual(self.messages(long_sentences), [])
+        self.write("b.md", "Let $x$ be given.\n\n$$\n" + "\n".join(["a_i"] * 3) + "\n$$\n\n**Surprisal** is defined here, after Surprisal was used.\n")
+        self.write("c.md", "$$\n" + "\n".join(["a_i"] * 3) + "\n$$\n")
+        self.assertEqual(self.messages(duplication), [])
+        from framework.check_api import prose_only
+        blank = prose_only("$$\na\nb\n$$ tail\nnext")
+        self.assertEqual(blank.count("\n"), 4)
+        self.assertEqual(blank.splitlines()[-1], "next")
+        self.assertEqual(prose_only("costs $5 and $10 today"), "costs $5 and $10 today")
+        self.assertEqual(prose_only("so $a+b$ holds"), "so       holds")
+
     def test_figures_present(self) -> None:
         self.write("plain.md", "\n".join(f"Sentence {index}." for index in range(45)) + "\n")
         self.write("drawn.md", "\n".join(f"Sentence {index}." for index in range(45)) + "\n\n| a | b |\n|---|---|\n")

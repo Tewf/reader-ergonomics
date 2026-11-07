@@ -16,6 +16,8 @@ from pathlib import Path
 MARKDOWN_SUFFIXES = {".md", ".qmd"}
 FENCED_BLOCK = re.compile(r"^(`{3,}|~{3,})[^\n]*\n.*?^\1[`~]*[ \t]*$", re.MULTILINE | re.DOTALL)  # closes on a run at least as long
 INLINE_CODE = re.compile(r"`[^`\n]*`")
+DISPLAY_MATH = re.compile(r"\$\$.*?\$\$", re.DOTALL)  # LaTeX display maths, on one line or several
+INLINE_MATH = re.compile(r"(?<![\\$])\$(?=\S)(?:[^$\n]*?\S)\$(?!\d)")  # $x$: no space inside the dollars, not a price
 
 
 @dataclass(frozen=True)
@@ -60,9 +62,13 @@ def files_in_scope(root: Path, config: dict, suffixes: set[str] | None = None) -
 
 
 def prose_only(text: str) -> str:
-    """The text with fenced blocks and inline code blanked out; line numbers are preserved."""
+    """The text with fenced blocks, inline code and LaTeX maths blanked out; line numbers and column positions are
+    preserved. A formula is not prose: a sentence check that read it found 40-word sentences and undefined terms in
+    the S7 notes of a mathematics vault (2026-11-07)."""
     text = FENCED_BLOCK.sub(lambda match: "\n" * match.group(0).count("\n"), text)
-    return INLINE_CODE.sub(lambda match: " " * len(match.group(0)), text)
+    text = INLINE_CODE.sub(lambda match: " " * len(match.group(0)), text)
+    text = DISPLAY_MATH.sub(lambda match: re.sub(r"[^\n]", " ", match.group(0)), text)
+    return INLINE_MATH.sub(lambda match: " " * len(match.group(0)), text)
 
 
 def without_front_matter(text: str) -> str:
