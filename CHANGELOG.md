@@ -4,6 +4,14 @@ Every release of the standard, newest first, in the form of [Keep a Changelog](h
 (Lacan 2019). Versions follow `MAJOR.MINOR.PATCH` as [extending.md](extending.md) defines them. The commit to pin
 a release by is the one its tag points to: `git rev-list -n 1 v1.16.1`, or the repository's tags page.
 
+## [1.21.2] - 2026-11-07
+
+### Fixed
+
+- `checks/figures/render_figure.py` split the list of pages on whitespace, so in a repository whose page names hold a
+  space it failed after writing the SVG, on a path cut at the space. Git also quotes a non-ASCII name in that list, so
+  a name with an accent failed even without a space. The pages are now listed with `git ls-files -z` and split on NUL.
+
 ## [1.21.1] - 2026-11-04
 
 ### Fixed

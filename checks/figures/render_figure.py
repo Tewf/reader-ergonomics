@@ -30,7 +30,7 @@ def render(source: Path) -> Path:
 def fold(source: Path) -> list[Path]:
     """Put the source under every image of its SVG, in the pages of the repository; return the pages changed."""
     top = Path(subprocess.run(["git", "rev-parse", "--show-toplevel"], capture_output=True, text=True, check=True).stdout.strip())
-    listed = subprocess.run(["git", "-C", str(top), "ls-files", "*.md", "*.qmd"], capture_output=True, text=True).stdout.split()
+    listed = subprocess.run(["git", "-C", str(top), "ls-files", "-z", "*.md", "*.qmd"], capture_output=True, text=True).stdout.split("\0")[:-1]
     changed = []
     for name in listed:
         page = top / name

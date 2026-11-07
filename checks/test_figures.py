@@ -4,11 +4,13 @@ Run: python3 -m unittest discover checks
 """
 from __future__ import annotations
 
+import os
+import subprocess
 import tempfile
 import unittest
 from pathlib import Path
 
-from figures import figure_alt, figure_contrast, figure_source, figure_source_inline, figure_width, typed_figure
+from figures import figure_alt, figure_contrast, figure_source, figure_source_inline, figure_width, render_figure, typed_figure
 from test_checks import CONFIG, ScratchRepository
 
 
@@ -38,6 +40,18 @@ class TestFigureSourceInline(ScratchRepository):
         self.write("photo.svg", "<svg/>\n")
         self.write("b.md", "# B\n\n![a photograph](photo.svg)\n")
         self.assertEqual(figure_source_inline.check(self.root, CONFIG), [])
+
+
+class TestFold(ScratchRepository):
+    def test_a_page_whose_name_has_a_space_and_an_accent_is_folded(self) -> None:
+        self.write("fig.dot", "digraph g { a -> b; }\n")
+        self.write("S5/Complément de maths.md", "# C\n\n![a goes to b](../fig.svg)\n")
+        subprocess.run(["git", "-C", str(self.root), "add", "-A"], check=True)
+        self.addCleanup(os.chdir, os.getcwd())
+        os.chdir(self.root)
+        page = self.root / "S5/Complément de maths.md"
+        self.assertEqual(render_figure.fold(self.root / "fig.dot"), [page])
+        self.assertIn("```dot\ndigraph g { a -> b; }\n```", page.read_text(encoding="utf-8"))
 
 
 class TestFigureChecks(unittest.TestCase):
