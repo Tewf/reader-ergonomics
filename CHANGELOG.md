@@ -9,7 +9,7 @@ a release by is the one its tag points to: `git rev-list -n 1 v1.16.1`, or the r
 ### Changed
 
 - The sentence-reading checks blank LaTeX maths as they blank code: `$$...$$` on one or several lines and `$x$` inline, with line numbers and columns kept. A formula is not prose: `long-sentences`, `defined-before-use`, `cross-file-terms`, `duplication` and the syntax tier read 40-word sentences and undefined terms out of the formulas of a mathematics vault. A price such as `$5 and $10` is left as it is.
-- `links` reads a wikilink whose pipe is escaped inside a table, `[[Note\|text]]`, as Obsidian writes it; the backslash was taken into the name, and every such link in a vault's tables was reported as pointing to nothing (1,103 of the 1,107 errors of one semester's notes).
+- `links` reads a wikilink whose pipe is escaped inside a table, `[[Note\|text]]`, as Obsidian writes it. The backslash was taken into the name, so every such link was reported as pointing to nothing: 1,103 of the 1,107 errors on one semester's notes.
 
 ## [1.21.2] - 2026-11-07
 
