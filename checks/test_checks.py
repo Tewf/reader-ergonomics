@@ -80,6 +80,13 @@ class TestPlantedViolations(ScratchRepository):
         found = self.messages(links)
         self.assertEqual(len(found), 2, found)
 
+    def test_a_wikilink_with_an_escaped_pipe_resolves(self) -> None:
+        self.write("notes/APP3 - Scheduling.md", "# APP3\n")
+        self.write("hub.md", "| row | [[APP3 - Scheduling\\|APP3]] and [[Missing\\|gone]] |\n")
+        found = self.messages(links)
+        self.assertEqual(len(found), 1, found)
+        self.assertIn("[[Missing]]", found[0])
+
     def test_tree_shape(self) -> None:
         for name in "abcde":
             self.write(f"wide/{name}.md")

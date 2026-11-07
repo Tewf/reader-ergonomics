@@ -19,7 +19,7 @@ NAME = "links"
 EXACT = True
 INLINE_LINK = re.compile(r"\]\(<([^>]+)>\)|\]\(([^)\s]+)(?:\s+\"[^\"]*\")?\)")
 REFERENCE_DEFINITION = re.compile(r"^\s{0,3}\[[^\]]+\]:\s*<?([^\s>]+)>?", re.MULTILINE)
-WIKILINK = re.compile(r"!?\[\[([^\]|#]+)")
+WIKILINK = re.compile(r"!?\[\[([^\]|#\\]+)")  # the name stops at a pipe, a heading, or the backslash that escapes a pipe inside a table
 URI_SCHEME = re.compile(r"^[A-Za-z][A-Za-z0-9+.-]*:")  # http:, mailto: and app links are not files
 
 
