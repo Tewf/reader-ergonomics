@@ -107,6 +107,7 @@ def move(root: Path, old: str, new: str, tag: str, dry_run: bool = False) -> dic
         changed = re.sub(r"(?<![0-9a-f])" + re.escape(short_old) + r"(?![0-9a-f])", short_new, changed)
         if previous:
             changed = re.sub(r"#(\s*)" + re.escape(previous) + r"\b", lambda m: "#" + m.group(1) + tag, changed)
+            changed = re.sub(r"(github\.com/Tewf/reader-ergonomics/(?:blob|tree)/)" + re.escape(previous) + "/", lambda m: m.group(1) + tag + "/", changed)
             for number, line in enumerate(changed.splitlines(), 1):
                 if previous in line and "#" not in line.split(previous)[0][-3:]:
                     prose.append(f"{path.relative_to(root)}:{number}: {line.strip()[:100]}")

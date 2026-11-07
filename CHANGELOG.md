@@ -4,6 +4,12 @@ Every release of the standard, newest first, in the form of [Keep a Changelog](h
 (Lacan 2019). Versions follow `MAJOR.MINOR.PATCH` as [extending.md](extending.md) defines them. The commit to pin
 a release by is the one its tag points to: `git rev-list -n 1 v1.16.1`, or the repository's tags page.
 
+## [1.22.2] - 2026-11-07
+
+### Fixed
+
+- `standard-pin`, moving a pin, also moves a link written with the tag, `blob/v1.18.2/`, which `standard-links` accepts and the first version left behind: ten files in one extension.
+
 ## [1.22.1] - 2026-11-07
 
 ### Fixed

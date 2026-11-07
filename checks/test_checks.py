@@ -248,14 +248,16 @@ class TestPlantedViolations(ScratchRepository):
         self.write(".github/workflows/checks.yml", f"          ref: {old}   # v1.0.0 (extending.md, Versions)\n")
         self.write("AGENTS.md", f"Read [standard.md](https://github.com/Tewf/reader-ergonomics/blob/{old}/standard.md); `git archive {old[:7]}`.\n")
         self.write("CHANGELOG.md", f"- Pinned reader-ergonomics v1.0.0 ({old[:7]}), from v0.9.0 (1234567).\n")
+        self.write("shapes/x.md", "[card](https://github.com/Tewf/reader-ergonomics/blob/v1.0.0/standard.md)\n")
         subprocess.run(["git", "-C", str(self.root), "add", "-A"], check=True, capture_output=True)
         from program import standard_pin
         touched = standard_pin.move(self.root, old, new, "v1.1.0")
-        self.assertEqual(sorted(touched), [".github/workflows/checks.yml", "AGENTS.md"])
+        self.assertEqual(sorted(touched), [".github/workflows/checks.yml", "AGENTS.md", "shapes/x.md"])
         self.assertEqual((self.root / ".github/workflows/checks.yml").read_text(encoding="utf-8"), f"          ref: {new}   # v1.1.0 (extending.md, Versions)\n")
         self.assertIn(f"blob/{new}/standard.md", (self.root / "AGENTS.md").read_text(encoding="utf-8"))
         self.assertIn(f"archive {new[:7]}", (self.root / "AGENTS.md").read_text(encoding="utf-8"))
         self.assertIn(old[:7], (self.root / "CHANGELOG.md").read_text(encoding="utf-8"))
+        self.assertIn("blob/v1.1.0/standard.md", (self.root / "shapes/x.md").read_text(encoding="utf-8"))
 
     def test_the_pin_tool_runs_as_a_program_from_another_folder(self) -> None:
         old, new = "c" * 40, "d" * 40
