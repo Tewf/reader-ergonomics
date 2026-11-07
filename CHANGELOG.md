@@ -4,6 +4,12 @@ Every release of the standard, newest first, in the form of [Keep a Changelog](h
 (Lacan 2019). Versions follow `MAJOR.MINOR.PATCH` as [extending.md](extending.md) defines them. The commit to pin
 a release by is the one its tag points to: `git rev-list -n 1 v1.16.1`, or the repository's tags page.
 
+## [1.22.1] - 2026-11-07
+
+### Fixed
+
+- `standard_pin.py`, run as a program from an extension's folder, could not import the checks' framework; it finds it beside its own folder now, from any working directory.
+
 ## [1.22.0] - 2026-11-07
 
 ### Added

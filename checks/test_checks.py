@@ -257,6 +257,16 @@ class TestPlantedViolations(ScratchRepository):
         self.assertIn(f"archive {new[:7]}", (self.root / "AGENTS.md").read_text(encoding="utf-8"))
         self.assertIn(old[:7], (self.root / "CHANGELOG.md").read_text(encoding="utf-8"))
 
+    def test_the_pin_tool_runs_as_a_program_from_another_folder(self) -> None:
+        old, new = "c" * 40, "d" * 40
+        self.write(".github/workflows/checks.yml", f"          ref: {old}   # v1.0.0\n")
+        subprocess.run(["git", "-C", str(self.root), "add", "-A"], check=True, capture_output=True)
+        tool = Path(__file__).resolve().parent / "program" / "standard_pin.py"
+        run = subprocess.run([sys.executable, str(tool), str(self.root), old, new, "v1.1.0", "--dry-run"], cwd=self.root, capture_output=True, text=True)
+        self.assertEqual(run.returncode, 0, run.stderr)
+        self.assertIn("would change .github/workflows/checks.yml", run.stdout)
+        self.assertIn(old, (self.root / ".github/workflows/checks.yml").read_text(encoding="utf-8"))
+
     def test_maths_is_not_prose(self) -> None:
         formula = "$$" + " + ".join(["x_{%d}" % i for i in range(40)]) + " = 0$$"
         self.write("a.md", "A short claim holds. " + formula + "\n\nAlso $" + " ".join(["y"] * 40) + "$ inline.\n")

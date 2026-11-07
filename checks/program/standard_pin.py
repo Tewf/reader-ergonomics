@@ -26,7 +26,10 @@ import sys
 from collections import Counter
 from pathlib import Path
 
-from framework.check_api import Finding
+if __name__ == "__main__":  # run as a program, from any folder: the checks package is beside this file's folder
+    sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+
+from framework.check_api import Finding  # noqa: E402
 
 NAME = "standard-pin"
 EXACT = True
