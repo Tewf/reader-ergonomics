@@ -6,6 +6,10 @@ a release by is the one its tag points to: `git rev-list -n 1 v1.16.1`, or the r
 
 ## [1.22.0] - 2026-11-07
 
+### Added
+
+- `python3 checks/program/standard_pin.py <repository> <old commit> <new commit> <new tag>` moves an extension's pin everywhere at once: the workflows' `ref:` lines, every link into the standard, the short hash of the local-run recipe. It lists what is left to the person: the changelog line, a figure label, the judgment answers. A pin raise was thirty edits by hand in each extension on 2026-11-07.
+
 ### Changed
 
 - The sentence-reading checks blank LaTeX maths as they blank code: `$$...$$` on one or several lines and `$x$` inline, with line numbers and columns kept. A formula is not prose: `long-sentences`, `defined-before-use`, `cross-file-terms`, `duplication` and the syntax tier read 40-word sentences and undefined terms out of the formulas of a mathematics vault. A price such as `$5 and $10` is left as it is.

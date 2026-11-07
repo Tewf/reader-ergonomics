@@ -243,6 +243,20 @@ class TestPlantedViolations(ScratchRepository):
         found = self.messages(long_sentences)
         self.assertEqual(len(found), 1, found)
 
+    def test_move_pin_moves_every_copy_but_the_changelog(self) -> None:
+        old, new = "a" * 40, "b" * 40
+        self.write(".github/workflows/checks.yml", f"          ref: {old}   # v1.0.0 (extending.md, Versions)\n")
+        self.write("AGENTS.md", f"Read [standard.md](https://github.com/Tewf/reader-ergonomics/blob/{old}/standard.md); `git archive {old[:7]}`.\n")
+        self.write("CHANGELOG.md", f"- Pinned reader-ergonomics v1.0.0 ({old[:7]}), from v0.9.0 (1234567).\n")
+        subprocess.run(["git", "-C", str(self.root), "add", "-A"], check=True, capture_output=True)
+        from program import standard_pin
+        touched = standard_pin.move(self.root, old, new, "v1.1.0")
+        self.assertEqual(sorted(touched), [".github/workflows/checks.yml", "AGENTS.md"])
+        self.assertEqual((self.root / ".github/workflows/checks.yml").read_text(encoding="utf-8"), f"          ref: {new}   # v1.1.0 (extending.md, Versions)\n")
+        self.assertIn(f"blob/{new}/standard.md", (self.root / "AGENTS.md").read_text(encoding="utf-8"))
+        self.assertIn(f"archive {new[:7]}", (self.root / "AGENTS.md").read_text(encoding="utf-8"))
+        self.assertIn(old[:7], (self.root / "CHANGELOG.md").read_text(encoding="utf-8"))
+
     def test_maths_is_not_prose(self) -> None:
         formula = "$$" + " + ".join(["x_{%d}" % i for i in range(40)]) + " = 0$$"
         self.write("a.md", "A short claim holds. " + formula + "\n\nAlso $" + " ".join(["y"] * 40) + "$ inline.\n")
