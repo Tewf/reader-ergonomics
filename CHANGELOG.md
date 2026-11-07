@@ -4,6 +4,12 @@ Every release of the standard, newest first, in the form of [Keep a Changelog](h
 (Lacan 2019). Versions follow `MAJOR.MINOR.PATCH` as [extending.md](extending.md) defines them. The commit to pin
 a release by is the one its tag points to: `git rev-list -n 1 v1.16.1`, or the repository's tags page.
 
+## [1.22.3] - 2026-11-07
+
+### Fixed
+
+- A fenced block inside a quote or an Obsidian callout, written `> ```\`, is blanked as code like any fence; data matrices quoted that way were read as wikilinks and prose.
+
 ## [1.22.2] - 2026-11-07
 
 ### Fixed

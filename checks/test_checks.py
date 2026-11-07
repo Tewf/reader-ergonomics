@@ -269,6 +269,12 @@ class TestPlantedViolations(ScratchRepository):
         self.assertIn("would change .github/workflows/checks.yml", run.stdout)
         self.assertIn(old, (self.root / ".github/workflows/checks.yml").read_text(encoding="utf-8"))
 
+    def test_a_fence_inside_a_callout_is_code(self) -> None:
+        self.write("a.md", "> [!EXAMPLE] data\n> ```\n> adj = [[0, 1, 1, 1],\n>        [1, 0, 1, 1]]\n> ```\n\nText with [[Real Note]].\n")
+        self.write("Real Note.md", "# Real\n")
+        found = self.messages(links)
+        self.assertEqual(found, [], found)
+
     def test_maths_is_not_prose(self) -> None:
         formula = "$$" + " + ".join(["x_{%d}" % i for i in range(40)]) + " = 0$$"
         self.write("a.md", "A short claim holds. " + formula + "\n\nAlso $" + " ".join(["y"] * 40) + "$ inline.\n")

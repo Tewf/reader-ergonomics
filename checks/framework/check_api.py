@@ -14,7 +14,7 @@ from dataclasses import dataclass
 from pathlib import Path
 
 MARKDOWN_SUFFIXES = {".md", ".qmd"}
-FENCED_BLOCK = re.compile(r"^(`{3,}|~{3,})[^\n]*\n.*?^\1[`~]*[ \t]*$", re.MULTILINE | re.DOTALL)  # closes on a run at least as long
+FENCED_BLOCK = re.compile(r"^(?:[ \t]*>[ \t]?)*(`{3,}|~{3,})[^\n]*\n.*?^(?:[ \t]*>[ \t]?)*\1[`~]*[ \t]*$", re.MULTILINE | re.DOTALL)  # closes on a run at least as long; a fence inside a quote or callout, `> ```\`, counts
 INLINE_CODE = re.compile(r"`[^`\n]*`")
 DISPLAY_MATH = re.compile(r"\$\$.*?\$\$", re.DOTALL)  # LaTeX display maths, on one line or several
 INLINE_MATH = re.compile(r"(?<![\\$])\$(?=\S)(?:[^$\n]*?\S)\$(?!\d)")  # $x$: no space inside the dollars, not a price
