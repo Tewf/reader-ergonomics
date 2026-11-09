@@ -2,7 +2,9 @@
 
 For a markdown file, the words of its name (a README takes its folder's name) are looked for in
 its title and first 300 characters, ignoring short words and case, and matching a word by its
-first five letters so that "folders" finds "folder". Fewer than half found warns.
+first five letters so that "folders" finds "folder"; a plural also matches its singular, a camel-case name
+counts as several words, and a hyphen in the text is ignored ("midterm" finds "mid-term"). Fewer than half found
+warns.
 
 Heuristic. Time O(text), space O(1) per file.
 """
@@ -19,11 +21,20 @@ EXACT = False
 SKIPPED_STEMS = {"readme", "index", "agents", "license", "changelog"}
 
 
+CAMEL = re.compile(r"(?<=[a-z0-9])(?=[A-Z])|(?<=[A-Z])(?=[A-Z][a-z])")  # DataAcquisition, HTMLPage
+
+
 def name_words(path: str) -> list[str]:
     pure = PurePosixPath(path)
     base = pure.name.split(".")[0]  # README.fr.md is a README
     stem = pure.parent.name if base.lower() in ("readme", "index") else base
+    stem = CAMEL.sub(" ", stem)  # a camel-case name is several words
     return [word for word in re.split(r"[-_. ]+", stem.lower()) if len(word) >= 4]
+
+
+def announced(word: str, opening: str) -> bool:
+    """The word, or its singular, by its first five letters; "wines" finds "wine", "midterm" finds "mid-term"."""
+    return word[:5] in opening or (word.endswith("s") and word[:-1][:5] in opening)
 
 
 def check(root: Path, config: dict) -> list[Finding]:
@@ -37,8 +48,8 @@ def check(root: Path, config: dict) -> list[Finding]:
         if not words:
             continue
         text = (root / path).read_text(encoding="utf-8", errors="replace")
-        opening = (title(text) + " " + prose_only(text)[:300]).lower()
-        found = [word for word in words if word[:5] in opening]
+        opening = (title(text) + " " + prose_only(text)[:300]).lower().replace("-", "")
+        found = [word for word in words if announced(word, opening)]
         if len(found) * 2 < len(words):
             findings.append(Finding(NAME, path, 1, f"the name's words {words} barely appear in the title or opening: "
                                     "rename the file, or say in its first lines what it holds", "warning"))

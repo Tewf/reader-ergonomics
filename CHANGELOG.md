@@ -4,6 +4,12 @@ Every release of the standard, newest first, in the form of [Keep a Changelog](h
 (Lacan 2019). Versions follow `MAJOR.MINOR.PATCH` as [extending.md](extending.md) defines them. The commit to pin
 a release by is the one its tag points to: `git rev-list -n 1 v1.16.1`, or the repository's tags page.
 
+## [1.24.2] - 2026-11-09
+
+### Fixed
+
+- `name-matches-title` reads a camel-case name as several words (`DataAcquisition` is "data" and "acquisition"), lets a plural find its singular ("wines" finds "wine production") and ignores a hyphen in the text ("midterm" finds "mid-term"). A folder named in camel case was never announced by its README, whatever the README said.
+
 ## [1.24.1] - 2026-11-09
 
 ### Fixed

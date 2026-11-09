@@ -355,8 +355,8 @@ answer = "A front page, read to choose where to go: `Where to start` sends each 
 [[answer]]
 check = "logical-lines"
 path = "checks/test_checks.py"
-question = "633 lines, past the ceiling of 500. Review it: split it only into pieces that change separately and each stay whole, or state why it stays one file."
-file = "a53c6384675c"
+question = "642 lines, past the ceiling of 500. Review it: split it only into pieces that change separately and each stay whole, or state why it stays one file."
+file = "169f45027526"
 answer = "One file: it is the one oracle of the program tier, run as `python3 -m unittest discover checks`, and every test shares `ScratchRepository`; a test per check module would scatter the fixture. It passed 500 with `test_maths_is_not_prose` and grows by one test per behaviour, not by a second role."
 
 [[answer]]

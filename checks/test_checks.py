@@ -372,6 +372,15 @@ class TestPlantedViolations(ScratchRepository):
         found = self.messages(figure_captions)
         self.assertEqual(len(found), 2, found)
 
+    def test_a_name_is_read_in_camel_case_and_a_plural_finds_its_singular(self) -> None:
+        self.write("DataAcquisition/README.md", "# Acquiring data\n\nHow the data is acquired.\n")
+        self.write("wines/README.md", "# Wine production\n\nModel the blend.\n")
+        self.write("handin/midterm.md", "# The mid-term checkpoint\n\nTooling.\n")
+        self.write("report/README.md", "# LaTeX source\n\nThe deliverable.\n")
+        found = self.messages(name_matches_title)
+        self.assertEqual(len(found), 1, found)
+        self.assertIn("report", found[0])
+
     def test_paragraph_length(self) -> None:
         self.write("a.md", "One. Two. Three. Four. Five.\n\nOne. Two.\n")
         found = self.messages(paragraph_length)
