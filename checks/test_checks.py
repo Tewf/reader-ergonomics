@@ -107,6 +107,26 @@ class TestPlantedViolations(ScratchRepository):
         found = self.messages(duplication)
         self.assertEqual(len(found), 1, found)
 
+    def test_duplication_skips_metadata_and_the_skeleton_inside_a_quote(self) -> None:
+        tags = "tags: [" + ", ".join(SENTENCE.split()) + "]"
+        self.write("one.md", f"---\n{tags}\n---\n\n> [!NOTE] {SENTENCE}\n> | {SENTENCE} |\n> ## {SENTENCE}\n\nOwn words here.\n")
+        self.write("two.md", f"---\n{tags}\n---\n\n> [!NOTE] {SENTENCE}\n> | {SENTENCE} |\n> ## {SENTENCE}\n\nOther words there.\n")
+        self.assertEqual(self.messages(duplication), [])
+        self.write("three.md", f"> [!NOTE] Title\n> {SENTENCE}.\n")
+        self.write("four.md", f"> [!NOTE] Title\n> {SENTENCE}.\n")
+        self.assertEqual(len(self.messages(duplication)), 1)  # the body of a quote is prose like any other
+
+    def test_duplication_skips_html_comments(self) -> None:
+        self.write("one.md", f"First words.\n\n<!-- private -->\nOwn text.\n<!-- {SENTENCE}\n{SENTENCE} -->\n")
+        self.write("two.md", f"Second words.\n\n<!-- private -->\nOther text.\n<!-- {SENTENCE}\n{SENTENCE} -->\n")
+        self.assertEqual(self.messages(duplication), [])
+
+    def test_duplication_skips_an_address_that_holds_parentheses(self) -> None:
+        address = "<../" + SENTENCE + " (" + SENTENCE + ").pdf>"
+        self.write("one.md", f"The first correction is [here]({address}), on page two.\n")
+        self.write("two.md", f"Another sheet points [there]({address}) for its answers.\n")
+        self.assertEqual(self.messages(duplication), [])
+
     def test_defined_before_use(self) -> None:
         self.write("a.md", "# Surprisal\n\nSurprisal rises here.\n\n**Surprisal** is the negative log probability.\n")
         found = self.messages(defined_before_use)

@@ -355,9 +355,9 @@ answer = "A front page, read to choose where to go: `Where to start` sends each 
 [[answer]]
 check = "logical-lines"
 path = "checks/test_checks.py"
-question = "513 lines, past the ceiling of 500. Review it: split it only into pieces that change separately and each stay whole, or state why it stays one file."
-file = "d43d0664f1ab"
-answer = "One file: it is the one oracle of the program tier, run as `python3 -m unittest discover checks`, and every test shares `ScratchRepository`; a test per check module would scatter the fixture. It passed 500 with `test_maths_is_not_prose`, one test per behaviour, not a second role."
+question = "572 lines, past the ceiling of 500. Review it: split it only into pieces that change separately and each stay whole, or state why it stays one file."
+file = "419ef83a9e5f"
+answer = "One file: it is the one oracle of the program tier, run as `python3 -m unittest discover checks`, and every test shares `ScratchRepository`; a test per check module would scatter the fixture. It passed 500 with `test_maths_is_not_prose` and grows by one test per behaviour, not by a second role."
 
 [[answer]]
 check = "co-change"
@@ -370,5 +370,54 @@ answer = "No: a change to what the checks read as prose (`reading_text`) is test
 check = "co-change"
 path = "checks/test_checks.py"
 question = "changed together with decisions/0003-one-key-one-work-across-the-family.md in 5 commits (83% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
-file = "d43d0664f1ab"
+file = "419ef83a9e5f"
 answer = "No: the decision is read for why one key names one work, and the test that holds it to that is one `def test_` among the others in `TestPlantedViolations`; a record and a test are linked by the check they name, not by a folder."
+
+[[answer]]
+check = "co-change"
+path = "CHANGELOG.md"
+question = "changed together with checks/framework/check_api.py in 3 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+file = "c0c853297031"
+answer = "Yes, and by design: a release that changes the framework records it here, as `## [1.22.3] - 2026-11-07` does. The changelog stays at the root, where a reader looks for it, and names the code it describes."
+
+[[answer]]
+check = "co-change"
+path = "CHANGELOG.md"
+question = "changed together with checks/program/standard_pin.py in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+file = "c0c853297031"
+answer = "Yes, and by design: each release of the pin tool has its entry here, such as the line that opens on `standard_pin.py`. The changelog stays at the root and names the file; the tool stays with the checks."
+
+[[answer]]
+check = "co-change"
+path = "CITATION.cff"
+question = "changed together with checks/framework/check_api.py in 3 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+file = "fc26eb00283b"
+answer = "Only through releases: `date-released` and the version move with every release, and three releases changed the framework. Nothing else ties them, so they stay apart."
+
+[[answer]]
+check = "co-change"
+path = "README.fr.md"
+question = "changed together with checks/framework/check_api.py in 3 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+file = "590ab482f768"
+answer = "Only through releases: the `release:version` line moves with every release, and three releases changed the framework. The front page stays at the root."
+
+[[answer]]
+check = "co-change"
+path = "README.md"
+question = "changed together with checks/framework/check_api.py in 3 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+file = "e41f14667d35"
+answer = "Only through releases: the `release:version` line moves with every release, and three releases changed the framework. The front page stays at the root."
+
+[[answer]]
+check = "co-change"
+path = "checks/framework/check_api.py"
+question = "changed together with checks/test_checks.py in 3 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+file = "9fbcf8e48396"
+answer = "Yes: a change to what `prose_only` blanks comes with the test that holds it. They stay apart because the tests of every tier live in one module at the top of checks/, which imports the framework."
+
+[[answer]]
+check = "co-change"
+path = "checks/program/standard_pin.py"
+question = "changed together with checks/test_checks.py in 4 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+file = "f66cc9a86abc"
+answer = "Yes: each change to the `standard-pin` check came with its test. They stay apart because the tests of every check live in one module at the top of checks/."

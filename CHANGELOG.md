@@ -4,6 +4,14 @@ Every release of the standard, newest first, in the form of [Keep a Changelog](h
 (Lacan 2019). Versions follow `MAJOR.MINOR.PATCH` as [extending.md](extending.md) defines them. The commit to pin
 a release by is the one its tag points to: `git rev-list -n 1 v1.16.1`, or the repository's tags page.
 
+## [1.22.4] - 2026-11-09
+
+### Fixed
+
+- `duplication` no longer reads skeleton or metadata as prose. It skips a leading YAML front matter block, the title line of a callout or an alert (`> [!NOTE] Title`), and a table row or a heading inside a quote. In a vault of notes with tags and callouts, 52 of 343 findings were such lines chained to the sentence beside them.
+- The sentence-reading checks and `duplication` no longer read an HTML comment, which no reader sees: markers such as `<!-- private -->` counted as words and chained two files' lines together.
+- `duplication` strips the whole address of a link written `[text](<path (with parentheses).pdf>)`; it stopped at the first closing parenthesis and read the rest of the path as prose.
+
 ## [1.22.3] - 2026-11-07
 
 ### Fixed

@@ -86,9 +86,17 @@ def without_front_matter(text: str) -> str:
     return "\n".join([""] * (end + 1) + lines[end + 1:])
 
 
+HTML_COMMENT = re.compile(r"<!--.*?-->", re.DOTALL)
+
+
+def without_comments(text: str) -> str:
+    """The text with HTML comments blanked: a reader never sees them; line numbers are preserved."""
+    return HTML_COMMENT.sub(lambda match: re.sub(r"[^\n]", " ", match.group(0)), text)
+
+
 def reading_text(text: str) -> str:
-    """The prose a sentence-reading check sees: no front matter, no code; line numbers are preserved."""
-    return prose_only(without_front_matter(text))
+    """The prose a sentence-reading check sees: no front matter, no code, no HTML comment; line numbers are preserved."""
+    return without_comments(prose_only(without_front_matter(text)))
 
 
 def line_of(text: str, offset: int) -> int:

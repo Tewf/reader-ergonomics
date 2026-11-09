@@ -3,7 +3,9 @@
 Prose is normalised (lower case, words only, code and link addresses removed) and cut into overlapping
 windows of `words` words. A window seen in two different files is a copy. One finding is
 reported per pair of files, at the first shared window, with the number of shared windows.
-Headings and table rows are skipped: they are the skeleton files of one kind share.
+Headings and table rows are skipped: they are the skeleton files of one kind share. So are a heading or a table row
+inside a quote, the title line of a callout (`> [!NOTE] Title`), and a leading YAML front matter block, which holds
+metadata such as tags, not prose.
 In a file that declares a shape (a line labelled `Shape:` that links the shape), every line that appears verbatim,
 after whitespace normalisation, in a fenced block under the shape's "Skeleton" heading is skipped too (also the text of
 a skeleton line before its first run of two spaces, where the shape writes a comment): headings, labels and pointer lines
@@ -22,16 +24,18 @@ import re
 from collections import defaultdict
 from pathlib import Path
 
-from framework.check_api import MARKDOWN_SUFFIXES, Finding, files_in_scope, matches_any, prose_only
+from framework.check_api import MARKDOWN_SUFFIXES, Finding, files_in_scope, matches_any, prose_only, reading_text
 
 NAME = "duplication"
 EXACT = True
 WORD = re.compile(r"[^\W_]+(?:'[^\W_]+)?")
-LINK_TARGET = re.compile(r"\]\([^)]*\)|https?://\S+")  # addresses are not prose
+LINK_TARGET = re.compile(r"\]\(<[^>\n]*>\)|\]\([^)]*\)|https?://\S+")  # addresses are not prose; one in <...> may hold parentheses
 SHAPE_LINE = re.compile(r"\bshape\s*:", re.IGNORECASE)
 LINK = re.compile(r"\[[^\]]*\]\(([^)\s#]+)(?:#[^)\s]*)?\)")
 GITHUB = re.compile(r"^https?://github\.com/[^/]+/([^/]+)/blob/[^/]+/(.+)$")
 SKELETON_HEADING = re.compile(r"^#{1,6}\s+.*skeleton", re.IGNORECASE)
+QUOTE_PREFIX = re.compile(r"^(?:\s*>)+\s?")  # a line inside a quote or a callout, at any depth
+CALLOUT_TITLE = re.compile(r"^\s*\[![A-Za-z-]+\][+-]?")  # > [!NOTE] Title: the label of a callout or an alert
 
 
 def squash(line: str) -> str:
@@ -86,9 +90,10 @@ def check(root: Path, config: dict) -> list[Finding]:
         raw = (root / path).read_text(encoding="utf-8", errors="replace")
         shape = shape_file(root, path)
         prescribed = skeleton_lines(shape) if shape else set()
-        for line_number, (line, original) in enumerate(zip(prose_only(raw).splitlines(), raw.splitlines()), 1):
-            if line.lstrip().startswith(("|", "#")) or squash(original) in prescribed:
-                continue  # table rows, headings and the lines a declared shape prescribes are the skeleton files of a kind share
+        for line_number, (line, original) in enumerate(zip(reading_text(raw).splitlines(), raw.splitlines()), 1):
+            inner = QUOTE_PREFIX.sub("", line)
+            if inner.lstrip().startswith(("|", "#")) or CALLOUT_TITLE.match(inner) or squash(original) in prescribed:
+                continue  # table rows, headings, callout titles and the lines a declared shape prescribes: the skeleton files of a kind share
             words += [(word.lower(), line_number) for word in WORD.findall(LINK_TARGET.sub("]", line))]
         seen_here = set()
         for start in range(len(words) - size + 1):
