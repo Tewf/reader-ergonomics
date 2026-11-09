@@ -4,6 +4,12 @@ Every release of the standard, newest first, in the form of [Keep a Changelog](h
 (Lacan 2019). Versions follow `MAJOR.MINOR.PATCH` as [extending.md](extending.md) defines them. The commit to pin
 a release by is the one its tag points to: `git rev-list -n 1 v1.16.1`, or the repository's tags page.
 
+## [1.23.5] - 2026-11-09
+
+### Fixed
+
+- The sentence-reading checks no longer read the marker line of a fenced div, `::: {.callout-note title="..."}`, as the start of the sentence under it: the title's words were counted with the first sentence of the callout.
+
 ## [1.23.4] - 2026-11-09
 
 ### Fixed

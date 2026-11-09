@@ -94,9 +94,19 @@ def without_comments(text: str) -> str:
     return HTML_COMMENT.sub(lambda match: re.sub(r"[^\n]", " ", match.group(0)), text)
 
 
+DIV_FENCE = re.compile(r"^[ \t]*:{3,}[^\n]*$", re.MULTILINE)
+
+
+def without_div_fences(text: str) -> str:
+    """The text with the marker lines of fenced divs blanked (`::: {.callout-note title="..."}` and the closing
+    `:::`): they are markup, and their attributes are not a sentence; line numbers are preserved."""
+    return DIV_FENCE.sub(lambda match: " " * len(match.group(0)), text)
+
+
 def reading_text(text: str) -> str:
-    """The prose a sentence-reading check sees: no front matter, no code, no HTML comment; line numbers are preserved."""
-    return without_comments(prose_only(without_front_matter(text)))
+    """The prose a sentence-reading check sees: no front matter, no code, no HTML comment, no div marker; line
+    numbers are preserved."""
+    return without_div_fences(without_comments(prose_only(without_front_matter(text))))
 
 
 def line_of(text: str, offset: int) -> int:

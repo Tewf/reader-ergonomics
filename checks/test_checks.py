@@ -128,6 +128,11 @@ class TestPlantedViolations(ScratchRepository):
         self.write("b/README.md", f"{SENTENCE}.\n\n" + line.format("b.md", "../b.md"))
         self.assertEqual(len(duplication.check(self.root, declared)), 1)  # prose outside the skeleton is still a copy
 
+    def test_a_div_marker_is_not_part_of_a_sentence(self) -> None:
+        opening = '::: {.callout-warning title="' + " ".join(["word"] * 20) + '"}'
+        self.write("a.qmd", opening + "\n" + " ".join(["short"] * 20) + ".\n:::\n")
+        self.assertEqual(self.messages(long_sentences), [])
+
     def test_duplication_skips_html_comments(self) -> None:
         self.write("one.md", f"First words.\n\n<!-- private -->\nOwn text.\n<!-- {SENTENCE}\n{SENTENCE} -->\n")
         self.write("two.md", f"Second words.\n\n<!-- private -->\nOther text.\n<!-- {SENTENCE}\n{SENTENCE} -->\n")
