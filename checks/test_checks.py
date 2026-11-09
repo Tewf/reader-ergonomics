@@ -144,6 +144,8 @@ class TestPlantedViolations(ScratchRepository):
         found = self.messages(defined_before_use)
         self.assertEqual(len(found), 1, found)
         self.assertIn("line 5", found[0])
+        self.write("b.md", "> - A widget is the small part.\n\n---\n\n# Widgets\n\n**Widget** is the small part of a gadget.\n")
+        self.assertEqual(len(self.messages(defined_before_use)), 1)  # a summary above the title may name the term
 
     def test_front_matter_is_not_prose(self) -> None:
         from framework.check_api import reading_text, without_front_matter

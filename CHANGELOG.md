@@ -4,6 +4,12 @@ Every release of the standard, newest first, in the form of [Keep a Changelog](h
 (Lacan 2019). Versions follow `MAJOR.MINOR.PATCH` as [extending.md](extending.md) defines them. The commit to pin
 a release by is the one its tag points to: `git rev-list -n 1 v1.16.1`, or the repository's tags page.
 
+## [1.23.2] - 2026-11-09
+
+### Fixed
+
+- `defined-before-use` no longer reports a term named in a summary placed above the title and defined in the body. An overview names what the document goes on to define, and overview first has the stronger grade of the two principles. A vault of notes that open on a three-point summary drew 328 such warnings.
+
 ## [1.23.1] - 2026-11-09
 
 ### Fixed
