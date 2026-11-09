@@ -377,35 +377,35 @@ answer = "No: the decision is read for why one key names one work, and the test 
 check = "co-change"
 path = "CHANGELOG.md"
 question = "changed together with checks/framework/check_api.py in 4 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
-file = "619e37ce4a3d"
+file = "c4934b8aae73"
 answer = "Yes, and by design: a release that changes the framework records it here, as `## [1.22.3] - 2026-11-07` does. The changelog stays at the root, where a reader looks for it, and names the code it describes."
 
 [[answer]]
 check = "co-change"
 path = "CHANGELOG.md"
 question = "changed together with checks/program/standard_pin.py in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
-file = "619e37ce4a3d"
+file = "c4934b8aae73"
 answer = "Yes, and by design: each release of the pin tool has its entry here, such as the line that opens on `standard_pin.py`. The changelog stays at the root and names the file; the tool stays with the checks."
 
 [[answer]]
 check = "co-change"
 path = "CITATION.cff"
 question = "changed together with checks/framework/check_api.py in 4 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
-file = "1fd8ebea6877"
+file = "701d544f6d80"
 answer = "Only through releases: `date-released` and the version move with every release, and the same releases changed the framework. Nothing else ties them, so they stay apart."
 
 [[answer]]
 check = "co-change"
 path = "README.fr.md"
 question = "changed together with checks/framework/check_api.py in 4 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
-file = "83a50837aa39"
+file = "57bf4bf597c9"
 answer = "Only through releases: the `release:version` line moves with every release, and the same releases changed the framework. The front page stays at the root."
 
 [[answer]]
 check = "co-change"
 path = "README.md"
 question = "changed together with checks/framework/check_api.py in 4 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
-file = "508889654b3a"
+file = "41c399e0010d"
 answer = "Only through releases: the `release:version` line moves with every release, and the same releases changed the framework. The front page stays at the root."
 
 [[answer]]
@@ -426,26 +426,26 @@ answer = "Yes: each change to the `standard-pin` check came with its test. They 
 check = "co-change"
 path = "CHANGELOG.md"
 question = "changed together with checks/program/duplication.py in 3 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
-file = "619e37ce4a3d"
+file = "c4934b8aae73"
 answer = "Yes, and by design: each release that changes the duplication check has its entry here, such as the one that opens on `duplication` under `## [1.23.0] - 2026-11-09`. The changelog stays at the root and names the check."
 
 [[answer]]
 check = "co-change"
 path = "CITATION.cff"
 question = "changed together with checks/program/duplication.py in 3 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
-file = "1fd8ebea6877"
+file = "701d544f6d80"
 answer = "Only through releases: `date-released` and the version move with every release, and three of them changed the duplication check. Nothing else ties the two files."
 
 [[answer]]
 check = "co-change"
 path = "README.fr.md"
 question = "changed together with checks/program/duplication.py in 3 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
-file = "83a50837aa39"
+file = "57bf4bf597c9"
 answer = "Only through releases: the `release:version` line moves with every release, and three of them changed the duplication check. The front page stays at the root."
 
 [[answer]]
 check = "co-change"
 path = "README.md"
 question = "changed together with checks/program/duplication.py in 3 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
-file = "508889654b3a"
+file = "41c399e0010d"
 answer = "Only through releases: the `release:version` line moves with every release, and three of them changed the duplication check. The front page stays at the root."

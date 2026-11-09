@@ -16,7 +16,8 @@ from framework.check_api import MARKDOWN_SUFFIXES, Finding, files_in_scope, matc
 
 NAME = "typed-figure"
 EXACT = True
-FENCE = re.compile(r"^(`{3,}|~{3,})[ \t]*([\w-]*)[^\n]*\n(.*?)^\1[`~]*[ \t]*$", re.MULTILINE | re.DOTALL)
+# the language may sit in braces, as an executable cell writes it: ```{python}, ```{r, fig.width=8}, ```{.dot}
+FENCE = re.compile(r"^(`{3,}|~{3,})[ \t]*\{?\.?([\w-]*)[^\n]*\n(.*?)^\1[`~]*[ \t]*$", re.MULTILINE | re.DOTALL)
 FIGURES = {"", "text", "txt", "plaintext"}
 DRAWING = re.compile(r"[─-╿▲-◄▶◀]")
 

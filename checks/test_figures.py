@@ -72,7 +72,7 @@ class TestFigureChecks(unittest.TestCase):
         self.assertEqual([(f.check, f.line, f.kind) for f in found], [("typed-figure", 3, "warning")])
 
     def test_typed_figure_spares_exempt_files_and_code(self) -> None:
-        code = "```python\nprint('a ──▶ b')\n```\n"
+        code = "```python\nprint('a ──▶ b')\n```\n\n```{python}\nprint('a ──▶ b')\n```\n"
         self.assertEqual(self.run_on(typed_figure, {"AGENTS.md": self.TYPED, "notes/AGENTS.md": self.TYPED, "x.md": code}), [])
 
     def test_figure_alt_flags_a_file_name_and_a_kind(self) -> None:
@@ -117,6 +117,11 @@ class TestFigureWidth(ScratchRepository):
     def test_a_text_figure_wider_than_the_column_warns(self) -> None:
         self.assertEqual(len(self.found("```text\nnode " + "x" * 70 + "\n```\n")), 1)
         self.assertEqual(len(self.found("```\n" + "y" * 61 + "\n```\n")), 1)
+
+    def test_an_executable_cell_is_code(self) -> None:
+        wide = "print(" + "x" * 70 + ")"
+        for opening in ("```{python}", "```{r, fig.width=8}", "```{.dot}", "```{cpp}"):
+            self.assertEqual(self.found(opening + "\n" + wide + "\n```\n"), [], opening)
 
     def test_descriptions_under_their_nodes_pass(self) -> None:
         self.assertEqual(self.found("```text\ntree\n ├─ a node\n │    its description, on the line below\n └─ another\n```\n"), [])

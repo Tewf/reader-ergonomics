@@ -4,6 +4,12 @@ Every release of the standard, newest first, in the form of [Keep a Changelog](h
 (Lacan 2019). Versions follow `MAJOR.MINOR.PATCH` as [extending.md](extending.md) defines them. The commit to pin
 a release by is the one its tag points to: `git rev-list -n 1 v1.16.1`, or the repository's tags page.
 
+## [1.23.4] - 2026-11-09
+
+### Fixed
+
+- `figure-width` and `typed-figure` read the language of an executable cell, written in braces as in ```` ```{python} ```` or ```` ```{r, fig.width=8} ````. They took such a block for one with no language, a figure drawn in characters: 1,959 of 2,112 width warnings in a repository of Quarto books were code cells.
+
 ## [1.23.3] - 2026-11-09
 
 ### Fixed
