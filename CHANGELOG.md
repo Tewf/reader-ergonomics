@@ -4,6 +4,13 @@ Every release of the standard, newest first, in the form of [Keep a Changelog](h
 (Lacan 2019). Versions follow `MAJOR.MINOR.PATCH` as [extending.md](extending.md) defines them. The commit to pin
 a release by is the one its tag points to: `git rev-list -n 1 v1.16.1`, or the repository's tags page.
 
+## [1.24.0] - 2026-11-09
+
+### Added
+
+- `[defined_terms] cues` sets what marks a definition for `defined-before-use` and `cross-file-terms`. The default is unchanged; a repository whose list items open on a bold label and a colon, `- **Practice**: ...`, drops the colon so that a label is not taken for a defined term.
+- `[cross_file_terms] within_depth` compares only files that share their first folders, for a repository that holds several collections side by side: the same word in two subjects is two terms.
+
 ## [1.23.8] - 2026-11-09
 
 ### Fixed

@@ -291,6 +291,14 @@ class TestPlantedViolations(ScratchRepository):
         found = self.messages(cross_file_terms)
         self.assertEqual(len(found), 1, found)
         self.assertIn("notes/unlinked.md", found[0])
+        apart = {**CONFIG, "cross_file_terms": {"within_depth": 1}}
+        self.assertEqual(cross_file_terms.check(self.root, apart), [])  # glossary/ and notes/ are two collections
+        labels = {**CONFIG, "defined_terms": {"cues": ["is", "are", "means"]}}
+        self.write("glossary/more.md", "- **Entropy**: a label that opens a line, not a definition here.\n")
+        self.write("notes/other.md", "Entropy is mentioned.\n")
+        self.assertEqual(len(cross_file_terms.check(self.root, labels)), 1)  # only Surprisal, defined with "is"
+        self.assertEqual(len(self.messages(cross_file_terms)), 2)  # by default the colon makes Entropy a definition too
+        (self.root / "glossary/more.md").unlink(); (self.root / "notes/other.md").unlink()
         self.write("notes/unlinked.md", "Surprisal matters here too, see [[terms|the glossary]].\n")
         self.assertEqual(self.messages(cross_file_terms), [])  # a wikilink to the defining file is a link
 

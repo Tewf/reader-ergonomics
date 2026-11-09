@@ -31,9 +31,12 @@ exempt = []
 max_files = 20     # PROVISIONAL: a commit touching more is a rename or a format pass
 min_together = 3   # PROVISIONAL
 min_share = 0.75   # PROVISIONAL: of the commits of the rarer file
-exempt = ["standard.md", "llms.txt", "evidence/bibliography.md", "checks/*/README.md", "checks/judgments.toml"]
+exempt = ["standard.md", "llms.txt", "evidence/bibliography.md", "checks/*/README.md", "checks/judgments.toml",
+          "CHANGELOG.md", "CITATION.cff", "README.md", "README.fr.md", "checks/test_checks.py", "checks/test_figures.py"]
 # built from, or shared by, many files (the tier READMEs are built from the checks); answering a question about
-# the answers file would reopen it
+# the answers file would reopen it. The last six change with every release by design: the changelog, the citation
+# file and the two front pages carry the version, and each check changes with its test, which lives in one module
+# for all the checks. Eleven releases in one day asked the same question of them each time.
 
 [type_buckets]
 names = ["docs", "doc", "assets", "misc", "utils", "util", "stuff", "other", "files", "helpers"]
@@ -155,6 +158,11 @@ max_entries = 32   # PROVISIONAL: the fastest measured layout had 32 on one leve
 min_entries = 3    # PROVISIONAL
 max_depth = 4      # PROVISIONAL
 exempt = ["LICENSES/"]
+
+# What marks a definition for defined-before-use and cross-file-terms: a bold term followed by one of these cues.
+# A repository whose list items open on a bold label and a colon drops ":" so that a label is not read as a term.
+[defined_terms]
+cues = [":", "(", "=", "is", "are", "means"]
 
 [duplication]
 words = 20         # PROVISIONAL: the length of a copied run that counts as one fact held twice

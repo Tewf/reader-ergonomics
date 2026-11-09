@@ -5,6 +5,8 @@ cue. A file that uses such a term (of at least `min_length` letters), does not d
 and holds no link to the file that does, warns once per term. A term used in more than
 `max_files` files is the repository's shared vocabulary rather than a reference, and is skipped,
 as is a use in the same folder as the definition: files of one folder are read as a set.
+`[cross_file_terms] within_depth = N` compares only files that share their first N folders, for a repository that
+holds several collections side by side, each with its own vocabulary.
 A wikilink `[[name]]` to the defining file counts as a link to it, by file name as the links check resolves it,
 unless the repository sets `[links] wikilinks = "ignore"`.
 
@@ -16,7 +18,7 @@ import re
 from pathlib import Path
 
 from framework.check_api import MARKDOWN_SUFFIXES, Finding, files_in_scope, line_of, matches_any, reading_text
-from program.defined_before_use import DEFINITION
+from program.defined_before_use import definition_pattern
 
 NAME = "cross-file-terms"
 EXACT = False
@@ -27,11 +29,12 @@ WIKILINK = re.compile(r"!?\[\[([^\]|#\\]+)")  # the target of [[name]], [[name|a
 def check(root: Path, config: dict) -> list[Finding]:
     settings = config.get("cross_file_terms", {})
     min_length, exempt = settings.get("min_length", 6), settings.get("exempt", [])
+    definition, depth = definition_pattern(config), settings.get("within_depth", 0)
     texts = {path: reading_text((root / path).read_text(encoding="utf-8", errors="replace"))
              for path in files_in_scope(root, config, MARKDOWN_SUFFIXES) if not matches_any(path, exempt)}
     defined_in = {}
     for path, text in texts.items():
-        for match in DEFINITION.finditer(text):
+        for match in definition.finditer(text):
             term = match.group(1).strip().lower()
             if (len(term) >= min_length and term[0].isalpha() and not term.endswith(":")  # "Check:" is a label
                     and term not in settings.get("ignore_terms", [])):
@@ -47,12 +50,14 @@ def check(root: Path, config: dict) -> list[Finding]:
         named = set()
         if config.get("links", {}).get("wikilinks", "resolve") == "resolve":
             named = {Path(target.strip()).name.removesuffix(".md") for target in WIKILINK.findall(text)}
-        own = {match.group(1).strip().lower() for match in DEFINITION.finditer(text)}
+        own = {match.group(1).strip().lower() for match in definition.finditer(text)}
         for term, source in defined_in.items():
             if source == path or term in own or source in linked or Path(source).parent == Path(path).parent:
                 continue
             if Path(source).stem in named:
                 continue  # linked by wikilink
+            if depth and Path(source).parts[:depth] != Path(path).parts[:depth]:
+                continue  # another collection of the repository: the same word there is another term
             use = pattern[term].search(text)
             if use:
                 findings.append(Finding(NAME, path, line_of(text, use.start()),
