@@ -116,6 +116,18 @@ class TestPlantedViolations(ScratchRepository):
         self.write("four.md", f"> [!NOTE] Title\n> {SENTENCE}.\n")
         self.assertEqual(len(self.messages(duplication)), 1)  # the body of a quote is prose like any other
 
+    def test_duplication_reads_a_shape_declared_in_config(self) -> None:
+        self.write("shape.md", "# Shape\n\n## Skeleton\n\n```markdown\nThe map of all the notes of this course is `<file>` at the course root, [here](<link>).\n```\n")
+        line = "The map of all the notes of this course is `{}` at the course root, [here]({}).\n"
+        self.write("a/README.md", "Alpha does one thing.\n\n" + line.format("a.md", "../a.md"))
+        self.write("b/README.md", "Beta does another.\n\n" + line.format("b.md", "../b.md"))
+        self.assertEqual(len(self.messages(duplication)), 1)  # no shape declared: the pointer line is a copy
+        declared = {**CONFIG, "duplication": {**CONFIG["duplication"], "shapes": [{"files": ["*/README.md"], "shape": "shape.md"}]}}
+        self.assertEqual(duplication.check(self.root, declared), [])
+        self.write("a/README.md", f"{SENTENCE}.\n\n" + line.format("a.md", "../a.md"))
+        self.write("b/README.md", f"{SENTENCE}.\n\n" + line.format("b.md", "../b.md"))
+        self.assertEqual(len(duplication.check(self.root, declared)), 1)  # prose outside the skeleton is still a copy
+
     def test_duplication_skips_html_comments(self) -> None:
         self.write("one.md", f"First words.\n\n<!-- private -->\nOwn text.\n<!-- {SENTENCE}\n{SENTENCE} -->\n")
         self.write("two.md", f"Second words.\n\n<!-- private -->\nOther text.\n<!-- {SENTENCE}\n{SENTENCE} -->\n")

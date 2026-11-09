@@ -4,6 +4,12 @@ Every release of the standard, newest first, in the form of [Keep a Changelog](h
 (Lacan 2019). Versions follow `MAJOR.MINOR.PATCH` as [extending.md](extending.md) defines them. The commit to pin
 a release by is the one its tag points to: `git rev-list -n 1 v1.16.1`, or the repository's tags page.
 
+## [1.23.0] - 2026-11-09
+
+### Added
+
+- `duplication` reads a shape declared for a set of files in config, `[[duplication.shapes]]` with `files` and `shape`, for a collection whose files follow one shape without each naming it. A line counts as prescribed when it holds the words of a skeleton line, code and addresses removed, so a line that differs by a file name matches. [Decision 0007](decisions/0007-a-shape-may-be-declared-for-a-set-of-files.md).
+
 ## [1.22.5] - 2026-11-09
 
 ### Fixed

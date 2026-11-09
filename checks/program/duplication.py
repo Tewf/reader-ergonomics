@@ -13,6 +13,10 @@ that the shape prescribes are not a fact held many times. The shape file is read
 resolved against the file; a github.com link is resolved in this repository when it names it, or in a sibling checkout
 beside it (`../<repository>/<path>`), never over the network. When the shape cannot be read (no link, no such file, no
 Skeleton block), nothing is skipped and the file counts as before.
+A collection whose files do not each carry a Shape line declares the shape for them in config, `[[duplication.shapes]]`
+with `files` (patterns) and `shape` (a path from the root). A line also counts as prescribed when it holds the same
+words as a skeleton line once both are read as this check reads prose, code and addresses removed: the skeleton writes
+``the map is `<file>` at the root`` and every file's own file name matches it (decision 0007).
 A deliberate quotation is exempted by path in config.
 
 Exact for the copy; whether the copy is a fact or a quotation is judgment.
@@ -63,6 +67,19 @@ def shape_file(root: Path, path: str) -> Path | None:
     return None
 
 
+def words_of(line: str) -> str:
+    """A line as this check reads prose: its words, lower case, code and link addresses removed."""
+    return " ".join(word.lower() for word in WORD.findall(LINK_TARGET.sub("]", prose_only(line))))
+
+
+def declared_shape(root: Path, path: str, declared: list[dict]) -> Path | None:
+    """The shape config declares for this file, or the one its own Shape line links."""
+    for entry in declared:
+        if matches_any(path, entry.get("files", [])) and (root / entry.get("shape", "")).is_file():
+            return root / entry["shape"]
+    return shape_file(root, path)
+
+
 def skeleton_lines(shape: Path) -> set[str]:
     """The squashed lines of the fenced blocks under a heading naming the skeleton."""
     lines, inside, fenced, found = shape.read_text(encoding="utf-8", errors="replace").splitlines(), False, False, set()
@@ -88,12 +105,15 @@ def check(root: Path, config: dict) -> list[Finding]:
             continue
         words = []  # (word, line)
         raw = (root / path).read_text(encoding="utf-8", errors="replace")
-        shape = shape_file(root, path)
+        shape = declared_shape(root, path, settings.get("shapes", []))
         prescribed = skeleton_lines(shape) if shape else set()
+        prescribed_words = {words_of(line) for line in prescribed} - {""}
         for line_number, (line, original) in enumerate(zip(reading_text(raw).splitlines(), raw.splitlines()), 1):
             inner = QUOTE_PREFIX.sub("", line)
             if inner.lstrip().startswith(("|", "#")) or CALLOUT_TITLE.match(inner) or squash(original) in prescribed:
                 continue  # table rows, headings, callout titles and the lines a declared shape prescribes: the skeleton files of a kind share
+            if prescribed_words and words_of(line) in prescribed_words:
+                continue  # the same skeleton line, with this file's own code or address in it
             words += [(word.lower(), line_number) for word in WORD.findall(LINK_TARGET.sub("]", line))]
         seen_here = set()
         for start in range(len(words) - size + 1):

@@ -159,6 +159,10 @@ exempt = ["LICENSES/"]
 [duplication]
 words = 20         # PROVISIONAL: the length of a copied run that counts as one fact held twice
 exempt = []
+# A set of files that follow one shape without naming it (decision 0007):
+# [[duplication.shapes]]
+# files = ["practicals/*/README.md"]
+# shape = "shapes/practical-readme.md"
 
 [citations]
 bibliography = "evidence/bibliography.md"

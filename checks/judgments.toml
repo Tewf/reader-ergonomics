@@ -355,8 +355,8 @@ answer = "A front page, read to choose where to go: `Where to start` sends each 
 [[answer]]
 check = "logical-lines"
 path = "checks/test_checks.py"
-question = "576 lines, past the ceiling of 500. Review it: split it only into pieces that change separately and each stay whole, or state why it stays one file."
-file = "d7eaf79a86a6"
+question = "588 lines, past the ceiling of 500. Review it: split it only into pieces that change separately and each stay whole, or state why it stays one file."
+file = "ac8f1bdc4764"
 answer = "One file: it is the one oracle of the program tier, run as `python3 -m unittest discover checks`, and every test shares `ScratchRepository`; a test per check module would scatter the fixture. It passed 500 with `test_maths_is_not_prose` and grows by one test per behaviour, not by a second role."
 
 [[answer]]
@@ -370,43 +370,43 @@ answer = "No: a change to what the checks read as prose (`reading_text`) is test
 check = "co-change"
 path = "checks/test_checks.py"
 question = "changed together with decisions/0003-one-key-one-work-across-the-family.md in 5 commits (83% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
-file = "d7eaf79a86a6"
+file = "ac8f1bdc4764"
 answer = "No: the decision is read for why one key names one work, and the test that holds it to that is one `def test_` among the others in `TestPlantedViolations`; a record and a test are linked by the check they name, not by a folder."
 
 [[answer]]
 check = "co-change"
 path = "CHANGELOG.md"
 question = "changed together with checks/framework/check_api.py in 4 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
-file = "cd9299085ac1"
+file = "faa4e70e4050"
 answer = "Yes, and by design: a release that changes the framework records it here, as `## [1.22.3] - 2026-11-07` does. The changelog stays at the root, where a reader looks for it, and names the code it describes."
 
 [[answer]]
 check = "co-change"
 path = "CHANGELOG.md"
 question = "changed together with checks/program/standard_pin.py in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
-file = "cd9299085ac1"
+file = "faa4e70e4050"
 answer = "Yes, and by design: each release of the pin tool has its entry here, such as the line that opens on `standard_pin.py`. The changelog stays at the root and names the file; the tool stays with the checks."
 
 [[answer]]
 check = "co-change"
 path = "CITATION.cff"
 question = "changed together with checks/framework/check_api.py in 4 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
-file = "dd520fc2a574"
-answer = "Only through releases: `date-released` and the version move with every release, and three releases changed the framework. Nothing else ties them, so they stay apart."
+file = "6141b63eea44"
+answer = "Only through releases: `date-released` and the version move with every release, and the same releases changed the framework. Nothing else ties them, so they stay apart."
 
 [[answer]]
 check = "co-change"
 path = "README.fr.md"
 question = "changed together with checks/framework/check_api.py in 4 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
-file = "ffa5a7a59278"
-answer = "Only through releases: the `release:version` line moves with every release, and three releases changed the framework. The front page stays at the root."
+file = "c5e078ed5537"
+answer = "Only through releases: the `release:version` line moves with every release, and the same releases changed the framework. The front page stays at the root."
 
 [[answer]]
 check = "co-change"
 path = "README.md"
 question = "changed together with checks/framework/check_api.py in 4 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
-file = "8bbc98020a8a"
-answer = "Only through releases: the `release:version` line moves with every release, and three releases changed the framework. The front page stays at the root."
+file = "e623930381f9"
+answer = "Only through releases: the `release:version` line moves with every release, and the same releases changed the framework. The front page stays at the root."
 
 [[answer]]
 check = "co-change"
