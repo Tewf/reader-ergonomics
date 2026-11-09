@@ -4,6 +4,12 @@ Every release of the standard, newest first, in the form of [Keep a Changelog](h
 (Lacan 2019). Versions follow `MAJOR.MINOR.PATCH` as [extending.md](extending.md) defines them. The commit to pin
 a release by is the one its tag points to: `git rev-list -n 1 v1.16.1`, or the repository's tags page.
 
+## [1.23.8] - 2026-11-09
+
+### Fixed
+
+- `defined-before-use` no longer counts as a use the term inside a link, which points at its definition, nor the term in the title line of a callout, which is a heading. It also takes `[defined_before_use] exempt`, as the other checks do, for files where bold is emphasis and not a definition.
+
 ## [1.23.7] - 2026-11-09
 
 ### Fixed

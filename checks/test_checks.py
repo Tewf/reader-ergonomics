@@ -164,6 +164,10 @@ class TestPlantedViolations(ScratchRepository):
         self.assertIn("line 5", found[0])
         self.write("b.md", "> - A widget is the small part.\n\n---\n\n# Widgets\n\n**Widget** is the small part of a gadget.\n")
         self.assertEqual(len(self.messages(defined_before_use)), 1)  # a summary above the title may name the term
+        self.write("c.md", "# Notes\n\n> [!NOTE] Widget and gadget\n> See [[Widget]] and [the widget page](widget.md).\n\n**Widget** is the small part.\n")
+        self.assertEqual(len(self.messages(defined_before_use)), 1)  # a link to the term, or a callout's title, is not a use
+        exempted = {**CONFIG, "defined_before_use": {"exempt": ["a.md"]}}
+        self.assertEqual(defined_before_use.check(self.root, exempted), [])
 
     def test_front_matter_is_not_prose(self) -> None:
         from framework.check_api import reading_text, without_front_matter
