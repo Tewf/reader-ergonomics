@@ -21,7 +21,7 @@ EXACT = False
 
 def opens(block) -> bool:
     """True for a block a reader can open on: prose, a list, a quote, a table or a figure, not a bare rule."""
-    return block.kind in {"paragraph", "list", "quote", "table", "image"} and bool(block.text.strip("-*_ \n"))
+    return block.kind in {"paragraph", "list", "quote", "table", "image", "embed"} and bool(block.text.strip("-*_ \n"))
 
 
 def check(root: Path, config: dict) -> list[Finding]:

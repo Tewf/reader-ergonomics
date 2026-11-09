@@ -12,6 +12,10 @@ SENTENCE_BOUNDARY = re.compile(r"(?<=[.!?])\s+(?=[A-ZÀ-Ý\[\$`(0-9*])")
 FENCE = re.compile(r"^(`{3,}|~{3,})\s*(\S*)")
 LIST_ITEM = re.compile(r"^([-*+]|\d+[.)])\s")
 IMAGE = re.compile(r"^!\[([^\]]*)\]\(([^)]+)\)$")
+EMBED = re.compile(r"^!\[\[[^\]\n]+\]\]$")  # a wikilink embed: a picture or a note shown in place
+# an abbreviation that points into a source ends no sentence when a number follows it: p. 6, ch. 10, Fig. 8.1
+REFERENCE = re.compile(r"(?:\b(?:pp?|ch|chap|fig|eq|sec|vol|no|ed)|§)\.$", re.IGNORECASE)
+CONTINUING = re.compile(r"\b(?:cf|vs|al|e\.g|i\.e)\.$", re.IGNORECASE)  # nor do these, whatever follows
 
 
 @dataclass(frozen=True)
@@ -54,7 +58,12 @@ def blocks(text: str) -> list[Block]:
             index += 1
             continue
         kind = ("table" if stripped.startswith("|") else "list" if LIST_ITEM.match(stripped)
-                else "quote" if stripped.startswith(">") else "image" if IMAGE.match(stripped) else "paragraph")
+                else "quote" if stripped.startswith(">") else "image" if IMAGE.match(stripped)
+                else "embed" if EMBED.match(stripped) else "paragraph")
+        if kind in ("image", "embed"):  # a picture is its own block: the caption under it is a paragraph
+            found.append(Block(kind, index + 1, stripped))
+            index += 1
+            continue
         body, first = [], index
         while index < len(lines):
             current = lines[index].strip()
@@ -69,7 +78,13 @@ def blocks(text: str) -> list[Block]:
 
 
 def sentences(paragraph: str) -> list[str]:
-    return [sentence for sentence in SENTENCE_BOUNDARY.split(paragraph) if sentence.strip()]
+    found: list[str] = []
+    for part in SENTENCE_BOUNDARY.split(paragraph):
+        if found and (CONTINUING.search(found[-1]) or (REFERENCE.search(found[-1]) and part[:1].isdigit())):
+            found[-1] += " " + part  # "p. 6" and "et al. (2019)" sit inside one sentence
+        else:
+            found.append(part)
+    return [sentence for sentence in found if sentence.strip()]
 
 
 def title(text: str) -> str:

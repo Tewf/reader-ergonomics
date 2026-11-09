@@ -27,7 +27,7 @@ answer = "One role: the scored table of this topic's sources, under `Grey source
 check = "logical-lines"
 path = "evidence/psycholinguistics/review.md"
 question = "87 logical lines, past the trigger of 80. State this file's role in one sentence. If the sentence needs 'and', split the file; if not, it may stay."
-file = "396236f2c3fa"
+file = "ce2234858ad2"
 answer = "One role: the reading log of this topic's literature, from `Surveys read first` through five strands to `5. Text tree`. It stays whole."
 
 [[answer]]
@@ -69,7 +69,7 @@ answer = "No: each of its five parts lists the objections to one claim, one line
 check = "figures-present"
 path = "evidence/psycholinguistics/review.md"
 question = "a long text with no figure, table or diagram: is a relation, set, quantity or process described only in words?"
-file = "396236f2c3fa"
+file = "ce2234858ad2"
 answer = "No: the file is a reading log, `Order inside each strand: definitions, seminal work, forward citations`; the comparisons between sources are tabled in `state-of-the-art.md`."
 
 [[answer]]
@@ -286,7 +286,7 @@ answer = "No: they changed together only in passes over every review at once (th
 check = "co-change"
 path = "evidence/psycholinguistics/review.md"
 question = "changed together with evidence/reading-order/review.md in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
-file = "396236f2c3fa"
+file = "ce2234858ad2"
 answer = "No: they changed together only in passes over every review at once (the multivocal merge, the audits, the opening sentences), not because they serve one purpose; each topic keeps its folder."
 
 [[answer]]
@@ -355,8 +355,8 @@ answer = "A front page, read to choose where to go: `Where to start` sends each 
 [[answer]]
 check = "logical-lines"
 path = "checks/test_checks.py"
-question = "623 lines, past the ceiling of 500. Review it: split it only into pieces that change separately and each stay whole, or state why it stays one file."
-file = "0e470f38f666"
+question = "633 lines, past the ceiling of 500. Review it: split it only into pieces that change separately and each stay whole, or state why it stays one file."
+file = "a53c6384675c"
 answer = "One file: it is the one oracle of the program tier, run as `python3 -m unittest discover checks`, and every test shares `ScratchRepository`; a test per check module would scatter the fixture. It passed 500 with `test_maths_is_not_prose` and grows by one test per behaviour, not by a second role."
 
 [[answer]]

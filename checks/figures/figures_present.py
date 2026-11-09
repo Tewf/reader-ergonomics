@@ -26,7 +26,7 @@ def check(root: Path, config: dict) -> list[Finding]:
         if matches_any(path, exempt):
             continue
         text = (root / path).read_text(encoding="utf-8", errors="replace")
-        if logical_line_count(text) >= minimum and not any(block.kind in ("fence", "image", "table") for block in blocks(text)):
+        if logical_line_count(text) >= minimum and not any(block.kind in ("fence", "image", "embed", "table") for block in blocks(text)):
             findings.append(Finding(NAME, path, 1, "a long text with no figure, table or diagram: is a relation, set, "
                                     "quantity or process described only in words?", "judgment"))
     return findings

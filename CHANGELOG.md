@@ -4,6 +4,13 @@ Every release of the standard, newest first, in the form of [Keep a Changelog](h
 (Lacan 2019). Versions follow `MAJOR.MINOR.PATCH` as [extending.md](extending.md) defines them. The commit to pin
 a release by is the one its tag points to: `git rev-list -n 1 v1.16.1`, or the repository's tags page.
 
+## [1.24.1] - 2026-11-09
+
+### Fixed
+
+- A sentence no longer ends on an abbreviation that points into a source: `p. 6`, `ch. 10`, `Fig. 8.1`, `vol. 2` before a number, and `et al.`, `cf.`, `e.g.` whatever follows. A paragraph of three sentences with eight page references was counted as eleven. A long sentence cut at its citation was measured as two short ones. So `paragraph-length` falls and `long-sentences` rises where notes cite by page.
+- A picture on a line of its own is its own block, a wikilink embed `![[curve.png]]` included, and the caption under it is a paragraph. The embed was read as the caption's first sentence.
+
 ## [1.24.0] - 2026-11-09
 
 ### Added

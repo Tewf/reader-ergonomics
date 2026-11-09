@@ -377,6 +377,16 @@ class TestPlantedViolations(ScratchRepository):
         found = self.messages(paragraph_length)
         self.assertEqual(len(found), 1, found)
 
+    def test_a_page_reference_ends_no_sentence(self) -> None:
+        self.write("a.md", "Named on p. 6 and in ch. 10, as Fig. 8.1 shows (Cormen et al. 2009). The rest is in vol. 2.\n")
+        self.assertEqual(self.messages(paragraph_length), [])
+        self.write("a.md", "No. 5 is first. Two. Three. Four. Five.\n")
+        self.assertEqual(len(self.messages(paragraph_length)), 1)
+
+    def test_a_caption_under_an_embedded_picture_is_its_own_paragraph(self) -> None:
+        self.write("a.md", "# A\n\n![[curve.png]]\nOne. Two. Three. Four.\n\n![a curve](curve.png)\nOne. Two. Three. Four.\n")
+        self.assertEqual(self.messages(paragraph_length), [])
+
     def test_site_stylesheet(self) -> None:
         self.write("site.css", "main p { max-width: 90ch; font-size: 14px; line-height: 1.2; }\n"
                    "body { color: #777777; background: #ffffff; }\n.ok { color: #101014; background: #F7F7F9; }\n")
