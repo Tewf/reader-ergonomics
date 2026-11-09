@@ -4,6 +4,12 @@ Every release of the standard, newest first, in the form of [Keep a Changelog](h
 (Lacan 2019). Versions follow `MAJOR.MINOR.PATCH` as [extending.md](extending.md) defines them. The commit to pin
 a release by is the one its tag points to: `git rev-list -n 1 v1.16.1`, or the repository's tags page.
 
+## [1.23.3] - 2026-11-09
+
+### Fixed
+
+- `cross-file-terms` counts a wikilink `[[name]]` to the defining file as a link to it. It read markdown links only, so a vault that links by wikilink was told that a file "does not link to" a note it links: 258 of 677 warnings in one vault.
+
 ## [1.23.2] - 2026-11-09
 
 ### Fixed

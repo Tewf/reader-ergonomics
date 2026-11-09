@@ -5,6 +5,8 @@ cue. A file that uses such a term (of at least `min_length` letters), does not d
 and holds no link to the file that does, warns once per term. A term used in more than
 `max_files` files is the repository's shared vocabulary rather than a reference, and is skipped,
 as is a use in the same folder as the definition: files of one folder are read as a set.
+A wikilink `[[name]]` to the defining file counts as a link to it, by file name as the links check resolves it,
+unless the repository sets `[links] wikilinks = "ignore"`.
 
 Heuristic. Time O(terms x text), space O(terms).
 """
@@ -19,6 +21,7 @@ from program.defined_before_use import DEFINITION
 NAME = "cross-file-terms"
 EXACT = False
 LINK = re.compile(r"\]\(([^)#\s]+)")
+WIKILINK = re.compile(r"!?\[\[([^\]|#\\]+)")  # the target of [[name]], [[name|alias]], [[name#part]]
 
 
 def check(root: Path, config: dict) -> list[Finding]:
@@ -41,10 +44,15 @@ def check(root: Path, config: dict) -> list[Finding]:
         linked = {str((root / path).parent.joinpath(target).resolve().relative_to(root.resolve()))
                   for target in LINK.findall(text) if not target.startswith(("http", "mailto"))
                   and (root / path).parent.joinpath(target).resolve().is_relative_to(root.resolve())}
+        named = set()
+        if config.get("links", {}).get("wikilinks", "resolve") == "resolve":
+            named = {Path(target.strip()).name.removesuffix(".md") for target in WIKILINK.findall(text)}
         own = {match.group(1).strip().lower() for match in DEFINITION.finditer(text)}
         for term, source in defined_in.items():
             if source == path or term in own or source in linked or Path(source).parent == Path(path).parent:
                 continue
+            if Path(source).stem in named:
+                continue  # linked by wikilink
             use = pattern[term].search(text)
             if use:
                 findings.append(Finding(NAME, path, line_of(text, use.start()),

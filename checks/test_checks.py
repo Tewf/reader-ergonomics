@@ -269,6 +269,8 @@ class TestPlantedViolations(ScratchRepository):
         found = self.messages(cross_file_terms)
         self.assertEqual(len(found), 1, found)
         self.assertIn("notes/unlinked.md", found[0])
+        self.write("notes/unlinked.md", "Surprisal matters here too, see [[terms|the glossary]].\n")
+        self.assertEqual(self.messages(cross_file_terms), [])  # a wikilink to the defining file is a link
 
     def test_shape_conformance(self) -> None:
         self.write("notes/a.md", "# A\n\n## In three points\n\n## Check yourself\n")
