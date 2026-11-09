@@ -4,6 +4,12 @@ Every release of the standard, newest first, in the form of [Keep a Changelog](h
 (Lacan 2019). Versions follow `MAJOR.MINOR.PATCH` as [extending.md](extending.md) defines them. The commit to pin
 a release by is the one its tag points to: `git rev-list -n 1 v1.16.1`, or the repository's tags page.
 
+## [1.23.7] - 2026-11-09
+
+### Fixed
+
+- `long-sentences` counts a wikilink as one word and does not count the address of a link. A line that lists ten notes by name was measured as a sentence of seventy words, and a path with spaces added its own.
+
 ## [1.23.6] - 2026-11-09
 
 ### Fixed

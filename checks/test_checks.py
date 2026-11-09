@@ -128,6 +128,12 @@ class TestPlantedViolations(ScratchRepository):
         self.write("b/README.md", f"{SENTENCE}.\n\n" + line.format("b.md", "../b.md"))
         self.assertEqual(len(duplication.check(self.root, declared)), 1)  # prose outside the skeleton is still a copy
 
+    def test_a_link_is_one_word_and_its_address_none(self) -> None:
+        links = ", ".join("[[A Note With A Long Name In Six Words %d]]" % number for number in range(12))
+        paths = ", ".join("[file](<../a folder/with many/words in its path %d.pdf>)" % number for number in range(12))
+        self.write("a.md", "Practice: " + links + ".\n\nSources: " + paths + ".\n")
+        self.assertEqual(self.messages(long_sentences), [])
+
     def test_a_table_row_inside_a_callout_is_not_a_sentence(self) -> None:
         row = "> | " + " ".join(["cell"] * 30) + " | " + " ".join(["more"] * 30) + " |"
         self.write("a.md", "> [!NOTE] A table\n> | A | B |\n> |---|---|\n" + row + "\n> A short line after it.\n")

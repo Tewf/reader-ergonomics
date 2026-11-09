@@ -3,6 +3,8 @@
 Paragraphs and list items are split into sentences; code, tables and figures are left out, and so are a table row
 and a heading written inside a quote or a callout, which are a table and a heading there too.
 Length is the proxy that needs no model for even information density and short dependencies.
+A wikilink counts as one word, since it names one thing however long the name, and the address of a link is not
+counted: a line that lists ten notes is an enumeration, not a sentence of seventy words.
 
 Heuristic. Time O(text).
 """
@@ -15,6 +17,8 @@ from framework.check_api import MARKDOWN_SUFFIXES, Finding, files_in_scope, matc
 from framework.prose import blocks, sentences
 
 LIST_ITEM_START = re.compile(r"\n(?=\s*(?:[-*+]|\d+[.)]|>)\s)")  # each item of a list is read on its own
+WIKILINK = re.compile(r"!?\[\[[^\]\n]*\]\]")  # [[a note]], [[a note|its label]]
+LINK_ADDRESS = re.compile(r"\]\(<[^>\n]*>\)|\]\([^)\n]*\)")  # the (address) of [label](address)
 QUOTED_SKELETON = re.compile(r"^(?:\s*>)+\s*(?:\||#{1,6}\s)")  # > | a table row |   or   > ## a heading
 NAME = "long-sentences"
 EXACT = False
@@ -30,7 +34,7 @@ def check(root: Path, config: dict) -> list[Finding]:
         for block in blocks(reading_text((root / path).read_text(encoding="utf-8", errors="replace"))):
             if block.kind not in ("paragraph", "list", "quote"):
                 continue
-            text = block.text
+            text = WIKILINK.sub("[link]", LINK_ADDRESS.sub("]", block.text))
             if block.kind == "quote":
                 text = "\n".join(line for line in text.split("\n") if not QUOTED_SKELETON.match(line))
             units = [text] if block.kind == "paragraph" else LIST_ITEM_START.split(text)
