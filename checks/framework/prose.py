@@ -22,6 +22,9 @@ class Block:
     info: str = ""  # heading level, or the fence's info string
 
 
+HEADING = re.compile(r"#{1,6}(\s|$)")
+
+
 def blocks(text: str) -> list[Block]:
     lines = text.splitlines()
     start = 0
@@ -46,7 +49,7 @@ def blocks(text: str) -> list[Block]:
             found.append(Block("fence", first + 1, "\n".join(body), fence.group(2)))
             index += 1
             continue
-        if stripped.startswith("#"):
+        if HEADING.match(stripped):  # "# Title", not "#tag": a heading has a space after its marks
             found.append(Block("heading", index + 1, stripped.lstrip("#").strip(), str(len(stripped) - len(stripped.lstrip("#")))))
             index += 1
             continue
@@ -55,7 +58,7 @@ def blocks(text: str) -> list[Block]:
         body, first = [], index
         while index < len(lines):
             current = lines[index].strip()
-            if not current or current.startswith("#") or FENCE.match(current):
+            if not current or HEADING.match(current) or FENCE.match(current):
                 break
             if kind == "paragraph" and body and (current.startswith("|") or LIST_ITEM.match(current)):
                 break

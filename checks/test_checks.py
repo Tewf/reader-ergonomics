@@ -254,6 +254,7 @@ class TestPlantedViolations(ScratchRepository):
         found = self.messages(overview_first)
         self.assertEqual(len(found), 1, found)
         self.assertIn("long.md", found[0])
+        self.write("tags.md", "# Title\n\n#first #second #third\n\nWhat this is, in two parts.\n\n## Detail\n\n" + body + "\n")
         self.write("summary-above.md", "> The whole note in one line.\n\n---\n\n# Title\n\n## Detail\n\n" + body + "\n")
         self.write("rule-above.md", "---\n\n# Title\n\n## Detail\n\n" + body + "\n")
         found = self.messages(overview_first)

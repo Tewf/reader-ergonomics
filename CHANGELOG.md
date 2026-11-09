@@ -4,6 +4,12 @@ Every release of the standard, newest first, in the form of [Keep a Changelog](h
 (Lacan 2019). Versions follow `MAJOR.MINOR.PATCH` as [extending.md](extending.md) defines them. The commit to pin
 a release by is the one its tag points to: `git rev-list -n 1 v1.16.1`, or the repository's tags page.
 
+## [1.23.1] - 2026-11-09
+
+### Fixed
+
+- A line of hashtags under a title, `#topic #other`, is no longer read as a heading: a heading has a space after its marks. Notes that carry their tags there were told that their title is followed by another heading.
+
 ## [1.23.0] - 2026-11-09
 
 ### Added
