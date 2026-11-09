@@ -128,6 +128,13 @@ class TestPlantedViolations(ScratchRepository):
         self.write("b/README.md", f"{SENTENCE}.\n\n" + line.format("b.md", "../b.md"))
         self.assertEqual(len(duplication.check(self.root, declared)), 1)  # prose outside the skeleton is still a copy
 
+    def test_a_table_row_inside_a_callout_is_not_a_sentence(self) -> None:
+        row = "> | " + " ".join(["cell"] * 30) + " | " + " ".join(["more"] * 30) + " |"
+        self.write("a.md", "> [!NOTE] A table\n> | A | B |\n> |---|---|\n" + row + "\n> A short line after it.\n")
+        self.assertEqual(self.messages(long_sentences), [])
+        self.write("a.md", "> [!NOTE] Prose\n> " + " ".join(["word"] * 60) + ".\n")
+        self.assertEqual(len(self.messages(long_sentences)), 1)
+
     def test_a_div_marker_is_not_part_of_a_sentence(self) -> None:
         opening = '::: {.callout-warning title="' + " ".join(["word"] * 20) + '"}'
         self.write("a.qmd", opening + "\n" + " ".join(["short"] * 20) + ".\n:::\n")

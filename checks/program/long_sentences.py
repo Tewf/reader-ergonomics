@@ -1,6 +1,7 @@
 """Long sentences: a sentence past `max_words` words is the cheap sign of packed information.
 
-Paragraphs and list items are split into sentences; code, tables and figures are left out.
+Paragraphs and list items are split into sentences; code, tables and figures are left out, and so are a table row
+and a heading written inside a quote or a callout, which are a table and a heading there too.
 Length is the proxy that needs no model for even information density and short dependencies.
 
 Heuristic. Time O(text).
@@ -14,6 +15,7 @@ from framework.check_api import MARKDOWN_SUFFIXES, Finding, files_in_scope, matc
 from framework.prose import blocks, sentences
 
 LIST_ITEM_START = re.compile(r"\n(?=\s*(?:[-*+]|\d+[.)]|>)\s)")  # each item of a list is read on its own
+QUOTED_SKELETON = re.compile(r"^(?:\s*>)+\s*(?:\||#{1,6}\s)")  # > | a table row |   or   > ## a heading
 NAME = "long-sentences"
 EXACT = False
 
@@ -28,7 +30,10 @@ def check(root: Path, config: dict) -> list[Finding]:
         for block in blocks(reading_text((root / path).read_text(encoding="utf-8", errors="replace"))):
             if block.kind not in ("paragraph", "list", "quote"):
                 continue
-            units = [block.text] if block.kind == "paragraph" else LIST_ITEM_START.split(block.text)
+            text = block.text
+            if block.kind == "quote":
+                text = "\n".join(line for line in text.split("\n") if not QUOTED_SKELETON.match(line))
+            units = [text] if block.kind == "paragraph" else LIST_ITEM_START.split(text)
             for sentence in (part for unit in units for part in sentences(unit.replace("\n", " "))):
                 words = len(sentence.split())
                 if words > limit:
