@@ -4,6 +4,12 @@ Every release of the standard, newest first, in the form of [Keep a Changelog](h
 (Lacan 2019). Versions follow `MAJOR.MINOR.PATCH` as [extending.md](extending.md) defines them. The commit to pin
 a release by is the one its tag points to: `git rev-list -n 1 v1.16.1`, or the repository's tags page.
 
+## [1.22.5] - 2026-11-09
+
+### Fixed
+
+- `overview-first` no longer flags a document that puts its summary above its title: a quote, a list or a paragraph before the first heading is the opening the principle asks for. A vault whose notes open on a three-point summary, then the title, drew 427 warnings for it.
+
 ## [1.22.4] - 2026-11-09
 
 ### Fixed

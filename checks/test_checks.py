@@ -242,6 +242,10 @@ class TestPlantedViolations(ScratchRepository):
         found = self.messages(overview_first)
         self.assertEqual(len(found), 1, found)
         self.assertIn("long.md", found[0])
+        self.write("summary-above.md", "> The whole note in one line.\n\n---\n\n# Title\n\n## Detail\n\n" + body + "\n")
+        self.write("rule-above.md", "---\n\n# Title\n\n## Detail\n\n" + body + "\n")
+        found = self.messages(overview_first)
+        self.assertEqual(sorted(line.split()[1] for line in found), ["long.md", "rule-above.md"], found)
 
     def test_cross_file_terms(self) -> None:
         self.write("glossary/terms.md", "**Surprisal** is how unexpected a word is.\n")
