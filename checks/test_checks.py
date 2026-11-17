@@ -86,6 +86,28 @@ class TestPlantedViolations(ScratchRepository):
         self.assertEqual(asked[0], asked[1])
         self.assertNotIn("%25", asked[0])
 
+    def test_references_a_server_that_refuses_the_checker_is_a_warning(self) -> None:
+        # found 2026-11-17 in three weekly runs: a WAF answering 405, the arXiv API answering 406, ERIC hanging up
+        import http.client
+        import urllib.error
+        self.write("refs.md", "https://waf.example/a https://ac.example/b https://hangs.example/c https://gone.example/d\n")
+
+        def answer(url, method="GET", timeout=20):
+            if "waf" in url:
+                raise urllib.error.HTTPError(url, 405, "Method Not Allowed", {}, None)
+            if "ac.example" in url:
+                raise urllib.error.HTTPError(url, 406, "Not Acceptable", {}, None)
+            if "hangs" in url:
+                raise http.client.RemoteDisconnected("Remote end closed connection without response")
+            raise urllib.error.HTTPError(url, 404, "Not Found", {}, None)
+        original, references.fetch = references.fetch, answer
+        try:
+            found = sorted(f"{finding.kind} {finding.message}" for finding in references.check(self.root, {**CONFIG, "online": True}))
+        finally:
+            references.fetch = original
+        self.assertEqual([f for f in found if f.startswith("error")], ["error link https://gone.example/d: HTTP 404"])
+        self.assertEqual(len([f for f in found if f.startswith("warning")]), 3)
+
     def test_references_server_failure_is_a_warning(self) -> None:
         self.write("refs.md", "https://failing.example/a\n")
         original, references.resolve = references.resolve, lambda kind, identifier: "HTTP 503"

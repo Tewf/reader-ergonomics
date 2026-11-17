@@ -5,7 +5,8 @@ needs no network. Online (`--online`), each one is resolved against doi.org, the
 API, GitHub and the link itself. Successes are cached in `checks/out/` for `cache_days`,
 so a rerun costs nothing. Resolving shows that a reference exists, not that it supports
 the claim it is cited for; that remains judgment. A server that refuses the checker (HTTP 401,
-403 or 429: a wall against robots or a rate limit) proves nothing about the reference, and
+403, 405, 406 or 429, or a connection it closes without an answer: a wall against robots or a rate
+limit) proves nothing about the reference, and
 neither does a server that does not answer in time or answers with a server error (HTTP 5xx); all are warnings to
 open by hand, never errors. A reference that cannot be reached at all (no such host, connection refused) is an error.
 
@@ -14,6 +15,7 @@ Time O(references) requests, space O(references).
 """
 from __future__ import annotations
 
+import http.client
 import json
 import re
 import time
@@ -34,7 +36,7 @@ GITHUB = re.compile(r"(?<![\w.-])(?:www\.)?github\.com/([A-Za-z0-9-]+)/([A-Za-z0
 URL = re.compile(r"https?://(?:[^\s()\]>\"'`|]|\([^\s()]*\))+")  # balanced ( ) kept: Wikipedia titles
 HEADERS = {"User-Agent": "reader-ergonomics-reference-check/1.0"}
 ATOM = "{http://www.w3.org/2005/Atom}"
-REFUSED = ("HTTP 401", "HTTP 403", "HTTP 429")  # the server refused the checker, not the reference
+REFUSED = ("HTTP 401", "HTTP 403", "HTTP 405", "HTTP 406", "HTTP 429", "connection closed")  # the server refused the checker, not the reference
 
 
 def fetch(url: str, method: str = "GET", timeout: int = 20) -> bytes:
@@ -64,6 +66,8 @@ def resolve(kind: str, identifier: str) -> str | None:
         return None
     except urllib.error.HTTPError as error:
         return f"HTTP {error.code}"
+    except http.client.RemoteDisconnected:  # the server took the connection, then hung up on the checker
+        return "connection closed"
     except Exception as error:  # an unreachable server fails this reference, not the run
         cause = getattr(error, "reason", error)
         return "timeout" if isinstance(error, TimeoutError) or isinstance(cause, TimeoutError) else error.__class__.__name__

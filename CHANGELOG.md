@@ -4,6 +4,12 @@ Every release of the standard, newest first, in the form of [Keep a Changelog](h
 (Lacan 2019). Versions follow `MAJOR.MINOR.PATCH` as [extending.md](extending.md) defines them. The commit to pin
 a release by is the one its tag points to: `git rev-list -n 1 v1.16.1`, or the repository's tags page.
 
+## [1.24.5] - 2026-11-17
+
+### Fixed
+
+- `references` counts three more answers as a server refusing the checker, a warning to open by hand: HTTP 405 (a bot wall such as an AWS WAF challenge), HTTP 406 (the arXiv API on a busy day) and a connection the server closes without answering (ERIC). Each failed a weekly online run although the reference existed. A 404 or a host that does not answer at all is still an error.
+
 ## [1.24.4] - 2026-11-17
 
 ### Fixed
