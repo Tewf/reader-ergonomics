@@ -4,6 +4,13 @@ Every release of the standard, newest first, in the form of [Keep a Changelog](h
 (Lacan 2019). Versions follow `MAJOR.MINOR.PATCH` as [extending.md](extending.md) defines them. The commit to pin
 a release by is the one its tag points to: `git rev-list -n 1 v1.16.1`, or the repository's tags page.
 
+## [1.24.3] - 2026-11-17
+
+### Fixed
+
+- `references` keeps a SICI DOI whole: `<` and `>` in balanced pairs and a `;` inside the identifier, as in `10.1002/1099-1255(200009/10)15:5<447::AID-JAE570>3.0.CO;2-1`. The DOI was cut at `<` and the cut form reported as unregistered, so a correct citation failed the weekly online run. The identifier is also quoted before it is sent to the handle server.
+- `references` reports a server error (HTTP 5xx) as a warning to open by hand later, as it already did for a timeout: a server that is down says nothing about the reference. A whole site answering 503 failed the weekly run.
+
 ## [1.24.2] - 2026-11-09
 
 ### Fixed

@@ -58,6 +58,30 @@ class TestPlantedViolations(ScratchRepository):
         self.assertIn("warning link https://refused.example/a: HTTP 403, the server refused the checker; open it by hand", found)
         self.assertIn("error link https://gone.example/b: HTTP 404", found)
 
+    def test_references_keep_a_sici_doi_whole(self) -> None:
+        sici = "10.1002/1099-1255(200009/10)15:5<447::AID-JAE570>3.0.CO;2-1"
+        found = references.cited(f"| McFadden 2000 | https://doi.org/{sici} |\nsee 10.1000/abc; and 10.1000/def.\n")
+        self.assertEqual(sorted(i for k, i in found if k == "doi"), ["10.1000/abc", "10.1000/def", sici])
+
+    def test_references_quote_a_doi_for_the_handle_server(self) -> None:
+        asked = []
+        original = references.fetch
+        references.fetch = lambda url, method="GET", timeout=20: asked.append(url) or b'{"responseCode": 1}'
+        try:
+            self.assertIsNone(references.resolve("doi", "10.1002/1099-1255(200009/10)15:5<447::AID-JAE570>3.0.CO;2-1"))
+        finally:
+            references.fetch = original
+        self.assertEqual(asked, ["https://doi.org/api/handles/10.1002/1099-1255(200009/10)15:5%3C447::AID-JAE570%3E3.0.CO%3B2-1"])
+
+    def test_references_server_failure_is_a_warning(self) -> None:
+        self.write("refs.md", "https://failing.example/a\n")
+        original, references.resolve = references.resolve, lambda kind, identifier: "HTTP 503"
+        try:
+            found = [f"{finding.kind} {finding.message}" for finding in references.check(self.root, {**CONFIG, "online": True})]
+        finally:
+            references.resolve = original
+        self.assertEqual(found, ["warning link https://failing.example/a: HTTP 503, the server is failing; open it by hand later"])
+
     def test_portable_paths(self) -> None:
         self.write("notes/a:b.md")
         self.write("notes/Same.md")

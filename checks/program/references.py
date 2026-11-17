@@ -6,8 +6,8 @@ API, GitHub and the link itself. Successes are cached in `checks/out/` for `cach
 so a rerun costs nothing. Resolving shows that a reference exists, not that it supports
 the claim it is cited for; that remains judgment. A server that refuses the checker (HTTP 401,
 403 or 429: a wall against robots or a rate limit) proves nothing about the reference, and
-neither does a server that does not answer in time; both are warnings to open by hand, never
-errors. A reference that cannot be reached at all (no such host, connection refused) is an error.
+neither does a server that does not answer in time or answers with a server error (HTTP 5xx); all are warnings to
+open by hand, never errors. A reference that cannot be reached at all (no such host, connection refused) is an error.
 
 Exact offline. Online depends on remote servers (a timeout is reported as a warning, never hidden).
 Time O(references) requests, space O(references).
@@ -18,6 +18,7 @@ import json
 import re
 import time
 import urllib.error
+import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ElementTree
 from pathlib import Path
@@ -27,7 +28,8 @@ from framework.check_api import MARKDOWN_SUFFIXES, Finding, files_in_scope, matc
 NAME = "references"
 EXACT = True
 ARXIV = re.compile(r"(?:arxiv\.org/(?:abs|pdf|html)/|arXiv[:\s]\s*)(\d{4}\.\d{4,5}|[a-z\-]+(?:\.[A-Z]{2})?/\d{7})", re.IGNORECASE)
-DOI = re.compile(r"\b(10\.\d{4,9}/(?:[^\s()\]>\"'`,;|]|\([^\s()]*\))+)")  # balanced ( ) kept: 10.1002/(SICI)...
+# balanced ( ) and < > kept, and a ; inside the identifier: 10.1002/(SICI)..., 15:5<447::AID-JAE570>3.0.CO;2-1
+DOI = re.compile(r"\b(10\.\d{4,9}/(?:[^\s()<>\]\"'`,;|]|\([^\s()]*\)|<[^\s<>]*>|;(?=[^\s|;]))+)")
 GITHUB = re.compile(r"(?<![\w.-])(?:www\.)?github\.com/([A-Za-z0-9-]+)/([A-Za-z0-9_.-]+)")
 URL = re.compile(r"https?://(?:[^\s()\]>\"'`|]|\([^\s()]*\))+")  # balanced ( ) kept: Wikipedia titles
 HEADERS = {"User-Agent": "reader-ergonomics-reference-check/1.0"}
@@ -45,7 +47,7 @@ def resolve(kind: str, identifier: str) -> str | None:
     """None when the identifier resolves, else the reason it does not."""
     try:
         if kind == "doi":
-            answer = json.loads(fetch(f"https://doi.org/api/handles/{identifier}"))
+            answer = json.loads(fetch("https://doi.org/api/handles/" + urllib.parse.quote(identifier, safe="/:()")))
             return None if answer.get("responseCode") == 1 else "not registered"
         if kind == "arxiv":
             feed = ElementTree.fromstring(fetch(f"https://export.arxiv.org/api/query?id_list={identifier}&max_results=1", timeout=30))
@@ -95,6 +97,9 @@ def check(root: Path, config: dict) -> list[Finding]:
             if reason in REFUSED:
                 findings.append(Finding(NAME, path, 0, f"{kind} {identifier}: {reason}, the server refused the checker; "
                                         "open it by hand", "warning"))
+            elif reason and reason.startswith("HTTP 5"):
+                findings.append(Finding(NAME, path, 0, f"{kind} {identifier}: {reason}, the server is failing; "
+                                        "open it by hand later", "warning"))
             elif reason == "timeout":
                 findings.append(Finding(NAME, path, 0, f"{kind} {identifier}: no answer in time; open it by hand", "warning"))
             elif reason:
