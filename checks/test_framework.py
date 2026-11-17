@@ -122,6 +122,61 @@ class TestFailurePaths(ScratchRepository):
         self.assertIn("is not a folder", absent.stderr)
 
 
+class TestLoudRunner(ScratchRepository):
+    """A run that checks nothing, or less than asked, says so and fails (issue #1): it never exits 0 silently."""
+
+    PROGRAM = ("from framework.check_api import Finding\nNAME = 'demo-program'\n"
+               "def check(root, config):\n    return []\n")
+    NEEDS_LIB = ("NAME = 'demo-needs-lib'\nTIER = 'meaning'\ndef available():\n    return False\n"
+                 "def check(root, config):\n    return []\n")
+
+    def runner(self, *arguments: str) -> subprocess.CompletedProcess:
+        return subprocess.run([sys.executable, str(Path(run.__file__)), str(self.root), *arguments],
+                              capture_output=True, text=True)
+
+    def setUp(self) -> None:
+        super().setUp()
+        self.write("a.md", "# A\n\nOne line.\n")
+        self.write("checks/local/demo_program.py", self.PROGRAM)
+        self.write("checks/local/demo_needs_lib.py", self.NEEDS_LIB)
+
+    def test_an_unknown_tier_fails(self) -> None:
+        result = self.runner("--tiers", "progam")
+        self.assertEqual(result.returncode, 2, result.stdout)
+        self.assertIn("unknown tier 'progam'", result.stdout)
+
+    def test_an_unknown_check_name_fails(self) -> None:
+        result = self.runner("--only", "demo-program,no-such-check")
+        self.assertEqual(result.returncode, 2, result.stdout)
+        self.assertIn("unknown check 'no-such-check'", result.stdout)
+
+    def test_a_run_where_nothing_ran_fails(self) -> None:
+        result = self.runner("--tiers", "meaning", "--only", "demo-program")
+        self.assertEqual(result.returncode, 2, result.stdout)
+        self.assertIn("no check ran", result.stdout)
+
+    def test_a_malformed_local_check_is_an_error(self) -> None:
+        self.write("checks/local/broken.py", "NAME = 'broken'\n")
+        result = self.runner("--only", "demo-program")
+        self.assertEqual(result.returncode, 1, result.stdout)
+        self.assertIn("checks/local/broken.py", result.stdout)
+
+    def test_a_helper_module_is_named_but_does_not_fail(self) -> None:
+        self.write("checks/local/helper.py", "def shared():\n    return 1\n")
+        result = self.runner("--only", "demo-program")
+        self.assertEqual(result.returncode, 0, result.stdout)
+        self.assertIn("checks/local/helper.py is a helper", result.stdout)
+
+    def test_a_required_tier_that_was_skipped_fails(self) -> None:
+        loose = self.runner("--tiers", "program,meaning", "--only", "demo-program,demo-needs-lib")
+        self.assertEqual(loose.returncode, 0, loose.stdout)
+        self.assertIn("skipped", loose.stdout)
+        strict = self.runner("--tiers", "program,meaning", "--only", "demo-program,demo-needs-lib",
+                             "--require-tiers", "meaning")
+        self.assertEqual(strict.returncode, 2, strict.stdout)
+        self.assertIn("required tier 'meaning' did not run", strict.stdout)
+
+
 class TestStandardConfig(unittest.TestCase):
     def test_the_answers_file_never_asks_about_itself(self) -> None:
         import tomllib
