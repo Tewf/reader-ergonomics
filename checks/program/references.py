@@ -47,7 +47,7 @@ def resolve(kind: str, identifier: str) -> str | None:
     """None when the identifier resolves, else the reason it does not."""
     try:
         if kind == "doi":
-            answer = json.loads(fetch("https://doi.org/api/handles/" + urllib.parse.quote(identifier, safe="/:()")))
+            answer = json.loads(fetch("https://doi.org/api/handles/" + urllib.parse.quote(urllib.parse.unquote(identifier), safe="/:()")))
             return None if answer.get("responseCode") == 1 else "not registered"
         if kind == "arxiv":
             feed = ElementTree.fromstring(fetch(f"https://export.arxiv.org/api/query?id_list={identifier}&max_results=1", timeout=30))

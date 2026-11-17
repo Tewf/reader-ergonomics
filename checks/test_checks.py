@@ -73,6 +73,19 @@ class TestPlantedViolations(ScratchRepository):
             references.fetch = original
         self.assertEqual(asked, ["https://doi.org/api/handles/10.1002/1099-1255(200009/10)15:5%3C447::AID-JAE570%3E3.0.CO%3B2-1"])
 
+    def test_references_do_not_encode_an_encoded_doi_twice(self):
+        # v1.24.3 sent 10.1002/...15:5%3C447 as %253C, so a DOI written percent-encoded failed (found 2026-11-17)
+        asked = []
+        original = references.fetch
+        references.fetch = lambda url, method="GET", timeout=20: asked.append(url) or b'{"responseCode": 1}'
+        try:
+            references.resolve("doi", "10.1002/1099-1255(200009/10)15:5%3C447::AID-JAE570%3E3.0.CO;2-1")
+            references.resolve("doi", "10.1002/1099-1255(200009/10)15:5<447::AID-JAE570>3.0.CO;2-1")
+        finally:
+            references.fetch = original
+        self.assertEqual(asked[0], asked[1])
+        self.assertNotIn("%25", asked[0])
+
     def test_references_server_failure_is_a_warning(self) -> None:
         self.write("refs.md", "https://failing.example/a\n")
         original, references.resolve = references.resolve, lambda kind, identifier: "HTTP 503"

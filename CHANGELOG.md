@@ -4,6 +4,12 @@ Every release of the standard, newest first, in the form of [Keep a Changelog](h
 (Lacan 2019). Versions follow `MAJOR.MINOR.PATCH` as [extending.md](extending.md) defines them. The commit to pin
 a release by is the one its tag points to: `git rev-list -n 1 v1.16.1`, or the repository's tags page.
 
+## [1.24.4] - 2026-11-17
+
+### Fixed
+
+- `references` decodes a DOI before quoting it for the handle server. v1.24.3 quoted it as written, so a DOI cited in percent-encoded form (`%3C` for `<`) was sent as `%253C` and reported unregistered: the weekly online run of reader-ergonomics-software-design and reader-ergonomics-learning failed on it. A DOI written either way now resolves the same.
+
 ## [1.24.3] - 2026-11-17
 
 ### Fixed
